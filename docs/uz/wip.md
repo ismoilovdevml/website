@@ -1,0 +1,2 @@
+# Ishlanmoqda
+Jarayonda
