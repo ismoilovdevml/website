@@ -1,0 +1,36 @@
+import type { NavbarConfig } from '@vuepress/theme-default'
+import { version } from '../meta.js'
+
+export const navbarEn: NavbarConfig = [
+  {
+    text: 'Guide',
+    link: '/guide/',
+  },
+  {
+    text: 'Projects',
+    link: '/wip/',
+  },
+  {
+    text: 'Useful',
+    children: [
+      {
+        text: 'At Silicon Valley',
+        children: [
+          {
+            text: 'In Silicon Valley',
+            link: 'https://youtu.be/fX87iHCDyr4',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    text: `v${version}`,
+    children: [
+      {
+        text: 'v0.x',
+        link: 'https://github.com/ismoilovdevml/website/commits/master',
+      },
+    ],
+  },
+]
