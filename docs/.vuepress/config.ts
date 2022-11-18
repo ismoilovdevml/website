@@ -46,7 +46,7 @@ export default defineUserConfig({
   // configure default theme
   theme: defaultTheme({
     logo: '/images/hero.png',
-    repo: 'uzinfocom-org/culture',
+    repo: 'ismoilovdevml/website',
     docsDir: 'docs',
 
     // theme-level locales config
