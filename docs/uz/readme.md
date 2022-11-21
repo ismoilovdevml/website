@@ -4,10 +4,10 @@ title: Asosiy
 heroImage: /images/hero.png
 actions:
 - text: Boshlash
-  link: /uz/guide/
+  link: /uz/guide/kirish/
   type: primary
 - text: Qo'shish
-  link: /uz/wip/
+  link: /uz/join/
   type: secondary
 features:
 - title: Open Sourse
