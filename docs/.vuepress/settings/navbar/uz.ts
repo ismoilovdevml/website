@@ -25,12 +25,7 @@ export const navbarUz: NavbarConfig = [
     ],
   },
   {
-    text: `v${version}`,
-    children: [
-      {
-        text: 'v0.x',
-        link: 'https://github.com/ismoilovdevml/website/commits/master',
-      },
-    ],
-  },
+    text: 'Donate',
+    link: '/uz/donate/'
+  }
 ]
