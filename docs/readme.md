@@ -1,6 +1,6 @@
 ---
 home: true
-title: Asosiy
+title: Main
 heroImage: /images/hero.png
 actions:
 - text: Get Started

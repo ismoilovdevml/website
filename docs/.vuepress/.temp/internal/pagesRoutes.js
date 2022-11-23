@@ -1,5 +1,5 @@
 export const pagesRoutes = [
-  ["v-8daa1a0e","/",{"title":"Asosiy"},["/index.html","/readme.md"]],
+  ["v-8daa1a0e","/",{"title":"Main"},["/index.html","/readme.md"]],
   ["v-553e8a99","/uz/donate.html",{"title":""},["/uz/donate","/uz/donate.md"]],
   ["v-563fdc7e","/uz/join.html",{"title":""},["/uz/join","/uz/join.md"]],
   ["v-2d0ac491","/uz/",{"title":"Asosiy"},["/uz/index.html","/uz/readme.md"]],
