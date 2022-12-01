@@ -27,9 +27,11 @@ Loyiha ustida ishlanmoqda
 
 ## Boshqa loyihalar
 
-[Github profilim](https://github.com/ismoilovdevml/) 
+[Github Profilim](https://github.com/ismoilovdevml/) 
 
 [Web Server Rust](https://github.com/ismoilovdevml/web-server-rust)
+
+[DNS Server](https://github.com/ismoilovdevml/dns-server)
 
 [OINIX](https://github.com/ismoilovdevml/OINIX)
 

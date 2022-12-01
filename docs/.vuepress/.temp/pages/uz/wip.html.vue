@@ -18,8 +18,9 @@ Loyiha ustida ishlanmoqda</p>
 <p><a href="https://github.com/rust-lang-uz/i10n" target="_blank" rel="noopener noreferrer">i10n Rust lokalizatsiya<ExternalLinkIcon/></a></p>
 <p><a href="https://github.com/rust-lang-uz/learn-rust-lang" target="_blank" rel="noopener noreferrer">Rust dasturash kitobi<ExternalLinkIcon/></a></p>
 <h2 id="boshqa-loyihalar" tabindex="-1"><a class="header-anchor" href="#boshqa-loyihalar" aria-hidden="true">#</a> Boshqa loyihalar</h2>
-<p><a href="https://github.com/ismoilovdevml/" target="_blank" rel="noopener noreferrer">Github profilim<ExternalLinkIcon/></a></p>
+<p><a href="https://github.com/ismoilovdevml/" target="_blank" rel="noopener noreferrer">Github Profilim<ExternalLinkIcon/></a></p>
 <p><a href="https://github.com/ismoilovdevml/web-server-rust" target="_blank" rel="noopener noreferrer">Web Server Rust<ExternalLinkIcon/></a></p>
+<p><a href="https://github.com/ismoilovdevml/dns-server" target="_blank" rel="noopener noreferrer">DNS Server<ExternalLinkIcon/></a></p>
 <p><a href="https://github.com/ismoilovdevml/OINIX" target="_blank" rel="noopener noreferrer">OINIX<ExternalLinkIcon/></a></p>
 <p><a href="https://github.com/ismoilovdevml/rust_os" target="_blank" rel="noopener noreferrer">Rust OS<ExternalLinkIcon/></a></p>
 </div></template>

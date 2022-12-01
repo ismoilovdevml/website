@@ -21,4 +21,6 @@ export const pagesComponents = {
   "v-4afa4981": defineAsyncComponent(() => import(/* webpackChunkName: "v-4afa4981" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/map.html.vue")),
   // path: /404.html
   "v-3706649a": defineAsyncComponent(() => import(/* webpackChunkName: "v-3706649a" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/404.html.vue")),
+  // path: /uz/guide/quantum.html
+  "v-49140dbc": defineAsyncComponent(() => import(/* webpackChunkName: "v-49140dbc" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/quantum.html.vue")),
 }

@@ -1,4 +1,4 @@
-export const data = JSON.parse("{\"key\":\"v-4afa4981\",\"path\":\"/uz/guide/map.html\",\"title\":\"Sayt Yo'l Xaritasi (Mundarija)\",\"lang\":\"uz-UZ\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"Blog haqida\",\"slug\":\"blog-haqida\",\"link\":\"#blog-haqida\",\"children\":[]},{\"level\":2,\"title\":\"Linux Nima\",\"slug\":\"linux-nima\",\"link\":\"#linux-nima\",\"children\":[]}],\"filePathRelative\":\"uz/guide/map.md\"}")
+export const data = JSON.parse("{\"key\":\"v-4afa4981\",\"path\":\"/uz/guide/map.html\",\"title\":\"Sayt Yo'l Xaritasi (Mundarija)\",\"lang\":\"uz-UZ\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"Blog haqida\",\"slug\":\"blog-haqida\",\"link\":\"#blog-haqida\",\"children\":[]},{\"level\":2,\"title\":\"Linux Nima\",\"slug\":\"linux-nima\",\"link\":\"#linux-nima\",\"children\":[]},{\"level\":2,\"title\":\"Kvant hisoblash nima?\",\"slug\":\"kvant-hisoblash-nima\",\"link\":\"#kvant-hisoblash-nima\",\"children\":[]}],\"filePathRelative\":\"uz/guide/map.md\"}")
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()

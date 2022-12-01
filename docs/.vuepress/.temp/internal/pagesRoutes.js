@@ -9,4 +9,5 @@ export const pagesRoutes = [
   ["v-16f10be9","/uz/guide/linux.html",{"title":"Linux nima"},["/uz/guide/linux","/uz/guide/linux.md"]],
   ["v-4afa4981","/uz/guide/map.html",{"title":"Sayt Yo'l Xaritasi (Mundarija)"},["/uz/guide/map","/uz/guide/map.md"]],
   ["v-3706649a","/404.html",{"title":""},["/404"]],
+  ["v-49140dbc","/uz/guide/quantum.html",{"title":"Kvant hisoblash nima?"},["/uz/guide/quantum","/uz/guide/quantum.md"]],
 ]

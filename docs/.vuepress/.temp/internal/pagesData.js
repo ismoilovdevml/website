@@ -19,4 +19,6 @@ export const pagesData = {
   "v-4afa4981": () => import(/* webpackChunkName: "v-4afa4981" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/map.html.js").then(({ data }) => data),
   // path: /404.html
   "v-3706649a": () => import(/* webpackChunkName: "v-3706649a" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/404.html.js").then(({ data }) => data),
+  // path: /uz/guide/quantum.html
+  "v-49140dbc": () => import(/* webpackChunkName: "v-49140dbc" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/quantum.html.js").then(({ data }) => data),
 }

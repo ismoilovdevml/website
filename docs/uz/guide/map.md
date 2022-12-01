@@ -3,3 +3,5 @@
 ## [Blog haqida](about.html)
 
 ## [Linux Nima](linux.html)
+
+## [Kvant hisoblash nima?](quantum.html)
