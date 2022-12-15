@@ -3,15 +3,15 @@
 
 So'nggi yillarda kompyuter protsessorlari ancha rivojlangan. Har yili tranzistorlar kichrayadi va o'zgarishlar Moore's qonuni keraksiz bo'ladigan nuqtaga yetadi.
 
-Protsessorlar haqida gap ketganda, faqat tranzistorlar va chastotalar emas, balki kesh ham hisobga olinadi.
+Protsessorlar haqida gap ketganda, faqat tranzistorlar va chastotalar emas, balki cache ham hisobga olinadi.
 
-Markaziy protsessorlar (Central Processing Units) muhokama qilinayotganda kesh xotirasi haqida eshitgan bo'lishingiz mumkin. Biroq, biz ushbu CPU kesh xotira raqamlariga yetarlicha e'tibor bermaymiz va ular CPU reklamalarining asosiy diqqatga sazovor joyi emas.
+Markaziy protsessorlar (Central Processing Units) muhokama qilinayotganda cache memory haqida eshitgan bo'lishingiz mumkin. Biroq, biz ushbu CPU cache memory raqamlariga yetarlicha e'tibor bermaymiz.
 
-Xo'sh, CPU keshi qanchalik muhim va u qanday ishlaydi?
+Xo'sh, CPU cache qanchalik muhim va u qanday ishlaydi?
 
 ## CPU Cache Memory nima?
 
-Oddiy qilib aytganda, protsessor xotirasi keshi shunchaki tezkor xotira turidir. Hisoblashning dastlabki kunlarida protsessor tezligi va xotira tezligi past edi. Biroq, 1980-yillarda protsessor tezligi tez o'sishni boshladi. O'sha paytdagi tizim xotirasi (RAM) ortib borayotgan protsessor tezligiga bardosh bera olmadi yoki mos kelmadi va shuning uchun yangi turdagi ultra tez xotira paydo bo'ldi: CPU kesh xotirasi.
+Oddiy qilib aytganda, CPU memory cache shunchaki tezkor xotira turidir. Hisoblashning dastlabki kunlarida protsessor tezligi va xotira tezligi past edi. Biroq, 1980-yillarda protsessor tezligi tez o'sishni boshladi. O'sha paytdagi system memory (RAM) ortib borayotgan protsessor tezligiga bardosh bera olmadi yoki mos kelmadi va shuning uchun yangi turdagi ultra-fast memory paydo bo'ldi: CPU cache memory.
 
 Endi sizning kompyuteringizda bir nechta xotira turlari mavjud.
 
@@ -25,7 +25,7 @@ Kompyuter xotirasi uning ishlash tezligiga asoslangan ierarxiyaga ega. CPU keshi
 
 Kompyuter xotirasi ham har xil turdagi bo'ladi.
 
-Cache memory Static RAM (SRAM), shaklidir, sizning oddiy tizimingizning operativ xotirasi esa Dynamic RAM (DRAM) deb nomlanadi. Static RAM doimiy yangilanishni talab qilmasdan ma'lumotlarni saqlashi mumkin, DRAMdan farqli o'laroq, bu SRAMni kesh xotirasi uchun ideal qiladi.
+Cache memory Static RAM (SRAM), shaklidir, sizning oddiy tizimingizning operativ xotirasi esa Dynamic RAM (DRAM) deb nomlanadi. Static RAM doimiy yangilanishni talab qilmasdan ma'lumotlarni saqlashi mumkin, DRAMdan farqli o'laroq, bu SRAMni cache memory uchun ideal qiladi.
 
 ## CPU Cache qanday ishlaydi?
 
@@ -39,7 +39,7 @@ Keyin memory cache protsessor ichidagi ma'lumotlarni oldinga va orqaga olib bora
 
 ## CPU Cache Memory darajalari: L1, L2 va L3
 
-CPU kesh xotirasi uchta "level" ga bo'lingan: L1, L2 va L3. Xotira ierarxiyasi yana tezlik va shuning uchun kesh hajmiga bog'liq.
+CPU Cache memory uchta "level" ga bo'lingan: L1, L2 va L3. Xotira ierarxiyasi yana tezlik va shuning uchun kesh hajmiga bog'liq.
 
 Xo'sh, CPU cache hajmi ishlashga ta'sir qiladimi?
 
@@ -47,7 +47,7 @@ Xo'sh, CPU cache hajmi ishlashga ta'sir qiladimi?
 
 L1 (1-darajali) cache - bu kompyuter tizimida mavjud bo'lgan eng tezkor xotira. Kirishning ustuvorligi nuqtai nazaridan, L1 keshi ma'lum bir vazifani bajarishda protsessorga kerak bo'lgan ma'lumotlarga ega.
 
-L1 keshining hajmi protsessorga bog'liq. Ba'zi yuqori darajadagi iste'molchi protsessorlari hozirda Intel i9-9980XE kabi 1MB L1 keshiga ega, ammo ular juda katta mablag'ni talab qiladi va hali ham kam va juda uzoq. Intelning Xeon diapazoni kabi ba'zi server chipsetlarida 1-2MB L1 memory cache ham mavjud.
+L1 keshining hajmi protsessorga bog'liq. Ba'zi yuqori darajadagi iste'molchi protsessorlari hozirda Intel i9-9980XE kabi 1MB L1 keshiga ega, ammo ular juda katta mablag'ni talab qiladi. Intelning Xeon diapazoni kabi ba'zi server chiplarida 1-2MB L1 memory cache ham mavjud.
 
 "Standart" L1 kesh hajmi yo'q, shuning uchun sotib olishdan oldin aniq L1 xotira kesh hajmini aniqlash uchun CPU xususiyatlarini tekshirishingiz kerak.
 
@@ -73,9 +73,8 @@ Bu yaxshi savol. Siz kutganingizdek ko'proq yaxshi. Eng so'nggi protsessorlar, t
 
 ## Ma'lumotlar CPU Memory Cachelar o'rtasida qanday o'tadi?
 
-::: tip
-Katta savol: CPU cache memory qanday ishlaydi?
-:::
+
+Yaxshi savol: CPU cache memory qanday ishlaydi?
 
 
 Eng asosiy so'zlar bilan aytganda, ma'lumotlar RAMdan L3 keshiga, keyin L2 va nihoyat L1 ga o'tadi. Protsessor operatsiyani bajarish uchun ma'lumotlarni qidirganda, u birinchi navbatda uni L1 keshida topishga harakat qiladi. Agar protsessor uni topsa, bu holat cache hit deb ataladi. Keyin uni L2 va keyin L3 da topishga davom etadi.
@@ -87,5 +86,9 @@ Endi, biz bilganimizdek, cache asosiy xotira va protsessor o'rtasidagi ma'lumotn
 L1 cache memory eng past kechikishga ega, u eng tez va yadroga eng yaqin, L3 esa eng yuqori. cache miss yuborilganda memory cache kechikishi ortadi, chunki protsessor system memorydan ma'lumotlarni olishi kerak.
 
 Kompyuterlar tezroq va samaraliroq bo'lishi bilan kechikish qisqarishda davom etmoqda. Kam kechikishli DDR4 RAM va super-fast SSD'lar kechikishni kamaytiradi, bu esa butun tizimingizni har qachongidan ham tezroq qiladi. Bunda system memoryning tezligi ham muhim.
+
+[Qo'shimca ma'lumot uchun animatsion videorolik](https://www.youtube.com/watch?v=yi0FhRqDJfo)
+
+Xato va kamchiliklar bo'lsa uzur so'rayman )
 
 Davomi Bor :) 
