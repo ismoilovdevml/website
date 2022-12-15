@@ -60,3 +60,32 @@ L2 (2-darajali) cache L1 keshiga qaraganda sekinroq, lekin hajmi kattaroq. L1 ke
 L2 kesh hajmi protsessorga qarab farq qiladi, lekin uning hajmi odatda 256KB dan 8MB gacha. Aksariyat zamonaviy protsessorlar 256 KB L2 keshdan ko'proq joy oladi va bu o'lcham endi kichik hisoblanadi. Bundan tashqari, eng kuchli zamonaviy protsessorlarning ba'zilari 8 MB dan oshiq kattaroq L2 memory cachega ega.
 
 Tezlik haqida gap ketganda, L2 keshi L1 keshidan orqada qoladi, ammo tizimingizning operativ xotirasidan ancha tezroq. L1 xotira keshi odatda operativ xotiradan 100 baravar tezroq, L2 keshi esa 25 baravar tezroq.
+
+### L3 Cache
+
+L3 (3-darajali) cache. Dastlabki kunlarda L3 memory cache aslida motherboarda topilgan. Bu juda uzoq vaqt oldin, aksariyat protsessorlar faqat bitta yadroli protsessorlar bo'lganida edi. Endi sizning protsessoringizdagi L3 keshi juda katta bo'lishi mumkin, yuqori darajadagi iste'molchi protsessorlari L3 keshlari 32 MB gacha. Ba'zi server protsessorlari L3 keshlari bundan oshib ketishi mumkin, ular 64 MB gacha.
+
+L3 cache eng katta, ammo eng sekin cache memory unit. Zamonaviy protsessorlar protsessorning o'zida L3 keshini o'z ichiga oladi. Ammo L1 va L2 keshlari chipning o'zida har bir yadro uchun mavjud bo'lsa-da, L3 keshi butun chip foydalanishi mumkin bo'lgan general memory poolga ko'proq o'xshaydi.
+
+## Menga qancha CPU Cache Memory kerak
+
+Bu yaxshi savol. Siz kutganingizdek ko'proq yaxshi. Eng so'nggi protsessorlar, tabiiyki, eski avlodlarga qaraganda ko'proq  CPU cache memoryni o'z ichiga oladi, shuningdek, faster cache memoryni ham. Siz qila oladigan narsa, protsessorlarni qanday qilib samarali solishtirishni o'rganishdir.
+
+## Ma'lumotlar CPU Memory Cachelar o'rtasida qanday o'tadi?
+
+::: tip
+Katta savol: CPU cache memory qanday ishlaydi?
+:::
+
+
+Eng asosiy so'zlar bilan aytganda, ma'lumotlar RAMdan L3 keshiga, keyin L2 va nihoyat L1 ga o'tadi. Protsessor operatsiyani bajarish uchun ma'lumotlarni qidirganda, u birinchi navbatda uni L1 keshida topishga harakat qiladi. Agar protsessor uni topsa, bu holat cache hit deb ataladi. Keyin uni L2 va keyin L3 da topishga davom etadi.
+
+Agar protsessor memory cachelarning birortasida ma'lumotlarni topmasa, u system memory (RAM)ga  kirishga harakat qiladi. Bu sodir bo'lganda, u cache miss deb nomlanadi.
+
+Endi, biz bilganimizdek, cache asosiy xotira va protsessor o'rtasidagi ma'lumotni oldinga va orqaga uzatishni tezlashtirish uchun mo'ljallangan. Xotiradan ma'lumotlarga kirish uchun zarur bo'lgan vaqt "latency" deb ataladi.
+
+L1 cache memory eng past kechikishga ega, u eng tez va yadroga eng yaqin, L3 esa eng yuqori. cache miss yuborilganda memory cache kechikishi ortadi, chunki protsessor system memorydan ma'lumotlarni olishi kerak.
+
+Kompyuterlar tezroq va samaraliroq bo'lishi bilan kechikish qisqarishda davom etmoqda. Kam kechikishli DDR4 RAM va super-fast SSD'lar kechikishni kamaytiradi, bu esa butun tizimingizni har qachongidan ham tezroq qiladi. Bunda system memoryning tezligi ham muhim.
+
+Davomi Bor :) 
