@@ -1,5 +1,6 @@
-# CPU cache qanday ishlaydi?
+# CPU cache nima va u qanday ishlaydi?
 
+![alt text](https://cdn.arstechnica.net/wp-content/uploads/2022/06/cpu.jpeg)
 
 So'nggi yillarda kompyuter protsessorlari ancha rivojlangan. Har yili tranzistorlar kichrayadi va o'zgarishlar Moore's qonuni keraksiz bo'ladigan nuqtaga yetadi.
 
@@ -133,7 +134,9 @@ Motherboardagi keshlar `AMD K6-2` va `AMD K6-III` protsessorlari tufayli uzoq va
 
 ### ARM mikroprotsessorlarida 
 
-Apple M1 protsessorida yadro turiga qarab har bir yadro uchun 128 yoki 192 KiB instruction L1 keshi mavjud (latenc/single-thread performance), faqat noutbuk uchun emas, balki har qanday CPU tipidagi L1 keshi uchun juda katta, umumiy kesh esa Xotira hajmi juda katta emas (jami o'tkazish qobiliyati uchun muhimroq), noutbuk uchun va ancha kattaroq umumiy o'lchamlar (masalan, L3 yoki L4) IBMning asosiy kompyuterlarida mavjud.
+![alt text](https://images.macrumors.com/t/1ntCzE-GELQyTx3lKWF0S1T7AUo=/400x0/article-new/2013/09/m1-chip-unified-memory-architecture-speed.jpg?lossy)
+![alt text](https://i0.wp.com/chipsandcheese.com/wp-content/uploads/2022/05/m1cache.png?resize=533%2C285&ssl=1)
+Apple `M1` protsessorida yadro turiga qarab har bir yadro uchun `128` yoki `192` KiB instruction L1 keshi mavjud (latenc/single-thread performance), faqat noutbuk uchun emas, balki har qanday CPU tipidagi L1 keshi uchun juda katta, umumiy kesh esa Xotira hajmi juda katta emas (jami o'tkazish qobiliyati uchun muhimroq), noutbuk uchun va ancha kattaroq umumiy o'lchamlar (masalan, L3 yoki L4) IBMning asosiy kompyuterlarida mavjud.
 
 ## Cache structure tuzilishi
 
@@ -158,9 +161,9 @@ block offset cache rowdagi saqlangan ma'lumotlar blokida kerakli ma'lumotlarni b
 
 Odatda effective address baytlarda bo'ladi, shuning uchun blokning offset uzunligi ![alt text](https://wikimedia.org/api/rest_v1/media/math/render/svg/1b8034533918755b6862f7ec7898c7912b636bbc) bit, bu erda b - ma'lumotlar blokiga to'g'ri keladigan baytlar soni. tag addressning eng muhim bitlarini o'z ichiga oladi, ular joriy to'plamdagi barcha satrlarga nisbatan tekshiriladi (to'plam indeks bo'yicha olingan), ushbu to'plamda so'ralgan address mavjud yoki yo'qligini tekshirish. Agar shunday bo'lsa, keshga kirish sodir bo'ladi. Bitlardagi tag uzunligi quyidagicha:
 
-```bash
-tag_length = address_length - index_length - block_offset_length
-```
+
+`tag_length = address_length - index_length - block_offset_length`
+
 Ba'zi mualliflar block offsetni oddiygina `"offset"` yoki `"displacement"` deb atashadi. 
 
 ## Misol 
@@ -187,7 +190,8 @@ Cache miss - bu keshdagi ma'lumotlarni o'qish yoki yozish bo'yicha muvaffaqiyats
 
 Instruction cachedagi cache read miss yuborilganligi odatda eng katta kechikishga olib keladi, chunki protsessor yoki hech bo'lmaganda execution ishi instruction asosiy xotiradan olinmaguncha kutishi (to'xtab turishi) kerak. Ma'lumotlar keshidagi cache read miss odatda kichikroq kechikishni keltirib chiqaradi, chunki kesh o'qilishiga bog'liq bo'lmagan ko'rsatmalar berilishi mumkin va ma'lumotlar asosiy xotiradan qaytarilgunga qadar bajarishni davom ettiradi va bog'liq ko'rsatmalar executionni davom ettirishi mumkin. Ma'lumotlarga cache write miss odatda eng qisqa kechikishni keltirib chiqaradi, chunki yozishni navbatga qo'yish mumkin va keyingi ko'rsatmalarni bajarishda bir nechta cheklovlar mavjud; protsessor navbat to'lguncha davom etishi mumkin.
 
+Ixtisoslashuv va ko'p darajali keshlashni tasvirlash uchun bu erda AMD Athlon 64 protsessoridagi K8 yadrosining kesh ierarxiyasi keltirilgan
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cache%2Chierarchy-example.svg/500px-Cache%2Chierarchy-example.svg.png)
 
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
-Davomi Bor :) 

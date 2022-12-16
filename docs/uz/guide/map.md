@@ -6,4 +6,4 @@
 
 ## [Kvant hisoblash nima?](quantum.html)
 
-## [CPU cache qanday ishlaydi? L1, L2 va L3 cachelari nima?](cpu_cache.html)
+## [CPU cache nima va u qanday ishlaydi?](cpu_cache.html)
