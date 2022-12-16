@@ -110,14 +110,32 @@ Cache row yozuvlari odatda quyidagi tuzilishga ega:
 
 `data block (cache line)` asosiy xotiradan olingan haqiqiy ma'lumotlarni o'z ichiga oladi. `tag` asosiy xotiradan olingan haqiqiy ma'lumotlarning manzilini (qismini) o'z ichiga oladi.
 
-Keshning "size" - bu asosiy xotira ma'lumotlarining hajmi. Ushbu o'lchamni har bir ma'lumot blokida saqlangan baytlar soni keshda saqlangan bloklar soniga ko'ra hisoblash mumkin. (tag, flag va error correction code bitlari oʻlchamga kiritilmagan, lekin ular keshning jismoniy maydoniga taʼsir qilsa ham )
+Keshning `"size"` - bu asosiy xotira ma'lumotlarining hajmi. Ushbu o'lchamni har bir ma'lumot blokida saqlangan baytlar soni keshda saqlangan bloklar soniga ko'ra hisoblash mumkin. (tag, flag va error correction code bitlari oʻlchamga kiritilmagan, lekin ular keshning jismoniy maydoniga taʼsir qilsa ham )
 
-cache line (xotira bloki) bilan birga keladigan samarali xotira manzili ( MSB dan LSB ga) tag, indeks va blok ofsetiga bo'linadi.
+cache line (xotira bloki) bilan birga keladigan samarali xotira manzili ( `MSB` dan `LSB` ga) tag, indeks va blok ofsetiga bo'linadi.
 
 | tag        | index         | block offset |
 | ---------- |:-------------:| ------------:|
 
 index ma'lumotlarning qaysi keshga kiritilganligini tavsiflaydi. index uzunligi ![alt text](https://wikimedia.org/api/rest_v1/media/math/render/svg/b36533bd5e32a9b0885d6a902752ea25dd1312c3) `s` cache sets uchun bitlar .
+
+block offset cache rowdagi saqlangan ma'lumotlar blokida kerakli ma'lumotlarni belgilaydi. 
+
+Odatda effective address baytlarda bo'ladi, shuning uchun blokning offset uzunligi ![alt text](https://wikimedia.org/api/rest_v1/media/math/render/svg/1b8034533918755b6862f7ec7898c7912b636bbc) bit, bu erda b - ma'lumotlar blokiga to'g'ri keladigan baytlar soni. tag addressning eng muhim bitlarini o'z ichiga oladi, ular joriy to'plamdagi barcha satrlarga nisbatan tekshiriladi (to'plam indeks bo'yicha olingan), ushbu to'plamda so'ralgan address mavjud yoki yo'qligini tekshirish. Agar shunday bo'lsa, keshga kirish sodir bo'ladi. Bitlardagi tag uzunligi quyidagicha:
+
+```bash
+tag_length = address_length - index_length - block_offset_length
+```
+Ba'zi mualliflar block offsetni oddiygina `"offset"` yoki `"displacement"` deb atashadi. 
+
+## Misol 
+
+Original Pentium 4 protsessorida 64 baytli cache blocklari bilan 8 KB hajmdagi to'rt tomonlama L1 associative ma'lumotlar keshi mavjud edi. Demak, `8 KiB / 64 = 128` cache blocklari mavjud.
+
+To'plamlar soni kesh bloklari sonining associativity yo'llari soniga bo'linishiga teng bo'lib, bu `128/4 = 32` to'plamga olib keladi va shuning uchun `2**5 = 32` different indekslar. 
+`2**6  = 64` mumkin bo'lgan ofset mavjud. CPU address kengligi 32 bit bo'lganligi sababli, bu tag maydoni uchun `32 - 5 - 6 = 21` bitni bildiradi.
+
+Original 4 protsessorida, shuningdek, 128 baytli cache block bilan 256 KiB o'lchamdagi sakkiz tomonlama o'rnatilgan L2 associative keshiga ega edi. Bu teg maydoni uchun `32 - 8 - 7 = 17` bitni bildiradi
 
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
