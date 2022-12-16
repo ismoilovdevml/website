@@ -40,6 +40,9 @@ Keyin memory cache protsessor ichidagi ma'lumotlarni oldinga va orqaga olib bora
 
 ## CPU Cache Memory darajalari: L1, L2 va L3
 
+![alt text](https://www.computerhope.com/issues/pictures/cpu-cache-die.png)
+
+
 CPU Cache memory uchta "level" ga bo'lingan: L1, L2 va L3. Xotira ierarxiyasi yana tezlik va shuning uchun kesh hajmiga bog'liq.
 
 Xo'sh, CPU cache hajmi ishlashga ta'sir qiladimi?
@@ -136,6 +139,8 @@ Motherboardagi keshlar `AMD K6-2` va `AMD K6-III` protsessorlari tufayli uzoq va
 
 ![alt text](https://images.macrumors.com/t/1ntCzE-GELQyTx3lKWF0S1T7AUo=/400x0/article-new/2013/09/m1-chip-unified-memory-architecture-speed.jpg?lossy)
 ![alt text](https://i0.wp.com/chipsandcheese.com/wp-content/uploads/2022/05/m1cache.png?resize=533%2C285&ssl=1)
+
+
 Apple `M1` protsessorida yadro turiga qarab har bir yadro uchun `128` yoki `192` KiB instruction L1 keshi mavjud (latenc/single-thread performance), faqat noutbuk uchun emas, balki har qanday CPU tipidagi L1 keshi uchun juda katta, umumiy kesh esa Xotira hajmi juda katta emas (jami o'tkazish qobiliyati uchun muhimroq), noutbuk uchun va ancha kattaroq umumiy o'lchamlar (masalan, L3 yoki L4) IBMning asosiy kompyuterlarida mavjud.
 
 ## Cache structure tuzilishi
@@ -194,4 +199,10 @@ Ixtisoslashuv va ko'p darajali keshlashni tasvirlash uchun bu erda AMD Athlon 64
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cache%2Chierarchy-example.svg/500px-Cache%2Chierarchy-example.svg.png)
 
 Xato va kamchiliklar bo'lsa uzur so'rayman )
+
+Foydanilgan Manbalar
+
+[Makeuseof.com](https://www.makeuseof.com/tag/what-is-cpu-cache/)
+
+[Wikipedia](https://en.wikipedia.org/wiki/CPU_cache)
 
