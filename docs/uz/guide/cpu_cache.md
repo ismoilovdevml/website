@@ -92,6 +92,13 @@ Kompyuterlar tezroq va samaraliroq bo'lishi bilan kechikish qisqarishda davom et
 
 ## CPU cache tarixi
 
+Kesh texnologiyasining dastlabki tarixi virtual xotiraning ixtirosi va ishlatilishi bilan chambarchas bog'liq. Yarim o'tkazgich xotiralarining tanqisligi va narxi tufayli 1960-yillardagi dastlabki asosiy kompyuterlar jismoniy xotiraning murakkab ierarxiyasidan foydalangan, ular dasturlar tomonidan ishlatiladigan tekis virtual xotira maydoniga joylashtirilgan. Xotira texnologiyalari yarim o'tkazgich, magnit yadro, drum va diskni qamrab oladi. Dasturlar tomonidan ko'rilgan va foydalaniladigan virtual xotira tekis bo'ladi va keshlash protsessorga kirishdan oldin ma'lumotlar va ko'rsatmalarni eng tez xotiraga olish uchun ishlatiladi. Kesh hajmini optimallashtirish uchun keng qamrovli tadqiqotlar o'tkazildi.
+
+Dastlabki kesh dizaynlari butunlay kesh va RAMning to'g'ridan-to'g'ri narxiga va o'rtacha bajarish tezligiga qaratilgan. Eng so'nggi kesh dizaynlarida energiya samaradorligi , nosozliklarga chidamlilik va boshqa maqsadlar ham hisobga olinadi.
+
+Kompyuter arxitektorlari uchun kesh aylanishi vaqti, energiya va maydon o'rtasidagi kelishuvlarni o'rganishga yordam beradigan bir nechta vositalar mavjud; CACTI kesh simulyatori va SimpleScalar ko'rsatmalar to'plami simulyatori ikkita ochiq manba variantidir.
+
+
 CPU cachening  dastlabki namunalari 1960-yillarda Atlas 2 va IBM System/360 Model 85 ni o'z ichiga oladi. Keshni ishlatgan birinchi protsessorlar faqat bitta darajadagi keshga ega edi; keyingi 1-darajali keshdan farqli o'laroq, u L1d (data uchun) va L1i (instructions uchun) ga bo'linmadi.
 
 Split L1 cache  1976 yilda IBM 801 protsessoridan boshlangan, 1980-yillarning oxirida mainstream aylandi va 1997 yilda ARMv5TE bilan o'rnatilgan CPU bozoriga kirdi
@@ -99,6 +106,29 @@ Split L1 cache  1976 yilda IBM 801 protsessoridan boshlangan, 1980-yillarning ox
 2015-yilda hatto sub-dollar SoC ham L1 keshini ajratdi. Ularda L2 keshlari va kattaroq protsessorlar uchun L3 keshlari ham mavjud. L2 keshi odatda bo'linmaydi va allaqachon ajratilgan L1 keshi uchun umumiy ombor vazifasini bajaradi.
 
 Ularda L2 keshlari va kattaroq protsessorlar uchun L3 keshlari ham mavjud. L2 keshi odatda bo'linmaydi va allaqachon ajratilgan L1 keshi uchun common repository vazifasini bajaradi. Ko'p yadroli protsessorning har bir yadrosi maxsus L1 keshiga ega va odatda yadrolar o'rtasida taqsimlanmaydi. L2 keshi va yuqori darajadagi keshlar yadrolar o'rtasida taqsimlanishi mumkin. L4 keshi hozirda kam uchraydi va odatda static random-access memory (SRAM) emas, balki dynamic random-access memory (DRAMning bir ko'rinishida) alohida qolipda yoki chipda (istisno, eDRAM shakli) mavjud. keshning barcha darajalari uchun L1 gacha ishlatiladi).
+### Birinchi  TLB implementations
+
+TLB dan birinchi hujjatlashtirilgan foydalanish GE 645 va IBM 360/67 da boʻlgan , ularning ikkalasi ham associative xotiradan TLB sifatida foydalangan.
+
+### Birinchi instruction cache
+
+Instruction cachedan birinchi hujjatlashtirilgan foydalanish CDC 6600 da bo'lgan 
+
+### Birinchi data cache
+
+Data cachedan birinchi hujjatlashtirilgan foydalanish IBM System/360 Model 85 da boʻlgan.
+
+### 68k microprocessorlarda
+
+1982-yilda chiqarilgan 68010 "loop mode" ga ega bo'lib, uni faqat ikkita ko'rsatmalardan iborat bo'lgan accelerates loop kichik va maxsus ko'rsatmalar keshi deb hisoblash mumkin. 1984 yilda chiqarilgan 68020 uni 256 baytlik odatiy ko'rsatmalar keshi bilan almashtirdi, bu haqiqiy chipdagi kesh xotirasiga ega bo'lgan birinchi 68k seriyali protsessor bo'ldi.
+
+### X86 mikroprotsessorlarida
+
+386 da x86 mikroprotsessorlari 20 MGts va undan yuqori soat tezligiga erishganligi sababli, unumdorlikni oshirish uchun tizimlarda kichik hajmdagi tez kesh xotirasi qo'llanila boshlandi. Buning sababi, asosiy xotira uchun ishlatiladigan DRAMning sezilarli kechikishi, 120 ns gacha, shuningdek, yangilash davrlari. Kesh qimmatroq, ammo sezilarli darajada tezroq SRAM xotira hujayralaridan qurilgan bo'lib, o'sha paytda ular taxminan 10-25 ns kechikishlarga ega edi. 
+
+X86 mikroprotsessorlarida keshni amalga oshirishning navbatdagi rivojlanishi `Pentium Pro` bilan boshlandi , u ikkilamchi keshni mikroprotsessor bilan bir xil chastotada mikroprotsessor bilan bir xil paketga olib keldi.
+
+Motherboardagi keshlar `AMD K6-2` va `AMD K6-III` protsessorlari tufayli uzoq vaqt mashhur bo'ldi, ular hali ham `Socket 7` dan foydalanadilar, bundan oldin Intel tomonidan motherboard keshlari bilan foydalanilgan. `K6-III` 256 KiB o'lchamdagi `L2` keshini o'z ichiga olgan va `L3` deb nomlangan uchinchi darajali kesh sifatida bortdagi keshdan foydalangan (2 Mb gacha board keshiga ega motherboardlar ishlab chiqarilgan). `Socket 7` eskirganidan so'ng, motherboardagi kesh x86 tizimlaridan yo'qoldi.
 
 ## Cache structure tuzilishi
 
