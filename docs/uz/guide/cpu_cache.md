@@ -137,6 +137,22 @@ To'plamlar soni kesh bloklari sonining associativity yo'llari soniga bo'linishig
 
 Original 4 protsessorida, shuningdek, 128 baytli cache block bilan 256 KiB o'lchamdagi sakkiz tomonlama o'rnatilgan L2 associative keshiga ega edi. Bu teg maydoni uchun `32 - 8 - 7 = 17` bitni bildiradi
 
+## Flag bits
+
+Instruction cache har bir cache rowga kirish uchun faqat flag bitini talab qiladi: joriy bit. Yaroqli bit cache block to'g'ri ma'lumotlar bilan yuklangan yoki yuklanmaganligini ko'rsatadi.
+
+Qurilma yoqilganda, hardware barcha keshlardagi barcha joriy bitlarni "invalid" ga o'rnatadi. Ba'zi tizimlar, shuningdek, boshqa paytlarda yaroqli bitni "invalid" qilib qo'yadi , masalan, bitta protsessor keshidagi multi-master bus snooping tekshirish hardware boshqa protsessordan address broadcastni eshitsa va local cachedagi ma'lum ma'lumotlar bloklari mavjudligini tushunsa. endi stale va invalid deb belgilanishi kerak.
+
+Data cache odatda har bir cache line uchun ikkita flag bitini talab qiladi - valid bit va dirty bit . Dirty bit to'plamiga ega bo'lish, bog'langan cache line asosiy xotiradan o'qilganidan beri o'zgartirilganligini ko'rsatadi ("dirty"), ya'ni protsessor ushbu qatorga ma'lumotlarni yozgan va yangi qiymat asosiy xotiraga to'liq tarqalmagan.
+
+## Cache miss
+
+
+Cache miss - bu keshdagi ma'lumotlarni o'qish yoki yozish bo'yicha muvaffaqiyatsiz urinish, bu esa asosiy xotiraga uzoqroq kechikish bilan kirishga olib keladi. Cache missning uchta turi mavjud: instruction read miss, data read miss va data write miss.
+
+Instruction cachedagi cache read miss yuborilganligi odatda eng katta kechikishga olib keladi, chunki protsessor yoki hech bo'lmaganda execution ishi instruction asosiy xotiradan olinmaguncha kutishi (to'xtab turishi) kerak. Ma'lumotlar keshidagi cache read miss odatda kichikroq kechikishni keltirib chiqaradi, chunki kesh o'qilishiga bog'liq bo'lmagan ko'rsatmalar berilishi mumkin va ma'lumotlar asosiy xotiradan qaytarilgunga qadar bajarishni davom ettiradi va bog'liq ko'rsatmalar executionni davom ettirishi mumkin. Ma'lumotlarga cache write miss odatda eng qisqa kechikishni keltirib chiqaradi, chunki yozishni navbatga qo'yish mumkin va keyingi ko'rsatmalarni bajarishda bir nechta cheklovlar mavjud; protsessor navbat to'lguncha davom etishi mumkin.
+
+
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
 Davomi Bor :) 
