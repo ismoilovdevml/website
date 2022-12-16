@@ -1,4 +1,4 @@
-# CPU cache qanday ishlaydi? L1, L2 va L3 cachelari nima?
+# CPU cache qanday ishlaydi?
 
 
 So'nggi yillarda kompyuter protsessorlari ancha rivojlangan. Har yili tranzistorlar kichrayadi va o'zgarishlar Moore's qonuni keraksiz bo'ladigan nuqtaga yetadi.
@@ -106,7 +106,8 @@ Split L1 cache  1976 yilda IBM 801 protsessoridan boshlangan, 1980-yillarning ox
 2015-yilda hatto sub-dollar SoC ham L1 keshini ajratdi. Ularda L2 keshlari va kattaroq protsessorlar uchun L3 keshlari ham mavjud. L2 keshi odatda bo'linmaydi va allaqachon ajratilgan L1 keshi uchun umumiy ombor vazifasini bajaradi.
 
 Ularda L2 keshlari va kattaroq protsessorlar uchun L3 keshlari ham mavjud. L2 keshi odatda bo'linmaydi va allaqachon ajratilgan L1 keshi uchun common repository vazifasini bajaradi. Ko'p yadroli protsessorning har bir yadrosi maxsus L1 keshiga ega va odatda yadrolar o'rtasida taqsimlanmaydi. L2 keshi va yuqori darajadagi keshlar yadrolar o'rtasida taqsimlanishi mumkin. L4 keshi hozirda kam uchraydi va odatda static random-access memory (SRAM) emas, balki dynamic random-access memory (DRAMning bir ko'rinishida) alohida qolipda yoki chipda (istisno, eDRAM shakli) mavjud. keshning barcha darajalari uchun L1 gacha ishlatiladi).
-### Birinchi  TLB implementations
+
+### Birinchi  TLB implementationlar
 
 TLB dan birinchi hujjatlashtirilgan foydalanish GE 645 va IBM 360/67 da boʻlgan , ularning ikkalasi ham associative xotiradan TLB sifatida foydalangan.
 
@@ -129,6 +130,10 @@ Data cachedan birinchi hujjatlashtirilgan foydalanish IBM System/360 Model 85 da
 X86 mikroprotsessorlarida keshni amalga oshirishning navbatdagi rivojlanishi `Pentium Pro` bilan boshlandi , u ikkilamchi keshni mikroprotsessor bilan bir xil chastotada mikroprotsessor bilan bir xil paketga olib keldi.
 
 Motherboardagi keshlar `AMD K6-2` va `AMD K6-III` protsessorlari tufayli uzoq vaqt mashhur bo'ldi, ular hali ham `Socket 7` dan foydalanadilar, bundan oldin Intel tomonidan motherboard keshlari bilan foydalanilgan. `K6-III` 256 KiB o'lchamdagi `L2` keshini o'z ichiga olgan va `L3` deb nomlangan uchinchi darajali kesh sifatida bortdagi keshdan foydalangan (2 Mb gacha board keshiga ega motherboardlar ishlab chiqarilgan). `Socket 7` eskirganidan so'ng, motherboardagi kesh x86 tizimlaridan yo'qoldi.
+
+### ARM mikroprotsessorlarida 
+
+Apple M1 protsessorida yadro turiga qarab har bir yadro uchun 128 yoki 192 KiB instruction L1 keshi mavjud (latenc/single-thread performance), faqat noutbuk uchun emas, balki har qanday CPU tipidagi L1 keshi uchun juda katta, umumiy kesh esa Xotira hajmi juda katta emas (jami o'tkazish qobiliyati uchun muhimroq), noutbuk uchun va ancha kattaroq umumiy o'lchamlar (masalan, L3 yoki L4) IBMning asosiy kompyuterlarida mavjud.
 
 ## Cache structure tuzilishi
 
