@@ -89,6 +89,36 @@ Kompyuterlar tezroq va samaraliroq bo'lishi bilan kechikish qisqarishda davom et
 
 [Qo'shimca ma'lumot uchun animatsion videorolik](https://www.youtube.com/watch?v=yi0FhRqDJfo)
 
+
+## CPU cache tarixi
+
+CPU cachening  dastlabki namunalari 1960-yillarda Atlas 2 va IBM System/360 Model 85 ni o'z ichiga oladi. Keshni ishlatgan birinchi protsessorlar faqat bitta darajadagi keshga ega edi; keyingi 1-darajali keshdan farqli o'laroq, u L1d (data uchun) va L1i (instructions uchun) ga bo'linmadi.
+
+Split L1 cache  1976 yilda IBM 801 protsessoridan boshlangan, 1980-yillarning oxirida mainstream aylandi va 1997 yilda ARMv5TE bilan o'rnatilgan CPU bozoriga kirdi
+
+2015-yilda hatto sub-dollar SoC ham L1 keshini ajratdi. Ularda L2 keshlari va kattaroq protsessorlar uchun L3 keshlari ham mavjud. L2 keshi odatda bo'linmaydi va allaqachon ajratilgan L1 keshi uchun umumiy ombor vazifasini bajaradi.
+
+Ularda L2 keshlari va kattaroq protsessorlar uchun L3 keshlari ham mavjud. L2 keshi odatda bo'linmaydi va allaqachon ajratilgan L1 keshi uchun common repository vazifasini bajaradi. Ko'p yadroli protsessorning har bir yadrosi maxsus L1 keshiga ega va odatda yadrolar o'rtasida taqsimlanmaydi. L2 keshi va yuqori darajadagi keshlar yadrolar o'rtasida taqsimlanishi mumkin. L4 keshi hozirda kam uchraydi va odatda static random-access memory (SRAM) emas, balki dynamic random-access memory (DRAMning bir ko'rinishida) alohida qolipda yoki chipda (istisno, eDRAM shakli) mavjud. keshning barcha darajalari uchun L1 gacha ishlatiladi).
+
+## Cache structure tuzilishi
+
+Cache row yozuvlari odatda quyidagi tuzilishga ega:
+
+| tag        | data block    | flag bits |
+| ---------- |:-------------:| ---------:|
+
+
+`data block (cache line)` asosiy xotiradan olingan haqiqiy ma'lumotlarni o'z ichiga oladi. `tag` asosiy xotiradan olingan haqiqiy ma'lumotlarning manzilini (qismini) o'z ichiga oladi.
+
+Keshning "size" - bu asosiy xotira ma'lumotlarining hajmi. Ushbu o'lchamni har bir ma'lumot blokida saqlangan baytlar soni keshda saqlangan bloklar soniga ko'ra hisoblash mumkin. (tag, flag va error correction code bitlari oʻlchamga kiritilmagan, lekin ular keshning jismoniy maydoniga taʼsir qilsa ham )
+
+cache line (xotira bloki) bilan birga keladigan samarali xotira manzili ( MSB dan LSB ga) tag, indeks va blok ofsetiga bo'linadi.
+
+| tag        | index         | block offset |
+| ---------- |:-------------:| ------------:|
+
+index ma'lumotlarning qaysi keshga kiritilganligini tavsiflaydi. index uzunligi ![alt text](https://wikimedia.org/api/rest_v1/media/math/render/svg/b36533bd5e32a9b0885d6a902752ea25dd1312c3) `s` cache sets uchun bitlar .
+
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
 Davomi Bor :) 
