@@ -93,3 +93,37 @@ Kompyuterning tezligi uning clock cycle(soat aylanishi) bilan belgilanadi. Bu ko
 CPU clock cycle gHz(Gigahertz) da o'lchanadi. 1gHz 10⁹ Hz(gerts) ga teng. Gerts soniyani bildiradi. Shunday qilib, 1 Gigahertz soniyada 10⁹ cycleni bildiradi.
 
 Clock cycle qanchalik tez bo'lsa, protsessor shunchalik ko'p instructionlarni bajarishi mumkin. Clock cycle = 1/soat tezligi CPU Time = clock cycle soni / clock rate
+
+Bu protsessor vaqtini yaxshilash uchun biz protsessorga taqdim etgan instructionni optimallashtirish orqali clock cycleni oshirishimiz yoki clock cycle sonini kamaytirishimiz mumkinligini anglatadi. Ba'zi protsessorlar clock cycleni oshirish qobiliyatini ta'minlaydi, ammo bu jismoniy o'zgarishlar bo'lgani uchun haddan tashqari issiqlik va hatto tutun/yong'in bo'lishi mumkin.
+
+### Instructio qanday bajariladi
+instructiolar operativ xotirada ketma-ket tartibda saqlanadi. Gipotetik protsessor uchun ko'rsatma OP kodi (operatsion kod) va memory yoki register addressdan iborat .
+
+Control Unit instructionlari registrida (IR) ikkita registr mavjud bo'lib, ular instructioning OP kodini yuklaydi va joriy bajaruvchi instructionning addresini yuklaydigan instruction address registrlari . Protsessor ichida buyruqning oxirgi 4 biti addresida saqlangan qiymatni saqlaydigan boshqa registrlar mavjud.
+
+Namuna, ikkita raqamni qo'shadigan instruction setiga misol keltiraylik. Quyida tavsif bilan birga instructionlar keltirilgan:
+
+* 1-QADAM — LOAD_A 8:
+
+Instruction dastlab RAMda saqlanadi, deylik <1100 1000>. Birinchi 4 bit op kodidir. Bu instructionni belgilaydi. Ushbu instruction control unitning IR- ga kiritiladi . Instruction load_A bo'lishi uchun dekodlanadi, ya'ni u A ni ro'yxatdan o'tkazish uchun instructionning oxirgi 4 biti bo'lgan 1000 addressiga ma'lumotlarni yuklash kerakligini anglatadi.
+
+* 2-QADAM — LOAD_B 2
+
+Yuqoridagi kabi, bu memory address 2 (0010) ma'lumotlarini CPU registr B ga yuklaydi.
+
+* 3-QADAM  - BA qo'shish
+
+Endi keyingi instruction bu ikki raqamni qo'shishdir. Bu erda CU ALUga qo'shish operatsiyasini bajarishni va natijani A registriga saqlashni buyuradi.
+
+* 4-QADAM — STORE_A 23
+
+Bu ikkita raqamni qo'shishga yordam beradigan juda oddiy instruction set.
+
+[Binary sonlarni Deciminalga convert qilib beradigan sayt](https://www.rapidtables.com/convert/number/binary-to-decimal.html)
+
+Biz ikkita raqamni muvaffaqiyatli qo'shdik!
+
+### BUS
+
+ CPU, register, memory va IO qurilmasi o'rtasidagi barcha ma'lumotlar `bus` orqali uzatiladi. Ma'lumotni o'zi qo'shgan xotiraga yuklash uchun protsessor memory addressni `address bus`ga va yig'indining natijasini `data bus`iga qo'yadi va `control bus`da to'g'ri signalni yoqadi. Shu tarzda ma'lumotlar bus yordamida xotiraga yuklanadi.
+ 
