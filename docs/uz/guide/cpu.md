@@ -126,4 +126,36 @@ Biz ikkita raqamni muvaffaqiyatli qo'shdik!
 ### BUS
 
  CPU, register, memory va IO qurilmasi o'rtasidagi barcha ma'lumotlar `bus` orqali uzatiladi. Ma'lumotni o'zi qo'shgan xotiraga yuklash uchun protsessor memory addressni `address bus`ga va yig'indining natijasini `data bus`iga qo'yadi va `control bus`da to'g'ri signalni yoqadi. Shu tarzda ma'lumotlar bus yordamida xotiraga yuklanadi.
- 
+
+ ![alt text](https://cdn-media-1.freecodecamp.org/images/1*N5wkXycN_ceV9HByxQUzCA.png)
+
+### Kesh
+
+CPU shuningdek, instructionlarni keshga oldindan yuklash mexanizmiga ega. Ma'lumki, protsessor bir soniya ichida bajarishi mumkin bo'lgan millionlab ko'rsatmalar mavjud. Bu shuni anglatadiki, instructionlarni RAMdan olish uchun ularni bajarishdan ko'ra ko'proq vaqt sarflanadi. Shunday qilib, protsessor keshi ba'zi instructionlar va ma'lumotlarni oldindan oladi, shunda bajarilishi tezlashadi.
+
+Cache va operatsion xotiradagi ma'lumotlar boshqacha bo'lsa, ma'lumotlar dirty bit sifatida belgilanadi .
+
+### Instruction pipelining
+
+Zamonaviy protsessor instructionni bajarishda parallellashtirish uchun `instruction pipelining`dan foydalanadi. Fetch, Decode, Execute. Agar bitta instruction dekodlash bosqichida bo'lsa, protsessor fetch bosqichi uchun boshqa instructionni qayta ishlashi mumkin.
+
+![alt text](https://cdn-media-1.freecodecamp.org/images/1*FJxls8ZBHc3l3tTKxrO6Sg.png)
+
+Bir instruction boshqasiga bog'liq bo'lsa, bu bitta muammoga ega. Shunday qilib, protsessorlar bog'liq bo'lmagan va har xil tartibda buyruqni bajaradilar.
+
+### Ko'p yadroli kompyuter
+Bu asosan boshqa CPU, lekin cache kabi ba'zi umumiy resourcega ega.
+
+### Performance
+
+Protsessor unumdorligi uning ishlash vaqti bilan belgilanadi. Performance = 1/execution time
+
+deylik, dasturni bajarish uchun 20ms vaqt ketadi. CPU unumdorligi 1/20 = 0,05 ms nisbiy ishlash = bajarish vaqti 1/ bajarilish vaqti 2
+
+Protsessor ishlashi uchun ko'rib chiqiladigan omil - bu buyruqni bajarish vaqti va protsessorning soat tezligi. Shunday qilib, dasturning ishlashini oshirish uchun biz clock speedni oshirishimiz yoki dasturdagi instructionlar sonini kamaytirishimiz kerak. Protsessor tezligi cheklangan va multi core zamonaviy kompyuterlar soniyada millionlab instructionlarni qo'llab-quvvatlaydi. Ammo biz yozgan dasturda ko'plab instructionlar mavjud bo'lsa, bu umumiy samaradorlikni pasaytiradi.
+
+Protsessor tezroq ishlashi uchun va imkon qadar ko'proq ishlashi uchun ko'plab optimallashtirishlar amalga oshirildi. Har qanday dasturni yozishda biz protsessorga beradigan instructionlar sonini kamaytirish kompyuter dasturining ishlashini qanday oshirishini hisobga olishimiz kerak.
+
+[CPU qanday ishlashi va qanday tuzulishi haqida ko'proq bilib olish uchun animatsion videorolik](https://www.youtube.com/watch?v=cNN_tTXABUA)
+
+## CPU qanday ishlashi va qanday tuzilganligi haqida mukammal bo'lim
