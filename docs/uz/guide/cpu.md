@@ -187,4 +187,32 @@ Massiv protsessorlari yoki vektor protsessorlari parallel ravishda ishlaydigan b
 
 ### CPU Tarixi
 
-`ENIAC` kabi dastlabki kompyuterlar turli vazifalarni bajarish uchun fizikaviy qayta o'rnatilishi kerak edi, bu esa bu mashinalarni `"fixed-program computers"` deb atalishiga olib keldi. `"central processing unit"` atamasi `1955` yildan beri qo'llanila boshlandi.
+`ENIAC` kabi dastlabki kompyuterlar turli vazifalarni bajarish uchun fizikaviy qayta o'rnatilishi kerak edi, bu esa bu mashinalarni `"fixed-program computers"` deb atalishiga olib keldi. `"central processing unit"` atamasi `1955` yildan beri qo'llanila boshlandi. `"CPU"` atamasi odatda  software (computer program) bajarish uchun qurilma sifatida ta'riflanganligi sababli, CPU deb nomlanishi mumkin bo'lgan eng dastlabki qurilmalar `"stored-program computer"` paydo bo'lishi bilan paydo bo'ldi.
+
+stored-program computer g'oyasi `J. Presper Ekkert` va `Jon Uilyam Mauchli`ning `ENIAC` dizaynida allaqachon mavjud bo'lgan, ammo uni tezroq tugatish uchun dastlab yo'q qilingan. 1945 yil 30 iyunda, `ENIAC` yaratilishidan oldin, matematik `Jon fon Neumann` `First Draft of a Report on the EDVAC` deb nomlangan maqolani tarqatdi. Bu 1949-yil avgustida yakunlangan stored-program computer outlini edi.
+
+![alt text](https://en.wikipedia.org/wiki/File:Edvac.jpg)
+
+Rasmda EDVAC birinchi stored-program computeri
+
+Dastlabki protsessorlar kattaroq va ba'zan o'ziga xos kompyuterning bir qismi sifatida ishlatiladigan maxsus dizaynlar edi. Biroq, ma'lum bir dastur uchun maxsus protsessorlarni loyihalashning ushbu usuli asosan katta miqdorda ishlab chiqarilgan ko'p maqsadli protsessorlarning rivojlanishiga yo'l ochdi.
+
+Ushbu standartlashtirish discrete transistorli asosiy kompyuterlar va  minicomputerlar davrida boshlangan va integral mikrosxemaning `(integrated circuit IC)` ommalashishi bilan tez sur'atlarda tezlashdi.
+
+### Transistorli protsessorlar 
+
+1964 yilda IBM o'zining IBM System/360 kompyuter arxitekturasini taqdim etdi, u bir xil dasturlarni turli tezlik va unumdorlik bilan ishga tushirishga qodir bo'lgan bir qator kompyuterlarda ishlatilgan.
+
+Ushbu yaxshilanishni osonlashtirish uchun IBM  microprogram kontseptsiyasidan (ko'pincha "microcode" deb ataladi) foydalangan, bu hali ham zamonaviy protsessorlarda keng qo'llaniladi.
+
+System/360 arxitekturasi shu qadar mashhur ediki, u o'nlab yillar davomida asosiy kompyuterlar bozorida hukmronlik qildi va IBM zSeries kabi zamonaviy kompyuterlar tomonidan davom ettirilayotgan meros qoldirdi.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/IBM_System_360_model_30_profile.agr.jpg/480px-IBM_System_360_model_30_profile.agr.jpg)
+
+Rasmda IBM System/360 
+
+1965 yilda `Digital Equipment Corporation (DEC)` ilmiy va tadqiqot bozorlariga qaratilgan yana bir nufuzli kompyuter `PDP-8` ni taqdim etdi.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/PDP-8_%281%29.jpg/359px-PDP-8_%281%29.jpg)
+
+Rasmda PDP-8
