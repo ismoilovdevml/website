@@ -1,5 +1,8 @@
 # CPU qanday ishlaydi?
 
+![alt text](https://www.howtogeek.com/wp-content/uploads/2020/10/cpu.jpg?height=200p&trim=2,2,2,2&crop=16:9)
+
+
 `Mikroprotsessor sifatida ham tanilgan CPU - bu kompyuterning yuragi va yoki miyasi. Kompyuter dasturlarini samarali yozishga yordam berish uchun kompyuterning yadrosiga chuqur kirib borishga imkon beradi.`
 
 Central Processing Unit (CPU) , asosiy protsessor yoki oddiy protsessor deb ham ataladigan central processor (CPU) kompyuter dasturini o'z ichiga olgan instructionlarni bajaradigan elektron sxemadir . Protsessor dasturdagi instructionlarda ko'rsatilgan asosiy arifmetik , mantiqiy, nazorat qilish va  input/output (I/O) operatsiyalarini bajaradi. Bu asosiy xotira va  I/O sxemasi kabi tashqi komponentlar va graphics processing units (GPU) kabi maxsus protsessorlardan farq qiladi.
@@ -33,3 +36,17 @@ Ko'pgina logic gatelar ikkita kirishni qabul qiladi va bitta chiqishni ishlab ch
 Quyida ikkita kirishni qabul qiladigan va natijani chiqaradigan yarim qo'shimcha sxemasiga misol keltirilgan. Bu erda A va B - kirish, S - chiqish va C - tashish.
 
 ![alt text](https://cdn-media-1.freecodecamp.org/images/1*u-VunK6bUafXlhubpGlNkA.png)
+
+### Storage - Registerlar va Memory
+CPU ning asosiy vazifasi unga berilgan ko'rsatmalarni bajarishdir. Ko'pincha ushbu ko'rsatmalarni qayta ishlash uchun unga ma'lumotlar kerak bo'ladi. Ba'zi ma'lumotlar intermediate data, ularning ba'zilari input va boshqalari outpudir. Ushbu ma'lumotlar ko'rsatmalar bilan birga quyidagi xotirada saqlanadi:
+
+### Registrlar
+Registr - bu ma'lumotlar saqlanishi mumkin bo'lgan kichik joylar to'plami. Registr latchesning birikmasidir . Flip-floplar deb ham ataladigan latchelar 1 bit ma'lumotni saqlaydigan ogic gates birikmasidir .
+
+Latchda ikkita input simi, write va input simi va bitta output simi mavjud. Saqlangan ma'lumotlarga o'zgartirish kiritish uchun write simini yoqishimiz mumkin. Write simi o'chirilgan bo'lsa, output har doim bir xil bo'lib qoladi.
+
+![alt text](https://cdn-media-1.freecodecamp.org/images/1*5WDU45YAH5CnICZOOvn1Yw.gif)
+
+Rasmda bir juft o'zaro bog'langan NOR gatedan qurilgan  SR latch
+
+CPU output ma'lumotlarini saqlash uchun registrlarga ega. Asosiy xotiraga (RAM) yuborish sekin bo'ladi, chunki u  intermediate data. Bu ma'lumotlar BUS orqali ulangan boshqa registrga yuboriladi . Registr ko'rsatmalarni, output ma'lumotlarini, storage addressni yoki har qanday ma'lumotlarni saqlashi mumkin.
