@@ -5,6 +5,18 @@
 
 `Mikroprotsessor sifatida ham tanilgan CPU - bu kompyuterning yuragi va yoki miyasi. Kompyuter dasturlarini samarali yozishga yordam berish uchun kompyuterning yadrosiga chuqur kirib borishga imkon beradi.`
 
+:::tip
+Bazi so'zlar ma'nosi:
+* Central Processing Unit (CPU) - Markaziy ishlov berish bloki
+* input/output - kirish/chiqish
+* Control Unit CU - Boshqaruv bloki
+* instruction - ko'rsatmalar
+* Clock cycle - Soat aylanishi
+* Memory, Storage - Xotira
+* ALU - Arifmetik va mantiqiy birlik
+* GPU Graphics Processing Unit - Grafik ishlov berish bloki
+::: 
+
 Central Processing Unit (CPU) , asosiy protsessor yoki oddiy protsessor deb ham ataladigan central processor (CPU) kompyuter dasturini o'z ichiga olgan instructionlarni bajaradigan elektron sxemadir . Protsessor dasturdagi instructionlarda ko'rsatilgan asosiy arifmetik , mantiqiy, nazorat qilish va  input/output (I/O) operatsiyalarini bajaradi. Bu asosiy xotira va  I/O sxemasi kabi tashqi komponentlar va graphics processing units (GPU) kabi maxsus protsessorlardan farq qiladi.
 
 
@@ -15,7 +27,7 @@ CPU - bu kompyuterning yuragi va yoki miyasi. U o'ziga berilgan instructionlarni
 ### Protsessorning ikkita asosiy komponenti
 
 * Control unit (Boshqarish bloki)  - CU
-* Arifmetik va mantiqiy birlik - ALU
+* Arifmetik va  logical unit - ALU
 
 ### Control Unit (Boshqaruv bloki) — CU
 
@@ -69,3 +81,15 @@ Instructionlarga quyidagilar kiradi:
 Instructionlar kompyuterga assembler tilidan foydalangan holda taqdim etiladi yoki kompilyator tomonidan ishlab chiqariladi yoki ba'zi high level dasturlash tillarida talqin qilinadi.
 
 Ushbu instructionlar protsessor ichida hardwired. ALU arifmetik va mantiqiy ma'lumotlarni o'z ichiga oladi, chunki control flow CU tomonidan boshqariladi.
+
+Bir soat siklida kompyuterlar bitta buyruqni bajarishi mumkin, ammo zamonaviy kompyuterlar bir nechta buyruqlarni bajarishi mumkin.
+
+Kompyuter bajarishi mumkin bo'lgan instructionlar guruhiga instruction set deyiladi .
+
+### CPU clock - Clock cycle
+
+Kompyuterning tezligi uning clock cycle(soat aylanishi) bilan belgilanadi. Bu kompyuterning sekundiga ishlayotgan clock period(soat davri) soni . Bitta soat sikllari juda kichik, taxminan 250 * 10 *-12 sec. Clock cycle qanchalik baland bo'lsa, protsessor tezroq bo'ladi.
+
+CPU clock cycle gHz(Gigahertz) da o'lchanadi. 1gHz 10⁹ Hz(gerts) ga teng. Gerts soniyani bildiradi. Shunday qilib, 1 Gigahertz soniyada 10⁹ cycleni bildiradi.
+
+Clock cycle qanchalik tez bo'lsa, protsessor shunchalik ko'p instructionlarni bajarishi mumkin. Clock cycle = 1/soat tezligi CPU Time = clock cycle soni / clock rate
