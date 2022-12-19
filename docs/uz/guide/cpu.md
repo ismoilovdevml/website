@@ -191,7 +191,7 @@ Massiv protsessorlari yoki vektor protsessorlari parallel ravishda ishlaydigan b
 
 stored-program computer g'oyasi `J. Presper Ekkert` va `Jon Uilyam Mauchli`ning `ENIAC` dizaynida allaqachon mavjud bo'lgan, ammo uni tezroq tugatish uchun dastlab yo'q qilingan. 1945 yil 30 iyunda, `ENIAC` yaratilishidan oldin, matematik `Jon fon Neumann` `First Draft of a Report on the EDVAC` deb nomlangan maqolani tarqatdi. Bu 1949-yil avgustida yakunlangan stored-program computer outlini edi.
 
-![alt text](https://en.wikipedia.org/wiki/File:Edvac.jpg)
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Edvac.jpg/330px-Edvac.jpg)
 
 Rasmda EDVAC birinchi stored-program computeri
 
@@ -216,3 +216,38 @@ Rasmda IBM System/360
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/PDP-8_%281%29.jpg/359px-PDP-8_%281%29.jpg)
 
 Rasmda PDP-8
+
+### Kichik o'lchamli integratsiya protsessorlari 
+
+Integratsiyalashgan sxema (IC) ko'p sonli tranzistorlarni bitta yarimo'tkazgichga asoslangan matritsa yoki "chip" da ishlab chiqarishga imkon berdi.
+Dastlab, `NOR gates`  kabi juda oddiy ixtisoslashmagan raqamli sxemalar ICga miniatyura qilingan.
+Ushbu "building block" IC'larga asoslangan protsessorlar odatda "small-scale integration" (SSI) qurilmalari deb ataladi.
+IBM `System/370`, System/360 ning davomi bo'lib, `Solid Logic Technology` discrete-transistorli modullardan ko'ra `SSI IC`-lardan foydalangan.
+`DEC`-ning PDP-8/I va KI10 PDP-10 qurilmalari ham PDP-8 va PDP-10 tomonidan ishlatiladigan individual tranzistorlardan `SSI IC`-lariga o'tdi va ularning juda mashhur PDP-11 liniyasi dastlab SSI IC-lari bilan qurilgan, ammo oxir-oqibat `LSI` komponentlari amaliy holga kelganidan keyin amalga oshirildi.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/IBM_PPC604e_200.jpg/330px-IBM_PPC604e_200.jpg)
+
+Rasmda `IBM PowerPC 604e` protsessori
+
+### Keng miqyosli integratsiya protsessorlari 
+`Lee Boysel` nufuzli maqolalarini, shu jumladan 1967 yildagi `"manifesto"` nashr etdi, unda `32-bitli` asosiy kompyuterning ekvivalentini nisbatan kichik miqdordagi keng ko'lamli integratsiya sxemalaridan (LSI) qanday qurish mumkinligi tasvirlangan.
+
+Yuz yoki undan ortiq gateli chiplar bo'lgan LSI chiplarini yaratishning yagona usuli ularni metall-oksid-yarim o'tkazgich `(metal–oxide–semiconductor MOS)` yarimo'tkazgich ishlab chiqarish jarayoni (PMOS logic, NMOS logic yoki  CMOS logic) yordamida qurish edi.
+Biroq, ba'zi kompaniyalar bipolyar  `transistor–transistor logic (TTL)` chiplaridan protsessorlar yaratishda davom etishdi, chunki bipolyar ulanish tranzistorlari 1970-yillarga qadar `MOS` chiplariga qaraganda tezroq edi.
+
+1968 yilda Fairchild Semiconductor kompaniyasida Federico Faggin tomonidan silicon-gate MOS texnologiyasini ishlab chiqqandan so'ng, MOS IC 1970-yillarning boshlarida standart chip texnologiyasi sifatida bipolyar TTL o'rnini egalladi.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Federico_Faggin_%28cropped%29.jpg/382px-Federico_Faggin_%28cropped%29.jpg)
+
+Rasmda Federico Faggin
+
+1968 yilga kelib, to'liq protsessorni yaratish uchun zarur bo'lgan IClar soni sakkiz xil turdagi 24 ICga qisqartirildi, har bir ICda taxminan `1000 MOSFET` mavjud.
+
+### Microprocessor - Mikroprotsessorlar 
+
+Mikroprotsessorlar birinchi marta paydo bo'lganidan beri ular markaziy protsessorlarni amalga oshirishning boshqa barcha usullarini deyarli butunlay ortda qoldirdilar. 1971 yilda ishlab chiqarilgan birinchi tijorat mikroprotsessori `Intel 4004` va 1974 yilda ishlab chiqarilgan birinchi keng tarqalgan mikroprotsessor `Intel 8080` edi.
+
+![alt text](https://hackaday.com/wp-content/uploads/2018/01/intel_c4004_b.jpg?w=640)
+![alt text](https://upload.wikimedia.org/wikipedia/commons/3/3a/KL_Intel_i8080_Black_Background.jpg)
+
+Rasmda Intel 4004 va Intel 8080 protsessorlari
