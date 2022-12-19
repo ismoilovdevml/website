@@ -169,3 +169,22 @@ Protsessor tezroq ishlashi uchun va imkon qadar ko'proq ishlashi uchun ko'plab o
 [CPU qanday ishlashi va qanday tuzulishi haqida ko'proq bilib olish uchun animatsion videorolik](https://www.youtube.com/watch?v=cNN_tTXABUA)
 
 ## 2-qism: CPU qanday ishlaydi va qanday tuzilgan (chuqurlashtirilgan)
+
+### Central Processing Unit - CPU
+
+Central Processorr, main protsessor yoki oddiy protsessor deb ham ataladigan central processing unit (CPU) kompyuter dasturini o'z ichiga olgan  instructionlarni bajaradigan elektron sxemadir.
+
+Protsessor dasturdagi instructionlarda ko'rsatilgan asosiy arifmetik, mantiqiy, nazorat qilish va  input/output (I/O) operatsiyalarini bajaradi. Bu asosiy xotira va input/output  I/O sxemasi kabi tashqi komponentlar va graphics processing units (GPU) kabi maxsus protsessorlardan farq qiladi.
+Vaqt o'tishi bilan protsessorlarning shakli, dizayni va implementation o'zgargan, ammo ularning asosiy ishlashi deyarli o'zgarmagan.
+
+Protsessorning asosiy komponentlariga arifmetik va mantiqiy amallarni bajaradigan arithmetic–logic unit (ALU), ALU ga operandlarni yetkazib beruvchi va ALU operatsiyalari natijalarini saqlaydigan protsessor registrlari va fetchni (xotiradan) tashkil qiluvchi control unit kiradi. ALU, registrlar va boshqa komponentlarning muvofiqlashtirilgan operatsiyalarini boshqarish orqali dekodlash va  executionni (instruction) tartibga soluvchi control unit.
+
+Ko'pgina zamonaviy protsessorlar bir yoki bir nechta protsessorlar bitta IC chipida o'rnatilgan integral mikrosxema (IC) mikroprotsessorlarida amalga oshiriladi. Multiple CPU mikroprotsessorli chiplar  multi-core protsessorlardir. Alohida fizikal protsessorlar, protsessor yadrolari , shuningdek, qo'shimcha virtual yoki logical CPUlarni yaratish uchun multithreaded bo'lishi mumkin.
+
+Protsessorni o'z ichiga olgan ICda xotira ,  peripheral interfeyslar va kompyuterning boshqa komponentlari ham bo'lishi mumkin; bunday o'rnatilgan qurilmalar turlicha mikrokontrollerlar yoki chipdagi tizimlar (SoC) deb ataladi .
+
+Massiv protsessorlari yoki vektor protsessorlari parallel ravishda ishlaydigan bir nechta protsessorlarga ega bo'lib, central unit hisoblanmaydi. Virtual protsessorlar dinamik jamlangan hisoblash resurslarining abstractligidir.
+
+### CPU Tarixi
+
+`ENIAC` kabi dastlabki kompyuterlar turli vazifalarni bajarish uchun fizikaviy qayta o'rnatilishi kerak edi, bu esa bu mashinalarni `"fixed-program computers"` deb atalishiga olib keldi. `"central processing unit"` atamasi `1955` yildan beri qo'llanila boshlandi.
