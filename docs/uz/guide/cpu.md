@@ -251,3 +251,23 @@ Mikroprotsessorlar birinchi marta paydo bo'lganidan beri ular markaziy protsesso
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/3/3a/KL_Intel_i8080_Black_Background.jpg)
 
 Rasmda Intel 4004 va Intel 8080 protsessorlari
+
+Hamma joyda keng tarqalgan shaxsiy kompyuterning paydo bo'lishi va yakuniy muvaffaqiyati bilan birgalikda CPU atamasi endi deyarli faqat mikroprotsessorlarga nisbatan qo'llaniladi.
+Oldingi protsessorlar bir yoki bir nechta elektron platalarda discrete componentlar va ko'p sonli kichik integral mikrosxemalar (IC) sifatida amalga oshirilgan.Mikroprotsessorlar esa juda oz sonli IClarda ishlab chiqarilgan protsessorlardir; odatda bitta.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Componentes.JPG/480px-Componentes.JPG)
+
+Rasmda discrete componentlari
+## Operation
+
+Ko'pgina protsessorlarning asosiy ishi, ularning jismoniy shaklidan qat'i nazar, dastur deb ataladigan saqlangan  instructionlar ketma-ketligini bajarishdir.
+Bajarilishi kerak bo'lgan instructionlar kompyuterning qandaydir xotirasida saqlanadi. Deyarli barcha protsessorlar o'zlarining ishlashida  instruction cycle deb nomlanuvchi fetch, decode va execute bosqichlarini bajaradilar. Murakkab protsessorlarda bir vaqtning o'zida multiple instructionlar olinishi, dekodlanishi va execute bo'lishi mumkin mumkin.
+### Fetch
+
+Fetch - program memorydan buyruqni (son yoki raqamlar ketma-ketligi bilan ifodalangan) olishni o'z ichiga oladi. Instructionning program memordagi joylashuvi (ddress)  program counter (Intel x86 mikroprotsessorlarida "instruction pointer" deb ataladi) tomonidan aniqlanadi, u keyingi fetch ko'rsatmaning manzilini aniqlaydigan raqamni saqlaydi.
+
+Instruction fetchdan so'ng, shaxsiy kompyuter buyruqning uzunligiga ko'paytiriladi, shunda u ketma-ketlikda keyingi instructionning addressini o'z ichiga oladi. Ko'pincha, fetch  instructionga nisbatan sekin xotiradan olinishi kerak, bu esa instruction return bo'lishini kutayotganda CPU to'xtab qoladi. Ushbu muammo asosan zamonaviy protsessorlarda cache va pipeline architecturelari orqali hal qilinadi.
+
+### Decode
+
+CPU xotiradan oladigan instruction CPU nima qilishini aniqlaydi. Instruction decoder deb nomlanuvchi binary decoder  sxemasi tomonidan bajariladigan dekodlash bosqichida instruction protsessorning boshqa qismlarini boshqaradigan signallarga aylanadi.
