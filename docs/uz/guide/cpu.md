@@ -2,6 +2,15 @@
 
 ![alt text](https://www.howtogeek.com/wp-content/uploads/2020/10/cpu.jpg?height=200p&trim=2,2,2,2&crop=16:9)
 
+Bu mavzu sal kattaroq shuning uchun mavzuni ikki qismga bo'ldim. Birinchi qismda CPU asoslari va asosiy yuzaki ma'lumotlar bilan tushuntiriladi. Ikkinchi qismda esa mavzu chuqurlashtirilgan holda tushuntiriladi.
+
+:::tip
+Bu ma'lumotlardan to'liq foydalanish uchun tavsiyalar!
+* Etibor bilan o'qib chiqing jumlalarga e'tibor bering!
+* Rasmlarni kuzatib boring!
+* Olgan ma'lumotlarimgizni mustahkamlash uchun Animatsion videolarni ko'ring!
+* Animatsion videorolikni ko'rish yanada yaxshiroq tushunishingizga yordam beradi!
+:::
 
 `Mikroprotsessor sifatida ham tanilgan CPU - bu kompyuterning yuragi va yoki miyasi. Kompyuter dasturlarini samarali yozishga yordam berish uchun kompyuterning yadrosiga chuqur kirib borishga imkon beradi.`
 
@@ -17,6 +26,7 @@ Bazi so'zlar ma'nosi:
 * GPU Graphics Processing Unit - Grafik ishlov berish bloki
 ::: 
 
+## 1-qism: CPU asoslari
 Central Processing Unit (CPU) , asosiy protsessor yoki oddiy protsessor deb ham ataladigan central processor (CPU) kompyuter dasturini o'z ichiga olgan instructionlarni bajaradigan elektron sxemadir . Protsessor dasturdagi instructionlarda ko'rsatilgan asosiy arifmetik , mantiqiy, nazorat qilish va  input/output (I/O) operatsiyalarini bajaradi. Bu asosiy xotira va  I/O sxemasi kabi tashqi komponentlar va graphics processing units (GPU) kabi maxsus protsessorlardan farq qiladi.
 
 
@@ -158,4 +168,4 @@ Protsessor tezroq ishlashi uchun va imkon qadar ko'proq ishlashi uchun ko'plab o
 
 [CPU qanday ishlashi va qanday tuzulishi haqida ko'proq bilib olish uchun animatsion videorolik](https://www.youtube.com/watch?v=cNN_tTXABUA)
 
-## CPU qanday ishlashi va qanday tuzilganligi haqida mukammal bo'lim
+## 2-qism: CPU qanday ishlaydi va qanday tuzilgan (chuqurlashtirilgan)
