@@ -294,4 +294,7 @@ Ba'zi protsessor konstruktsiyalarida instruction decode hardwiredir, o'zgarmas b
 
 ### Execute
 
-Fetch va decode bosqichlaridan so'ng, execut bosqichi amalga oshiriladi. CPU arxitekturasiga qarab, bu single action yoki sequence actiondan iborat bo'lishi mumkin
+Fetch va decode bosqichlaridan so'ng, execut bosqichi amalga oshiriladi. CPU arxitekturasiga qarab, bu single action yoki sequence actiondan iborat bo'lishi mumkin. 
+Har bir action davomida control signallari protsessorning turli qismlarini elektr bilan yoqadi yoki o'chiradi, shuning uchun ular kerakli operatsiyani to'liq yoki bir qismini bajarishlari mumkin. Keyin action odatda clock pulsega javoban yakunlanadi. Ko'pincha natijalar keyingi instructionlarga tez kirish uchun internal CPU registriga yoziladi. Boshqa hollarda natijalar sekinroq, lekin arzonroq va yuqori sig'imli asosiy xotiraga yozilishi mumkin.
+
+Misol uchun, agar qo'shish buyrug'i bajariladigan bo'lsa, operandlarni o'z ichiga olgan registrlar, qo'shishni amalga oshiradigan arithmetic logic unit (ALU) qismlari faollashadi. Clock pulsei sodir bo'lganda, operandlar manba registrlaridan ALUga  o'tadi va yig'indisi uning chiqishida paydo bo'ladi. Keyingi clock pulslarida outputni (operatsiya yig'indisini) saqlashga (masalan, registr yoki xotira) ko'chirish uchun boshqa komponentlar yoqiladi (va o'chiriladi). Olingan yig'indi juda katta bo'lsa (ya'ni, u ALU ning output so'z hajmidan kattaroq bo'lsa), keyingi operatsiyaga ta'sir qiluvchi `arithmetic overflow flag` o'rnatiladi.
