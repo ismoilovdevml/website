@@ -170,6 +170,19 @@ Protsessor tezroq ishlashi uchun va imkon qadar ko'proq ishlashi uchun ko'plab o
 
 ## 2-qism: CPU qanday ishlaydi va qanday tuzilgan (chuqurlashtirilgan)
 
+:::tip
+## Central Processing Unit - CPU
+## 1 CPU Tarixi
+* 1.1 Transistorli protsessorlar
+* 1.2 Kichik o'lchamli integratsiya protsessorlari
+* 1.3 Keng miqyosli integratsiya protsessorlari 
+* 1.4 Mikroprotsessorlar 
+## 2 Operation
+* 2.1 Fetch
+* 2.2 Decode
+* 2.3 Execute
+:::
+
 ### Central Processing Unit - CPU
 
 Central Processorr, main protsessor yoki oddiy protsessor deb ham ataladigan central processing unit (CPU) kompyuter dasturini o'z ichiga olgan  instructionlarni bajaradigan elektron sxemadir.
@@ -271,3 +284,14 @@ Instruction fetchdan so'ng, shaxsiy kompyuter buyruqning uzunligiga ko'paytirila
 ### Decode
 
 CPU xotiradan oladigan instruction CPU nima qilishini aniqlaydi. Instruction decoder deb nomlanuvchi binary decoder  sxemasi tomonidan bajariladigan dekodlash bosqichida instruction protsessorning boshqa qismlarini boshqaradigan signallarga aylanadi.
+Instructionni interpretation qilish usuli CPU instruction set architecture (ISA) bilan belgilanadi.
+
+Ko'pincha, opcode deb ataladigan buyruq ichidagi bitlarning bir guruhi (ya'ni "field") qaysi instruction bajarish kerakligini ko'rsatadi, qolgan fieldlar odatda operandlar kabi operatsiya uchun zarur bo'lgan qo'shimcha ma'lumotlarni beradi.
+
+Ushbu operandlar constant value (immediate value deb ataladi) yoki ba'zi bir addressing mode tomonidan aniqlangan protsessor registri yoki memory address bo'lishi mumkin bo'lgan qiymatning addressi sifatida ko'rsatilishi mumkin.
+
+Ba'zi protsessor konstruktsiyalarida instruction decode hardwiredir, o'zgarmas binary decode sxemasi sifatida amalga oshiriladi. Boshqalarida mikrodastur  instructiolarni  multiple clock pulslari bo'yicha ketma-ket qo'llaniladigan CPU konfiguratsiya signallari setiga  translate qilish uchun ishlatiladi.
+
+### Execute
+
+Fetch va decode bosqichlaridan so'ng, execut bosqichi amalga oshiriladi. CPU arxitekturasiga qarab, bu single action yoki sequence actiondan iborat bo'lishi mumkin
