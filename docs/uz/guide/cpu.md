@@ -171,13 +171,13 @@ Protsessor tezroq ishlashi uchun va imkon qadar ko'proq ishlashi uchun ko'plab o
 ## 2-qism: CPU qanday ishlaydi va qanday tuzilgan (chuqurlashtirilgan)
 
 :::tip
-## Central Processing Unit - CPU
-## 1 CPU Tarixi
+### Central Processing Unit - CPU
+### 1 CPU Tarixi
 * 1.1 Transistorli protsessorlar
 * 1.2 Kichik o'lchamli integratsiya protsessorlari
 * 1.3 Keng miqyosli integratsiya protsessorlari 
 * 1.4 Mikroprotsessorlar 
-## 2 Operation
+### 2 Operation
 * 2.1 Fetch
 * 2.2 Decode
 * 2.3 Execute
