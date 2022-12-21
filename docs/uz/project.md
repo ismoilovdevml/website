@@ -27,7 +27,7 @@ Loyiha ustida ishlanmoqda
 ## Open Source dasturchi blogi
 
 O'zimga qiziq bo'lgan texnogogiyalar haqida maqolalar va texnik hujjatlar joylab boradigan blog vebsayt.
-Bu loyiha Open Source hisoblanadi loyiga o'z hissangizni qo'shishingiz mumkin.
+Bu loyiha Open Source hisoblanadi loyihaga o'z hissangizni qo'shishingiz mumkin.
 
 Veb-sayt: [ismoilovdev.vercel.app](https://ismoilovdev.vercel.app/)
 

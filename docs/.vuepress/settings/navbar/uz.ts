@@ -8,7 +8,7 @@ export const navbarUz: NavbarConfig = [
   },
   {
     text: 'Loyihalar',
-    link: '/uz/wip/',
+    link: '/uz/project/',
   },
   {
     text: 'Foydali',

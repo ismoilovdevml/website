@@ -8,7 +8,7 @@ export const navbarEn: NavbarConfig = [
   },
   {
     text: 'Projects',
-    link: '/wip/',
+    link: '/en/project/',
   },
   {
     text: 'Useful',
@@ -30,6 +30,6 @@ export const navbarEn: NavbarConfig = [
   },
   {
     text: "Contact",
-    link: '/uz/contact.md'
+    link: '/en/contact.md'
   }
 ]
