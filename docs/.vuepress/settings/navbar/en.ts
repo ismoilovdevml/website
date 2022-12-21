@@ -4,7 +4,7 @@ import { version } from '../meta.js'
 export const navbarEn: NavbarConfig = [
   {
     text: 'Guide',
-    link: '/guide/',
+    link: '/en/guide/map',
   },
   {
     text: 'Projects',
