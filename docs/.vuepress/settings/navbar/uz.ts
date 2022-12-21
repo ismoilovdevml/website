@@ -27,5 +27,9 @@ export const navbarUz: NavbarConfig = [
   {
     text: 'Donate',
     link: '/uz/donate/'
+  },
+  {
+    text: "Bog'lanish",
+    link: '/uz/contact.md'
   }
 ]
