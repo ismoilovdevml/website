@@ -188,6 +188,7 @@ Protsessor tezroq ishlashi uchun va imkon qadar ko'proq ishlashi uchun ko'plab o
 * Memory Management Unit (MMU)
 * Cache
 * Clock rate
+* Clockless CPU
 :::
 
 ### Central Processing Unit - CPU
@@ -387,3 +388,31 @@ CPU cache haqida to'liqroq ma'lumot berilgan maqola bor. Ushbu maqoladan CPU cac
 
 
 ### Clock rate
+
+Aksariyat protsessorlar sinxron sxemalardir, ya'ni ular ketma-ket operatsiyalarini tezlashtirish uchun clock signalidan foydalanadilar. Clock signali davriy square wave shaklida har soniyada doimiy miqdordagi impulslarni hosil qiluvchi external oscillator davri tomonidan ishlab chiqariladi. Clock pulselarining chastotasi protsessor instructionlarni bajarish tezligini belgilaydi va shuning uchun sclock qanchalik tez bo'lsa, protsessor har soniyada ko'proq instructionlarni bajaradi.
+Protsessorning to'g'ri ishlashini ta'minlash uchun clock period barcha signallarning protsessor orqali tarqalishi (move) uchun zarur bo'lgan maksimal vaqtdan uzoqroqdir. 
+
+Clock periodi tarqalishning eng yomon kechikishidan ancha yuqori qiymatga o'rnatgan holda, butun protsessorni va uning ko'tarilgan va pasaygan clock signalining "edges" atrofida ma'lumotlarni harakatlantirish usulini loyihalash mumkin. Bu protsessorni dizayn nuqtai nazaridan ham, komponentlar soni nuqtai nazaridan ham sezilarli darajada soddalashtirishning afzalligi.
+
+Doimiy o'zgarib turadigan clock ko'plab komponentlarning o'sha paytda ishlatilishidan qat'iy nazar o'zgarishiga olib keladi. Umuman olganda, o'zgaruvchan komponent statik holatdagi elementga qaraganda ko'proq energiya sarflaydi. Shuning uchun, clock rate oshgani sayin, energiya iste'moli ortadi, bu esa protsessorni protsessor sovutish yechimlari shaklida ko'proq issiqlik tarqalishini talab qiladi.
+
+So'nggi paytlarda keng ko'lamli clock modedan foydalanadigan diqqatga sazovor protsessor dizayni `Xbox 360` da ishlatiladigan `IBM PowerPC`-ga asoslangan `Xenon`dir; Shunday qilib, Xbox 360 ning quvvat talablari sezilarli darajada kamayadi.
+
+
+### Clockless CPU
+
+Global clock signali bilan bog'liq ba'zi muammolarni hal qilishning yana bir usuli - bu clock signalini butunlay olib tashlash.
+Global clock signalini olib tashlash dizayn jarayonini ko'p jihatdan ancha murakkablashtirgan bo'lsa-da, asinxron  dizaynlar shunga o'xshash sinxron dizaynlarga nisbatan energiya iste'moli va issiqlik tarqalishida sezilarli afzalliklarga ega.
+Biroz kam uchraydigan bo'lsa-da, butun asinxron protsessorlar global clock signalidan foydalanmasdan qurilgan. Bunga ikkita diqqatga sazovor misol - `ARM`-ga mos keladigan `AMULET` va `MIPS R3000`-ga mos keladigan `MiniMIPS`.
+
+Ba'zi protsessor konstruktsiyalari clock signa lini butunlay olib tashlash o'rniga, qurilmaning ba'zi qismlarini asinxron bo'lishiga imkon beradi, masalan, asinxron ALU-larni superscalar pipelining bilan birgalikda arifmetik samaradorlikka erishish uchun ishlatish.
+
+### Voltage regulator module
+
+`Voltage Regulator Module (VRM)`, ba'zan `Processor Power Module (PPM) `deb ataladi, mikroprotsessor va chipsetni mos keladigan kuchlanish kuchlanishini ta'minlaydigan, +3,3 V, +5 V yoki +12 V kuchlanishni qurilmalar tomonidan talab qilinadigan pastroq kuchlanishga aylantiruvchi konvertordir. , har xil ta'minot kuchlanishiga ega qurilmalarni bir xil motherboardga o'rnatishga imkon beradi. Shaxsiy kompyuter (PC) tizimlarida VRM odatda quvvatli MOSFET qurilmalaridan iborat.
+
+Ko'pgina zamonaviy protsessorlarda power managing moduli o'rnatilgan bo'lib, u protsessor sxemasiga talab bo'yicha kuchlanish ta'minotini tartibga soladi, bu esa ishlash va quvvat sarfi o'rtasidagi muvozanatni saqlashga imkon beradi.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Voltage_regulator_module_for_an_Intel_Xeon_500_MHz_processor.jpg/465px-Voltage_regulator_module_for_an_Intel_Xeon_500_MHz_processor.jpg)
+
+Rasmda `Intel Xeon 500 MHz` protsessorida ishlaydigan ` IBM Netfinity 7000 M10` serveri uchun Voltage Regulator Moduli (VRM)
