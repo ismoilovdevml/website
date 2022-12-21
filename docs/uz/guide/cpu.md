@@ -416,3 +416,33 @@ Ko'pgina zamonaviy protsessorlarda power managing moduli o'rnatilgan bo'lib, u p
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Voltage_regulator_module_for_an_Intel_Xeon_500_MHz_processor.jpg/465px-Voltage_regulator_module_for_an_Intel_Xeon_500_MHz_processor.jpg)
 
 Rasmda `Intel Xeon 500 MHz` protsessorida ishlaydigan ` IBM Netfinity 7000 M10` serveri uchun Voltage Regulator Moduli (VRM)
+
+
+### Integer range
+
+Har bir CPU ma'lum bir tarzda raqamli qiymatlarni ifodalaydi. Misol uchun, ba'zi dastlabki raqamli kompyuterlar raqamlarni tanish o'nlik (10 ta baza) raqamli tizim qiymatlari sifatida ifodalagan, boshqalari esa uchlik (uchlik asos) kabi noodatiy ko'rinishlardan foydalangan. Barcha zamonaviy protsessorlar  binary formda raqamlarni ifodalaydi, har bir raqam "high" yoki "low" kuchlanish kabi ikki qiymatli jismoniy miqdor bilan ifodalanadi.
+
+Ikkilik protsessor bo'lsa, bu protsessor bitta operatsiyada ishlov berishi mumkin bo'lgan bitlar soni (ikkilik kodlangan butun sonning muhim raqamlari) bilan o'lchanadi, bu odatda word size, bit width, data path width, integer precision yoki integer size
+
+Protsessorning butun son o‘lchami u to‘g‘ridan-to‘g‘ri ishlashi mumkin bo‘lgan butun son qiymatlari diapazonini belgilaydi. Masalan, 8-bitli protsessor sakkiz bit bilan ifodalangan, 256 (28) discrete butun qiymatlar diapazoniga ega bo‘lgan butun sonlarni to‘g‘ridan-to‘g‘ri boshqarishi mumkin.
+Butun son diapazoni, shuningdek, protsessor to'g'ridan-to'g'ri murojaat qilishi mumkin bo'lgan memory locationlari soniga ham ta'sir qilishi mumkin. Misol uchun, agar ikkilik protsessor xotira manzilini ko'rsatish uchun 32 bitdan foydalansa, u to'g'ridan-to'g'ri 232 memory locationga murojaat qilishi mumkin. Ushbu cheklovni chetlab o'tish uchun va boshqa sabablarga ko'ra, ba'zi protsessorlar qo'shimcha xotiraga ruxsat beruvchi mexanizmlardan (masalan,  bank switching) foydalanadi.
+
+Kattaroq word sizega ega bo'lgan protsessorlar ko'proq sxemani talab qiladi va shuning uchun jismonan kattaroq, qimmatroq va ko'proq quvvat sarflaydi (va shuning uchun ko'proq issiqlik chiqaradi).
+Natijada, word sizelari ancha katta bo'lgan protsessorlar (masalan, 16, 32, 64, hatto 128 bit) mavjud bo'lsa ham, zamonaviy ilovalarda kichikroq 4 yoki 8 bitli mikrokontrollerlar odatda qo'llaniladi. Yuqori unumdorlik talab qilinganda, kattaroq word sizening afzalliklari kamchiliklardan ustun bo'lishi mumkin.
+
+![alt text](http://www.passmark.com/images/forumimages/64bit_vs_32bit_benchmark_V7.png)
+
+### Parallellik 
+
+Odatda `subscalar `deb ataladigan bu turdagi protsessor bir vaqtning o'zida bir yoki ikkita ma'lumot bo'lagida bitta instruction ustida ishlaydi va bajaradi, ya'ni clock cycliga bitta ko'rsatmadan kamroq (IPC < 1).
+
+Bu jarayon subscalar protsessorlarning o'ziga xos samarasizligini keltirib chiqaradi. Bir vaqtning o'zida faqat bitta instruction bajarilganligi sababli, keyingi instructionga o'tishdan oldin butun protsessor ushbu instruction bajarilishini kutishi kerak.
+
+Scalar va yaxshiroq ishlashga erishishga urinishlar protsessorning less linearly va parallel ravishda ishlashiga olib keladigan turli xil dizayn metodologiyalariga olib keldi. Protsessorlarda parallelizm haqida gap ketganda, ushbu dizayn texnikasini tasniflash uchun odatda ikkita atama qo'llaniladi:
+
+* instruction-level parallelism (ILP), protsessor ichida instructionlarni bajarish tezligini oshirishga intiladi (ya'ni, o'z vaqtida bajarish resurslaridan foydalanishni ko'paytirish);
+* task-level parallelism (TLP), Bu CPU bir vaqtning o'zida bajarishi mumkin bo'lgan ish zarralari yoki  proceslar sonini ko'paytirishdan iborat.
+
+### Data parallelism - Ma'lumotlar parallelligi 
+
+
