@@ -185,6 +185,9 @@ Protsessor tezroq ishlashi uchun va imkon qadar ko'proq ishlashi uchun ko'plab o
 * Control Unit
 * Arithmetic logic unit
 * Address generation unit
+* Memory Management Unit (MMU)
+* Cache
+* Clock rate
 :::
 
 ### Central Processing Unit - CPU
@@ -340,7 +343,7 @@ Arithmetic Logic Unit (ALU) butun sonli arifmetik va bitli mantiqiy amallarni ba
 ALU ga inputlar - bu operatsiya qilinadigan ma'lumotlar so'zlari (operandlar deb ataladi), oldingi operatsiyalardagi status ma'lumotlari va qaysi operatsiyani bajarish kerakligini ko'rsatadigan control unitdan olingan kod.
 Amalga oshirilayotgan buyruqqa qarab operandlar  internal CPU registrlaridan, external memorydan yoki ALU tomonidan yaratilgan konstantalardan kelib chiqishi mumkin. Barcha input signallari ALU sxemasi bo'ylab joylashib, tarqalgach, bajarilgan operatsiya natijasi ALU outputlarida paydo bo'ladi. Natija registrda yoki xotirada saqlanishi mumkin bo'lgan data word va odatda ushbu maqsad uchun ajratilgan maxsus, internal CPU registrida saqlanadigan status informationdan iborat.
 
-[alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ALU_block.gif/435px-ALU_block.gif)
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ALU_block.gif/435px-ALU_block.gif)
 
 Rasmda ALU va uning input va output signallari
 
@@ -349,3 +352,38 @@ Rasmda ALU va uning input va output signallari
 ### Address generation unit
 
 `Address Generation Unit (AGU)`, ba'zan `Address Computation Unit(ACU)` deb ham ataladi, protsessor ichidagi execution unit bo'lib, main memoryga kirish uchun CPU tomonidan foydalaniladigan addresslarni hisoblaydi. Address calculate protsessorning qolgan qismi bilan parallel ravishda ishlaydigan alohida sxemalar orqali amalga oshirish orqali turli xil mashina instructiolarini bajarish uchun zarur bo'lgan protsessor davrlari sonini kamaytirish mumkin, bu esa unumdorlikni oshirishga olib keladi.
+
+Turli operatsiyalarni bajarayotganda, protsessorlar memorydan ma'lumotlarni olish uchun zarur bo'lgan  memory addresslarini hisoblashlari kerak; masalan, protsessor actual memory locationdan ma'lumotlarni olishdan oldin massiv elementlarining memorydagi o'rni hisoblanishi kerak. Ushbu address-generation hisob-kitoblari qo'shish, ayirish, modul operatsiyalari yoki bitni almashtirish kabi turli xil arifmetik operatsiyalarni o'z ichiga oladi.
+
+AGU imkoniyatlari ma'lum bir CPU va uning arxitekturasiga bog'liq. Ba'zi protsessor arxitekturalari bir nechta AGU-larni o'z ichiga oladi, shuning uchun bir vaqtning o'zida bir nechta address-calculation operatsiyalari bajarilishi mumkin, bu esa ilg'or protsessor dizaynlarining superskalyar tabiati tufayli ishlashning yanada yaxshilanishiga olib keladi.
+Misol uchun, Intel o'zining `Sandy Bridge` va `Haswell` mikroarxitekturalariga bir nechta AGU-larni o'z ichiga oladi, bu esa bir nechta xotiraga kirish ko'rsatmalarini parallel ravishda bajarishga imkon berish orqali CPU xotirasi subsystemning bandwidthni oshiradi.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Intel_CPU_Core_i7_2600K_Sandy_Bridge_perspective.jpg/480px-Intel_CPU_Core_i7_2600K_Sandy_Bridge_perspective.jpg)
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Haswell_Chip.jpg/480px-Haswell_Chip.jpg)
+
+Rasmda `Sandy Bridge` va `Haswell` mikroarxitekturalari
+
+### Memory Management Unit (MMU)
+
+Ko'pgina mikroprotsessorlar (smartfonlar va desktop, noutbuklarda, server kompyuterlarida) `memory management unit`ga ega bo'lib,  `logical address`ni fizik RAM addressga aylantiradi, `memory protection` va `paging abilities`larini ta'minlaydi, virtual memory uchun foydalidir. Oddiyroq protsessorlar, ayniqsa mikrokontrollerlar odatda MMUni o'z ichiga olmaydi.
+
+MMU virtual memoryni boshqarish, bir vaqtning o'zida `memory protection`, `cache control`, `bus arbitration` va oddiy kompyuter arxitekturalarida (ayniqsa 8-bitli tizimlarda) bank switchingni samarali bajaradi.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/MMU_principle_updated.png/488px-MMU_principle_updated.png)
+
+Rasmda `Memory Management Unit (MMU)`
+
+### Cache
+
+CPU cache - bu main memorydan ma'lumotlarga kirish uchun o'rtacha xarajatlarni (vaqt yoki energiya) kamaytirish uchun kompyuterning  central processing unit (CPU) tomonidan foydalaniladigan hardware keshi.
+
+Cache - bu tez-tez ishlatiladigan main memory  joylaridan ma'lumotlar nusxalarini saqlaydigan protsessor yadrosiga yaqinroq bo'lgan kichikroq, tezroq xotira. Aksariyat protsessorlarda turli xil independent cachelar, jumladan, instruction va data cachelari mavjud, bu yerda data cache odatda ko'proq cache levellari (L1, L2, L3, L4 va boshqalar) ierarxiyasi sifatida tashkil etilgan.
+
+Boshqa turdagi keshlar ham  mavjud, masalan, ko'pchilik protsessorlarda mavjud bo'lgan memory management unitning (MMU) bir qismi bo'lgan `Translation Lookaside Buffer (TLB)`.
+
+CPU cache haqida to'liqroq ma'lumot berilgan maqola bor. Ushbu maqoladan CPU cache haqida to'liqroq bilib olishingiz mumkin
+
+[CPU cache nima va u qanday ishlaydi?](https://ismoilovdev.vercel.app/uz/guide/cpu_cache.html)
+
+
+### Clock rate
