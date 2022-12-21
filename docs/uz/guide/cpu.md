@@ -181,6 +181,9 @@ Protsessor tezroq ishlashi uchun va imkon qadar ko'proq ishlashi uchun ko'plab o
 * 2.1 Fetch
 * 2.2 Decode
 * 2.3 Execute
+### Structure va implementation
+* Control Unit
+* Arithmetic logic unit
 :::
 
 ### Central Processing Unit - CPU
@@ -298,3 +301,27 @@ Fetch va decode bosqichlaridan so'ng, execut bosqichi amalga oshiriladi. CPU arx
 Har bir action davomida control signallari protsessorning turli qismlarini elektr bilan yoqadi yoki o'chiradi, shuning uchun ular kerakli operatsiyani to'liq yoki bir qismini bajarishlari mumkin. Keyin action odatda clock pulsega javoban yakunlanadi. Ko'pincha natijalar keyingi instructionlarga tez kirish uchun internal CPU registriga yoziladi. Boshqa hollarda natijalar sekinroq, lekin arzonroq va yuqori sig'imli asosiy xotiraga yozilishi mumkin.
 
 Misol uchun, agar qo'shish buyrug'i bajariladigan bo'lsa, operandlarni o'z ichiga olgan registrlar, qo'shishni amalga oshiradigan arithmetic logic unit (ALU) qismlari faollashadi. Clock pulsei sodir bo'lganda, operandlar manba registrlaridan ALUga  o'tadi va yig'indisi uning chiqishida paydo bo'ladi. Keyingi clock pulslarida outputni (operatsiya yig'indisini) saqlashga (masalan, registr yoki xotira) ko'chirish uchun boshqa komponentlar yoqiladi (va o'chiriladi). Olingan yig'indi juda katta bo'lsa (ya'ni, u ALU ning output so'z hajmidan kattaroq bo'lsa), keyingi operatsiyaga ta'sir qiluvchi `arithmetic overflow flag` o'rnatiladi.
+
+## Structure va implementation
+
+Protsessorning sxemasiga ulangan u bajarishi mumkin bo'lgan asosiy operatsiyalar to'plami bo'lib, instruction set deb ataladi.
+Bunday operatsiyalar, masalan, ikkita raqamni qo'shish yoki ayirish, ikkita raqamni solishtirish yoki dasturning boshqa qismiga o'tishni o'z ichiga olishi mumkin. Har bir instruction mashina tilining opcode deb nomlanuvchi bitlarning noyob kombinatsiya bilan ifodalanadi. Instructionni qayta ishlash jarayonida protsessor opkodni (binary decoder orqali) protsessorning harakatini tartibga soluvchi control signallariga dekodlaydi. Mashina tilining to‘liq instructionni opkoddan va ko‘p hollarda operatsiya uchun argumentlarni ko‘rsatuvchi qo‘shimcha bitlardan iborat (masalan, qo‘shish amalida yig‘iladigan raqamlar). Murakkablik shkalasiga ko'ra, mashina tili dasturi bu CPU bajaradigan mashina tilidagi instructionlar to'plamidir.
+
+Har bir instruction uchun haqiqiy matematik operatsiya CPU protsessoridagi arithmetic–logic unit yoki ALU deb nomlanuvchi kombinatsiyalangan logic sxema tomonidan amalga oshiriladi. Umuman olganda, protsessor buyruqni xotiradan olish, operatsiyani bajarish uchun ALU dan foydalanish va natijani xotiraga saqlash orqali bajaradi.
+Integer matematikasi va logic operationlar bo'yicha instructionlar bilan bir qatorda, xotiradan ma'lumotlarni yuklash va ularni qayta saqlash, tarmoqlash operatsiyalari va protsessorning `floating-point unit (FPU)` tomonidan bajariladigan floating-poin raqamlar ustida matematik operatsiyalar kabi boshqa turli xil mashina instructionlari mavjud.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/ABasicComputer.svg/555px-ABasicComputer.svg.png)
+
+Rasmda asosiy bir protsessorli kompyuterning blok diagrammasi. Qora chiziqlar data flowni(ma'lumotlar oqimi), qizil chiziqlar esa control flowni bildiradi; o'qlar flow directionlarini ko'rsatadi.
+
+
+### Control unit
+
+`Control Unit (CU)` protsessorning ishlashini boshqaradigan protsessorning tarkibiy qismidir. U kompyuter xotirasiga, arithmetic logic unitiga hamda input va output qurilmalariga protsessorga yuborilgan instructionlarga qanday javob berish kerakligini aytadi. Vaqt va control signallarini ta'minlash orqali boshqa unitlarning ishlashini boshqaradi. Ko'pgina kompyuter resurslari CU tomonidan boshqariladi. U protsessor va boshqa qurilmalar o'rtasida ma'lumotlar oqimini boshqaradi.
+`John von Neumann` control unitni von Neumann arxitekturasining bir qismi sifatida kiritdi. Zamonaviy kompyuter konstruksiyalarida control uniti odatda protsessorning ichki qismi bo‘lib, uning umumiy roli va faoliyati joriy qilinganidan beri o‘zgarmagan.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/JohnvonNeumann-LosAlamos.gif/368px-JohnvonNeumann-LosAlamos.gif)
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Von_Neumann_Architecture.svg/480px-Von_Neumann_Architecture.svg.png)
+
+Rasmda `John von Neumann` va `von Neumann arxitekturasi`
