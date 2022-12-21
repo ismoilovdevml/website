@@ -26,7 +26,7 @@ export const navbarEn: NavbarConfig = [
   },
   {
     text: 'Donate',
-    link: 'uz/donate/'
+    link: '/en/donate/'
   },
   {
     text: "Contact",
