@@ -1,11 +1,11 @@
-# Sitemap (Table of Contents)
+# Sayt yo'l xaritasi (Mundarija)
 
-## [About the blog](about.html)
+## [Blog haqida](about.html)
 
-## [What is Linux?](linux.html)
+## [Linux Nima](linux.html)
 
-## [What is quantum computing?](quantum.html)
+## [Kvant hisoblash nima?](quantum.html)
 
-## [What is CPU cache and how does it work?](cpu_cache.html)
+## [CPU cache nima va u qanday ishlaydi?](cpu_cache.html)
 
-## [What is a CPU and how does it work?](cpu.html)
+## [CPU qanday ishlaydi?](cpu.html)
