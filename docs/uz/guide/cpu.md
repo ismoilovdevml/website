@@ -184,6 +184,7 @@ Protsessor tezroq ishlashi uchun va imkon qadar ko'proq ishlashi uchun ko'plab o
 ### Structure va implementation
 * Control Unit
 * Arithmetic logic unit
+* Address generation unit
 :::
 
 ### Central Processing Unit - CPU
@@ -278,6 +279,8 @@ Rasmda discrete componentlari
 
 Ko'pgina protsessorlarning asosiy ishi, ularning jismoniy shaklidan qat'i nazar, dastur deb ataladigan saqlangan  instructionlar ketma-ketligini bajarishdir.
 Bajarilishi kerak bo'lgan instructionlar kompyuterning qandaydir xotirasida saqlanadi. Deyarli barcha protsessorlar o'zlarining ishlashida  instruction cycle deb nomlanuvchi fetch, decode va execute bosqichlarini bajaradilar. Murakkab protsessorlarda bir vaqtning o'zida multiple instructionlar olinishi, dekodlanishi va execute bo'lishi mumkin mumkin.
+
+[Fetch, Decode va Execute Cycle - animatsion videorolig](https://youtu.be/B9kqYiyptCk)
 ### Fetch
 
 Fetch - program memorydan buyruqni (son yoki raqamlar ketma-ketligi bilan ifodalangan) olishni o'z ichiga oladi. Instructionning program memordagi joylashuvi (ddress)  program counter (Intel x86 mikroprotsessorlarida "instruction pointer" deb ataladi) tomonidan aniqlanadi, u keyingi fetch ko'rsatmaning manzilini aniqlaydigan raqamni saqlaydi.
@@ -314,6 +317,8 @@ Integer matematikasi va logic operationlar bo'yicha instructionlar bilan bir qat
 
 Rasmda asosiy bir protsessorli kompyuterning blok diagrammasi. Qora chiziqlar data flowni(ma'lumotlar oqimi), qizil chiziqlar esa control flowni bildiradi; o'qlar flow directionlarini ko'rsatadi.
 
+[Instruction Set Architectur animatsion videorolig](https://youtu.be/6fgbLOL7bis)
+
 
 ### Control unit
 
@@ -325,3 +330,22 @@ Rasmda asosiy bir protsessorli kompyuterning blok diagrammasi. Qora chiziqlar da
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Von_Neumann_Architecture.svg/480px-Von_Neumann_Architecture.svg.png)
 
 Rasmda `John von Neumann` va `von Neumann arxitekturasi`
+
+[Control Unit (CU) animatsion videorolik](https://youtu.be/-Qs5Ypwnb9c)
+
+
+### Arithmetic logic unit
+
+Arithmetic Logic Unit (ALU) butun sonli arifmetik va bitli mantiqiy amallarni bajaradigan protsessor ichidagi raqamli sxema.
+ALU ga inputlar - bu operatsiya qilinadigan ma'lumotlar so'zlari (operandlar deb ataladi), oldingi operatsiyalardagi status ma'lumotlari va qaysi operatsiyani bajarish kerakligini ko'rsatadigan control unitdan olingan kod.
+Amalga oshirilayotgan buyruqqa qarab operandlar  internal CPU registrlaridan, external memorydan yoki ALU tomonidan yaratilgan konstantalardan kelib chiqishi mumkin. Barcha input signallari ALU sxemasi bo'ylab joylashib, tarqalgach, bajarilgan operatsiya natijasi ALU outputlarida paydo bo'ladi. Natija registrda yoki xotirada saqlanishi mumkin bo'lgan data word va odatda ushbu maqsad uchun ajratilgan maxsus, internal CPU registrida saqlanadigan status informationdan iborat.
+
+[alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ALU_block.gif/435px-ALU_block.gif)
+
+Rasmda ALU va uning input va output signallari
+
+[Arithmetic Logic Unit animatsion videorolik](https://youtu.be/H_aoaQYgKT8)
+
+### Address generation unit
+
+`Address Generation Unit (AGU)`, ba'zan `Address Computation Unit(ACU)` deb ham ataladi, protsessor ichidagi execution unit bo'lib, main memoryga kirish uchun CPU tomonidan foydalaniladigan addresslarni hisoblaydi. Address calculate protsessorning qolgan qismi bilan parallel ravishda ishlaydigan alohida sxemalar orqali amalga oshirish orqali turli xil mashina instructiolarini bajarish uchun zarur bo'lgan protsessor davrlari sonini kamaytirish mumkin, bu esa unumdorlikni oshirishga olib keladi.
