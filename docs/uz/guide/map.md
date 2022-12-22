@@ -12,4 +12,4 @@
 
 ## [#2 CPU nima va qanday ishlaydi?](cpu_2.html)
 
-## [#1 RAM nima va qanday ishlaydi?](ram.html)
+## [RAM nima va qanday ishlaydi?](ram.html)

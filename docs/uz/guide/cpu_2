@@ -2,6 +2,7 @@
 
 :::tip
 ### Central Processing Unit - CPU
+Ko'rib chiqiladigan mavzular
 ### 1 CPU Tarixi
 * 1.1 Transistorli protsessorlar
 * 1.2 Kichik o'lchamli integratsiya protsessorlari
@@ -19,9 +20,14 @@
 * Cache
 * Clock rate
 * Clockless CPU
+* Voltage regulator module
+* Integer range
+* Parallellik 
+* Data parallelism - Ma'lumotlar parallelligi 
+
 :::
 
-
+#1 CPU nima va qanday ishlaydi?
 
 ### Central Processing Unit - CPU
 

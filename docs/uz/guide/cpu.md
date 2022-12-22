@@ -1,4 +1,4 @@
-# 2-qism: CPU nima va u qanday ishlaydi?
+# 1-qism: CPU nima va u qanday ishlaydi?
 
 ![alt text](https://www.howtogeek.com/wp-content/uploads/2020/10/cpu.jpg?height=200p&trim=2,2,2,2&crop=16:9)
 
@@ -8,7 +8,7 @@ Bu mavzu sal kattaroq shuning uchun mavzuni ikki qismga bo'ldim. Birinchi qismda
 Bu ma'lumotlardan to'liq foydalanish uchun tavsiyalar!
 * Etibor bilan o'qib chiqing jumlalarga e'tibor bering!
 * Rasmlarni kuzatib boring!
-* Olgan ma'lumotlarimgizni mustahkamlash uchun Animatsion videolarni ko'ring!
+* Olgan ma'lumotlarimgizni mustahkamlash uchun animatsion videolarni ko'ring!
 * Animatsion videorolikni ko'rish yanada yaxshiroq tushunishingizga yordam beradi!
 :::
 
@@ -29,8 +29,6 @@ Bazi so'zlar ma'nosi:
 ## 1-qism: CPU asoslari
 Central Processing Unit (CPU) , asosiy protsessor yoki oddiy protsessor deb ham ataladigan central processor (CPU) kompyuter dasturini o'z ichiga olgan instructionlarni bajaradigan elektron sxemadir . Protsessor dasturdagi instructionlarda ko'rsatilgan asosiy arifmetik , mantiqiy, nazorat qilish va  input/output (I/O) operatsiyalarini bajaradi. Bu asosiy xotira va  I/O sxemasi kabi tashqi komponentlar va graphics processing units (GPU) kabi maxsus protsessorlardan farq qiladi.
 
-
-Kompyuter asosan elektr energiyasi bilan ishlaydigan mashinadir , lekin uning moslashuvchanligi va dasturlash qobiliyati toolning soddaligiga erishishga yordam berdi.
 
 CPU - bu kompyuterning yuragi va yoki miyasi. U o'ziga berilgan instructionlarni bajaradi. Uning asosiy vazifasi arifmetik va mantiqiy amallarni bajarish va instructionlarni birgalikda tartibga solishdir. Asosiy qismlarga o'tishdan oldin, CPU ning asosiy komponentlari va rollari nima ekanligini ko'rib chiqaylik:
 
