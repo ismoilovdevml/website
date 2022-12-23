@@ -15,7 +15,7 @@ Bu ma'lumotlardan to'liq foydalanish uchun tavsiyalar!
 `Mikroprotsessor sifatida ham tanilgan CPU - bu kompyuterning yuragi va yoki miyasi. Bu maqola kompyuter dasturlarini samarali yozishga yordam berish uchun kompyuterning yadrosiga chuqur kirib borishga imkon beradi.`
 
 :::tip
-Bazi so'zlar ma'nosi:
+Bazi termin atamalar ma'nosi:
 * Central Processing Unit (CPU) - Markaziy ishlov berish bloki
 * input/output - kirish/chiqish
 * Control Unit CU - Boshqaruv bloki
