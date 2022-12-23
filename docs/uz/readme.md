@@ -4,7 +4,7 @@ title: Asosiy
 heroImage: /images/hero.png
 actions:
 - text: Boshlash
-  link: /uz/guide/kirish/
+  link: /uz/guide/map/
   type: primary
 - text: Qo'shish
   link: /uz/join/

@@ -4,7 +4,7 @@ title: Main
 heroImage: /images/hero.png
 actions:
 - text: Get Started
-  link: /uz/guide/map/
+  link: /en/guide/map/
   type: primary
 - text: Introduction
   link: /uz/join/
