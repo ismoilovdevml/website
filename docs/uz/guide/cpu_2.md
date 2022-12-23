@@ -1,7 +1,12 @@
 ## 2-qism: CPU qanday ishlaydi va qanday tuzilgan (chuqurlashtirilgan)
 
-:::tip
+![alt text](https://media.istockphoto.com/id/1204740322/photo/cpu.jpg?s=612x612&w=0&k=20&c=DSjrMlrtuD42yC5XHtpoc2mqGEYEjk-B-JTDK4McTK8=)
+
+
+
 ### Central Processing Unit - CPU
+
+:::tip
 Ko'rib chiqiladigan mavzular
 ### 1 CPU Tarixi
 * 1.1 Transistorli protsessorlar
