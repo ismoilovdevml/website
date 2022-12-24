@@ -5,50 +5,50 @@
 Bu mavzu sal kattaroq shuning uchun mavzuni ikki qismga bo'ldim. Birinchi qismda CPU asoslari va asosiy yuzaki ma'lumotlar bilan tushuntiriladi. Ikkinchi qismda esa mavzu chuqurlashtirilgan holda tushuntiriladi.
 
 :::tip
-Bu ma'lumotlardan to'liq foydalanish uchun tavsiyalar!
+Bu ma'lumotlardan to'liq foydalanish uchun ba'zi tavsiyalar!
 * Etibor bilan o'qib chiqing va jumlalarga e'tibor bering!
 * Rasmlarni kuzatib boring!
-* Olgan ma'lumotlarimgizni mustahkamlash uchun animatsion videolarni ko'ring!
+* Olgan ma'lumotlarimgizni mustahkamlash uchun animatsion videolarni ham ko'ring!
 * Animatsion videorolikni ko'rish yanada yaxshiroq tushunishingizga yordam beradi!
 :::
 
-`Mikroprotsessor sifatida ham tanilgan CPU - bu kompyuterning yuragi va yoki miyasi. Bu maqola kompyuter dasturlarini samarali yozishga yordam berish uchun kompyuterning yadrosiga chuqur kirib borishga imkon beradi.`
+`Mikroprotsessor sifatida ham tanilgan CPU - bu kompyuterning yuragi yoki miyasi. Bu maqola kompyuter dasturlarini samarali yozishga yordam berish uchun kompyuterning yadrosiga chuqur kirib borishga imkon beradi.`
 
 :::tip
 Bazi termin atamalar ma'nosi:
-* Central Processing Unit (CPU) - Markaziy ishlov berish bloki
+* Central Processing Unit (CPU) - Markaziy jarayonlar bo'limi
 * input/output - kirish/chiqish
 * Control Unit CU - Boshqaruv bloki
 * instruction - ko'rsatmalar
 * Clock cycle - Soat aylanishi
-* Memory, Storage - Xotira
-* ALU - Arifmetik va mantiqiy birlik
-* GPU Graphics Processing Unit - Grafik ishlov berish bloki
+* Memory, Storage - Xotira (**Memory** - Kompyuter ma'lumotlarni saqlashda foydalanadigan vaqtinchalik xotira | **Storage** - Ma'lumotlar saqlanuvchi doimiy xotra )
+* ALU - Arifmetic-logic Unit (Mantiqiy arifmetik bo'lim) 
+* GPU Graphics Processing Unit - Grafik jarayonlar bo'limi
 ::: 
 
 ## 1-qism: CPU asoslari
-Central Processing Unit (CPU) , asosiy protsessor yoki oddiy protsessor deb ham ataladigan central processor unit (CPU) kompyuter dasturini o'z ichiga olgan instructionlarni bajaradigan elektron sxemadir . Protsessor dasturdagi instructionlarda ko'rsatilgan asosiy arifmetik , logic(mantiqiy), control(nazorat qilish) va  input/output (I/O) operatsiyalarini bajaradi. Bu main memory va  I/O sxemasi kabi external komponentlar va graphics processing units (GPU) kabi maxsus protsessorlardan farq qiladi.
+Central Processing Unit (CPU) , asosiy protsessor yoki oddiy protsessor deb ham ataladigan central processor unit (CPU) kompyuter dasturini o'z ichiga olgan ko'rsatmalarni bajaradigan elektron sxemadir . Protsessor dasturdagi ko'rsatmalarda ko'rsatilgan asosiy arifmetik amallar, mantiqiy amallar, nazorat va  input/output (I/O ) jarayonlarini bajaradi. Bu main memory va  I/O sxemasi kabi tashqi komponentlar va GPU kabi maxsus protsessorlardan farq qiladi.
 
 
-CPU - bu kompyuterning yuragi va yoki miyasi. U o'ziga berilgan instructionlarni bajaradi. Uning asosiy vazifasi arifmetik va mantiqiy amallarni bajarish va instructionlarni birgalikda tartibga solishdir. Asosiy qismlarga o'tishdan oldin, CPU ning asosiy komponentlari va rollari nima ekanligini ko'rib chiqaylik:
+CPU - bu kompyuterning yuragi va yoki miyasi. U o'ziga berilgan ko'rsatmalarni bajaradi. Uning asosiy vazifasi arifmetik va mantiqiy amallarni bajarish va ko'rsatmalarni tartibga solishdir. Mavzuning asosiy qismiga o'tishdan avval, CPU ning asosiy komponentlari va vazifasi nima ekanligini ko'rib chiqaylik:
 
-### Protsessorning ikkita asosiy komponenti
+### Protsessorning ikki asosiy komponenti
 
-* Control unit CU (Boshqarish bloki)
-* Arifmetik va  logical unit - ALU
+* Control unit CU (Boshqarish bo'limi)
+* Arifmetic-logic unit - ALU
 
-### Control Unit — CU (Boshqaruv bloki) 
+### Control Unit — CU (Boshqaruv bo'limi) 
 
-Control Unit CU - protsessorning instructionlarning bajarilishini tartibga solishga yordam beradigan qismi. Nima qilish kerakligini aytadi. Instructionga ko'ra, u protsessorni kompyuterning boshqa qismlariga, shu jumladan `ALU` ga ulaydigan simlarni faollashtirishga yordam beradi . Control Unit protsessorning qayta ishlash bo'yicha instructionlarini oladigan birinchi komponentidir.
+Control Unit - protsessorning ko'rsatmalarning bajarilishini tartibga solishga yordam beradigan qismdir. Nima qilish kerakligini aytadi. Ko'rsatmaga ko'ra, u protsessorni kompyuterning boshqa qismlariga, shu jumladan `ALU` ga ulaydigan simlarni faollashtirishga yordam beradi. CPUning qayta ishlash bo'yicha ko'rsatmalarini oladigan birinchi komponentidir.
 
 Control Unitning ikki turi mavjud:
 
-* hardwired control units .
-* mikroprogramlanadigan (mikrodasturlashtirilgan) control units.
+* Hardwired control units.
+* Microprogrammable (mikrodasturlashtirilgan) control units.
 
 `Hardwired control unit` hardware bo'lib, u ishlayotganini o'zgartirish uchun hardwareni o'zgartirishni talab qiladi, bu erda mikroprogramlanadigan control unit uning xatti-harakatlarini o'zgartirish uchun dasturlashtirilishi mumkin. Hardwired CU instructionlarni qayta ishlashda tezroq, mikroprogramlansa, moslashuvchanroq.
 
-### Arifmetik va logical unit — ALU
+### Arifmetik-logic unit — ALU
 Arithmetic Logic Unit ALU nomidan ko'rinib turibdiki, barcha arifmetik va mantiqiy hisob-kitoblarni amalga oshiradi. ALU qo'shish, ayirish kabi amallarni bajaradi. ALU bu operatsiyalarni bajaradigan mantiqiy sxema yoki logic gatelardan iborat.
 
 Ko'pgina logic gatelar ikkita kirishni qabul qiladi va bitta chiqishni ishlab chiqaradi
