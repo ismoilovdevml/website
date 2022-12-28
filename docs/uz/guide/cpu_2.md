@@ -288,4 +288,16 @@ Scalar va yaxshiroq ishlashga erishishga urinishlar protsessorning less linearly
 
 ### Data parallelism - Ma'lumotlar parallelligi 
 
+Protsessorlarning kamroq tarqalgan, ammo tobora muhim bo'lgan paradigmasi (va umuman olganda, hisoblash) data parallelism bilan bog'liq. Yuqorida muhokama qilingan protsessorlarning barchasi skalyar qurilmalarning bir turi deb ataladi. Nomidan ko'rinib turibdiki, vektor protsessorlari bitta instruction kontekstida bir nechta ma'lumotlar qismlari bilan ishlaydi. Bu har bir instruction uchun bitta ma'lumot bo'lagi bilan ishlaydigan skalyar protsessorlardan farq qiladi. `Flynn taxonomy`sidan foydalangan holda, ma'lumotlar bilan ishlashning ushbu ikki sxemasi odatda mos ravishda `single instruction stream,` `multiple data stream (SIMD)` va `single instruction stream`, `single data stream (SISD)` deb ataladi.
 
+Ma'lumotlar vektorlari bilan shug'ullanadigan protsessorlarni yaratishda katta foyda, katta hajmdagi ma'lumotlar to'plamida bir xil operatsiyani (masalan, yig'indi yoki dot product) bajarishni talab qiladigan vazifalarni optimallashtirish turadi.
+
+Skayar protsessor ma'lumotlar to'plamidagi har bir buyruq va fetch qilish, dekodlash va bajarishning butun jarayonini yakunlashi kerak bo'lsa, vektor protsessor bir buyruq bilan nisbatan katta ma'lumotlar to'plamida bitta operatsiyani bajarishi mumkin.
+
+Ko'pgina ilk vektor protsessorlari, masalan, `Cray-1`, deyarli faqat ilmiy tadqiqotlar va kriptografiya ilovalari bilan bog'liq edi.
+
+Ko'p o'tmay, floating-point units general-purpose protsessorlarda odatiy holga aylana boshladi, general-purpose protsessorlar uchun SIMD  execution unitlarining spetsifikatsiyalari va amalga oshirishlari ham paydo bo'la boshladi.
+
+### Hardware performance counter
+
+Ko'pgina zamonaviy arxitekturalar (shu jumladan embedded ones) odatda  low-leveldagi (instruction-level) collection, benchmarking, debugging  yoki running software metriclarini tahlil qilish imkonini beruvchi `hardware performance counters (HPC)` ni o'z ichiga oladi.
