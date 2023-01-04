@@ -301,3 +301,11 @@ Ko'p o'tmay, floating-point units general-purpose protsessorlarda odatiy holga a
 ### Hardware performance counter
 
 Ko'pgina zamonaviy arxitekturalar (shu jumladan embedded ones) odatda  low-leveldagi (instruction-level) collection, benchmarking, debugging  yoki running software metriclarini tahlil qilish imkonini beruvchi `hardware performance counters (HPC)` ni o'z ichiga oladi.
+HPC shuningdek, dasturiy ta'minotning g'ayrioddiy yoki shubhali faoliyatini aniqlash va tahlil qilish uchun ishlatilishi mumkin, masalan, `return-oriented programming (ROP)` yoki `sigreturn-oriented programming (SROP)` ekspluatatsiyalari va boshqalar.
+
+Ko'pgina yirik ishlab chiqaruvchilar (masalan, IBM, Intel, AMD va Arm va boshqalar) o'lchovlarni olish uchun CPU registrlaridan ma'lumotlarni to'plash uchun ishlatilishi mumkin bo'lgan software interfacelarni (odatda C/C++ da yozilgan) taqdim etadi.
+Operatsion tizim vendorlari kernellar va ilovalarda ishlaydigan CPU eventlarni qayd etish, taqqoslash yoki kuzatish uchun `perf`(Linux) kabi dasturlarni ham taqdim etadi.
+
+### Virtual CPU
+
+`Cloud computing` protsessor ishini virtual central processing units(vCPUs) bo'linishni o'z ichiga olishi mumkin.
