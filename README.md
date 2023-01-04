@@ -1,3 +1,2 @@
-# website
-Website
-Open Sourse Dasturchi Blogi
+# Website
+Open Source Developer Blog
