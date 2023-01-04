@@ -7,7 +7,7 @@ actions:
   link: /en/guide/map/
   type: primary
 - text: Introduction
-  link: /uz/join/
+  link: /en/join/
   type: secondary
 features:
 - title: Open Sourse

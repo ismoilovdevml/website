@@ -8,7 +8,7 @@
 
 ## [What is CPU cache and how does it work?](cpu_cache.html)
 
-## [#1 What is a CPU and how does it work?](cpu.html)
+## [#1 What is a CPU and how does it work?](uz/guide/cpu.html)
 
 ## [#2 What is a CPU and how does it work?](cpu.html)
 
