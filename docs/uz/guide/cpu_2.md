@@ -35,20 +35,20 @@ Ko'rib chiqiladigan mavzular
 
 :::
 
-#1 CPU nima va qanday ishlaydi?
+# 1 CPU nima va qanday ishlaydi?
 
 ### Central Processing Unit - CPU
 
 Central Processorr, main protsessor yoki oddiy protsessor deb ham ataladigan central processing unit (CPU) kompyuter dasturini o'z ichiga olgan  instructionlarni bajaradigan elektron sxemadir.
 
-Protsessor dasturdagi instructionlarda ko'rsatilgan asosiy arifmetik, mantiqiy, nazorat qilish va  input/output (I/O) operatsiyalarini bajaradi. Bu asosiy xotira va input/output  I/O sxemasi kabi tashqi komponentlar va graphics processing units (GPU) kabi maxsus protsessorlardan farq qiladi.
+Protsessor dasturdagi instructionlarda ko'rsatilgan asosiy arifmetik, mantiqiy, nazorat qilish va  `input/output (I/O)` operatsiyalarini bajaradi. Bu asosiy xotira va input/output  I/O sxemasi kabi tashqi komponentlar va `graphics processing units (GPU)` kabi maxsus protsessorlardan farq qiladi.
 Vaqt o'tishi bilan protsessorlarning shakli, dizayni va implementation o'zgargan, ammo ularning asosiy ishlashi deyarli o'zgarmagan.
 
-Protsessorning asosiy komponentlariga arifmetik va mantiqiy amallarni bajaradigan arithmetic–logic unit (ALU), ALU ga operandlarni yetkazib beruvchi va ALU operatsiyalari natijalarini saqlaydigan protsessor registrlari va fetchni (xotiradan) tashkil qiluvchi control unit kiradi. ALU, registrlar va boshqa komponentlarning muvofiqlashtirilgan operatsiyalarini boshqarish orqali dekodlash va  executionni (instruction) tartibga soluvchi control unit.
+Protsessorning asosiy komponentlariga arifmetik va mantiqiy amallarni bajaradigan `arithmetic–logic unit (ALU)`, ALU ga operandlarni yetkazib beruvchi va ALU operatsiyalari natijalarini saqlaydigan protsessor registrlari va fetchni (xotiradan) tashkil qiluvchi control unit kiradi. ALU, registrlar va boshqa komponentlarning muvofiqlashtirilgan operatsiyalarini boshqarish orqali dekodlash va  executionni (instruction) tartibga soluvchi control unit.
 
 Ko'pgina zamonaviy protsessorlar bir yoki bir nechta protsessorlar bitta IC chipida o'rnatilgan integral mikrosxema (IC) mikroprotsessorlarida amalga oshiriladi. Multiple CPU mikroprotsessorli chiplar  multi-core protsessorlardir. Alohida fizikal protsessorlar, protsessor yadrolari , shuningdek, qo'shimcha virtual yoki logical CPUlarni yaratish uchun multithreaded bo'lishi mumkin.
 
-Protsessorni o'z ichiga olgan ICda xotira ,  peripheral interfeyslar va kompyuterning boshqa komponentlari ham bo'lishi mumkin; bunday o'rnatilgan qurilmalar turlicha mikrokontrollerlar yoki chipdagi tizimlar (SoC) deb ataladi .
+Protsessorni o'z ichiga olgan ICda xotira ,  peripheral interfeyslar va kompyuterning boshqa komponentlari ham bo'lishi mumkin; bunday o'rnatilgan qurilmalar turlicha mikrokontrollerlar yoki `systems on a chip (SoC)` deb ataladi .
 
 Massiv protsessorlari yoki vektor protsessorlari parallel ravishda ishlaydigan bir nechta protsessorlarga ega bo'lib, central unit hisoblanmaydi. Virtual protsessorlar dinamik jamlangan hisoblash resurslarining abstractligidir.
 
@@ -68,7 +68,7 @@ Ushbu standartlashtirish discrete transistorli asosiy kompyuterlar va  minicompu
 
 ### Transistorli protsessorlar 
 
-1964 yilda IBM o'zining IBM System/360 kompyuter arxitekturasini taqdim etdi, u bir xil dasturlarni turli tezlik va unumdorlik bilan ishga tushirishga qodir bo'lgan bir qator kompyuterlarda ishlatilgan.
+1964 yilda IBM o'zining `IBM System/360` kompyuter arxitekturasini taqdim etdi, u bir xil dasturlarni turli tezlik va unumdorlik bilan ishga tushirishga qodir bo'lgan bir qator kompyuterlarda ishlatilgan.
 
 Ushbu yaxshilanishni osonlashtirish uchun IBM  microprogram kontseptsiyasidan (ko'pincha "microcode" deb ataladi) foydalangan, bu hali ham zamonaviy protsessorlarda keng qo'llaniladi.
 
@@ -88,11 +88,12 @@ Rasmda PDP-8
 
 Integratsiyalashgan sxema (IC) ko'p sonli tranzistorlarni bitta yarimo'tkazgichga asoslangan matritsa yoki "chip" da ishlab chiqarishga imkon berdi.
 Dastlab, `NOR gates`  kabi juda oddiy ixtisoslashmagan raqamli sxemalar ICga miniatyura qilingan.
-Ushbu "building block" IC'larga asoslangan protsessorlar odatda "small-scale integration" (SSI) qurilmalari deb ataladi.
+Ushbu "building block" IC'larga asoslangan protsessorlar odatda `"small-scale integration" (SSI)` qurilmalari deb ataladi.
 IBM `System/370`, System/360 ning davomi bo'lib, `Solid Logic Technology` discrete-transistorli modullardan ko'ra `SSI IC`-lardan foydalangan.
 `DEC`-ning PDP-8/I va KI10 PDP-10 qurilmalari ham PDP-8 va PDP-10 tomonidan ishlatiladigan individual tranzistorlardan `SSI IC`-lariga o'tdi va ularning juda mashhur PDP-11 liniyasi dastlab SSI IC-lari bilan qurilgan, ammo oxir-oqibat `LSI` komponentlari amaliy holga kelganidan keyin amalga oshirildi.
 
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/IBM_PPC604e_200.jpg/330px-IBM_PPC604e_200.jpg)
+![alt text](https://upload.wikimedia.org/wikipedia/commons/2/2f/KL_IBM_PowerPC_604e-2.jpg)
 
 Rasmda `IBM PowerPC 604e` protsessori
 
@@ -102,7 +103,7 @@ Rasmda `IBM PowerPC 604e` protsessori
 Yuz yoki undan ortiq gateli chiplar bo'lgan LSI chiplarini yaratishning yagona usuli ularni metall-oksid-yarim o'tkazgich `(metal–oxide–semiconductor MOS)` yarimo'tkazgich ishlab chiqarish jarayoni (PMOS logic, NMOS logic yoki  CMOS logic) yordamida qurish edi.
 Biroq, ba'zi kompaniyalar bipolyar  `transistor–transistor logic (TTL)` chiplaridan protsessorlar yaratishda davom etishdi, chunki bipolyar ulanish tranzistorlari 1970-yillarga qadar `MOS` chiplariga qaraganda tezroq edi.
 
-1968 yilda Fairchild Semiconductor kompaniyasida Federico Faggin tomonidan silicon-gate MOS texnologiyasini ishlab chiqqandan so'ng, MOS IC 1970-yillarning boshlarida standart chip texnologiyasi sifatida bipolyar TTL o'rnini egalladi.
+1968 yilda `Fairchild Semiconductor` kompaniyasida `Federico Faggin` tomonidan silicon-gate MOS texnologiyasini ishlab chiqqandan so'ng, MOS IC 1970-yillarning boshlarida standart chip texnologiyasi sifatida bipolyar TTL o'rnini egalladi.
 
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Federico_Faggin_%28cropped%29.jpg/382px-Federico_Faggin_%28cropped%29.jpg)
 
@@ -120,7 +121,7 @@ Mikroprotsessorlar birinchi marta paydo bo'lganidan beri ular markaziy protsesso
 Rasmda Intel 4004 va Intel 8080 protsessorlari
 
 Hamma joyda keng tarqalgan shaxsiy kompyuterning paydo bo'lishi va yakuniy muvaffaqiyati bilan birgalikda CPU atamasi endi deyarli faqat mikroprotsessorlarga nisbatan qo'llaniladi.
-Oldingi protsessorlar bir yoki bir nechta elektron platalarda discrete componentlar va ko'p sonli kichik integral mikrosxemalar (IC) sifatida amalga oshirilgan.Mikroprotsessorlar esa juda oz sonli IClarda ishlab chiqarilgan protsessorlardir; odatda bitta.
+Oldingi protsessorlar bir yoki bir nechta elektron platalarda discrete componentlar va ko'p sonli kichik integral mikrosxemalar (IC) sifatida amalga oshirilgan. Mikroprotsessorlar esa juda oz sonli IClarda ishlab chiqarilgan protsessorlardir; odatda bitta.
 
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Componentes.JPG/480px-Componentes.JPG)
 
