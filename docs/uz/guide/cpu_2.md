@@ -134,14 +134,14 @@ Bajarilishi kerak bo'lgan instructionlar kompyuterning qandaydir xotirasida saql
 [Fetch, Decode va Execute Cycle - animatsion videorolig](https://youtu.be/B9kqYiyptCk)
 ### Fetch
 
-Fetch - program memorydan buyruqni (son yoki raqamlar ketma-ketligi bilan ifodalangan) olishni o'z ichiga oladi. Instructionning program memordagi joylashuvi (ddress)  program counter (Intel x86 mikroprotsessorlarida "instruction pointer" deb ataladi) tomonidan aniqlanadi, u keyingi fetch ko'rsatmaning manzilini aniqlaydigan raqamni saqlaydi.
+Fetch - program memorydan buyruqni (son yoki raqamlar ketma-ketligi bilan ifodalangan) olishni o'z ichiga oladi. Instructionning program memordagi joylashuvi (address)  program counter (Intel x86 mikroprotsessorlarida "instruction pointer" deb ataladi) tomonidan aniqlanadi, u keyingi fetch ko'rsatmaning manzilini aniqlaydigan raqamni saqlaydi.
 
 Instruction fetchdan so'ng, shaxsiy kompyuter buyruqning uzunligiga ko'paytiriladi, shunda u ketma-ketlikda keyingi instructionning addressini o'z ichiga oladi. Ko'pincha, fetch  instructionga nisbatan sekin xotiradan olinishi kerak, bu esa instruction return bo'lishini kutayotganda CPU to'xtab qoladi. Ushbu muammo asosan zamonaviy protsessorlarda cache va pipeline architecturelari orqali hal qilinadi.
 
 ### Decode
 
 CPU xotiradan oladigan instruction CPU nima qilishini aniqlaydi. Instruction decoder deb nomlanuvchi binary decoder  sxemasi tomonidan bajariladigan dekodlash bosqichida instruction protsessorning boshqa qismlarini boshqaradigan signallarga aylanadi.
-Instructionni interpretation qilish usuli CPU instruction set architecture (ISA) bilan belgilanadi.
+Instructionni interpretation qilish usuli CPU `instruction set architecture (ISA)` bilan belgilanadi.
 
 Ko'pincha, opcode deb ataladigan buyruq ichidagi bitlarning bir guruhi (ya'ni "field") qaysi instruction bajarish kerakligini ko'rsatadi, qolgan fieldlar odatda operandlar kabi operatsiya uchun zarur bo'lgan qo'shimcha ma'lumotlarni beradi.
 
@@ -151,10 +151,10 @@ Ba'zi protsessor konstruktsiyalarida instruction decode hardwiredir, o'zgarmas b
 
 ### Execute
 
-Fetch va decode bosqichlaridan so'ng, execut bosqichi amalga oshiriladi. CPU arxitekturasiga qarab, bu single action yoki sequence actiondan iborat bo'lishi mumkin. 
+Fetch va decode bosqichlaridan so'ng, execute bosqichi amalga oshiriladi. CPU arxitekturasiga qarab, bu single action yoki sequence actiondan iborat bo'lishi mumkin. 
 Har bir action davomida control signallari protsessorning turli qismlarini elektr bilan yoqadi yoki o'chiradi, shuning uchun ular kerakli operatsiyani to'liq yoki bir qismini bajarishlari mumkin. Keyin action odatda clock pulsega javoban yakunlanadi. Ko'pincha natijalar keyingi instructionlarga tez kirish uchun internal CPU registriga yoziladi. Boshqa hollarda natijalar sekinroq, lekin arzonroq va yuqori sig'imli asosiy xotiraga yozilishi mumkin.
 
-Misol uchun, agar qo'shish buyrug'i bajariladigan bo'lsa, operandlarni o'z ichiga olgan registrlar, qo'shishni amalga oshiradigan arithmetic logic unit (ALU) qismlari faollashadi. Clock pulsei sodir bo'lganda, operandlar manba registrlaridan ALUga  o'tadi va yig'indisi uning chiqishida paydo bo'ladi. Keyingi clock pulslarida outputni (operatsiya yig'indisini) saqlashga (masalan, registr yoki xotira) ko'chirish uchun boshqa komponentlar yoqiladi (va o'chiriladi). Olingan yig'indi juda katta bo'lsa (ya'ni, u ALU ning output so'z hajmidan kattaroq bo'lsa), keyingi operatsiyaga ta'sir qiluvchi `arithmetic overflow flag` o'rnatiladi.
+Misol uchun, agar qo'shish buyrug'i bajariladigan bo'lsa, operandlarni o'z ichiga olgan registrlar, qo'shishni amalga oshiradigan arithmetic logic unit (ALU) qismlari faollashadi. Clock pulse sodir bo'lganda, operandlar manba registrlaridan ALUga  o'tadi va yig'indisi uning chiqishida paydo bo'ladi. Keyingi clock pulslarida outputni (operatsiya yig'indisini) saqlashga (masalan, registr yoki xotira) ko'chirish uchun boshqa komponentlar yoqiladi (va o'chiriladi). Olingan yig'indi juda katta bo'lsa (ya'ni, u ALU ning output so'z hajmidan kattaroq bo'lsa), keyingi operatsiyaga ta'sir qiluvchi `arithmetic overflow flag` o'rnatiladi.
 
 ## Structure va implementation
 
@@ -236,7 +236,7 @@ CPU cache haqida to'liqroq ma'lumot berilgan maqola bor. Ushbu maqoladan CPU cac
 
 ### Clock rate
 
-Aksariyat protsessorlar sinxron sxemalardir, ya'ni ular ketma-ket operatsiyalarini tezlashtirish uchun clock signalidan foydalanadilar. Clock signali davriy square wave shaklida har soniyada doimiy miqdordagi impulslarni hosil qiluvchi external oscillator davri tomonidan ishlab chiqariladi. Clock pulselarining chastotasi protsessor instructionlarni bajarish tezligini belgilaydi va shuning uchun sclock qanchalik tez bo'lsa, protsessor har soniyada ko'proq instructionlarni bajaradi.
+Aksariyat protsessorlar sinxron sxemalardir, ya'ni ular ketma-ket operatsiyalarini tezlashtirish uchun clock signalidan foydalanadilar. Clock signali davriy square wave shaklida har soniyada doimiy miqdordagi impulslarni hosil qiluvchi external oscillator davri tomonidan ishlab chiqariladi. Clock pulselarining chastotasi protsessor instructionlarni bajarish tezligini belgilaydi va shuning uchun clock qanchalik tez bo'lsa, protsessor har soniyada ko'proq instructionlarni bajaradi.
 Protsessorning to'g'ri ishlashini ta'minlash uchun clock period barcha signallarning protsessor orqali tarqalishi (move) uchun zarur bo'lgan maksimal vaqtdan uzoqroqdir. 
 
 Clock periodi tarqalishning eng yomon kechikishidan ancha yuqori qiymatga o'rnatgan holda, butun protsessorni va uning ko'tarilgan va pasaygan clock signalining "edges" atrofida ma'lumotlarni harakatlantirish usulini loyihalash mumkin. Bu protsessorni dizayn nuqtai nazaridan ham, komponentlar soni nuqtai nazaridan ham sezilarli darajada soddalashtirishning afzalligi.
@@ -252,11 +252,11 @@ Global clock signali bilan bog'liq ba'zi muammolarni hal qilishning yana bir usu
 Global clock signalini olib tashlash dizayn jarayonini ko'p jihatdan ancha murakkablashtirgan bo'lsa-da, asinxron  dizaynlar shunga o'xshash sinxron dizaynlarga nisbatan energiya iste'moli va issiqlik tarqalishida sezilarli afzalliklarga ega.
 Biroz kam uchraydigan bo'lsa-da, butun asinxron protsessorlar global clock signalidan foydalanmasdan qurilgan. Bunga ikkita diqqatga sazovor misol - `ARM`-ga mos keladigan `AMULET` va `MIPS R3000`-ga mos keladigan `MiniMIPS`.
 
-Ba'zi protsessor konstruktsiyalari clock signa lini butunlay olib tashlash o'rniga, qurilmaning ba'zi qismlarini asinxron bo'lishiga imkon beradi, masalan, asinxron ALU-larni superscalar pipelining bilan birgalikda arifmetik samaradorlikka erishish uchun ishlatish.
+Ba'zi protsessor konstruktsiyalari clock signalini butunlay olib tashlash o'rniga, qurilmaning ba'zi qismlarini asinxron bo'lishiga imkon beradi, masalan, asinxron ALU-larni superscalar pipelining bilan birgalikda arifmetik samaradorlikka erishish uchun ishlatish.
 
 ### Voltage regulator module
 
-`Voltage Regulator Module (VRM)`, ba'zan `Processor Power Module (PPM) `deb ataladi, mikroprotsessor va chipsetni mos keladigan kuchlanish kuchlanishini ta'minlaydigan, +3,3 V, +5 V yoki +12 V kuchlanishni qurilmalar tomonidan talab qilinadigan pastroq kuchlanishga aylantiruvchi konvertordir. , har xil ta'minot kuchlanishiga ega qurilmalarni bir xil motherboardga o'rnatishga imkon beradi. Shaxsiy kompyuter (PC) tizimlarida VRM odatda quvvatli MOSFET qurilmalaridan iborat.
+`Voltage Regulator Module (VRM)`, ba'zan `Processor Power Module (PPM) `deb ataladi, mikroprotsessor va chipsetni mos keladigan kuchlanishini ta'minlaydigan, +3,3 V, +5 V yoki +12 V kuchlanishni qurilmalar tomonidan talab qilinadigan pastroq kuchlanishga aylantiruvchi konvertordir. , har xil ta'minot kuchlanishiga ega qurilmalarni bir xil motherboardga o'rnatishga imkon beradi. Shaxsiy kompyuter (PC) tizimlarida VRM odatda quvvatli MOSFET qurilmalaridan iborat.
 
 Ko'pgina zamonaviy protsessorlarda power managing moduli o'rnatilgan bo'lib, u protsessor sxemasiga talab bo'yicha kuchlanish ta'minotini tartibga soladi, bu esa ishlash va quvvat sarfi o'rtasidagi muvozanatni saqlashga imkon beradi.
 
@@ -281,7 +281,8 @@ Natijada, word sizelari ancha katta bo'lgan protsessorlar (masalan, 16, 32, 64, 
 
 ### Parallellik 
 
-Odatda `subscalar `deb ataladigan bu turdagi protsessor bir vaqtning o'zida bir yoki ikkita ma'lumot bo'lagida bitta instruction ustida ishlaydi va bajaradi, ya'ni clock cycliga bitta ko'rsatmadan kamroq (IPC < 1).
+Odatda `subscalar `deb ataladigan bu turdagi protsessor bir vaqtning o'zida bir yoki ikkita ma'lumot bo'lagida bitta instruction ustida ishlaydi va bajaradi, ya'ni clock cycliga bitta ko'rsatmadan kamroq 
+(IPC < 1).
 
 Bu jarayon subscalar protsessorlarning o'ziga xos samarasizligini keltirib chiqaradi. Bir vaqtning o'zida faqat bitta instruction bajarilganligi sababli, keyingi instructionga o'tishdan oldin butun protsessor ushbu instruction bajarilishini kutishi kerak.
 
@@ -296,7 +297,7 @@ Protsessorlarning kamroq tarqalgan, ammo tobora muhim bo'lgan paradigmasi (va um
 
 Ma'lumotlar vektorlari bilan shug'ullanadigan protsessorlarni yaratishda katta foyda, katta hajmdagi ma'lumotlar to'plamida bir xil operatsiyani (masalan, yig'indi yoki dot product) bajarishni talab qiladigan vazifalarni optimallashtirish turadi.
 
-Skayar protsessor ma'lumotlar to'plamidagi har bir buyruq va fetch qilish, dekodlash va bajarishning butun jarayonini yakunlashi kerak bo'lsa, vektor protsessor bir buyruq bilan nisbatan katta ma'lumotlar to'plamida bitta operatsiyani bajarishi mumkin.
+Skalyar protsessor ma'lumotlar to'plamidagi har bir buyruq va fetch qilish, dekodlash va bajarishning butun jarayonini yakunlashi kerak bo'lsa, vektor protsessor bir buyruq bilan nisbatan katta ma'lumotlar to'plamida bitta operatsiyani bajarishi mumkin.
 
 Ko'pgina ilk vektor protsessorlari, masalan, `Cray-1`, deyarli faqat ilmiy tadqiqotlar va kriptografiya ilovalari bilan bog'liq edi.
 
