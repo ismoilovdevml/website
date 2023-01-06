@@ -29,6 +29,9 @@ Ko'rib chiqiladigan mavzular
 * Integer range
 * Parallellik 
 * Data parallelism - Ma'lumotlar parallelligi 
+* Hardware performance counter
+* Virtual CPU
+* Performance
 
 :::
 
@@ -327,6 +330,7 @@ Protsessorning ishlashi yoki tezligi, boshqa ko'plab omillar bilan bir qatorda, 
 
 :::tip
 IPC = instructions per clock
+
 IPS = instructions per second
 :::
 
@@ -337,6 +341,10 @@ Zamonaviy protsessorlarning o'ziga xos imkoniyatlari, masalan, simultaneous mult
 
 Bunga javoban, ba'zi protsessorlar protsessorning turli qismlaridan haqiqiy foydalanishni kuzatuvchi va dasturiy ta'minot uchun mavjud bo'lgan turli hisoblagichlarni ta'minlaydigan qo'shimcha hardware logicni amalga oshiradi; Misol tariqasida Intelning `Performance Counter Monitor` texnologiyasini keltirish mumkin
 
+
+Maqola juda uzun bo'lgani uchun uzur so'rayman )
+
+Endi sizda CPU ishlashi va qanday tuzilgani haqida bilib oldingiz )
 
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
