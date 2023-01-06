@@ -309,3 +309,41 @@ Operatsion tizim vendorlari kernellar va ilovalarda ishlaydigan CPU eventlarni q
 ### Virtual CPU
 
 `Cloud computing` protsessor ishini virtual central processing units(vCPUs) bo'linishni o'z ichiga olishi mumkin.
+Virtual CPU (vCPU) virtual protsessor sifatida ham tanilgan, virtual machine (VM) tayinlangan physical central processing unit (CPU).
+
+Virtual protsessorlar haqida batafsil ma'lumot
+
+[IBM - Virtual processors](https://www.ibm.com/docs/en/power8?topic=processors-virtual)
+
+[Datacenters.com - What is a vCPU and How Do You Calculate vCPU to CPU?](datacenters.com/news/what-is-a-vcpu-and-how-do-you-calculate-vcpu-to-cpu)
+
+
+![alt text](https://hoststud.com/attachments/1614317912921-png.1341/)
+![alt text](http://frankdenneman.nl/wp-content/uploads/2013/09/05-vCPU-Stack.png)
+
+### Performance
+
+Protsessorning ishlashi yoki tezligi, boshqa ko'plab omillar bilan bir qatorda, soat tezligiga (odatda gertsning ko'paytmalarida berilgan) va  instructions per clock (IPC) bog'liq bo'lib, ular birgalikda CPU bajarishi mumkin bo'lgan instructions per second (IPS) uchun omillari hisoblanadi.
+
+:::tip
+IPC = instructions per clock
+IPS = instructions per second
+:::
+
+Kompyuterlarning qayta ishlash unumdorligi multi-core protsessorlar(ko'p yadroli) yordamida oshiriladi, bu asosan ikkita yoki undan ortiq individual protsessorlarni (bu ma'noda core deb ataladi) bitta integral mikrosxemaga ulaydi.
+Ideal holda, dual core(2 yadroli) protsessor bir yadroli protsessordan deyarli ikki baravar kuchliroq bo'ladi. Amalda, dasturiy ta'minot algoritmlari va amalga oshirishning nomukammalligi tufayli unumdorligi ancha kichik, atigi 50% atrofida.
+
+Zamonaviy protsessorlarning o'ziga xos imkoniyatlari, masalan, simultaneous multithreading o'tkazish va  uncore kabi, bu protsessorning haqiqiy resurslarini ko'paytirishni maqsad qilgan holda almashishni o'z ichiga olganligi sababli, performance darajasi va hardwaredan foydalanishni kuzatish asta-sekin murakkabroq vazifaga aylandi.
+
+Bunga javoban, ba'zi protsessorlar protsessorning turli qismlaridan haqiqiy foydalanishni kuzatuvchi va dasturiy ta'minot uchun mavjud bo'lgan turli hisoblagichlarni ta'minlaydigan qo'shimcha hardware logicni amalga oshiradi; Misol tariqasida Intelning `Performance Counter Monitor` texnologiyasini keltirish mumkin
+
+
+Xato va kamchiliklar bo'lsa uzur so'rayman )
+
+
+Foydanilgan Manbalar
+
+[Wikipedi](https://en.wikipedia.org/wiki/Central_processing_unit)
+va boshqa manbalar
+
+
