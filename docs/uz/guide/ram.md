@@ -10,3 +10,10 @@ RAM, aslida, sizning kompyuteringiz va uning ilovalari vaqtinchalik ma'lumotlarn
 
 RAM ma'lumotlar liniyalarini kirishni o'qish yoki yozish uchun manzilli xotiraga ulash uchun `multiplexing` va `demultiplexing `sxemalarini o'z ichiga oladi. Odatda bir xil manzil orqali bir bitdan ortiq xotiraga kirish mumkin va RAM qurilmalari ko'pincha bir nechta ma'lumotlar liniyalariga ega va `8-bit` yoki `16-bit` va hokazo qurilmalar deb aytiladi.
 Hozirgi texnologiyada  random-access memory MOS (metal–oxide–semiconductor) memory cellari bo'lgan integral mikrosxemalar (IC) chiplari ko'rinishini oladi. RAM odatda o'zgaruvchan xotira turlari bilan bog'lanadi, bu erda quvvat o'chirilganda saqlangan ma'lumotlar yo'qoladi.
+
+O'zgaruvchan random-access semiconductor xotirasining ikkita asosiy turi mavjud bular quyidagilar: Static Random-Access Memory (SRAM) va Dynamic Random-Access Memory (DRAM).
+
+O'zgaruvchan operativ xotira ham ishlab chiqilgan va boshqa turdagi non-volatile memory o'qish operatsiyalari uchun random access imkonini beradi, lekin yozish operatsiyalariga ruxsat bermaydi yoki ularda boshqa turdagi cheklovlar mavjud. Bularga ko'pgina `ROM` turlari va `NOR-Flash` deb nomlangan flash memory turi kiradi.
+
+Yarimo'tkazgichli operativ xotiradan foydalanish 1965 yilda, IBM o'zining `System/360 Model 95` kompyuteri uchun monolit (bir chipli) 16-bitli SP95 SRAM chipini taqdim etganida boshlangan va Toshiba o'zining 180 bitli Toscal BC-1411 elektron kalkulyatori uchun diskret DRAM xotira cellaridan foydalangan, ikkalasi ham bipolyar tranzistorlarga asoslangan.
+U magnetic-core memoryga nisbatan yaxshilangan ishlashni taklif qilgan bo'lsa-da, bipolyar DRAM o'sha paytdagi magnetic-core memoryning past narxi bilan raqobatlasha olmadi.
