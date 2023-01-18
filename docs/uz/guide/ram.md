@@ -17,3 +17,12 @@ O'zgaruvchan operativ xotira ham ishlab chiqilgan va boshqa turdagi non-volatile
 
 Yarimo'tkazgichli operativ xotiradan foydalanish 1965 yilda, IBM o'zining `System/360 Model 95` kompyuteri uchun monolit (bir chipli) 16-bitli SP95 SRAM chipini taqdim etganida boshlangan va Toshiba o'zining 180 bitli Toscal BC-1411 elektron kalkulyatori uchun diskret DRAM xotira cellaridan foydalangan, ikkalasi ham bipolyar tranzistorlarga asoslangan.
 U magnetic-core memoryga nisbatan yaxshilangan ishlashni taklif qilgan bo'lsa-da, bipolyar DRAM o'sha paytdagi magnetic-core memoryning past narxi bilan raqobatlasha olmadi.
+
+MOS tranzistorlariga asoslangan MOS memory 1960-yillarning oxirida ishlab chiqilgan va barcha dastlabki tijorat yarimo'tkazgich xotirasi uchun asos bo'lgan. Birinchi tijorat DRAM IC chipi, 1K `Intel 1103` 1970 yil oktyabr oyida taqdim etilgan.
+
+`Synchronous Dynamic Random-Access Memory (SDRAM)` keyinchalik 1992 yilda `Samsung` KM48SL2000 chipi bilan debyut qildi.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Intel_C1103.jpg/220px-Intel_C1103.jpg)
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/KL_CoreMemory.jpg/480px-KL_CoreMemory.jpg)
+
+Rasmda Intel 1103 va magnetic-core memory
