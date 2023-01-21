@@ -25,4 +25,8 @@ MOS tranzistorlariga asoslangan MOS memory 1960-yillarning oxirida ishlab chiqil
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Intel_C1103.jpg/220px-Intel_C1103.jpg)
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/KL_CoreMemory.jpg/480px-KL_CoreMemory.jpg)
 
-Rasmda Intel 1103 va magnetic-core memory
+Rasmda Intel 1103 va magnetic-core memory(chap tomonda intel 1103)
+
+# Tarixi
+
+Ilk kompyuterlarda asosiy xotira funksiyalari uchun rele, mexanik hisoblagichlar yoki delay liniyalari ishlatilgan.
