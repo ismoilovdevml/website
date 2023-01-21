@@ -16,5 +16,5 @@ features:
   details: Foydali texnik hujjatlar to'planmasi
 - title: Rivojlanish
   details: Rivojlanish uchun yaxshi imkoniyat
-footer: CC0-1.0 Licensed | Hamma xuquqlar himoyalangan © 2022 Uzinfocom Open Source
+footer: CC0-1.0 Licensed | Hamma xuquqlar himoyalangan © 2023 Uzinfocom Open Source
 ---

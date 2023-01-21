@@ -16,5 +16,5 @@ features:
   details: Collection of useful technical documents
 - title: Development
   details: Good opportunity for development
-footer: CC0-1.0 Licensed | All rights reserved © 2022 Uzinfocom Open Source
+footer: CC0-1.0 Licensed | All rights reserved © 2023 Uzinfocom Open Source
 ---
