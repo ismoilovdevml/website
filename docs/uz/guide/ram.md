@@ -30,3 +30,4 @@ Rasmda Intel 1103 va magnetic-core memory(chap tomonda intel 1103)
 # Tarixi
 
 Ilk kompyuterlarda asosiy xotira funksiyalari uchun rele, mexanik hisoblagichlar yoki delay liniyalari ishlatilgan.
+Random-access memoryning birinchi amaliy shakli 1947 yilda boshlangan `Williams tube` edi.

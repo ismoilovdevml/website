@@ -13,3 +13,5 @@
 ## [#2 CPU nima va qanday ishlaydi?](cpu_2.html)
 
 ## [RAM nima va qanday ishlaydi?](ram.html)
+
+## [Kernel nima va u qanday ishlaydi?](kernel.html)
