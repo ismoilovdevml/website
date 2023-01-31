@@ -82,7 +82,7 @@ export default defineUserConfig({
         lastUpdatedText: 'Oxirgi yangilanish',
         contributorsText: 'Hissa qo\'shganlar',
         // custom containers
-        tip: 'Yordam',
+        tip: ' ',
         warning: 'Ogohlantiruv',
         danger: 'Ehtiyot bo\'ling',
         // 404 page

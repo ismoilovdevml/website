@@ -14,19 +14,19 @@ Bundan farqli o'laroq, brauzerlar, word processorlari va audio yoki video player
 
 #### Monolitik kernel
 
-Bu barcha operatsion tizim servicelari kernel spaceda ishlaydigan kernel turlaridan biridir. Tizim komponentlari o'rtasida bog'liqlik mavjud. U juda murakkab kod satrlariga ega.
+Monolitik kernellar kernelning eng oddiy va eng keng tarqalgan turidir. Bu barcha operatsion tizim servicelari kernel spaceda ishlaydigan kernel turlaridan biridir. Tizim komponentlari o'rtasida bog'liqlik mavjud. U juda murakkab kod satrlariga ega.Ular operatsion tizimning asosiy funksiyalarini o'z ichiga oladi va unga ulangan barcha qurilmalarni qo'llab-quvvatlaydi.Bunda foydalanuvchi va kernel xizmatlari bir xil memory spaceda amalga oshiriladi. Shu tufayli kernel hajmi kattalashadi, bu esa o'z navbatida operatsion tizim hajmini oshiradi
 
 
-Linux kerneli doimiy ravishda o'sib borayotgan monolit kerneldir; 2018 yilda u 20 million qator kodga ega edi.
 
-Misol:
-```text
+##### Misollar:
+:::tip
 Unix, Linux, Open VMS, XTS-400 va boshqalar.
-```
+:::
+Linux kerneli doimiy ravishda o'sib borayotgan monolit kerneldir; 2018 yilda u 20 million qator kodga ega edi.
 
 #### Afzallik
 
-Bu yaxshi ishlashga ega.  
+Bu yaxshi ishlashga ega.Asosiy afzallik shundaki, jarayonning tezroq bajarilishi, chunki foydalanuvchi va kernel uchun alohida memory space mavjud emas. 
 
 #### Kamchilik
 
@@ -35,6 +35,7 @@ Tizim komponenti va millionlab kod satrlari o'rtasida bog'liqlik mavjud.
 
 #### Micro Kernel
 
+Mikrokernellar yangi ishlanmadir va shuning uchun monolit kernellar kabi keng tarqalgan emas. Ular faqat tizimning ishlashi uchun zarur bo'lgan asosiy servicelar va qurilmalarni o'z ichiga oladi. Bu tezroq va kamroq xotiradan foydalanadigan kichikroq kernelgaga olib keladi. Bu yerda foydalanuvchi va kernel servicelari ikki xil spaceda amalga oshiriladi. Unda alohida `User Space` va `Kernel Space` mavjud.Bu kernel hajmini kamaytiradi va operatsion tizim hajmini qisqartiradi.
 
 
 
