@@ -71,6 +71,28 @@ U monolit kernel va mikrokernelni birlashtiradi.
 
 U hali ham monolit kernelga o'xshaydi.
 
+#### Exo Kernel
+Bu `end-to-end` tamoyiliga amal qiladigan kernel turi. Unda iloji boricha kamroq hardware abstractionlari mavjud. U jismoniy resurslarni ilovalarga ajratadi. Bu kernel alohida resurs protection va boshqaruviga ega. Ilovaga maxsus moslashtirishni amalga oshirishda foydalanish uchun javob beradi. Exo kernellari mobil qurilmalarda foydalanish uchun mo'ljallangan. Ular power management va bir nechta protsessorlarni qo'llab-quvvatlash kabi mobil qurilmalar uchun maxsus qo'shimcha funksiyalarni o'z ichiga olgan mikrokernellarning o'zgarishi.
+
+#### Nano Kernel
+
+Nano kernellar kernelning eng kichik turi bo'lib, bir necha ming kod qatoridan iborat. Bu hardware abstractionini taklif qiladigan, lekin system servicelarisiz kernel turi. Micro Kernel ham system servicelariga ega emas, shuning uchun Micro Kernel va Nano Kernel o'xshash bo'ladi. Bu hardwerining privilegeli rejimida bajariladigan kod minimal ekanligini anglatadi. Ular asosan embedded systemlarda yoki cheklangan resurslarga ega qurilmalarda qo'llaniladi.
+
+##### Misollar:
+
+:::tip
+EROS va boshqalar.
+:::
+
+#### Afzallik
+
+U system servicelarisiz hardware abstractionlarini taklif qiladi.
+
+#### Kamchilik
+
+Bu mikrokernel bilan bir xil, shuning uchun u kamroq qo'llaniladi.
+
+
 
 Monolitik kernellar to'liq bitta manzil maydonida ishlaydi, protsessor nazoratchi rejimida, asosan tezlik uchun ishlaydi. Mikrokernellar user processeslari kabi, asosan, moslashuvchanlik va modullilik uchun user spaceda xizmatlarining hammasini emas, balki ko'pini ishlaydi.`MINIX 3` mikrokernel arxitekturasining yorqin namunasidir. Buning o'rniga, Linux kerneli monolitdir, garchi u modulli bo'lsa ham, chunki u runtimeda yuklanadigan kernel modullarini kiritishi va olib tashlashi mumkin.
 
