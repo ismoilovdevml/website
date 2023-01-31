@@ -19,6 +19,7 @@ Monolitik kernellar kernelning eng oddiy va eng keng tarqalgan turidir. Bu barch
 
 
 ##### Misollar:
+
 :::tip
 Unix, Linux, Open VMS, XTS-400 va boshqalar.
 :::
@@ -37,9 +38,38 @@ Tizim komponenti va millionlab kod satrlari o'rtasida bog'liqlik mavjud.
 
 Mikrokernellar yangi ishlanmadir va shuning uchun monolit kernellar kabi keng tarqalgan emas. Ular faqat tizimning ishlashi uchun zarur bo'lgan asosiy servicelar va qurilmalarni o'z ichiga oladi. Bu tezroq va kamroq xotiradan foydalanadigan kichikroq kernelgaga olib keladi. Bu yerda foydalanuvchi va kernel servicelari ikki xil spaceda amalga oshiriladi. Unda alohida `User Space` va `Kernel Space` mavjud.Bu kernel hajmini kamaytiradi va operatsion tizim hajmini qisqartiradi.
 
+##### Misollar:
+
+:::tip
+Mach, L4, AmigaOS, Minix, K42 va boshqalar.
+:::
+
+#### Afzallik
+
+Bu yanada barqaror.
+
+#### Kamchilik
+
+Ko'p system calllari va context switchelar mavjud.
 
 
+#### Gibrid Kernel
 
+Gibrid kernellar monolit va mikrokernellarni birlashtiradi. Ular mikrokernellarga qaraganda ko'proq servicelarni o'z ichiga oladi, lekin monolit kernellardan kamroq. Bu ularga ikkala kernelning ba'zi afzalliklarini taklif qilish imkonini beradi. U monolit kerne;lardan tezlikni va mikrokernellardan modullikni oladi.
+
+##### Misollar:
+
+:::tip
+Windows NT, Netware, BeOS va boshqalar.
+:::
+
+#### Afzallik
+
+U monolit kernel va mikrokernelni birlashtiradi.
+
+#### Kamchilik
+
+U hali ham monolit kernelga o'xshaydi.
 
 
 Monolitik kernellar to'liq bitta manzil maydonida ishlaydi, protsessor nazoratchi rejimida, asosan tezlik uchun ishlaydi. Mikrokernellar user processeslari kabi, asosan, moslashuvchanlik va modullilik uchun user spaceda xizmatlarining hammasini emas, balki ko'pini ishlaydi.`MINIX 3` mikrokernel arxitekturasining yorqin namunasidir. Buning o'rniga, Linux kerneli monolitdir, garchi u modulli bo'lsa ham, chunki u runtimeda yuklanadigan kernel modullarini kiritishi va olib tashlashi mumkin.
