@@ -22,7 +22,7 @@ Kernellarning beshta asosiy turi:
 * Gibrid Kernel
 * Exo Kernel
 * Nano Kernel
-::tip
+:::tip
 
 #### Monolitik kernel
 
@@ -121,3 +121,12 @@ Bu mikrok ernel bilan bir xil, shuning uchun u kamroq qo'llaniladi.
 
 
 Kompyuter tizimining ushbu markaziy komponenti dasturlarni bajarish uchun javobgardir. Kernel istalgan vaqtda ko'plab ishlaydigan dasturlardan qaysi biri protsessor yoki protsessorlarga ajratilishi kerakligini hal qilish uchun javobgarlikni o'z zimmasiga oladi.
+
+
+### Random-access memory RAM
+
+Random-access memory (RAM) dastur instructionlarini va ma'lumotlarni saqlash uchun ishlatiladi. Odatda, dastur bajarilishi uchun ikkalasi ham xotirada bo'lishi kerak.Ko'pincha bir nechta dasturlar xotiraga kirishni xohlaydi, ko'pincha kompyuter mavjud bo'lganidan ko'ra ko'proq xotira talab qiladi.Kernel har bir jarayon qaysi xotiradan foydalanishi mumkinligi va xotira yetarli bo'lmaganda nima qilish kerakligini aniqlash uchun javobgardir.
+
+### Input/Output qurilmalari
+
+I/O(Input/Output) qurilmalariga klaviatura, sichqoncha, disk drayvlar, printerlar, USB qurilmalari, tarmoq adapterlari va displey qurilmalari kabi tashqi qurilmalar kiradi.Kernel tegishli qurilmaga I/O ni amalga oshirish uchun ilovalardan so'rovlarni taqsimlaydi va qurilmadan foydalanishning qulay usullarini taqdim etadi (odatda dastur qurilmaning amalga oshirish tafsilotlarini bilishi shart bo'lmagan darajada abstraktlangan).
