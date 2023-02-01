@@ -144,3 +144,24 @@ Resource managementda zarur bo'lgan asosiy jihatlar execution domenini (space ad
 
 Kernel tizim xotirasiga to'liq kirish huquqiga ega va jarayonlarga ushbu xotiraga o'zlari talab qilganda xavfsiz kirishiga ruxsat berishi kerak.Ko'pincha buni amalga oshirishda birinchi qadam virtual manzillash bo'lib, odatda paging va/yoki segmentation orqali erishiladi.Agar dasturga operativ xotirada bo'lmagan ma'lumotlar kerak bo'lsa, protsessor kernelga bu sodir bo'lganligi haqida signal beradi kernel esa faol bo'lmagan xotira blokining tarkibini diskka yozish (agar kerak bo'lsa) va uni dastur tomonidan so'ralgan ma'lumotlar bilan almashtirish orqali javob beradi. Keyin dastur to'xtatilgan joydan davom ettirilishi mumkin. Ushbu sxema odatda `demand paging` sifatida tanilgan. Virtual manzillash, shuningdek, ikkita ajratilgan sohada xotiraning virtual bo'limlarini yaratishga imkon beradi, ulardan biri kernel (kernel space), ikkinchisi esa ilovalar uchun (user space). Ilovalar kernel xotirasiga murojaat qilish uchun protsessor tomonidan ruxsat etilmaydi, bu esa dastur ishlaydigan kernelga zarar yetkazishining oldini oladi.
 
+### Device management
+
+Foydali funksiyalarni bajarish uchun jarayonlar yadro tomonidan qurilma drayverlari orqali boshqariladigan kompyuterga ulangan tashqi qurilmalarga kirishi kerak. Qurilma drayveri - bu OS nomidan hardware qurilmasini (uning Hardware/Software Interface (HSI) orqali) inkapsulyatsiya qiluvchi, nazorat qiluvchi va boshqaradigan kompyuter dasturi. Qurilma drayverlari, masalan: video kartalar, ovoz kartalari, printerlar, skanerlar, modemlar va tarmoq kartalari uchun ishlatiladi.
+
+##### Hardware levelda qurilma drayverlarining umumiy abstractionlari quyidagilarni o'z ichiga oladi:
+
+* To'g'ridan-to'g'ri interfeys
+* Yuqori darajadagi interfeysdan foydalanish (BIOS)
+* Quyi darajadagi qurilma drayveridan foydalanish (disk drayverlari yordamida fayl drayverlari)
+* Hardware bilan ishlashni simulyatsiya qilish, shu bilan birga butunlay boshqacha narsalarni qilish
+
+
+##### Software level darajasida, qurilma drayverlari abstractionlari quyidagilarni o'z ichiga oladi:
+
+* Operatsion tizimning hardware resurslariga bevosita kirishiga ruxsat berish
+* Faqat primitivlarni implement qilish
+* TWAIN kabi driveri bo'lmagan dasturiy ta'minot uchun interfeysni implement qilish
+* Tilni implement qilish (ko'pincha PostScript kabi yuqori darajadagi til)
+
+
+Misol uchun, foydalanuvchiga ekranda biror narsani ko'rsatish uchun dastur kernelga so'rov yuboradi, bu so'rovni displey drayveriga yo'naltiradi, keyin esa belgi/pikselni chizish uchun javobgardir.
