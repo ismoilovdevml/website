@@ -156,7 +156,7 @@ Foydali funksiyalarni bajarish uchun jarayonlar yadro tomonidan qurilma drayverl
 * Hardware bilan ishlashni simulyatsiya qilish, shu bilan birga butunlay boshqacha narsalarni qilish
 
 
-##### Software level darajasida, qurilma drayverlari abstractionlari quyidagilarni o'z ichiga oladi:
+##### Software levelda, qurilma drayverlari abstractionlari quyidagilarni o'z ichiga oladi:
 
 * Operatsion tizimning hardware resurslariga bevosita kirishiga ruxsat berish
 * Faqat primitivlarni implement qilish
@@ -165,3 +165,15 @@ Foydali funksiyalarni bajarish uchun jarayonlar yadro tomonidan qurilma drayverl
 
 
 Misol uchun, foydalanuvchiga ekranda biror narsani ko'rsatish uchun dastur kernelga so'rov yuboradi, bu so'rovni displey drayveriga yo'naltiradi, keyin esa belgi/pikselni chizish uchun javobgardir.
+
+
+### System call
+
+Hisoblashda system call jarayonning operatsion tizim kernelidan odatda ishga ruxsati bo‘lmagan xizmatni so‘rashidir. System callari jarayon va operatsion tizim o'rtasidagi interfeysni ta'minlaydi. 
+
+System call - bu operatsion tizimdan xizmat so'rash uchun amaliy dastur tomonidan foydalaniladigan mexanizm.
+Ular protsessorni rejimni o'zgartirishga olib keladigan machine-code instructiondan foydalanadilar.
+
+Bu yerda operatsion tizim hardware qurilmalari yoki memory management unitga kirish kabi amallarni bajaradi.Odatda operatsion tizim va oddiy foydalanuvchi dasturlari o'rtasida joylashgan kutubxonani ta'minlaydi.Odatda bu `Glibc` yoki `Windows API` kabi `C` kutubxonasi.
+
+ Kutubxona kernelga ma'lumot uzatish va supervisor rejimiga o'tishning low-leveldagi tafsilotlarini boshqaradi. System callarga yopish, ochish, o'qish, kutish va yozish kiradi. Haqiqiy foydali ishni bajarish uchun jarayon kernel tomonidan taqdim etilgan xizmatlarga kirish imkoniyatiga ega bo'lishi kerak. Bu har bir kernel tomonidan turlicha amalga oshiriladi, lekin ko'pchilik C kutubxonasi yoki APIni taqdim etadi, bu esa o'z navbatida tegishli kernel funksiyalarini chaqiradi.
