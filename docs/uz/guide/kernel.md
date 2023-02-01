@@ -88,3 +88,37 @@ Bugungi kunda odatiy kompyuter tizimlari qaysi dasturlarga qanday ma'lumotlarga 
 Protsessor executionni nazorat qiladi va qoidani buzadigan dasturni to'xtatadi, masalan, kernel xotirasiga yozishga harakat qiladigan foydalanuvchi jarayoni.
 
 Muqobil yondashuv tilga asoslangan himoyadan foydalanishdir.Tilga asoslangan himoya tizimida kernel faqat ishonchli til kompilyatori tomonidan ishlab chiqarilgan kodni bajarishga ruxsat beradi. Keyin til shunday ishlab chiqilgan bo'lishi mumkinki, dasturchi unga xavfsizlik talabini buzadigan biror narsa qilishni buyura olmaydi.
+
+#### I/O device management
+
+Parallel hamkorlik jarayonlari sifatida input/output qurilmalari boshqa jarayonlar bilan bir xilda ishlanadigan kernel g'oyasi birinchi marta `Brinch Hansen` tomonidan taklif qilingan va amalga oshirilgan (garchi shunga o'xshash g'oyalar 1967 yilda taklif qilingan bo'lsa-da). Hansenning bu tavsifida "umumiy" jarayonlar internal processlar, input/output qurilmalari esa external processlar deb ataladi.
+
+### Kernel bo'ylab dizayn yondashuvlari
+
+Tabiiyki, yuqorida sanab o'tilgan vazifalar va xususiyatlar dizayn va implement qilishda bir-biridan farq qiladigan ko'p jihatdan ta'minlanishi mumkin.
+
+Mexanizm va siyosatni ajratish printsipi mikro va monolit kernelar falsafasi o'rtasidagi jiddiy farqdir. Bu yerda mexanizm ko'plab turli siyosatlarni amalga oshirishga imkon beruvchi qo'llab-quvvatlashdir, siyosat esa ma'lum bir "ish rejimi" dir.
+
+Misol:
+ * Mexanizm: Foydalanuvchining kirishga urinishlari avtorizatsiya serveriga yo'naltiriladi
+ * Siyosat: Avtorizatsiya serveri maʼlumotlar bazasida saqlangan parollar bilan tasdiqlangan parolni talab qiladi
+
+ Mexanizm va siyosat bir-biridan ajratilganligi sababli, siyosat osongina o'zgartirilishi mumkin, masalan. xavfsizlik tokenidan foydalanishni talab qiladi. Monolit kernel ko'plab siyosatlarni o'z ichiga oladi, shuning uchun tizimning qolgan qismini ularga tayanishni cheklaydi.
+
+Per Brinch Hansen mexanizm va siyosatni ajratish foydasiga dalillar keltirdi. Ushbu ajratishning to'g'ri bajarilmasligi mavjud operatsion tizimlarda jiddiy innovatsiyalar yo'qligining asosiy sabablaridan biri bo'lib, kompyuter arxitekturasida keng tarqalgan muammo.
+
+Asosiy muqobil arxitektura yondoshuvi, capability-based addressing ikkalasini aniq ajratib turadi, bu esa tabiiy ravishda mikrokernel dizayniga olib keladi.
+
+### Kernel arxitekturasining turli dizaynlari mavjud.
+
+#### Kernel turlari
+
+:::tip
+Kernellarning beshta asosiy turi:
+
+* Monolitik kernel
+* Micro Kernel
+* Gibrid Kernel
+* Exo Kernel
+* Nano Kernel
+:::
