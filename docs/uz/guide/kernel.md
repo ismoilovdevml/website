@@ -159,7 +159,9 @@ Unix, Linux, Open VMS, XTS-400 va boshqalar.
 
 Mikro kernellar yangi ishlanmadir va shuning uchun monolit kernellar kabi keng tarqalgan emas. Ular faqat tizimning ishlashi uchun zarur bo'lgan asosiy servicelar va qurilmalarni o'z ichiga oladi. Bu tezroq va kamroq xotiradan foydalanadigan kichikroq kernelgaga olib keladi. Bu yerda foydalanuvchi va kernel servicelari ikki xil spaceda amalga oshiriladi. Unda alohida `User Space` va `Kernel Space` mavjud.Bu kernel hajmini kamaytiradi va operatsion tizim hajmini qisqartiradi. 
 
-Mikro kernellar an'anaviy `monolitik` kernel dizayniga reaksiya sifatida ixtiro qilingan, bunda tizimning barcha funksiyalari protsessorning maxsus `system` rejimida ishlaydigan bitta statik dasturga kiritilgan.
+Mikro kernellar an'anaviy `monolitik` kernel dizayniga reaksiya sifatida ixtiro qilingan, bunda tizimning barcha funksiyalari protsessorning maxsus `system` rejimida ishlaydigan bitta statik dasturga kiritilgan. Faqat privileged rejimda bo'lishni talab qiladigan qismlar kernel spaceda: `IPC (Inter-Process Communication)`(jarayonlararo aloqa), asosiy rejalashtiruvchi yoki rejalashtirish primitivlari, asosiy xotira bilan ishlash, asosiy I/O(input/output) primitivlari.
+
+##### Misollar:
 
 :::tip
 Mach, L4, AmigaOS, Minix, K42 va boshqalar.
@@ -177,3 +179,19 @@ Mach, L4, AmigaOS, Minix, K42 va boshqalar.
 * Interfeys uchun ko'proq dasturiy ta'minot talab qilinadi, ishlashni yo'qotish ehtimoli mavjud.
 * Umuman olganda, jarayonni boshqarish juda murakkab bo'lishi mumkin.
 * Ko'p system calllari va context switchelar mavjud.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Kernel-microkernel.svg/260px-Kernel-microkernel.svg.png)
+![alt text](https://www.researchgate.net/publication/274076584/figure/fig1/AS:294857785528320@1447310982190/Comparison-between-a-monolithic-kernel-design-A-and-a-microkernel-B.png)
+
+##### Rasmda Mikro Kernel tasvirlangan va Monolitik va Mikro kernel kernel dizaynlari tasvirlangan
+
+### Monolitik kernellar va mikrokernellar
+
+1990-yillarning boshlariga kelib, monolit kernellarning mikrokernellarga nisbatan turli kamchiliklari tufayli, deyarli barcha operatsion tizim tadqiqotchilari tomonidan monolit kernellar eskirgan deb hisoblangan. Natijada, Linuxning mikrokernel emas, balki monolit kernel sifatida dizayni Linus Torvalds va Andrew Tanenbaum o'rtasidagi mashhur munozaraning mavzusi edi. Tanenbaum–Torvalds bahsida keltirilgan argumentning har ikki tomonida ham asos bor.
+
+Monolitik kernellar o'zlarining barcha kodlari bir xil address space (kernel space) bo'lishi uchun yaratilgan bo'lib, ba'zi ishlab chiquvchilar buni tizimning ishlashini oshirish uchun zarur deb hisoblaydilar.
+Ushbu ma'lumotlarning tushuntirishlari `kernel-mode`dan `user-mode` ga o'tish chastotasining ko'payishi, inter-process communication(jarayonlararo aloqa) chastotasining ko'payishi bilan bog'liq degan taxmin bilan `folklore` ga qoldirildi va context switchelarning ortib borayotgan chastotasiga.
+
+
+### Gibrid (yoki modulli) kernellar
+
