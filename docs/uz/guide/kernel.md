@@ -224,9 +224,8 @@ Windows NT, Netware, BeOS, XNU va boshqalar.
 * Symbollar farqi kabi muammolarni hal qilishda modullarni saqlash ba'zi ma'murlar uchun chalkash bo'lishi mumkin.
 
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kernel-hybrid.svg/260px-Kernel-hybrid.svg.png)
-![alt text](https://github.com/ismoilovdevml/website/blob/master/assets/Windows_2000_architecture.png)
 
-##### Rasmda Gibrid kernel va Windows 2000 arxitekturasi
+##### Rasmda Gibrid kernel arxitekturasi
 
 #### Nano Kernel
 
@@ -308,10 +307,6 @@ Ushbu mahsulot qatori 1980 va 1990 yillar davomida rivojlanishda davom etdi, Win
 Bu yoʻnalish 1993-yilda Windows NT 3.1-ning chiqarilishi bilan boshlangan va umumiy foydalanuvchilarga 2001-yil oktabr oyida Windows XP-ning chiqarilishi bilan tanishtirilgan - Windows 9x-ni butunlay boshqacha, ancha murakkab operatsion tizim bilan almashtirgan. Bu Windows 11 bilan davom etadigan yo'nalish.
 
 Windows NT kernelining arxitekturasi gibrid kernel hisoblanadi, chunki kernelning o'zi client/server qatlamli subsystem modeliga ega Window Manager va IPC Managers kabi vazifalarni o'z ichiga oladi. U o'zgartirilgan mikrokernel sifatida ishlab chiqilgan, chunki Windows NT kernelii Mach mikrokernelidan ilhomlangan, ammo sof mikrokernelning barcha mezonlariga javob bermaydi.
-
-![alt text](https://github.com/ismoilovdevml/website/blob/master/assets/Windows_2000_architecture.png)
-
-##### Rasmda Windows NT operatsion tizimlari oilasining arxitekturasi
 
 ### IBM Supervisor
 
