@@ -283,6 +283,14 @@ Zamonaviy Unix hosilalari odatda modul yuklaydigan monolit kernellarga asoslanga
 
 Apple birinchi marta 1984 yilda Macintosh shaxsiy kompyuteri bilan birga o'zining classic Mac OS-ni ishga tushirdi. Apple Mac OS 8.6 da nanokernel dizayniga o'tdi. Bunga qarshi zamonaviy macOS (dastlab Mac OS X deb nomlangan) Darvinga asoslangan bo'lib, u 4.3BSD kerneli va Mach kernelnini birlashtirish orqali yaratilgan XNU deb nomlangan gibrid kerneldan foydalanadi.
 
+### XNU
+
+XNU - bu Mac OS X (hozirgi macOS) operatsion tizimida foydalanish uchun 1996 yil dekabr oyidan beri Apple Inc da ishlab chiqilgan va Darvin OSning bir qismi sifatida bepul va open source dasturiy ta'minot sifatida chiqarilgan kompyuter operatsion tizimining (OS) kerneli. macOS uchun ham Apple TV dasturiy ta'minoti, iOS, iPadOS, watchOS va tvOS operatsion tizimlari uchun asosdir.
+
+
+XNU - X is Not Unix qisqartmasi.
+
+[XNU Open Source Github](https://github.com/apple/darwin-xnu)
 
 ## Microsoft Windows
 
@@ -293,3 +301,13 @@ Ushbu mahsulot qatori 1980 va 1990 yillar davomida rivojlanishda davom etdi, Win
 Bu yoʻnalish 1993-yilda Windows NT 3.1-ning chiqarilishi bilan boshlangan va umumiy foydalanuvchilarga 2001-yil oktabr oyida Windows XP-ning chiqarilishi bilan tanishtirilgan - Windows 9x-ni butunlay boshqacha, ancha murakkab operatsion tizim bilan almashtirgan. Bu Windows 11 bilan davom etadigan yo'nalish.
 
 Windows NT kernelining arxitekturasi gibrid kernel hisoblanadi, chunki kernelning o'zi client/server qatlamli subsystem modeliga ega Window Manager va IPC Managers kabi vazifalarni o'z ichiga oladi. U o'zgartirilgan mikrokernel sifatida ishlab chiqilgan, chunki Windows NT kernelii Mach mikrokernelidan ilhomlangan, ammo sof mikrokernelning barcha mezonlariga javob bermaydi.
+
+### IBM Supervisor
+
+Supervisor dastur yoki supervisor - kompyuter dasturi, odatda operatsion tizimning bir qismi bo'lib, u boshqa tartiblarning bajarilishini nazorat qiladi va ishni rejalashtirish, input/output operatsiyalari, xato harakatlar va shunga o'xshash funksiyalarni tartibga soladi va ma'lumotlarni qayta ishlash tizimidagi ish oqimini tartibga soladi.
+
+Tarixiy jihatdan, bu atama IBM ning OS/360 dan boshlangan asosiy operatsion tizimlari qatori bilan bog'liq edi. Boshqa operatsion tizimlarda supervisor odatda kernel deb ataladi.
+
+1970-yillarda IBM supervisor holatini hardwaredan ajratib oldi, natijada toʻliq virtualizatsiya, yaʼni bir mashinada bir nechta operatsion tizimlarni bir-biridan mutlaqo mustaqil ravishda ishga tushirish imkoniyatini beruvchi hypervisor paydo boʻldi.
+Shunday qilib, birinchi bunday tizim `Virtual Machine` yoki `VM`deb nomlangan.
+
