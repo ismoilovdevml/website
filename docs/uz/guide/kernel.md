@@ -2,6 +2,13 @@
 
 ![alt text](https://pemmzchannel.com/wp-content/uploads/2022/06/kernel-panic-3.10.0-229.4.2.el7_.png)
 
+
+:::tip
+Buguni maqolada biz ko'p sirlarni mavhumliklarni ochamiz. Bu maqolada kernel nima? kernel tarixi, Apple Microsoft kernel ishlab chiqishi, Unix kernel, Linux FreeBSD OpenBSD, Kernel arxitekturasi va kerneldagi muammolar va boshqa ko'p qiziqarli malumotlarni bilib olasiz.
+
+Tayyormisiz qani kettik :)
+:::
+
 `Kernel` - bu kompyuterning operatsion tizimining yadrosi bo'lgan kompyuter dasturi va odatda tizimdagi hamma narsani to'liq nazorat qiladi. Bu operatsion tizim kodining har doim xotirada joylashgan qismi va hardware va software componentlari o'rtasidagi o'zaro aloqalarni osonlashtiradi.
 To'liq kernel qurilma drayverlari orqali barcha hardware resurslarini (masalan, I/O(input/output), memory, kriptografiya) boshqaradi, bunday resurslarga tegishli jarayonlar o'rtasidagi conflictni hal qiladi va umumiy resurslardan foydalanishni optimallashtiradi, masalan. CPU va keshdan foydalanish, fayl tizimlari va network socketlari.
 Ko'pgina tizimlarda kernel ishga tushirilganda (bootloderdan keyin) yuklangan birinchi dasturlardan biridir.
@@ -217,9 +224,9 @@ Windows NT, Netware, BeOS, XNU va boshqalar.
 * Symbollar farqi kabi muammolarni hal qilishda modullarni saqlash ba'zi ma'murlar uchun chalkash bo'lishi mumkin.
 
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kernel-hybrid.svg/260px-Kernel-hybrid.svg.png)
-![alt text](https://static.wikia.nocookie.net/windows/images/5/5d/Windows_2000_architecture.svg/revision/latest/scale-to-width-down/275?cb=20120829114452)
+![alt text](assets/Windows_2000_architecture.png)
 
-##### Rasmda Gibrid kernel dizayni
+##### Rasmda Gibrid kernel va Windows 2000 dizayni
 
 #### Nano Kernel
 
@@ -302,6 +309,10 @@ Bu yoʻnalish 1993-yilda Windows NT 3.1-ning chiqarilishi bilan boshlangan va um
 
 Windows NT kernelining arxitekturasi gibrid kernel hisoblanadi, chunki kernelning o'zi client/server qatlamli subsystem modeliga ega Window Manager va IPC Managers kabi vazifalarni o'z ichiga oladi. U o'zgartirilgan mikrokernel sifatida ishlab chiqilgan, chunki Windows NT kernelii Mach mikrokernelidan ilhomlangan, ammo sof mikrokernelning barcha mezonlariga javob bermaydi.
 
+![alt text](assets/Windows_2000_architecture.png)
+
+##### Rasmda Windows NT operatsion tizimlari oilasining arxitekturasi
+
 ### IBM Supervisor
 
 Supervisor dastur yoki supervisor - kompyuter dasturi, odatda operatsion tizimning bir qismi bo'lib, u boshqa tartiblarning bajarilishini nazorat qiladi va ishni rejalashtirish, input/output operatsiyalari, xato harakatlar va shunga o'xshash funksiyalarni tartibga soladi va ma'lumotlarni qayta ishlash tizimidagi ish oqimini tartibga soladi.
@@ -311,3 +322,15 @@ Tarixiy jihatdan, bu atama IBM ning OS/360 dan boshlangan asosiy operatsion tizi
 1970-yillarda IBM supervisor holatini hardwaredan ajratib oldi, natijada toʻliq virtualizatsiya, yaʼni bir mashinada bir nechta operatsion tizimlarni bir-biridan mutlaqo mustaqil ravishda ishga tushirish imkoniyatini beruvchi hypervisor paydo boʻldi.
 Shunday qilib, birinchi bunday tizim `Virtual Machine` yoki `VM`deb nomlangan.
 
+
+Maqola juda uzun bo'lgani uchun uzur so'rayman )
+
+Endi siz kernel ishlashi kelib chiqishi kernel turlari haqidagi bilimlarni bilib oldingiz )
+
+Xato va kamchiliklar bo'lsa uzur so'rayman )
+
+
+Foydanilgan Manbalar
+
+[Wikipedia](https://en.wikipedia.org/wiki/Kernel_(operating_system))
+va boshqa juda ko'p manbalar

@@ -353,7 +353,7 @@ Xato va kamchiliklar bo'lsa uzur so'rayman )
 
 Foydanilgan Manbalar
 
-[Wikipedi](https://en.wikipedia.org/wiki/Central_processing_unit)
+[Wikipedia](https://en.wikipedia.org/wiki/Central_processing_unit)
 va boshqa manbalar
 
 
