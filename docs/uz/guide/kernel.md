@@ -264,3 +264,16 @@ Multikernelli operatsion tizim multi-coreli mashinaga xuddi taqsimlangan tizim k
 
 ### Unix
 
+Unixni loyihalash bosqichida dasturchilar har bir yuqori darajali qurilmani fayl sifatida modellashtirishga qaror qilishdi, chunki ular hisoblashning maqsadi ma'lumotlarni o'zgartirish deb hisoblashgan. Tizimni fayl darajasida virtualizatsiya qilish foydalanuvchilarga mavjud fayllarni boshqarish yordam dasturlari va kontseptsiyalari yordamida butun tizimni manipulyatsiya qilish imkonini berdi va bu operatsiyani sezilarli darajada soddalashtirdi.
+
+Xuddi shu paradigmaning kengaytmasi sifatida Unix dasturchilarga pipelar kontseptsiyasidan foydalangan holda bir qator kichik dasturlardan foydalanib fayllarni manipulyatsiya qilish imkonini beradi.
+
+Yakuniy natija bir xil bo'lsa-da, shu tarzda kichikroq dasturlardan foydalanish moslashuvchanlikni, shuningdek, ishlab chiqish va foydalanish qulayligini sezilarli darajada oshirdi, bu foydalanuvchiga dasturni zanjirdan qo'shish yoki olib tashlash orqali o'z ish jarayonini o'zgartirish imkonini berdi.
+
+Unix modelida operatsion tizim ikki qismdan iborat: birinchidan, ko'pchilik operatsiyalarni boshqaradigan yordamchi dasturlarning ulkan to'plami; ikkinchidan, dasturlarni boshqaradigan kernel. Yillar davomida hisoblash modeli o'zgardi va Unix-ning hamma narsani fayl yoki bayt oqimi sifatida ko'rib chiqishi avvalgidek universal qo'llanilmaydi.
+
+Kompyuterlarning imkoniyatlari oshgani sayin, Unix kodlar bilan tobora ko'proq chigallashib bordi. 1970 va 1980 - yillarda kernellarda 100 000 qator kod boʻlishi mumkin boʻlsa-da, Linux kabi kernellar, GNU kabi zamonaviy Unix vorislari 13 milliondan ortiq qatorga ega.
+
+2020 yil hisobiga ko'ra Linux kerneli kodi 27.8 million qatorga yetgan.
+
+Zamonaviy Unix hosilalari odatda modul yuklaydigan monolit kernellarga asoslangan. Bunga misol qilib GNU, IBM AIX ning koʻplab distribyutsiyalaridagi Linux yadrosi, shuningdek, FreeBSD, DragonflyBSD, OpenBSD, NetBSD va macOS kabi Berkeley Software Distribution variant kernelllari misol boʻla oladi. Ushbu muqobil variantlardan tashqari, havaskor ishlab chiquvchilar asosan Linux, FreeBSD, DragonflyBSD, OpenBSD yoki NetBSD kernellari bilan ko‘p funksiyalarni baham ko‘radigan va/yoki ular bilan mos keladigan o‘z-o‘zidan yozilgan sevimli mashg‘ulot kernellari bilan to‘ldirilgan faol operatsion tizimni ishlab chiqish hamjamiyatiga ega.
