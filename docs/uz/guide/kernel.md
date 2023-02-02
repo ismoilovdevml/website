@@ -262,7 +262,7 @@ Nemesis, ExOS va boshqalar.
 
 Multikernelli operatsion tizim multi-coreli mashinaga xuddi taqsimlangan tizim kabi mustaqil yadrolar tarmog'i sifatida qaraydi. U umumiy xotirani o'z zimmasiga olmaydi, balki message-passing sifatida inter-process communicationni amalga oshiradi. `Barrelfish` ko'p multikernelli deb ta'riflangan birinchi operatsion tizim edi.
 
-### Unix
+## Unix
 
 Unixni loyihalash bosqichida dasturchilar har bir yuqori darajali qurilmani fayl sifatida modellashtirishga qaror qilishdi, chunki ular hisoblashning maqsadi ma'lumotlarni o'zgartirish deb hisoblashgan. Tizimni fayl darajasida virtualizatsiya qilish foydalanuvchilarga mavjud fayllarni boshqarish yordam dasturlari va kontseptsiyalari yordamida butun tizimni manipulyatsiya qilish imkonini berdi va bu operatsiyani sezilarli darajada soddalashtirdi.
 
@@ -277,3 +277,19 @@ Kompyuterlarning imkoniyatlari oshgani sayin, Unix kodlar bilan tobora ko'proq c
 2020 yil hisobiga ko'ra Linux kerneli kodi 27.8 million qatorga yetgan.
 
 Zamonaviy Unix hosilalari odatda modul yuklaydigan monolit kernellarga asoslangan. Bunga misol qilib GNU, IBM AIX ning koʻplab distribyutsiyalaridagi Linux yadrosi, shuningdek, FreeBSD, DragonflyBSD, OpenBSD, NetBSD va macOS kabi Berkeley Software Distribution variant kernelllari misol boʻla oladi. Ushbu muqobil variantlardan tashqari, havaskor ishlab chiquvchilar asosan Linux, FreeBSD, DragonflyBSD, OpenBSD yoki NetBSD kernellari bilan ko‘p funksiyalarni baham ko‘radigan va/yoki ular bilan mos keladigan o‘z-o‘zidan yozilgan sevimli mashg‘ulot kernellari bilan to‘ldirilgan faol operatsion tizimni ishlab chiqish hamjamiyatiga ega.
+
+## Classic Mac OS va macOS
+
+
+Apple birinchi marta 1984 yilda Macintosh shaxsiy kompyuteri bilan birga o'zining classic Mac OS-ni ishga tushirdi. Apple Mac OS 8.6 da nanokernel dizayniga o'tdi. Bunga qarshi zamonaviy macOS (dastlab Mac OS X deb nomlangan) Darvinga asoslangan bo'lib, u 4.3BSD kerneli va Mach kernelnini birlashtirish orqali yaratilgan XNU deb nomlangan gibrid kerneldan foydalanadi.
+
+
+## Microsoft Windows
+
+Microsoft Windows birinchi marta 1985 yilda MS-DOS qo'shimchasi sifatida chiqarilgan. Boshqa operatsion tizimga bog'liqligi sababli, Windows 95 dan oldingi Windowsning dastlabki versiyalari operating environment(operatsion muhit) deb hisoblangan (operatsion tizim bilan adashtirmaslik kerak).
+
+Ushbu mahsulot qatori 1980 va 1990 yillar davomida rivojlanishda davom etdi, Windows 9x seriyali 32-bitli adreslash va oldindan ko'p vazifalarni qo'shdi; lekin 2000 yilda `Windows Me`-ning chiqarilishi bilan yakunlandi. Microsoft shuningdek, `Windows NT` operatsion tizimini ishlab chiqdi, bu juda o'xshash interfeysga ega, lekin yuqori darajadagi va biznes foydalanuvchilari uchun mo'ljallangan.
+
+Bu yoʻnalish 1993-yilda Windows NT 3.1-ning chiqarilishi bilan boshlangan va umumiy foydalanuvchilarga 2001-yil oktabr oyida Windows XP-ning chiqarilishi bilan tanishtirilgan - Windows 9x-ni butunlay boshqacha, ancha murakkab operatsion tizim bilan almashtirgan. Bu Windows 11 bilan davom etadigan yo'nalish.
+
+Windows NT kernelining arxitekturasi gibrid kernel hisoblanadi, chunki kernelning o'zi client/server qatlamli subsystem modeliga ega Window Manager va IPC Managers kabi vazifalarni o'z ichiga oladi. U o'zgartirilgan mikrokernel sifatida ishlab chiqilgan, chunki Windows NT kernelii Mach mikrokernelidan ilhomlangan, ammo sof mikrokernelning barcha mezonlariga javob bermaydi.
