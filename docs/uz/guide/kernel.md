@@ -220,3 +220,47 @@ Windows NT, Netware, BeOS, XNU va boshqalar.
 ![alt text](https://static.wikia.nocookie.net/windows/images/5/5d/Windows_2000_architecture.svg/revision/latest/scale-to-width-down/275?cb=20120829114452)
 
 ##### Rasmda Gibrid kernel dizayni
+
+#### Nano Kernel
+
+Nano kernellar kernelning eng kichik turi bo'lib, bir necha ming kod qatoridan iborat. Bu hardware abstractionini taklif qiladigan, lekin system servicelarisiz kernel turi. Micro Kernel ham system servicelariga ega emas, shuning uchun Micro Kernel va Nano Kernel o'xshash bo'ladi. Bu hardwerining privilegeli rejimida bajariladigan kod minimal ekanligini anglatadi. Ular asosan embedded systemlarda yoki cheklangan resurslarga ega qurilmalarda qo'llaniladi.
+
+##### Misollar:
+
+:::tip
+EROS va boshqalar.
+:::
+
+#### Afzalliklari
+
+* U system servicelarisiz hardware abstractionlarini taklif qiladi.
+
+#### Kamchiliklari
+
+* Bu mikro kernel bilan bir xil, shuning uchun u kamroq qo'llaniladi.
+
+#### Exo Kernel
+Bu `end-to-end` tamoyiliga amal qiladigan kernel turi. Unda iloji boricha kamroq hardware abstractionlari mavjud. U jismoniy resurslarni ilovalarga ajratadi. Bu kernel alohida resurs protection va boshqaruviga ega. Ilovaga maxsus moslashtirishni amalga oshirishda foydalanish uchun javob beradi. Exo kernellari mobil qurilmalarda foydalanish uchun mo'ljallangan. Ular power management va bir nechta protsessorlarni qo'llab-quvvatlash kabi mobil qurilmalar uchun maxsus qo'shimcha funksiyalarni o'z ichiga olgan mikrokernellarning o'zgarishi.
+
+Exo kernellar operatsion tizimni loyihalashda hali ham eksperimental yondashuvdir. Ular boshqa turdagi kernellardan o'zlarining funksional imkoniyatlarini raw hardwareni himoya qilish va multiplekslash bilan cheklashlari bilan farq qiladi, buning ustiga ilovalarni ishlab chiqish uchun hech qanday apparat hardware abstractionlarini ta'minlamaydi.
+
+##### Misollar:
+
+:::tip
+Nemesis, ExOS va boshqalar.
+:::
+
+#### Afzalliklari
+
+* Unda juda kam hardware abstractionlari mavjud.
+
+#### Kamchiliklari
+
+* Ilovalarni ishlab chiquvchilar uchun ko'proq ish bor.
+
+### Multi kernellar
+
+Multikernelli operatsion tizim multi-coreli mashinaga xuddi taqsimlangan tizim kabi mustaqil yadrolar tarmog'i sifatida qaraydi. U umumiy xotirani o'z zimmasiga olmaydi, balki message-passing sifatida inter-process communicationni amalga oshiradi. `Barrelfish` ko'p multikernelli deb ta'riflangan birinchi operatsion tizim edi.
+
+### Unix
+
