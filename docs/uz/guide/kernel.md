@@ -4,10 +4,23 @@
 
 
 :::tip
-Buguni maqolada biz ko'p sirlarni mavhumliklarni ochamiz. Bu maqolada kernel nima? kernel tarixi, Apple Microsoft kernel ishlab chiqishi, Unix kernel, Linux FreeBSD OpenBSD, Kernel arxitekturasi va kerneldagi muammolar va boshqa ko'p qiziqarli malumotlarni bilib olasiz.
+Buguni maqolada biz ko'p sirlarni mavhumliklarni ochamiz. Bu maqolada kernel nima?, kernel tarixi, Apple Microsoft kernel ishlab chiqishi, Unix kernel, Linux FreeBSD OpenBSD, Kernel arxitekturasi va kerneldagi muammolar va boshqa ko'p qiziqarli malumotlarni bilib olasiz.
 
 Tayyormisiz qani kettik :)
 :::
+
+## Kernel nima?
+
+#### Soddalashtirilgan tushuntirish
+
+Kernel kompyuter va hardware operatsiyalarini boshqaradigan operatsion tizimning markaziy komponentidir. U asosan xotira va CPU time operatsiyalarini boshqaradi. Bu operatsion tizimning asosiy komponentidir. kernel inter-process communication(jarayonlararo aloqa) va system calllari yordamida hardware levelda amalga oshiriladigan ilovalar va ma'lumotlarni qayta ishlash o'rtasida ko'prik vazifasini bajaradi. Operatsion tizim yuklanganda kernel birinchi bo'lib xotiraga yuklanadi va operatsion tizim qayta o'chirilguncha xotirada qoladi. U diskni boshqarish, vazifalarni boshqarish va xotirani boshqarish kabi turli vazifalar uchun javobgardir. Kernelda barcha faol jarayonlarni kuzatib boruvchi process table mavjud.
+
+Kernel "exec" system call paytida bajariladigan faylni xotiraga yuklaydi. U qaysi jarayonni bajarish uchun protsessorga ajratish va qaysi jarayonni bajarish uchun asosiy xotirada saqlash kerakligini hal qiladi. U asosan foydalanuvchi ilovalari va hardware o'rtasidagi interfeys vazifasini bajaradi. YKernelning asosiy maqsadi dasturiy ta'minot, ya'ni foydalanuvchi darajasidagi ilovalar va hardware, ya'ni protsessor va disk xotirasi o'rtasidagi aloqani boshqarishdir.
+
+
+
+
+#### Kengaytirilgan tushuntirish
 
 `Kernel` - bu kompyuterning operatsion tizimining yadrosi bo'lgan kompyuter dasturi va odatda tizimdagi hamma narsani to'liq nazorat qiladi. Bu operatsion tizim kodining har doim xotirada joylashgan qismi va hardware va software componentlari o'rtasidagi o'zaro aloqalarni osonlashtiradi.
 To'liq kernel qurilma drayverlari orqali barcha hardware resurslarini (masalan, I/O(input/output), memory, kriptografiya) boshqaradi, bunday resurslarga tegishli jarayonlar o'rtasidagi conflictni hal qiladi va umumiy resurslardan foydalanishni optimallashtiradi, masalan. CPU va keshdan foydalanish, fayl tizimlari va network socketlari.
