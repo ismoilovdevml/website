@@ -56,7 +56,7 @@ Ko'p system calllari va context switchelar mavjud.
 
 #### Gibrid Kernel
 
-Gibrid kernellar monolit va mikro kernellarni birlashtiradi. Ular mikro kernellarga qaraganda ko'proq servicelarni o'z ichiga oladi, lekin monolit kernellardan kamroq. Bu ularga ikkala kernelning ba'zi afzalliklarini taklif qilish imkonini beradi. U monolit kerne;lardan tezlikni va mikro kernellardan modullikni oladi.
+Gibrid kernellar monolit va mikro kernellarni birlashtiradi. Ular mikro kernellarga qaraganda ko'proq servicelarni o'z ichiga oladi, lekin monolit kernellardan kamroq. Bu ularga ikkala kernelning ba'zi afzalliklarini taklif qilish imkonini beradi. U monolit kernellardan tezlikni va mikro kernellardan modullikni oladi.
 
 ##### Misollar:
 

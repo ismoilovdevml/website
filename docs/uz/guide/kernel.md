@@ -195,3 +195,28 @@ Ushbu ma'lumotlarning tushuntirishlari `kernel-mode`dan `user-mode` ga o'tish ch
 
 ### Gibrid (yoki modulli) kernellar
 
+Gibrid kernellar `Microsoft Windows` NT 3.1, NT 3.5, NT 3.51, NT 4.0, 2000, XP, Vista, 7, 8, 8.1 va 10 kabi ko'pgina tijorat operatsion tizimlarida qo'llaniladi. `Apple Inc` kompaniyasining o'z macOS tizimi OSF/1 Mach kerneli (OSFMK 7.3)va FreeBSD monolit kerneli kodiga asoslangan `XNU` nomli gibrid kerneldan foydalanadi.
+
+Gibrid kernellar monolit va mikro kernellarni birlashtiradi. Ular mikro kernellarga qaraganda ko'proq servicelarni o'z ichiga oladi, lekin monolit kernellardan kamroq. Bu ularga ikkala kernelning ba'zi afzalliklarini taklif qilish imkonini beradi. U monolit kernellardan tezlikni va mikro kernellardan modullikni oladi.
+
+##### Misollar:
+
+:::tip
+Windows NT, Netware, BeOS, XNU va boshqalar.
+:::
+
+#### Afzalliklari
+
+* U monolit kernel va mikro kernelni birlashtiradi.
+* Uchinchi tomon texnologiyasining tezroq integratsiyasi
+* Modullar ichidan ishlashi mumkin bo'lgan drayverlar uchun tezroq ishlab chiqish vaqti. Sinov uchun qayta ishga tushirish shart emas.
+
+#### Kamchiliklari
+
+* U hali ham monolit kernelga o'xshaydi.
+* Symbollar farqi kabi muammolarni hal qilishda modullarni saqlash ba'zi ma'murlar uchun chalkash bo'lishi mumkin.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kernel-hybrid.svg/260px-Kernel-hybrid.svg.png)
+![alt text](https://static.wikia.nocookie.net/windows/images/5/5d/Windows_2000_architecture.svg/revision/latest/scale-to-width-down/275?cb=20120829114452)
+
+##### Rasmda Gibrid kernel dizayni
