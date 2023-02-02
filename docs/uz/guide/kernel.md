@@ -19,7 +19,7 @@ Bundan farqli o'laroq, brauzerlar, word processorlari va audio yoki video player
 
 ![alt tab](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kernel_Layout.svg/220px-Kernel_Layout.svg.png)
 
-Rasmda soddalashtirilgan kernel ishlashi
+Rasmda soddalashtirilgan kernel arxitekturasi
 
 
 
@@ -160,7 +160,7 @@ Unix, Linux, Open VMS, XTS-400 va boshqalar.
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Kernel-simple.svg/170px-Kernel-simple.svg.png)
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kernel_Layout.svg/220px-Kernel_Layout.svg.png)
 
-##### Rasmda Monolitik kernellar
+##### Rasmda Monolitik kernellar arxitekturasi
 
 ### Mikro kernellar 
 
@@ -190,7 +190,7 @@ Mach, L4, AmigaOS, Minix, K42 va boshqalar.
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Kernel-microkernel.svg/260px-Kernel-microkernel.svg.png)
 ![alt text](https://www.researchgate.net/publication/274076584/figure/fig1/AS:294857785528320@1447310982190/Comparison-between-a-monolithic-kernel-design-A-and-a-microkernel-B.png)
 
-##### Rasmda Mikro Kernel tasvirlangan va Monolitik va Mikro kernel kernel dizaynlari tasvirlangan
+##### Rasmda Mikro Kernel tasvirlangan va Monolitik va Mikrokernel arxitekturalari tasvirlangan
 
 ### Monolitik kernellar va mikrokernellar
 
@@ -224,9 +224,9 @@ Windows NT, Netware, BeOS, XNU va boshqalar.
 * Symbollar farqi kabi muammolarni hal qilishda modullarni saqlash ba'zi ma'murlar uchun chalkash bo'lishi mumkin.
 
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kernel-hybrid.svg/260px-Kernel-hybrid.svg.png)
-![alt text](assets/Windows_2000_architecture.png)
+![alt text](https://github.com/ismoilovdevml/website/blob/master/assets/Windows_2000_architecture.png)
 
-##### Rasmda Gibrid kernel va Windows 2000 dizayni
+##### Rasmda Gibrid kernel va Windows 2000 arxitekturasi
 
 #### Nano Kernel
 
@@ -309,7 +309,7 @@ Bu yoʻnalish 1993-yilda Windows NT 3.1-ning chiqarilishi bilan boshlangan va um
 
 Windows NT kernelining arxitekturasi gibrid kernel hisoblanadi, chunki kernelning o'zi client/server qatlamli subsystem modeliga ega Window Manager va IPC Managers kabi vazifalarni o'z ichiga oladi. U o'zgartirilgan mikrokernel sifatida ishlab chiqilgan, chunki Windows NT kernelii Mach mikrokernelidan ilhomlangan, ammo sof mikrokernelning barcha mezonlariga javob bermaydi.
 
-![alt text](assets/Windows_2000_architecture.png)
+![alt text](https://github.com/ismoilovdevml/website/blob/master/assets/Windows_2000_architecture.png)
 
 ##### Rasmda Windows NT operatsion tizimlari oilasining arxitekturasi
 
