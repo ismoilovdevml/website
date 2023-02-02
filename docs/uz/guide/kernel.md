@@ -122,3 +122,18 @@ Kernellarning beshta asosiy turi:
 * Exo Kernel
 * Nano Kernel
 :::
+
+### Monolitik kernellar
+
+Monolitik kernellar kernelning eng oddiy va eng keng tarqalgan turidir. Bu barcha operatsion tizim servicelari kernel spaceda ishlaydigan kernel turlaridan biridir. Tizim komponentlari o'rtasida bog'liqlik mavjud. U juda murakkab kod satrlariga ega.Ular operatsion tizimning asosiy funksiyalarini o'z ichiga oladi va unga ulangan barcha qurilmalarni qo'llab-quvvatlaydi.Bunda foydalanuvchi va kernel xizmatlari bir xil memory spaceda amalga oshiriladi. Shu tufayli kernel hajmi kattalashadi, bu esa o'z navbatida operatsion tizim hajmini oshiradi
+
+Monolit kernelda barcha OS xizmatlari asosiy kernel thread bilan birga ishlaydi, shuning uchun ham bir xil xotira sohasida joylashadi. Ushbu yondashuv boy va kuchli hardware vositalariga kirishni ta'minlaydi. Ba'zi ishlab chiquvchilar, masalan, UNIX dasturchisi Ken Thompson, mikro kernellarga qaraganda "monolitik kernelni implement qilish osonroq" , deb ta'kidlaydilar.
+
+Monolitik kernellarning asosiy kamchiliklari tizim komponentlari o'rtasidagi bog'liqlikdir - qurilma drayveridagi xato butun tizimni ishdan chiqarishi mumkin - va katta kernellarni saqlash juda qiyin bo'lishi mumkin. Unix-ga o'xshash operatsion tizimlar tomonidan an'anaviy ravishda qo'llaniladigan monolit kernellar operatsion tizimning barcha asosiy funksiyalarini va qurilma drayverlarini o'z ichiga oladi. Bu UNIX tizimlarining an'anaviy dizayni. Linux (GNU operatsion tizimining kernellaridan biri) va FreeBSD kernellari kabi zamonaviy monolit kernellar, har ikkalasi ham Unix-ga o'xshash operatsion tizimlar toifasiga kiradi, modullarni ish vaqtida yuklash qobiliyatiga ega va shu bilan oson ishlashga imkon beradi, zarur bo'lganda kernel imkoniyatlarini kengaytirish, shu bilan birga kernel spaceda ishlaydigan kod miqdorini minimallashtirishga yordam beradi.
+
+
+##### Misollar:
+
+:::tip
+Unix, Linux, Open VMS, XTS-400 va boshqalar.
+:::
