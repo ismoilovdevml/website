@@ -137,3 +137,43 @@ Monolitik kernellarning asosiy kamchiliklari tizim komponentlari o'rtasidagi bog
 :::tip
 Unix, Linux, Open VMS, XTS-400 va boshqalar.
 :::
+
+#### Afzalliklari
+
+* Dasturiy ta'minot kamroq bo'lgani uchun u tezroq ishlaydi.
+* Bu bitta dasturiy ta'minot bo'lagi bo'lgani uchun u ham manba, ham kompilyatsiya shaklida kichikroq bo'lishi kerak.
+* Kamroq kod odatda kamroq xavfsizlik muammolariga aylanishi mumkin bo'lgan kamroq xatolarni anglatadi.
+
+#### Kamchiliklari
+
+* Modullar bir xil address spaceda ishlaganligi sababli, xato butun tizimni buzishi mumkin.
+* Monolitik kernellar portativ emas; shuning uchun ular operatsion tizim foydalaniladigan har bir yangi arxitektura uchun qayta yozilishi kerak.
+* Kernelning bir qismidagi xatolar kuchli yon ta'sirga ega; kerneldagi har bir funksiya barcha imtiyozlarga ega bo'lganligi sababli, bitta funksiyadagi xato boshqasining ma'lumotlar strukturasini, kernelning mutlaqo aloqador bo'lmagan qismini yoki har qanday ishlaydigan dasturni buzishi mumkin.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Kernel-simple.svg/170px-Kernel-simple.svg.png)
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kernel_Layout.svg/220px-Kernel_Layout.svg.png)
+
+##### Rasmda Monolitik kernellar
+
+### Mikro kernellar 
+
+Mikro kernellar yangi ishlanmadir va shuning uchun monolit kernellar kabi keng tarqalgan emas. Ular faqat tizimning ishlashi uchun zarur bo'lgan asosiy servicelar va qurilmalarni o'z ichiga oladi. Bu tezroq va kamroq xotiradan foydalanadigan kichikroq kernelgaga olib keladi. Bu yerda foydalanuvchi va kernel servicelari ikki xil spaceda amalga oshiriladi. Unda alohida `User Space` va `Kernel Space` mavjud.Bu kernel hajmini kamaytiradi va operatsion tizim hajmini qisqartiradi. 
+
+Mikro kernellar an'anaviy `monolitik` kernel dizayniga reaksiya sifatida ixtiro qilingan, bunda tizimning barcha funksiyalari protsessorning maxsus `system` rejimida ishlaydigan bitta statik dasturga kiritilgan.
+
+:::tip
+Mach, L4, AmigaOS, Minix, K42 va boshqalar.
+:::
+
+#### Afzalliklari
+
+* Bu yanada barqaror.
+* Patchlar alohida misolda sinovdan o'tkazilishi va keyin ishlab chiqarish namunasini egallash uchun almashtirilishi mumkin.
+* Tez ishlab chiqish vaqti va yangi dasturiy ta'minot kernelni qayta ishga tushirmasdan sinovdan o'tkazilishi mumkin.
+
+#### Kamchiliklari
+
+* Kattaroq ishlaydigan memory footprint
+* Interfeys uchun ko'proq dasturiy ta'minot talab qilinadi, ishlashni yo'qotish ehtimoli mavjud.
+* Umuman olganda, jarayonni boshqarish juda murakkab bo'lishi mumkin.
+* Ko'p system calllari va context switchelar mavjud.
