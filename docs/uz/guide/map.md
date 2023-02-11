@@ -15,3 +15,5 @@
 ## [RAM nima va qanday ishlaydi?](ram.html)
 
 ## [Kernel nima va u qanday ishlaydi?](kernel.html)
+
+## [Linux fayl tizimi uchun keng qamrovli qo'llanma](file_system.html)
