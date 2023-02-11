@@ -63,3 +63,23 @@ Linux fayl tizimining tuzilishi ierarxik bo'lib, ildiz directorysi `/` tizimdagi
 `/sbin` Ushbu directory tizimni boshqarish va texnik xizmat ko'rsatish uchun ishlatiladigan binary fayllarni o'z ichiga oladi. Odatda bu fayllarga faqat root foydalanuvchisi kirishi mumkin.
 
 `/sys` Bu virtual fayl tizimi bo'lib, tizimning hardware ta'minoti, jumladan, tizim qurilmalari va ularning konfiguratsiyasi haqida ma'lumot beradi.
+
+`/var` Ushbu directory jurnal fayllari va ma'lumotlar bazasi fayllari kabi o'zgaruvchan fayllarni o'z ichiga oladi. Ushbu directorydagi fayllar tizimdan foydalanishga qarab hajmi o'zgarishi mumkin, shuning uchun u `o'zgaruvchan` deb ataladi.
+
+Ushbu directorylarning har biri muayyan maqsadga xizmat qiladi va tizimdagi fayllarni topish va boshqarishni osonlashtiradigan tarzda tashkil etilgan. Linux fayl tizimining tuzilishini tushunish Linux tizimidan samarali foydalanish va boshqarish uchun zarurdir.
+
+## Inode tuzilishini tushunish
+
+
+Index nodening qisqartmasi inode - Linux fayl tizimidagi fayl haqidagi ma'lumotlarni saqlash uchun ishlatiladigan ma'lumotlar tuzilmasi. Inode tuzilmalari har bir faylga xos boʻlib, fayl haqidagi maʼlumotlar, jumladan, uning egaligi, ruxsatlari, vaqt belgilari va fayl maʼlumotlarining diskdagi joylashuvi haqidagi maʼlumotlarning markaziy ombori boʻlib xizmat qiladi.
+
+Har bir inode yaratilganda unga noyob raqam (inode raqami) beriladi va bu raqam inode va uning ma'lumotlariga kirish uchun ishlatiladi. Inode raqami fayl tizimi tomonidan diskdagi fayl ma'lumotlarini aniqlash uchun ishlatiladi va faylning directory yozuvida saqlanadi. Fayl ochilganda, uning inode diskdan o'qiladi va undagi ma'lumotlar faylga kirish ruxsatlarini, vaqt belgilarini va boshqa atributlarini aniqlash uchun ishlatiladi.
+
+Inodeda saqlanadigan ma'lumotlar quyidagilarni o'z ichiga oladi
+
+* Fayl turi (masalan, oddiy fayl, directory, symbolic link va boshqalar)
+* Egalik (foydalanuvchi va guruh identifikatorlari)
+* Permission(Ruxsatlar) (o'qish, yozish, bajarish va h.k.)
+* Timestamp (oxirgi kirish vaqti, oxirgi o'zgartirish vaqti va yaratish vaqti)
+* Havolalar soni (faylga qattiq havolalar soni)
+* Fayl hajmi
