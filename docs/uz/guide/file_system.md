@@ -45,3 +45,21 @@ Linux fayl tizimining tuzilishi ierarxik bo'lib, ildiz directorysi `/` tizimdagi
 `/etc` Ushbu directory tizim va ilovalar uchun konfiguratsiya fayllarini o'z ichiga oladi. Ushbu directory ko'pincha tarmoq konfiguratsiya fayllari va foydalanuvchi autentifikatsiya fayllari kabi butun tizim sozlamalarini saqlash uchun ishlatiladi.
 
 `/home` Ushbu directory tizimdagi alohida foydalanuvchilarning shaxsiy fayllari va konfiguratsiya fayllarini saqlashi mumkin bo'lgan home directorylarini o'z ichiga oladi.
+
+`/lib` Ushbu directory ilovalar va tizim uchun zarur bo'lgan umumiy kutubxonalar va boshqa fayllarni o'z ichiga oladi.
+
+`/media` Ushbu directory odatda USB drayvlar va CD-ROMlar kabi olinadigan xotira qurilmalarini o'rnatish uchun ishlatiladi.
+
+`/mnt `Ushbu directory fayl tizimlarini vaqtincha o'rnatish uchun ishlatiladi, masalan, masofaviy serverdagi ma'lumotlarga kirish uchun mount buyrug'idan foydalanganda.
+
+`/opt` Ushbu directory asosiy tizimning bir qismi bo'lmagan ixtiyoriy dasturiy paketlarni saqlash uchun ishlatiladi.
+
+`/tmp` Ushbu directory ilovalar va tizim tomonidan yaratilgan vaqtinchalik fayllarni saqlash uchun ishlatiladi.
+
+`/proc` Bu tizim va uning jarayonlari haqida ma'lumot beruvchi virtual fayl tizimi. /proc directorydagi fayllar diskda saqlanmaydi, balki kernel tomonidan real vaqtda yaratiladi.
+
+`/root` Bu tizimdagi administrator hisobi bo'lgan root foydalanuvchi uchun home  directorydir.
+
+`/sbin` Ushbu directory tizimni boshqarish va texnik xizmat ko'rsatish uchun ishlatiladigan binary fayllarni o'z ichiga oladi. Odatda bu fayllarga faqat root foydalanuvchisi kirishi mumkin.
+
+`/sys` Bu virtual fayl tizimi bo'lib, tizimning hardware ta'minoti, jumladan, tizim qurilmalari va ularning konfiguratsiyasi haqida ma'lumot beradi.
