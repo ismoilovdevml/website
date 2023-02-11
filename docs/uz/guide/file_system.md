@@ -22,3 +22,12 @@ Ext fayl tizimlariga qo'shimcha ravishda, Linuxda ishlatiladigan yana bir qancha
 * Btrfs (B-tree file system):
 
 Bu Oracle va Red Hat kabi bir nechta kompaniyalar tomonidan ishlab chiqilgan zamonaviy fayl tizimi. Btrfs yozishda nusxa ko'chirish, snapshotlar va checksumlari kabi ilg'or xususiyatlarni taklif etadi, bu esa uni saqlash tizimlari va serverlarida foydalanish uchun mashhur tanlovga aylantiradi.
+
+* XFS (XFS file system):
+Bu Silicon Graphics tomonidan ishlab chiqilgan yuqori samarali fayl tizimi. XFS katta fayl tizimlari uchun optimallashtirilgan va ko'pincha yuqori unumli hisoblash va boshqa talabchan ilovalar uchun ishlatiladi.
+
+* NTFS (New Technology File System):
+
+Bu Windows va Linux o'rnatilgan ikkilamchi yuklash tizimlari uchun tez-tez ishlatiladigan Microsoft fayl tizimi. NTFS Windows tizimlari bilan yaxshi moslikni ta'minlaydi va ko'pincha Windows bo'limlarida saqlangan ma'lumotlarga kirish uchun ishlatiladi.
+
+Ushbu fayl tizimlarining har biri o'zining kuchli va zaif tomonlariga ega va qaysi birini tanlash muayyan tizimning o'ziga xos ehtiyojlari va talablariga bog'liq bo'lishi mumkin. Umuman olganda, Linux fayl tizimining evolyutsiyasi ma'lumotlarni saqlash va boshqarishning mustahkam va moslashuvchan usulini ta'minlovchi operatsion tizim sifatida Linuxning muvaffaqiyatida asosiy rol o'ynadi.
