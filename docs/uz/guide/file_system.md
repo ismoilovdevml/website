@@ -4,9 +4,9 @@
 
 ### Kirish
 
-Linux fayl tizimi - bu Linux operatsion tizimida fayllar va jildlarni saqlash, tartibga solish va ularga kirish usuli. Bu hard disk yoki ssd disk kabi saqlash qurilmasida ma'lumotlar qanday saqlanishini belgilaydigan ierarxik tuzilma. Linux fayl tizimida ildiz jildi `/` bilan belgilanadi tizimdagi barcha boshqa jild va fayllarni o'z ichiga olgan yuqori darajadagi jilddir. Har bir jild ma'lumotlarning ierarxik tashkil etilishiga imkon beruvchi boshqa kichik jildlar yoki fayllarni o'z ichiga olishi mumkin.
+Linux fayl tizimi - bu Linux operatsion tizimida fayllar va directorylarni saqlash, tartibga solish va ularga kirish usuli. Bu hard disk yoki ssd disk kabi saqlash qurilmasida ma'lumotlar qanday saqlanishini belgilaydigan ierarxik tuzilma. Linux fayl tizimida ildiz directorysi `/` bilan belgilanadi tizimdagi barcha boshqa directory va fayllarni o'z ichiga olgan yuqori darajadagi directorydir. Har bir directory ma'lumotlarning ierarxik tashkil etilishiga imkon beruvchi boshqa kichik directorylar yoki fayllarni o'z ichiga olishi mumkin.
 
-Operatsion tizimda fayl tizimining ahamiyati shundan iboratki, u operatsion tizimga tizimdagi barcha fayllar va jildlarni kuzatib borish va ularga kirishni boshqarish imkonini beradi. Fayl tizimi diskda bo'sh joy ajratish, ma'lumotlarni joylashtirish va kirishni osonlashtiradigan tarzda tartibga solish va ma'lumotlarning samarali saqlanishi va olinishini ta'minlash uchun javobgardir.
+Operatsion tizimda fayl tizimining ahamiyati shundan iboratki, u operatsion tizimga tizimdagi barcha fayllar va directorylarni kuzatib borish va ularga kirishni boshqarish imkonini beradi. Fayl tizimi diskda bo'sh joy ajratish, ma'lumotlarni joylashtirish va kirishni osonlashtiradigan tarzda tartibga solish va ma'lumotlarning samarali saqlanishi va olinishini ta'minlash uchun javobgardir.
 
 Linuxda har xil fayl tizimlaridan foydalanish mumkin, ularning har biri o'ziga xos xususiyatlarga va ishlash xususiyatlariga ega. Ba'zi mashhur Linux fayl tizimlariga Ext2, Ext3 va Ext4 fayl tizimlari, shuningdek, yangi Btrfs va XFS fayl tizimlari kiradi. Fayl tizimini tanlash Linux tizimining ishlashi, ishonchliligi va mosligiga ta'sir qilishi mumkin, shuning uchun vazifa uchun to'g'ri fayl tizimini tanlash muhimdir.
 
@@ -31,3 +31,17 @@ Bu Silicon Graphics tomonidan ishlab chiqilgan yuqori samarali fayl tizimi. XFS 
 Bu Windows va Linux o'rnatilgan ikkilamchi yuklash tizimlari uchun tez-tez ishlatiladigan Microsoft fayl tizimi. NTFS Windows tizimlari bilan yaxshi moslikni ta'minlaydi va ko'pincha Windows bo'limlarida saqlangan ma'lumotlarga kirish uchun ishlatiladi.
 
 Ushbu fayl tizimlarining har biri o'zining kuchli va zaif tomonlariga ega va qaysi birini tanlash muayyan tizimning o'ziga xos ehtiyojlari va talablariga bog'liq bo'lishi mumkin. Umuman olganda, Linux fayl tizimining evolyutsiyasi ma'lumotlarni saqlash va boshqarishning mustahkam va moslashuvchan usulini ta'minlovchi operatsion tizim sifatida Linuxning muvaffaqiyatida asosiy rol o'ynadi.
+
+### Linux fayl tizimining tuzilishi
+
+Linux fayl tizimining tuzilishi ierarxik bo'lib, ildiz directorysi `/` tizimdagi barcha boshqa fayllar va directorylarni o'z ichiga olgan yuqori darajadagi directory bo'lib xizmat qiladi. Ildiz directorysidan ma'lum turdagi fayllarni o'z ichiga olgan va ma'lum maqsadlarga xizmat qiluvchi bir nechta subdirectorylar mavjud. Linux fayl tizimidagi eng muhim subdirectorylardan ba'zilari:
+
+`/bin` Ushbu directory tizimni yuklash va to'g'ri ishlashi uchun zarur bo'lgan muhim binary fayllarni o'z ichiga oladi. Bu fayllar odatda tizimdagi barcha foydalanuvchilar uchun umumiy bo'lib, ls, cp va mv kabi asosiy buyruqlarni o'z ichiga oladi.
+
+`/boot` Ushbu directory tizimni yuklash uchun zarur bo'lgan fayllarni o'z ichiga oladi, jumladan Linux kerneli, system map fayli va boot loader konfiguratsiya fayllari.
+
+`/dev `Ushbu directory tizimdagi qattiq disklar, klaviaturalar va sichqonlar kabi turli xil hardware qurilmalarini ifodalovchi qurilma fayllarini o'z ichiga oladi.
+
+`/etc` Ushbu directory tizim va ilovalar uchun konfiguratsiya fayllarini o'z ichiga oladi. Ushbu directory ko'pincha tarmoq konfiguratsiya fayllari va foydalanuvchi autentifikatsiya fayllari kabi butun tizim sozlamalarini saqlash uchun ishlatiladi.
+
+`/home` Ushbu directory tizimdagi alohida foydalanuvchilarning shaxsiy fayllari va konfiguratsiya fayllarini saqlashi mumkin bo'lgan home directorylarini o'z ichiga oladi.
