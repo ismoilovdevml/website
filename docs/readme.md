@@ -11,10 +11,10 @@ actions:
   type: secondary
 features:
 - title: Open Sourse
-  details: Development of Open Source in Uzbekistan
+  details: We will build the future together - we will unite for the development of Open Source in Uzbekistan.
 - title: Technical Documents
-  details: Collection of useful technical documents
+  details: Elevating Uzbekistan's IT community with comprehensive technical documentation
 - title: Development
-  details: Good opportunity for development
+  details: Strengthening my skills, improving my future - my journey with Open Source.
 footer: CC0-1.0 Licensed | All rights reserved © 2023 Uzinfocom Open Source
 ---

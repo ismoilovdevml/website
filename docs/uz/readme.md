@@ -11,10 +11,10 @@ actions:
   type: secondary
 features:
 - title: Open Sourse
-  details: O'zbekistonda Open Sourseni rivojlantirish
+  details: Kelajakni birgalikda quramiz - O'zbekistonda Open Source taraqqiyoti uchun birlashamiz.
 - title: Texnik Hujjatlar
-  details: Foydali texnik hujjatlar to'planmasi
+  details: O'zbekistonning IT hamjamiyatini keng qamrovli texnik hujjatlar bilan yuksaltirish
 - title: Rivojlanish
-  details: Rivojlanish uchun yaxshi imkoniyat
+  details: Ko'nikmalarimni kuchaytirish, kelajagimni yaxshilash - Open Source bilan sayohatim.
 footer: CC0-1.0 Licensed | Hamma xuquqlar himoyalangan © 2023 Uzinfocom Open Source
 ---
