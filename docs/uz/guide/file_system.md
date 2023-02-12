@@ -4,11 +4,27 @@
 
 ### Kirish
 
+### Hamma narsa fayl - Falsafasi
+
+:::tip
+Linuxda hamma narsa fayl sifatida ko'riladi, jumladan directorylar, qurilmalar, socketlar va hatto processlar xam. Bu Linux operatsion tizimidagi asosiy tushuncha bo'lib, `hamma narsa fayl` falsafasi deb ataladi.
+:::
+
+Har bir narsani fayl sifatida ko'rib, Linux tizimdagi turli xil manbalarga kirish va ularni boshqarishning yagona va izchil usulini taqdim etadi. Bu ishlab chiquvchilarga tizim va uning komponentlari bilan o'zaro aloqada bo'lishi mumkin bo'lgan dasturlar va skriptlarni yozishni osonlashtiradi.
+
+Masalan, Linuxda siz hard disk yoki tarmoq interfeysi kabi qurilmaga fayl tizimidagi tegishli faylni o'qish va yozish orqali kirishingiz va uni boshqarishingiz mumkin. Bu vazifalarni avtomatlashtirish va tizim darajasidagi operatsiyalarni bajarishni osonlashtiradi, chunki hamma narsani umumiy toollar va buyruqlar to'plami orqali boshqarish mumkin.
+
+
+Umuman olganda, `hamma narsa fayldir` falsafasi Linux operatsion tizimining asosiy kuchli tomonlaridan biri bo'lib, uning mashhurligi va muvaffaqiyatida muhim rol o'ynadi.
+
+
 Linux fayl tizimi - bu Linux operatsion tizimida fayllar va directorylarni saqlash, tartibga solish va ularga kirish usuli. Bu hard disk yoki ssd disk kabi saqlash qurilmasida ma'lumotlar qanday saqlanishini belgilaydigan ierarxik tuzilma. Linux fayl tizimida ildiz directorysi `/` bilan belgilanadi tizimdagi barcha boshqa directory va fayllarni o'z ichiga olgan yuqori darajadagi directorydir. Har bir directory ma'lumotlarning ierarxik tashkil etilishiga imkon beruvchi boshqa kichik directorylar yoki fayllarni o'z ichiga olishi mumkin.
 
 Operatsion tizimda fayl tizimining ahamiyati shundan iboratki, u operatsion tizimga tizimdagi barcha fayllar va directorylarni kuzatib borish va ularga kirishni boshqarish imkonini beradi. Fayl tizimi diskda bo'sh joy ajratish, ma'lumotlarni joylashtirish va kirishni osonlashtiradigan tarzda tartibga solish va ma'lumotlarning samarali saqlanishi va olinishini ta'minlash uchun javobgardir.
 
 Linuxda har xil fayl tizimlaridan foydalanish mumkin, ularning har biri o'ziga xos xususiyatlarga va ishlash xususiyatlariga ega. Ba'zi mashhur Linux fayl tizimlariga Ext2, Ext3 va Ext4 fayl tizimlari, shuningdek, yangi Btrfs va XFS fayl tizimlari kiradi. Fayl tizimini tanlash Linux tizimining ishlashi, ishonchliligi va mosligiga ta'sir qilishi mumkin, shuning uchun vazifa uchun to'g'ri fayl tizimini tanlash muhimdir.
+
+![alt text](https://miro.medium.com/max/720/1*zpJLHyfrEVoA7qBs8A3EDg.webp)
 
 ### Linux fayl tizimining umumiy ko'rinishi
 
