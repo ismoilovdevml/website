@@ -107,3 +107,23 @@ Superblokning vazifasi operatsion tizimga fayl tizimi haqida muhim ma'lumotlarni
 * Oxirgi o'rnatish vaqti: Bu fayl tizimi oxirgi marta o'rnatilgan sana va vaqtni bildiradi.
 
 * Oxirgi yozish vaqti: Bu fayl tizimi oxirgi marta yozilgan sana va vaqtni bildiradi.
+
+Superblok fayl tizimining muhim komponentidir va agar u buzilgan yoki yo'qolsa, fayl tizimiga kirish imkoni bo'lmaydi va ma'lumotlar yo'qolishi mumkin. Bunga yo'l qo'ymaslik uchun, zamonaviy Linux fayl tizimlari, odatda, diskning turli joylarida saqlanadigan superblokning bir nechta nusxalarini saqlaydi, bu buzilish yoki yo'qolgan taqdirda har doim haqiqiy nusxasi mavjudligini ta'minlaydi.
+
+Xulosa qilib aytadigan bo'lsak, superblok Linux fayl tizimidagi muhim ma'lumotlar tuzilmasi bo'lib, fayl tizimining izchilligi va yaxlitligini saqlashda markaziy rol o'ynaydi. Superblokning rolini tushunish Linux fayl tizimini boshqarish va unga xizmat ko'rsatish hamda fayl tizimining qanday ishlashini tushunish uchun muhimdir.
+
+## Fayl tizimlarini mountlash  va ummount
+
+Fayl tizimlarini mount qilish va ummount qilish Linuxda muhim jarayondir, chunki u operatsion tizimga fayl tizimlariga kirish va undan foydalanish imkonini beradi. Operatsion tizim va foydalanuvchilar tomonidan foydalanish uchun fayl tizimi o'rnatilgan bo'lishi kerak. Fayl tizimi mount qilinganda, u Linux fayl tizimi ierarxiyasidagi  mount pointga biriktiriladi va uning tarkibiga kirish mumkin va foydalanish mumkin bo'ladi.
+
+Fayl tizimini mount qilish quyidagi bosqichlarni o'z ichiga oladi
+
+* Mount qilishi kerak bo'lgan fayl tizimini o'z ichiga olgan qurilmani aniqlash. Bu jismoniy disk, diskdagi partition yoki virtual disk image fayli bo'lishi mumkin.
+
+* Fayl tizimi ierarxiyasida mount pointni yaratish. Bu fayl tizimi biriktiriladigan va uning tarkibiga kirish mumkin bo'lgan joy.
+
+* Mount qilish buyrug'ini ishga tushirish, qurilma va mount pointni ko'rsatish. Masalan: `mount /dev/sda1 /mnt` birinchi diskdagi (sda1) birinchi bo'limni `/mnt` directoryga o'rnatadi.
+
+* Fayl tizimi mount qilgandan so'ng, uning tarkibiga kirish va fayl tizimining boshqa qismlari kabi foydalanish mumkin. Fayl tizimi endi kerak bo'lmaganda, uni fayl tizimi ierarxiyasidan ajratish va foydalanayotgan resurslarni bo'shatish uchun uni ummount qilish mumkin.
+
+Fayl tizimini ummount qilish quyidagi bosqichlarni o'z ichiga oladi:
