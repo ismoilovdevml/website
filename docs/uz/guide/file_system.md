@@ -12,12 +12,15 @@ Linuxda har xil fayl tizimlaridan foydalanish mumkin, ularning har biri o'ziga x
 
 ### Linux fayl tizimining umumiy ko'rinishi
 
-
-Linux fayl tizimi uzoq va qiziqarli tarixga ega. Asl Linux fayl tizimi Minix fayl tizimi o'z imkoniyatlari bilan cheklangan edi va tez orada Ext (extended) fayl tizimi bilan almashtirildi. Ext fayl tizimining birinchi versiyasi Ext2 1993 yilda chiqarildi va mustahkam dizayni va katta hajmdagi fayllarni qoʻllab-quvvatlash va ish faoliyatini yaxshilash kabi ilg'or xususiyatlari tufayli Linux tizimlarida keng qoʻllanila boshlandi.
+Linux fayl tizimining tarixi Linux operatsion tizimining dastlabki kunlariga borib taqaladi. Linuxning dastlabki versiyalarida oddiy va cheklangan fayl tizimi bo'lgan MINIX fayl tizimi ishlatilgan. Biroq, Linuxning tobora ommalashib borishi va yanada rivojlangan va kengaytiriladigan fayl tizimiga bo'lgan ehtiyoj bilan Linux kernelini ishlab chiquvchilar yangi fayl tizimi ustida ishlay boshladilar.Tez orada Ext (extended) fayl tizimi bilan almashtirildi. Ext fayl tizimining birinchi versiyasi Ext2 1993 yilda chiqarildi va mustahkam dizayni va katta hajmdagi fayllarni qoʻllab-quvvatlash va ish faoliyatini yaxshilash kabi ilg'or xususiyatlari tufayli Linux tizimlarida keng qoʻllanila boshlandi.
 
 Yillar davomida Ext fayl tizimi rivojlandi va takomillashtirildi, bu Ext3 va Ext4 fayl tizimlarining yaratilishiga olib keldi. Ext3 2001-yilda chiqarildi va Ext fayl tizimiga jurnal yuritish imkoniyatlarini qo'shdi, bu esa diskdagi operatsiyalarning ishonchliligi va tezligini oshirdi. 2008-yilda chiqarilgan Ext4 Ext3 imkoniyatlarini yanada takomillashtirildi va kattaroq fayl tizimlarini qo‘llab-quvvatlash va ish faoliyatini yaxshilash imkonini berdi.
 
 Ext fayl tizimlariga qo'shimcha ravishda, Linuxda ishlatiladigan yana bir qancha fayl tizimi turlari mavjud bo'lib, ularning har biri o'ziga xos xususiyat va afzalliklarga ega. 
+
+So'nggi yillarda btrfs kabi yangi fayl tizimlarining rivojlanishi Linux fayl tizimining imkoniyatlari va unumdorligini yanada oshirdi. Linux fayl tizimi rivojlanishda va Linux hamjamiyatining o'zgaruvchan ehtiyojlariga moslashishda davom etmoqda va u Linux operatsion tizimining muhim tarkibiy qismi bo'lib qolmoqda.
+
+![alt text](https://images.wondershare.com/recoverit/article/ext4-file-system-chronology.jpg)
 
 #### Eng mashhurlaridan ba'zilari:
 
@@ -33,6 +36,7 @@ Bu Silicon Graphics tomonidan ishlab chiqilgan yuqori samarali fayl tizimi. XFS 
 Bu Windows va Linux o'rnatilgan ikkilamchi yuklash tizimlari uchun tez-tez ishlatiladigan Microsoft fayl tizimi. NTFS Windows tizimlari bilan yaxshi moslikni ta'minlaydi va ko'pincha Windows bo'limlarida saqlangan ma'lumotlarga kirish uchun ishlatiladi.
 
 Ushbu fayl tizimlarining har biri o'zining kuchli va zaif tomonlariga ega va qaysi birini tanlash muayyan tizimning o'ziga xos ehtiyojlari va talablariga bog'liq bo'lishi mumkin. Umuman olganda, Linux fayl tizimining evolyutsiyasi ma'lumotlarni saqlash va boshqarishning mustahkam va moslashuvchan usulini ta'minlovchi operatsion tizim sifatida Linuxning muvaffaqiyatida asosiy rol o'ynadi.
+
 
 ### Linux fayl tizimining tuzilishi
 
@@ -70,10 +74,15 @@ Linux fayl tizimining tuzilishi ierarxik bo'lib, ildiz directorysi `/` tizimdagi
 
 `/var` Ushbu directory jurnal fayllari va ma'lumotlar bazasi fayllari kabi o'zgaruvchan fayllarni o'z ichiga oladi. Ushbu directorydagi fayllar tizimdan foydalanishga qarab hajmi o'zgarishi mumkin, shuning uchun u `o'zgaruvchan` deb ataladi.
 
+![alt text](https://nepalisupport.files.wordpress.com/2016/06/linux-filesystem.png)
+
+##### Rasmda Linux fayl tizimi tasvirlangan
+
 Ushbu directorylarning har biri muayyan maqsadga xizmat qiladi va tizimdagi fayllarni topish va boshqarishni osonlashtiradigan tarzda tashkil etilgan. Linux fayl tizimining tuzilishini tushunish Linux tizimidan samarali foydalanish va boshqarish uchun zarurdir.
 
 ## Inode tuzilishini tushunish
 
+![alt text](https://helpdeskgeek.com/wp-content/pictures/2020/02/file-structure.jpg)
 
 Index nodening qisqartmasi inode - Linux fayl tizimidagi fayl haqidagi ma'lumotlarni saqlash uchun ishlatiladigan ma'lumotlar tuzilmasi. Inode tuzilmalari har bir faylga xos boʻlib, fayl haqidagi maʼlumotlar, jumladan, uning egaligi, ruxsatlari, vaqt belgilari va fayl maʼlumotlarining diskdagi joylashuvi haqidagi maʼlumotlarning markaziy ombori boʻlib xizmat qiladi.
 
@@ -91,6 +100,9 @@ Har bir inode yaratilganda unga noyob raqam (inode raqami) beriladi va bu raqam 
 Faylni tashkil etuvchi ma'lumotlar bloklariga pointerlar (direct blocklar, indirect blocklar, double indirect blocklar va boshqalar).
 Inode tuzilmalari Linux fayl tizimining muhim qismi bo'lib, fayl tizimining yaxlitligi va izchilligini ta'minlash uchun ishlatiladi. Har bir fayl haqidagi ma'lumotni markaziy joyda saqlash orqali inodelar fayl tizimining o'lchami va tuzilishi vaqt o'tishi bilan o'zgargan taqdirda ham fayllarga samarali kirish va boshqarishni ta'minlaydi. Linux fayl tizimidagi inodelarning rolini tushunish fayllar va kataloglarni boshqarish va fayl tizimining qanday ishlashini tushunish uchun muhimdir.
 
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Ext2-inode.svg/1200px-Ext2-inode.svg.png)
+
+##### Rasmda Inode pointer tasvirlangan
 
 ## Superblok
 
@@ -117,6 +129,8 @@ Superblokning vazifasi operatsion tizimga fayl tizimi haqida muhim ma'lumotlarni
 Superblok fayl tizimining muhim komponentidir va agar u buzilgan yoki yo'qolsa, fayl tizimiga kirish imkoni bo'lmaydi va ma'lumotlar yo'qolishi mumkin. Bunga yo'l qo'ymaslik uchun, zamonaviy Linux fayl tizimlari, odatda, diskning turli joylarida saqlanadigan superblokning bir nechta nusxalarini saqlaydi, bu buzilish yoki yo'qolgan taqdirda har doim haqiqiy nusxasi mavjudligini ta'minlaydi.
 
 Xulosa qilib aytadigan bo'lsak, superblok Linux fayl tizimidagi muhim ma'lumotlar tuzilmasi bo'lib, fayl tizimining izchilligi va yaxlitligini saqlashda markaziy rol o'ynaydi. Superblokning rolini tushunish Linux fayl tizimini boshqarish va unga xizmat ko'rsatish hamda fayl tizimining qanday ishlashini tushunish uchun muhimdir.
+
+![alt text](https://unlix.ru/wp-content/uploads/2020/05/linux-filesystem.jpg)
 
 ## Fayl tizimlarini mountlash  va ummount
 
@@ -149,6 +163,8 @@ Linuxda setuid va setgid ruxsatlari tushunchasi fayllar va directorylarga kirish
 Linux fayl ruxsatnomalarida yana bir muhim tushuncha sticky bit hisoblanadi. Sticky bit - bu directorylarga o'rnatilishi mumkin bo'lgan maxsus permission biti va u directorydagi fayllarni o'chirish usullariga ta'sir qiladi. Directoryga sticky bit o'rnatilgan bo'lsa, faqat fayl egasi, directory egasi yoki root foydalanuvchisi directorydagi fayllarni o'chirib tashlashi mumkin. Bu umumiy directorylardagi muhim fayllarni tasodifiy o'chirib tashlashning oldini olishga yordam beradi.
 
 Linuxda fayl ruxsatlari ega, guruh va boshqalar uchun o'qish `r`, yozish `w` va bajarish `x` ruxsatlarini belgilovchi belgilar qatori bilan ifodalanadi. Misol uchun, `rwxrw-r--` ruxsat qatori egasi o'qish, yozish va bajarish uchun ruxsatlarga ega ekanligini, guruhda o'qish va yozish ruxsatnomalariga ega ekanligini va boshqalar faqat o'qish ruxsatiga ega ekanligini bildiradi.
+
+![alt text](https://remy.parkland.edu/~smauney/csc128/fig_permissions.jpg)
 
 Faylga egalik huquqi faylning foydalanuvchi va guruh egasi tomonidan belgilanadi. Fayl egasi uni toʻliq nazorat qiladi va uning ruxsatlarini oʻzgartirishi yoki egalik huquqini boshqa foydalanuvchi yoki guruhga oʻtkazishi mumkin.
 
