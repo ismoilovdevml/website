@@ -17,7 +17,9 @@ Linux fayl tizimi uzoq va qiziqarli tarixga ega. Asl Linux fayl tizimi Minix fay
 
 Yillar davomida Ext fayl tizimi rivojlandi va takomillashtirildi, bu Ext3 va Ext4 fayl tizimlarining yaratilishiga olib keldi. Ext3 2001-yilda chiqarildi va Ext fayl tizimiga jurnal yuritish imkoniyatlarini qo'shdi, bu esa diskdagi operatsiyalarning ishonchliligi va tezligini oshirdi. 2008-yilda chiqarilgan Ext4 Ext3 imkoniyatlarini yanada takomillashtirildi va kattaroq fayl tizimlarini qo‘llab-quvvatlash va ish faoliyatini yaxshilash imkonini berdi.
 
-Ext fayl tizimlariga qo'shimcha ravishda, Linuxda ishlatiladigan yana bir qancha fayl tizimi turlari mavjud bo'lib, ularning har biri o'ziga xos xususiyat va afzalliklarga ega. Eng mashhurlaridan ba'zilari:
+Ext fayl tizimlariga qo'shimcha ravishda, Linuxda ishlatiladigan yana bir qancha fayl tizimi turlari mavjud bo'lib, ularning har biri o'ziga xos xususiyat va afzalliklarga ega. 
+
+#### Eng mashhurlaridan ba'zilari:
 
 * Btrfs (B-tree file system):
 
@@ -34,7 +36,9 @@ Ushbu fayl tizimlarining har biri o'zining kuchli va zaif tomonlariga ega va qay
 
 ### Linux fayl tizimining tuzilishi
 
-Linux fayl tizimining tuzilishi ierarxik bo'lib, ildiz directorysi `/` tizimdagi barcha boshqa fayllar va directorylarni o'z ichiga olgan yuqori darajadagi directory bo'lib xizmat qiladi. Ildiz directorysidan ma'lum turdagi fayllarni o'z ichiga olgan va ma'lum maqsadlarga xizmat qiluvchi bir nechta subdirectorylar mavjud. Linux fayl tizimidagi eng muhim subdirectorylardan ba'zilari:
+Linux fayl tizimining tuzilishi ierarxik bo'lib, ildiz directorysi `/` tizimdagi barcha boshqa fayllar va directorylarni o'z ichiga olgan yuqori darajadagi directory bo'lib xizmat qiladi. Ildiz directorysidan ma'lum turdagi fayllarni o'z ichiga olgan va ma'lum maqsadlarga xizmat qiluvchi bir nechta subdirectorylar mavjud. 
+
+#### Linux fayl tizimidagi eng muhim subdirectorylardan ba'zilari:
 
 `/bin` Ushbu directory tizimni yuklash va to'g'ri ishlashi uchun zarur bo'lgan muhim binary fayllarni o'z ichiga oladi. Bu fayllar odatda tizimdagi barcha foydalanuvchilar uchun umumiy bo'lib, ls, cp va mv kabi asosiy buyruqlarni o'z ichiga oladi.
 
@@ -75,7 +79,7 @@ Index nodening qisqartmasi inode - Linux fayl tizimidagi fayl haqidagi ma'lumotl
 
 Har bir inode yaratilganda unga noyob raqam (inode raqami) beriladi va bu raqam inode va uning ma'lumotlariga kirish uchun ishlatiladi. Inode raqami fayl tizimi tomonidan diskdagi fayl ma'lumotlarini aniqlash uchun ishlatiladi va faylning directory yozuvida saqlanadi. Fayl ochilganda, uning inode diskdan o'qiladi va undagi ma'lumotlar faylga kirish ruxsatlarini, vaqt belgilarini va boshqa atributlarini aniqlash uchun ishlatiladi.
 
-Inodeda saqlanadigan ma'lumotlar quyidagilarni o'z ichiga oladi
+#### Inodeda saqlanadigan ma'lumotlar quyidagilarni o'z ichiga oladi
 
 * Fayl turi (masalan, oddiy fayl, directory, symbolic link va boshqalar)
 * Egalik (foydalanuvchi va guruh identifikatorlari)
@@ -92,7 +96,9 @@ Inode tuzilmalari Linux fayl tizimining muhim qismi bo'lib, fayl tizimining yaxl
 
 Superblok Linux fayl tizimidagi markaziy ma'lumotlar strukturasi bo'lib, u butun fayl tizimi haqida muhim ma'lumotlarni o'z ichiga oladi. Ushbu ma'lumotlar fayl tizimining o'zi haqidagi metama'lumotlarni o'z ichiga oladi, masalan, bloklarning umumiy soni, bloklarning o'lchami va inodelarning umumiy soni. Superblok odatda diskdagi belgilangan joyda, odatda fayl tizimining boshida saqlanadi va fayl tizimi tomonidan fayl tizimining umumiy holatini kuzatish uchun foydalaniladi.
 
-Superblokning vazifasi operatsion tizimga fayl tizimi haqida muhim ma'lumotlarni taqdim etishdan iborat. Ushbu ma'lumotlar operatsion tizim tomonidan fayl tizimini boshqarish va uning izchilligi va yaxlitligini saqlash uchun ishlatiladi. Superblokda saqlanadigan ba'zi asosiy ma'lumotlarga quyidagilar kiradi:
+Superblokning vazifasi operatsion tizimga fayl tizimi haqida muhim ma'lumotlarni taqdim etishdan iborat. Ushbu ma'lumotlar operatsion tizim tomonidan fayl tizimini boshqarish va uning izchilligi va yaxlitligini saqlash uchun ishlatiladi. 
+
+#### Superblokda saqlanadigan ba'zi asosiy ma'lumotlarga quyidagilar kiradi:
 
 * Fayl tizimi turi: Bu ext4, btrfs, XFS va boshqalar kabi foydalanilayotgan fayl tizimining turini bildiradi.
 
@@ -116,7 +122,7 @@ Xulosa qilib aytadigan bo'lsak, superblok Linux fayl tizimidagi muhim ma'lumotla
 
 Fayl tizimlarini mount qilish va ummount qilish Linuxda muhim jarayondir, chunki u operatsion tizimga fayl tizimlariga kirish va undan foydalanish imkonini beradi. Operatsion tizim va foydalanuvchilar tomonidan foydalanish uchun fayl tizimi o'rnatilgan bo'lishi kerak. Fayl tizimi mount qilinganda, u Linux fayl tizimi ierarxiyasidagi  mount pointga biriktiriladi va uning tarkibiga kirish mumkin va foydalanish mumkin bo'ladi.
 
-Fayl tizimini mount qilish quyidagi bosqichlarni o'z ichiga oladi
+#### Fayl tizimini mount qilish quyidagi bosqichlarni o'z ichiga oladi
 
 * Mount qilishi kerak bo'lgan fayl tizimini o'z ichiga olgan qurilmani aniqlash. Bu jismoniy disk, diskdagi partition yoki virtual disk image fayli bo'lishi mumkin.
 
@@ -126,4 +132,23 @@ Fayl tizimini mount qilish quyidagi bosqichlarni o'z ichiga oladi
 
 * Fayl tizimi mount qilgandan so'ng, uning tarkibiga kirish va fayl tizimining boshqa qismlari kabi foydalanish mumkin. Fayl tizimi endi kerak bo'lmaganda, uni fayl tizimi ierarxiyasidan ajratish va foydalanayotgan resurslarni bo'shatish uchun uni ummount qilish mumkin.
 
-Fayl tizimini ummount qilish quyidagi bosqichlarni o'z ichiga oladi:
+#### Fayl tizimini ummount qilish quyidagi bosqichlarni o'z ichiga oladi:
+
+* Fayl tizimi ishlatilmayotganligini tekshirish. Fayl tizimiga kiradigan har qanday ochiq fayllar yoki jarayonlar yopilishi yoki tugatilishi kerak.
+
+* ummount buyrug'ini ishga tushirish, mount pointni ko'rsatish. Masalan: `umount /mnt` `/mnt` directoryga biriktirilgan fayl tizimini ummount qiladi.
+
+Fayl tizimlarini mount qilish va ummount qilish Linuxda muhim jarayondir, chunki u operatsion tizimga turli fayl tizimlariga, jumladan local storage qurilmalari va tarmoq xotira qurilmalariga kirish va ulardan foydalanish imkonini beradi. Fayl tizimlarini mount qilish va ummount qilish orqali operatsion tizim foydalanuvchilarga kerakli storage resurslariga kirishni ta'minlashi, shuningdek storage resurslarini samarali boshqarishi va taqsimlashi mumkin.
+
+### Fayl ruxsatnomalari(permission) va egalik(ownership) huquqi
+
+Fayl ruxsatlari va egalik huquqi Linux fayl tizimidagi fayllar va directorylarga kirishni boshqarishda hal qiluvchi rol o'ynaydi. Har bir fayl va directory kim o'qishi, yozishi yoki bajarishi mumkinligini aniqlaydigan ruxsatlarga ega. Ruxsatlar fayl egasi, egasi tegishli bo'lgan guruh va boshqalar uchun o'rnatiladi.
+
+Linuxda fayl ruxsatlari ega, guruh va boshqalar uchun o'qish `r`, yozish `w` va bajarish `x` ruxsatlarini belgilovchi belgilar qatori bilan ifodalanadi. Misol uchun, `rwxrw-r--` ruxsat qatori egasi o'qish, yozish va bajarish uchun ruxsatlarga ega ekanligini, guruhda o'qish va yozish ruxsatnomalariga ega ekanligini va boshqalar faqat o'qish ruxsatiga ega ekanligini bildiradi.
+
+Faylga egalik huquqi faylning foydalanuvchi va guruh egasi tomonidan belgilanadi. Fayl egasi uni toʻliq nazorat qiladi va uning ruxsatlarini oʻzgartirishi yoki egalik huquqini boshqa foydalanuvchi yoki guruhga oʻtkazishi mumkin.
+
+Linuxda `chmod` buyrug'i faylga ruxsatlarni o'zgartirish uchun, `chown` buyrug'i esa faylga egalik huquqini o'zgartirish uchun ishlatiladi. Masalan, `chmod 755 file.txt` buyrug'i egasiga faylni o'qish, yozish va bajarishga ruxsat berish uchun `file.txt` faylining ruxsatlarini o'rnatadi va boshqalarga faqat faylni o'qish va bajarishga ruxsat beradi.
+
+Linux fayl tizimida fayl ruxsatlari va egalik huquqini tushunish va boshqarish juda muhim, chunki u fayllar va directorylarning xavfsizligi va maxfiyligini taʼminlashga yordam beradi, shuningdek, umumiy resurslarga kirishni boshqarishga yordam beradi. Tegishli ruxsatlar va egalik huquqini o'rnatish orqali operatsion tizim maxfiy ma'lumotlarga ruxsatsiz kirishni oldini oladi va fayllarga faqat ularga kirish huquqiga ega bo'lganlar kirishini ta'minlaydi.
+
