@@ -83,3 +83,27 @@ Inodeda saqlanadigan ma'lumotlar quyidagilarni o'z ichiga oladi
 * Timestamp (oxirgi kirish vaqti, oxirgi o'zgartirish vaqti va yaratish vaqti)
 * Havolalar soni (faylga qattiq havolalar soni)
 * Fayl hajmi
+
+Faylni tashkil etuvchi ma'lumotlar bloklariga pointerlar (direct blocklar, indirect blocklar, double indirect blocklar va boshqalar).
+Inode tuzilmalari Linux fayl tizimining muhim qismi bo'lib, fayl tizimining yaxlitligi va izchilligini ta'minlash uchun ishlatiladi. Har bir fayl haqidagi ma'lumotni markaziy joyda saqlash orqali inodelar fayl tizimining o'lchami va tuzilishi vaqt o'tishi bilan o'zgargan taqdirda ham fayllarga samarali kirish va boshqarishni ta'minlaydi. Linux fayl tizimidagi inodelarning rolini tushunish fayllar va kataloglarni boshqarish va fayl tizimining qanday ishlashini tushunish uchun muhimdir.
+
+
+## Superblok
+
+Superblok Linux fayl tizimidagi markaziy ma'lumotlar strukturasi bo'lib, u butun fayl tizimi haqida muhim ma'lumotlarni o'z ichiga oladi. Ushbu ma'lumotlar fayl tizimining o'zi haqidagi metama'lumotlarni o'z ichiga oladi, masalan, bloklarning umumiy soni, bloklarning o'lchami va inodelarning umumiy soni. Superblok odatda diskdagi belgilangan joyda, odatda fayl tizimining boshida saqlanadi va fayl tizimi tomonidan fayl tizimining umumiy holatini kuzatish uchun foydalaniladi.
+
+Superblokning vazifasi operatsion tizimga fayl tizimi haqida muhim ma'lumotlarni taqdim etishdan iborat. Ushbu ma'lumotlar operatsion tizim tomonidan fayl tizimini boshqarish va uning izchilligi va yaxlitligini saqlash uchun ishlatiladi. Superblokda saqlanadigan ba'zi asosiy ma'lumotlarga quyidagilar kiradi:
+
+* Fayl tizimi turi: Bu ext4, btrfs, XFS va boshqalar kabi foydalanilayotgan fayl tizimining turini bildiradi.
+
+* Bloklarning umumiy soni: Bu fayl tizimidagi ishlatilgan va foydalanilmagan bloklarning umumiy sonini bildiradi.
+
+* Inodlarning umumiy soni: Bu fayl tizimidagi ishlatilgan va foydalanilmagan inodelarning umumiy sonini bildiradi.
+
+* Blok hajmi: Bu fayl tizimidagi blok hajmini baytlarda ko'rsatadi.
+
+* Fayl tizimini yaratish vaqti: Bu fayl tizimi yaratilgan sana va vaqtni bildiradi.
+
+* Oxirgi o'rnatish vaqti: Bu fayl tizimi oxirgi marta o'rnatilgan sana va vaqtni bildiradi.
+
+* Oxirgi yozish vaqti: Bu fayl tizimi oxirgi marta yozilgan sana va vaqtni bildiradi.
