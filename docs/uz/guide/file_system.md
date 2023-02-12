@@ -144,6 +144,10 @@ Fayl tizimlarini mount qilish va ummount qilish Linuxda muhim jarayondir, chunki
 
 Fayl ruxsatlari va egalik huquqi Linux fayl tizimidagi fayllar va directorylarga kirishni boshqarishda hal qiluvchi rol o'ynaydi. Har bir fayl va directory kim o'qishi, yozishi yoki bajarishi mumkinligini aniqlaydigan ruxsatlarga ega. Ruxsatlar fayl egasi, egasi tegishli bo'lgan guruh va boshqalar uchun o'rnatiladi.
 
+Linuxda setuid va setgid ruxsatlari tushunchasi fayllar va directorylarga kirishni boshqarishda ham muhim ahamiyatga ega. Setuid va setgid - bu faylni tegishli ravishda egasi yoki guruhi ruxsati bilan bajarishga imkon beruvchi maxsus permission flaglari. Bajariladigan faylga setuid yoki setgid bit o'rnatilgan bo'lsa, faylni ishga tushiradigan har qanday foydalanuvchi tegishli ravishda fayl egasi yoki guruh egasining ruxsatiga ega bo'ladi. Bu foydalanuvchilarga yuqori ruxsatlarga ega faylni bajarishga imkon beradi, bu tizim boshqaruvi buyruqlarini bajarish kabi yuqori imtiyozlarni talab qiladigan vazifalar uchun foydalidir.
+
+Linux fayl ruxsatnomalarida yana bir muhim tushuncha sticky bit hisoblanadi. Sticky bit - bu directorylarga o'rnatilishi mumkin bo'lgan maxsus permission biti va u directorydagi fayllarni o'chirish usullariga ta'sir qiladi. Directoryga sticky bit o'rnatilgan bo'lsa, faqat fayl egasi, directory egasi yoki root foydalanuvchisi directorydagi fayllarni o'chirib tashlashi mumkin. Bu umumiy directorylardagi muhim fayllarni tasodifiy o'chirib tashlashning oldini olishga yordam beradi.
+
 Linuxda fayl ruxsatlari ega, guruh va boshqalar uchun o'qish `r`, yozish `w` va bajarish `x` ruxsatlarini belgilovchi belgilar qatori bilan ifodalanadi. Misol uchun, `rwxrw-r--` ruxsat qatori egasi o'qish, yozish va bajarish uchun ruxsatlarga ega ekanligini, guruhda o'qish va yozish ruxsatnomalariga ega ekanligini va boshqalar faqat o'qish ruxsatiga ega ekanligini bildiradi.
 
 Faylga egalik huquqi faylning foydalanuvchi va guruh egasi tomonidan belgilanadi. Fayl egasi uni toʻliq nazorat qiladi va uning ruxsatlarini oʻzgartirishi yoki egalik huquqini boshqa foydalanuvchi yoki guruhga oʻtkazishi mumkin.
@@ -152,3 +156,11 @@ Linuxda `chmod` buyrug'i faylga ruxsatlarni o'zgartirish uchun, `chown` buyrug'i
 
 Linux fayl tizimida fayl ruxsatlari va egalik huquqini tushunish va boshqarish juda muhim, chunki u fayllar va directorylarning xavfsizligi va maxfiyligini taʼminlashga yordam beradi, shuningdek, umumiy resurslarga kirishni boshqarishga yordam beradi. Tegishli ruxsatlar va egalik huquqini o'rnatish orqali operatsion tizim maxfiy ma'lumotlarga ruxsatsiz kirishni oldini oladi va fayllarga faqat ularga kirish huquqiga ega bo'lganlar kirishini ta'minlaydi.
 
+### Xulosa yakun
+
+Xulosa qilib aytganda, Linux fayl tizimi Linux tizimidagi fayllar va directorylarni tartibga soluvchi va saqlaydigan ierarxik tuzilmadir. Bu operatsion tizimning muhim tarkibiy qismi bo'lib, uning tuzilishi va tashkil etilishi tizimning ishlashi va ishlashida hal qiluvchi rol o'ynaydi.
+
+
+Linux fayl tizimi root directory, boot directory, inodelar, superblok va boshqa muhim directorylar kabi komponentlarni o'z ichiga oladi. Inode strukturasi fayl tizimidagi har bir fayl haqidagi ma'lumotlarni saqlaydi, superblok esa butun fayl tizimi haqida muhim ma'lumotlarni o'z ichiga oladi. Fayl tizimlarini mount qilish va ummount qilish jarayoni tizimga fayl tizimlariga kirish va ulardan foydalanish imkonini beradi, faylga ruxsat va egalik esa fayllar va directorylarga kirishni boshqarishda yordam beradi.
+
+Umuman olganda, Linux fayl tizimini tushunish Linux tizimini samarali boshqarish va saqlash uchun muhimdir.
