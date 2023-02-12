@@ -17,12 +17,14 @@ Loyiha ustida ishlanmoqda
 * Cinnamon
 
 ## Rust dasturlash tilini o'zbekcha qo'llanmasi
-Mening sevimli dasturlash tilim Rust dasturlash tilidir. Ammo men Rust dasturlash tilini texnik hujajtlarida o'zbek tilini ko'rmadim shu sabab Rust dasturlash tili texnik hujjatlarini o'zbek tilida qilishga qaror qildim.
+Mening sevimli dasturlash tilim Rust dasturlash tilidir. Ammo men Rust dasturlash tilini texnik hujajtlarida o'zbek tilini ko'rmadim. Rust dasturlash tiliga o‘zbek tilini qo‘llab-quvvatlashni qo‘shish tashabbusi bilan chiqdim, bu uning imkoniyatlarini kengaytiradi va foydalanuvchilarning keng doirasini jalb qiladi.
+
 Loyiha ustida ishlanmoqda
 
 [i10n Rust lokalizatsiya](https://github.com/rust-lang-uz/i10n)
 
-[Rust dasturash kitobi](https://github.com/rust-lang-uz/learn-rust-lang)
+
+[Rust dasturash kitobi](https://book.rust-lang.uz/)
 
 ## Open Source dasturchi blogi
 
@@ -35,9 +37,11 @@ Github: [github.com/ismoilovdevml/website](https://github.com/ismoilovdevml/webs
 
 ## Boshqa loyihalar
 
-[Github Profilim](https://github.com/ismoilovdevml/) 
+[Github Profil](https://github.com/ismoilovdevml/) 
 
 [Web Server Rust](https://github.com/ismoilovdevml/web-server-rust)
+
+[Chaqmoq Runtime](https://github.com/ismoilovdevml/chaqmoq)
 
 [DNS Server](https://github.com/ismoilovdevml/dns-server)
 
