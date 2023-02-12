@@ -2,7 +2,6 @@
 
 ![alt text](https://cdn.mos.cms.futurecdn.net/DCLGUx4ks428XWdHvrX93m-1200-80.jpg)
 
-### Kirish
 
 ### Hamma narsa fayl - Falsafasi
 
@@ -56,7 +55,7 @@ Ushbu fayl tizimlarining har biri o'zining kuchli va zaif tomonlariga ega va qay
 
 ### Linux fayl tizimining tuzilishi
 
-Linux fayl tizimining tuzilishi ierarxik bo'lib, ildiz directorysi `/` tizimdagi barcha boshqa fayllar va directorylarni o'z ichiga olgan yuqori darajadagi directory bo'lib xizmat qiladi. Ildiz directorysidan ma'lum turdagi fayllarni o'z ichiga olgan va ma'lum maqsadlarga xizmat qiluvchi bir nechta subdirectorylar mavjud. 
+Linux fayl tizimining tuzilishi ierarxik bo'lib, root(ildiz) directorysi `/` tizimdagi barcha boshqa fayllar va directorylarni o'z ichiga olgan yuqori darajadagi directory bo'lib xizmat qiladi. Root directorysidan ma'lum turdagi fayllarni o'z ichiga olgan va ma'lum maqsadlarga xizmat qiluvchi bir nechta subdirectorylar mavjud. 
 
 #### Linux fayl tizimidagi eng muhim subdirectorylardan ba'zilari:
 
@@ -100,9 +99,9 @@ Ushbu directorylarning har biri muayyan maqsadga xizmat qiladi va tizimdagi fayl
 
 ![alt text](https://helpdeskgeek.com/wp-content/pictures/2020/02/file-structure.jpg)
 
-Index nodening qisqartmasi inode - Linux fayl tizimidagi fayl haqidagi ma'lumotlarni saqlash uchun ishlatiladigan ma'lumotlar tuzilmasi. Inode tuzilmalari har bir faylga xos boʻlib, fayl haqidagi maʼlumotlar, jumladan, uning egaligi, ruxsatlari, vaqt belgilari va fayl maʼlumotlarining diskdagi joylashuvi haqidagi maʼlumotlarning markaziy ombori boʻlib xizmat qiladi.
+Index nodening qisqartmasi inode - Linux fayl tizimidagi fayl haqidagi ma'lumotlarni saqlash uchun ishlatiladigan ma'lumotlar tuzilmasi. Inode tuzilmalari har bir faylga xos boʻlib, fayl haqidagi maʼlumotlar, jumladan, uning egaligi, ruxsatlari, timestamplar(vaqt belgilari) va fayl maʼlumotlarining diskdagi joylashuvi haqidagi maʼlumotlarning markaziy ombori boʻlib xizmat qiladi.
 
-Har bir inode yaratilganda unga noyob raqam (inode raqami) beriladi va bu raqam inode va uning ma'lumotlariga kirish uchun ishlatiladi. Inode raqami fayl tizimi tomonidan diskdagi fayl ma'lumotlarini aniqlash uchun ishlatiladi va faylning directory yozuvida saqlanadi. Fayl ochilganda, uning inode diskdan o'qiladi va undagi ma'lumotlar faylga kirish ruxsatlarini, vaqt belgilarini va boshqa atributlarini aniqlash uchun ishlatiladi.
+Har bir inode yaratilganda unga noyob raqam (inode raqami) beriladi va bu raqam inode va uning ma'lumotlariga kirish uchun ishlatiladi. Inode raqami fayl tizimi tomonidan diskdagi fayl ma'lumotlarini aniqlash uchun ishlatiladi va faylning directory yozuvida saqlanadi. Fayl ochilganda, uning inode diskdan o'qiladi va undagi ma'lumotlar faylga kirish ruxsatlarini, timestamplarini va boshqa atributlarini aniqlash uchun ishlatiladi.
 
 #### Inodeda saqlanadigan ma'lumotlar quyidagilarni o'z ichiga oladi
 
@@ -132,13 +131,13 @@ Superblokning vazifasi operatsion tizimga fayl tizimi haqida muhim ma'lumotlarni
 
 * Bloklarning umumiy soni: Bu fayl tizimidagi ishlatilgan va foydalanilmagan bloklarning umumiy sonini bildiradi.
 
-* Inodlarning umumiy soni: Bu fayl tizimidagi ishlatilgan va foydalanilmagan inodelarning umumiy sonini bildiradi.
+* Inodelarning umumiy soni: Bu fayl tizimidagi ishlatilgan va foydalanilmagan inodelarning umumiy sonini bildiradi.
 
 * Blok hajmi: Bu fayl tizimidagi blok hajmini baytlarda ko'rsatadi.
 
 * Fayl tizimini yaratish vaqti: Bu fayl tizimi yaratilgan sana va vaqtni bildiradi.
 
-* Oxirgi o'rnatish vaqti: Bu fayl tizimi oxirgi marta o'rnatilgan sana va vaqtni bildiradi.
+* Oxirgi mount vaqti: Bu fayl tizimi oxirgi marta mount qilingan sana va vaqtni bildiradi.
 
 * Oxirgi yozish vaqti: Bu fayl tizimi oxirgi marta yozilgan sana va vaqtni bildiradi.
 
