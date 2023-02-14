@@ -140,3 +140,30 @@ Kvant hisoblash sohasi ishlab chiquvchilar uchun mavjud bo'lgan bir nechta dastu
 `IBM Quantum Composer` kvant sxemalarini loyihalash uchun drag-and-drop grafik foydalanuvchi interfeysi hisoblanadi. U ta'lim va targ'ibotga e'tibor qaratgan holda, mutaxassis bo'lmaganlar uchun foydalanish uchun qulay bo'lishi uchun yaratilgan.
 
 Ushbu dasturlash tillarining har biri o'zining kuchli va zaif tomonlariga ega va tilni tanlash loyihaning o'ziga xos talablariga bog'liq. Ishlab chiquvchilar kvant hisoblashning hayajonli salohiyatini o'rganish uchun ularning ehtiyojlari va afzalliklariga eng mos keladigan tilni tanlashlari mumkin.
+
+
+
+
+
+
+## Kvant dasturlashda Pythondan Rustni ustunligi 
+
+Rust ham, Python ham o'zining kuchli va zaif tomonlariga ega bo'lsa-da, Rust uni kvant hisoblash uchun yaxshi tanlovga aylantiradigan bir nechta xususiyatlarga ega:
+
+#### Tezlik
+
+Rust - bu tez va samarali bo'lish uchun mo'ljallangan kompilyatsiya qilingan til. Bu uni kvant hisoblash kabi yuqori unumdorlikni talab qiladigan ilovalar uchun juda mos keladi. Bundan farqli o'laroq, Python talqin qilinadigan til bo'lib, u ba'zi ilovalarda sekinroq bo'ladi.
+
+#### Xavfsizlik
+
+Rust xavfsiz til boʻlib ishlab chiqilgan boʻlib, bufer toʻlib ketishi va null koʻrsatgichni yoʻqotish kabi keng tarqalgan dasturlash xatolarining oldini olishga yordam beradi. Bu, ayniqsa, hisob-kitoblarning aniqligi muhim bo'lgan kvant hisoblashlarida muhimdir. Python mashhur va moslashuvchan til bo'lsa-da, Rust kabi xavfsizlikka yo'naltirilgan emas.
+
+#### Parallelizm
+
+Rust kvant hisoblashda muhim bo'lgan parallelizmni qo'llab-quvvatlash uchun mo'ljallangan. Kvant algoritmlari ko'pincha bir vaqtning o'zida bir nechta mustaqil simulyatsiyalarni bajarishni talab qiladi va Rustning parallelizmni qo'llab-quvvatlashi buni samaraliroq qiladi. Python-ning parallelizmni qo'llab-quvvatlashi cheklangan va ko'pincha tashqi kutubxonalardan foydalanishni talab qiladi.
+
+#### Low-leveldagi boshqaruv
+
+Rust - bu tizim dasturlash tili bo'lib, u xotirani boshqarish va tizim darajasidagi boshqa operatsiyalar ustidan low-lewel darajadagi nazoratni ta'minlaydi. Bu maxsus apparat uchun kodni optimallashtirishni osonlashtiradi, bu esa kvant hisoblashda muhim, bunda apparatga xos optimallashtirish ish faoliyatini sezilarli darajada yaxshilashga olib kelishi mumkin. Python, yuqori darajadagi til bo'lsa-da, low-lweldagi optimallashtirishga unchalik mos kelmaydi.
+
+Qisqa qilib aytganda, Rustning ishlashi, xavfsizligi, parallelligi va low-leweldagi boshqaruvi uni kvant hisoblash ilovalari uchun samarador tanlovga aylantiradi, ayniqsa yuqori unumdorlik va apparatga xos optimallashtirish muhim bo'lgan hollarda.
