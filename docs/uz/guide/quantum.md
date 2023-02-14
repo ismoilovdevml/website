@@ -1,33 +1,12 @@
-# Kvant hisoblash nima?
+# Kvant dasturlashga sayohat
 
-Kvant hisoblash - bu klassik kompyuterlar uchun juda murakkab muammolarni hal qilish uchun kvant mexanikasi qonunlaridan foydalanadigan tez rivojlanayotgan texnologiya. 
+![alt text](https://thumbs.dreamstime.com/b/abstract-technology-background-polygonal-grid-analyze-data-dark-analytics-algorithms-quantum-computing-concept-banner-228106476.jpg)
 
-Bugungi kunda IBM Quantum haqiqiy kvant uskunasini ishlab chiqaradi - olimlar buni faqat 30 yil oldin tasavvur qila boshlagan - yuz minglab ishlab chiquvchilar uchun mavjud.
 
-## Nima uchun bizga kvant kompyuterlari kerak?
+Kvant hisoblash - tez rivojlanayotgan soha bo'lib, klassik kompyuterlar bilan hal qilib bo'lmaydigan muammolarni hal qilish uchun kvant mexanikasi kuchidan foydalanishga intiladi. 0 yoki 1 ni ifodalash uchun bitlardan foydalanadigan klassik kompyuterlardan farqli o'laroq, kvant kompyuterlari bir vaqtning o'zida ikkala holatning superpozitsiyasida mavjud bo'lishi mumkin bo'lgan kvant bitlari yoki kubitlardan foydalanadi. Bu kvant kompyuterlariga ko'plab hisob-kitoblarni parallel ravishda bajarishga imkon beradi, bu ularni katta sonlarni faktoring qilish, murakkab kimyoviy reaktsiyalarni simulyatsiya qilish va logistikani optimallashtirish kabi vazifalar uchun juda mos keladi.
 
-Ba'zi muammolar uchun superkompyuterlar u qadar super emas.
+Kvant kompyuterlari muhim ahamiyatga ega, chunki ular fan, texnika va sanoatdagi hozirgi vaqtda klassik kompyuterlarning imkoniyatlaridan tashqarida bo'lgan eng murakkab muammolarni hal qilish imkoniyatiga ega. Masalan, ular moslashtirilgan xususiyatlarga ega yangi materiallarni ishlab chiqish, yangi dori vositalarini loyihalash uchun murakkab kimyoviy reaktsiyalarni modellashtirish, moliyaviy portfellarni optimallashtirish va transport oqimini yaxshilash uchun ishlatilishi mumkin. Kvant hisoblash kriptografiyani ham inqilob qilishi mumkin, chunki u hozirda foydalanilayotgan shifrlash algoritmlarini buzishi mumkin.
 
-Olimlar va muhandislar qiyin muammolarga duch kelganda, ular superkompyuterlarga murojaat qilishadi. Bular juda katta klassik kompyuterlar bo'lib, ko'pincha minglab klassik CPU va GPU yadrolariga ega. Biroq, hatto superkompyuterlar ham muayyan turdagi muammolarni hal qilish uchun kurashadilar.
+Kvant hisoblashning ulkan salohiyatiga qaramay, klassik kompyuterlardan ustun turadigan keng ko'lamli kvant kompyuterini yaratish hali ham katta muammo bo'lib qolmoqda. Biroq, butun dunyo bo'ylab tadqiqotchilar va muhandislar ularning kuchidan foydalanish uchun kvant kompyuterlari va kvant algoritmlarini ishlab chiqish ustida ishlamoqda.
 
-Agar superkompyuter qotib qolsa, bu katta klassik mashinadan yuqori darajadagi murakkablikdagi muammoni hal qilish so'ralgani uchundir. Klassik kompyuterlar ishlamay qolganda, bu ko'pincha murakkablik tufayli yuzaga keladi. Molekuladagi alohida atomlarning xatti-harakatlarini modellashtirish murakkab muammodir, chunki har xil elektronlar bir-biri bilan o'zaro ta'sir qiladi. Global yuk tashish tarmog'ida bir necha yuz tankerlar uchun ideal marshrutlarni saralash ham murakkab.
-
-## Nima uchun kvant kompyuterlari tezroq
-
-Klassik kompyuterlar muvaffaqiyatsizlikka uchragan joyda kvant kompyuterlari qanday muvaffaqiyat qozonishini ko'rsatadigan misolni ko'rib chiqaylik:
-
-Superkompyuter oqsil ketma-ketliklarining katta ma'lumotlar bazasini saralash kabi qiyin vazifalarda ajoyib bo'lishi mumkin. Ammo bu ma'lumotlardagi oqsillarning o'zini qanday tutishini aniqlaydigan nozik sabablarni ko'rish qiyin bo'ladi.
-
-Proteinlar aminokislotalarning uzun qatorlari bo'lib, ular murakkab shakllarga aylanganda foydali biologik mashinalarga aylanadi. Oqsillarning qanday yig'ilishini aniqlash biologiya va tibbiyot uchun muhim ahamiyatga ega bo'lgan muammodir. 
-
-Klassik superkompyuter o'zining ko'plab protsessorlaridan foydalanib, oqsilni qo'pol kuch bilan katlamoqchi bo'lishi mumkin, bu javobga kelishdan oldin kimyoviy zanjirni egishning barcha mumkin bo'lgan usullarini tekshirishi mumkin. Ammo oqsil ketma-ketligi sifatida Kvant hisoblash nima? uzoqroq va murakkabroq bo'lsin, superkompyuter to'xtaydi. 100 ta aminokislotadan iborat zanjir nazariy jihatdan trillionlab usullardan birida yi'gila oladi. Hech bir kompyuter alohida burmalarning barcha mumkin bo'lgan kombinatsiyalarini boshqarish uchun ishchi xotiraga ega emas.
-
-Kvant algoritmlari bunday murakkab muammolarga yangicha yondashadi -- alohida ma'lumotlar nuqtalarini bog'laydigan sabablar paydo bo'ladigan ko'p o'lchovli bo'shliqlarni yaratadi. Proteinni yig'ish muammosi bo'lsa, bu sabab ishlab chiqarish uchun eng kam energiya talab qiladigan burmalar birikmasi bo'lishi mumkin. Bu burmalarning kombinatsiyasi muammoning yechimidir.
-
-Klassik kompyuterlar bu hisoblash maydonlarini yarata olmaydi, shuning uchun ular bu sabablarni topa olmaydi. Proteinlarga kelsak, klassik kompyuterlarning mashaqqatli tekshirish protseduralarisiz mutlaqo yangi, samaraliroq usullarda yi'gilish sabablarini topishi mumkin bo'lgan dastlabki kvant algoritmlari allaqachon mavjud. Kvant apparat shkalasi va bu algoritmlar rivojlangani sayin, ular har qanday superkompyuter uchun juda murakkab oqsillarni yi'gilish muammolarini hal qilishlari mumkin.
-
-### Murakkablik superkompyuterlarni qanday hayratda qoldiradi
-
-Proteinlar aminokislotalarning uzun qatorlari bo'lib, ular murakkab shakllarga aylanganda foydali biologik mashinalarga aylanadi. Oqsillarning qanday yig'ilishini aniqlash biologiya va tibbiyot uchun muhim ahamiyatga ega bo'lgan muammodir. Klassik superkompyuter o'zining ko'plab protsessorlaridan foydalanib, oqsilni qo'pol kuch bilan yig'moqchi bo'lishi mumkin, bu javobga kelishdan oldin kimyoviy zanjirni egishning barcha mumkin bo'lgan usullarini tekshirishi mumkin. Ammo oqsil ketma-ketligi uzoqroq va murakkablashgani sayin, superkompyuter to'xtab qoladi. 100 ta aminokislotadan iborat zanjir nazariy jihatdan trillionlab usullardan birida topa oladi. Hech bir kompyuter alohida burmalarning barcha mumkin bo'lgan kombinatsiyalarini boshqarish uchun ishchi xotiraga ega emas.
-
-### Kvant kompyuterlari murakkablik uchun yaratilgan
+Dasturlash tillari kvant hisoblashlari uchun zarurdir, chunki ular kvant tizimlarining xatti-harakatlarini boshqarish va kvant algoritmlarini loyihalash vositalarini ta'minlaydi. Kvant mexanikasining kvant hisoblashlari asosidagi tamoyillari klassik hisoblashlardan juda farq qiladi, shuning uchun kvant hisoblashlari uchun dasturlash tillari ushbu tamoyillarni hisobga olish uchun moslashtirilishi kerak. Ular ishlab chiquvchilarga kubitlarni manipulyatsiya qilish va kvant algoritmlarini bajarish uchun kvant sxemalarini yaratish bo'yicha ko'rsatmalar yozishga imkon beradi. Ushbu maqolada biz kvant hisoblash uchun mavjud bo'lgan turli xil dasturlash tillarini va ular ushbu inqilobiy texnologiyaning imkoniyatlarini ochish uchun qanday ishlatilishini o'rganamiz.

@@ -4,7 +4,7 @@
 
 ## [What is Linux?](linux.html)
 
-## [What is quantum computing?](quantum.html)
+## [A Journey into Quantum Programming](quantum.html)
 
 ## [What is CPU cache and how does it work?](cpu_cache.html)
 

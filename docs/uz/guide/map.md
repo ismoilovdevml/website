@@ -4,7 +4,7 @@
 
 ## [Linux Nima](linux.html)
 
-## [Kvant hisoblash nima?](quantum.html)
+## [Kvant dasturlashga sayohat](quantum.html)
 
 ## [CPU cache nima va u qanday ishlaydi?](cpu_cache.html)
 
