@@ -80,3 +80,35 @@ Opsion narxlari va risklarni tahlil qilish kabi ko'plab moliyaviy modellar klass
 Kvant hisoblash usuli molekulalar va oqsillarning xatti-harakatlarini klassik kompyuterlarga qaraganda aniqroq va samaraliroq simulyatsiya qilish uchun ishlatilishi mumkin, bu esa dori-darmonlarni tezroq va aniqroq topish va ishlab chiqish imkonini beradi.
 
 Bular kvant hisoblashning joriy va potentsial qo'llanilishiga bir nechta misollar. Texnologiya rivojlanishda va yetuklikda davom etar ekan, u fan, texnika va sanoatning ko'plab sohalariga yanada katta ta'sir ko'rsatishi mumkin.
+
+
+## Kvant hisoblashning asosiy qiyinchiliklari va cheklovlari
+
+
+Kvant hisoblash ko'plab sohalarda inqilob qilish potentsialiga ega bo'lsa-da, u bir qator qiyinchiliklar va cheklovlarga ham duch keladi. Kvant hisoblashning asosiy qiyinchiliklari va cheklovlaridan ba'zilari:
+
+#### Xatolarni tuzatish
+
+Kvant hisoblash tizimdagi xatolar va noiselarga juda sezgir. Qubitlar juda nozik va muvofiqlikni osongina yo'qotishi mumkinligi sababli, kvant kompyuterlarining ishonchli ishlashi uchun xatolarni tuzatish juda muhimdir. Biroq, kvant tizimida xatolarni tuzatishni amalga oshirish qo'shimcha qubitlar va murakkab algoritmlarni talab qiladigan qiyin vazifadir.
+
+#### Scalability(Masshtablilik)
+
+Kvant hisoblashning asosiy afzalliklaridan biri klassik kompyuterlarga nisbatan eksponensial tezlikni oshirish imkoniyatidir. Biroq, bu tezlikka erishish uchun ko'p sonli qubitlar kerak bo'ladi. Hozirgi vaqtda kvant kompyuterlari o'nlab yoki yuzlab qubitlar bilan cheklangan, bu ko'plab amaliy muammolarni hal qilish uchun yetarli emas. Kvant tizimlarini minglab yoki millionlab qubitlarga kengaytirish katta texnik muammodir.
+
+#### Noise va dekogerentlik
+
+Kvant tizimlari environmental noisega va dekogerentlikka juda sezgir. Kvant tizimi va atrof-muhit o'rtasidagi har qanday o'zaro ta'sir tizimning uyg'unligini yo'qotishiga va kvant holatini yo'q qilishga olib kelishi mumkin. Bu uzoq vaqt davomida qubitlarning nozik kvant holatini saqlab qolishni qiyinlashtiradi.
+
+#### Dasturlashning murakkabligi
+
+Kvant kompyuterini dasturlash klassik dasturlashdan juda farq qiladigan yangi ko'nikmalar va vositalar to'plamini talab qiladi. Kvant algoritmlarini ishlab chiqish va ularni kvant zanjirlariga o'tkazish kvant mexanikasi va kompyuter fanlari bo'yicha tajriba talab qiladigan murakkab va qiyin vazifadir.
+
+#### Hardware cheklovlari
+
+Hozirgi kvant kompyuterlari o'ta o'tkazuvchan qubitlar yoki tutilgan ionlar kabi mavjud hardware texnologiyalari bilan cheklangan. Har bir texnologiyaning o'ziga xos afzalliklari va cheklovlari bor va oxir-oqibat qaysi texnologiya eng muvaffaqiyatli bo'lishi aniq emas.
+
+#### Narxi
+
+Kvant kompyuterini yaratish va ishlatish qimmat va murakkab jarayondir. Kvant uskunasining yuqori narxi va ixtisoslashtirilgan tajribaga bo'lgan ehtiyoj kvant hisoblash imkoniyatlarini faqat bir nechta tadqiqot institutlari va kompaniyalari bilan cheklaydi.
+
+Qisqa qilib aytadigan bo'lsak, kvant hisoblash bir qator qiyinchiliklar va cheklovlarga duch keladi, jumladan xatolarni tuzatish, Scalability, noise va dekogerentlik, dasturlashning murakkabligi, hardware cheklovlari va xarajatlar. Ushbu muammolarni hal qilishda muvaffaqiyatga erishilgan bo'lsa-da, bu soha hali ham dastlabki bosqichda va kvant hisoblashning to'liq imkoniyatlarini amalga oshirish uchun ko'proq tadqiqotlar talab etiladi.
