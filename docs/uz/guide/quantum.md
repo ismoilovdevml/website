@@ -112,3 +112,31 @@ Hozirgi kvant kompyuterlari o'ta o'tkazuvchan qubitlar yoki tutilgan ionlar kabi
 Kvant kompyuterini yaratish va ishlatish qimmat va murakkab jarayondir. Kvant uskunasining yuqori narxi va ixtisoslashtirilgan tajribaga bo'lgan ehtiyoj kvant hisoblash imkoniyatlarini faqat bir nechta tadqiqot institutlari va kompaniyalari bilan cheklaydi.
 
 Qisqa qilib aytadigan bo'lsak, kvant hisoblash bir qator qiyinchiliklar va cheklovlarga duch keladi, jumladan xatolarni tuzatish, Scalability, noise va dekogerentlik, dasturlashning murakkabligi, hardware cheklovlari va xarajatlar. Ushbu muammolarni hal qilishda muvaffaqiyatga erishilgan bo'lsa-da, bu soha hali ham dastlabki bosqichda va kvant hisoblashning to'liq imkoniyatlarini amalga oshirish uchun ko'proq tadqiqotlar talab etiladi.
+
+
+## Kvant kompyuterlari dasturlash tillari
+
+Kvant hisoblash sohasi ishlab chiquvchilar uchun mavjud bo'lgan bir nechta dasturlash tillariga ega. Bu tillar dasturchilarga kvant algoritmlarini yozish va ularni kvant kompyuterlarida ishga tushirishga yordam berish uchun yaratilgan. Kvant hisoblash uchun mashhur dasturlash tillaridan ba'zilari:
+
+#### Qiskit
+
+`Qiskit` - bu Python-da kvant dasturlarini yaratish va ishga tushirish uchun open-source framework. U sxemani loyihalash, optimallashtirish, simulyatsiya qilish va kvant uskunasiga kirish uchun vositalarni o'z ichiga oladi.
+
+#### Microsoft Q#
+
+`Q#` - kvant hisoblash uchun domain-specific language bo'lib, u Visual Studio va .NET frameworki bilan birlashtirilgan. U kvant algoritmlarini tabiiy usulda ifodalashga qaratilgan holda oʻrganish va ulardan foydalanish oson boʻlishi uchun yaratilgan.
+
+#### Cirq
+
+`Cirq` - bu Python-da kvant sxemalarini yaratish va ishga tushirish uchun open-source kutubxona. U turli xil kvant qurilma platformalarida ishlay oladigan yuqori unumdorlikdagi sxemalarni yaratishga qaratilgan holda moslashuvchan va kengaytiriladigan bo‘lishi uchun mo‘ljallangan.
+
+
+#### PyQuil
+
+`PyQuil` - bu Rigettining kvant hisoblash platformasidan foydalangan holda kvant dasturlash uchun Python kutubxonasi. U kvant dasturlarini yaratish va ularni real yoki simulyatsiya qilingan kvant uskunasida ishga tushirish uchun yuqori darajadagi interfeysni taqdim etadi.
+
+#### IBM Quantum Composer
+
+`IBM Quantum Composer` kvant sxemalarini loyihalash uchun drag-and-drop grafik foydalanuvchi interfeysi hisoblanadi. U ta'lim va targ'ibotga e'tibor qaratgan holda, mutaxassis bo'lmaganlar uchun foydalanish uchun qulay bo'lishi uchun yaratilgan.
+
+Ushbu dasturlash tillarining har biri o'zining kuchli va zaif tomonlariga ega va tilni tanlash loyihaning o'ziga xos talablariga bog'liq. Ishlab chiquvchilar kvant hisoblashning hayajonli salohiyatini o'rganish uchun ularning ehtiyojlari va afzalliklariga eng mos keladigan tilni tanlashlari mumkin.
