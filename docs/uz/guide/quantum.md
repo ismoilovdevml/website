@@ -16,7 +16,7 @@ Klassik mexanikada zarralar aniq belgilangan pozitsiya va momentga ega bo'lishi 
 
 Qubit - bu 0 yoki 1 holatda bo'lishi mumkin bo'lgan klassik bitga o'xshash ikki holatli kvant tizimi. Biroq, qubitlar bir vaqtning o'zida ikkala holatning superpozitsiyasida mavjud bo'lishi mumkin, ya'ni bitta qubit klassik bitga qaraganda ko'proq holatlarni ifodalashi mumkin. Bundan tashqari, qubitlar chigal bo'lishi mumkin, ya'ni bir qubitning holati boshqasining holatiga bog'liq bo'lishi mumkin, hatto ular katta masofalar bilan ajratilgan bo'lsa ham.
 
-Klassik va kvant hisoblash o'rtasidagi yana bir asosiy farq bu xatolarning tabiatidir. Klassik hisoblashda shovqin va boshqa omillar tufayli xatolar yuzaga kelishi mumkin, ammo bu xatolar xatolarni tuzatish kodlari yordamida tuzatilishi mumkin. Kvant hisoblashda xatolar qubitlar va boshqa omillar orasidagi kvant kogerentligini yo'qotish bo'lgan dekogerentlik tufayli yuzaga kelishi mumkin. Kvant kompyuterlari uchun xatolarni tuzatishning samarali strategiyalarini ishlab chiqish doimiy tadqiqot sohasidir.
+Klassik va kvant hisoblash o'rtasidagi yana bir asosiy farq bu xatolarning tabiatidir. Kvant hisoblashda xatolar qubitlar va boshqa omillar orasidagi kvant kogerentligini yo'qotish bo'lgan dekogerentlik tufayli yuzaga kelishi mumkin. Kvant kompyuterlari uchun xatolarni tuzatishning samarali strategiyalarini ishlab chiqish doimiy tadqiqot sohasidir.
 
 Kvant gatelari - bu bir yoki bir nechta qubitlarda o'z holatlarini boshqarish uchun harakat qiladigan operatsiyalar. Ular klassik hisoblashda AND, OR va NOT gatelari kabi logical gatelarga o'xshash va turli kvant hisoblarini bajarish uchun ishlatilishi mumkin.
 
@@ -36,3 +36,47 @@ Kvant kompyuterining ishlashi atom va subatomik miqyosdagi zarrachalarning harak
 `Interference` (Interferentsiya) kvant holatlarining o'zaro ta'sirini tavsiflovchi printsipdir. Ikki yoki undan ortiq kvant holatlari o'zaro ta'sirlashganda, ular bir-biriga xalaqit berishi mumkin, natijada constructive yoki destructive interferensiya paydo bo'ladi. Bu interfering holatlarning fazasiga qarab, ma'lum bir holatni o'lchash ehtimolini kuchaytirish yoki kamaytirish uchun ishlatilishi mumkin.
 
 Kvant mexanikasining ushbu tamoyillari klassik hisoblashda logic gatelarga o'xshash kvant gatelari yordamida qubitlarning holatini boshqarish uchun ishlatiladi. Kvant gatelari yordamida qubitlarning holatini manipulyatsiya qilish orqali kvant algoritmlarini amalga oshirish uchun kvant sxemalarini qurish mumkin, ular klassik algoritmlarga qaraganda aniq muammolarni hal qilish uchun ishlatilishi mumkin.
+
+#### Qubitlar
+
+Qubitlar kvant kompyuterining asosiy qurilish bloklaridir. Ular klassik hisoblashda ishlatiladigan klassik bitlarga o'xshash, ammo ular kvant mexanikasi tamoyillariga muvofiq ishlaydi. Qubit ikkita holat, 0 va 1 superpozitsiyasida bo'lishi mumkin va boshqa qubitlar bilan ham aralashib ketishi mumkin. Qubitning holatini klassik bitni olish uchun o'lchash mumkin, ammo kubitni o'lchash harakati uning superpozitsiya holatini buzadi.
+
+#### Quantum gatelar
+
+Quantum gatelar - bu qubitlarning holatini boshqarish uchun ishlatiladigan operatsiyalar. Ular klassik hisoblashda qo'llaniladigan logic gatelarga o'xshash, ammo ular kvant mexanikasi tamoyillariga muvofiq ishlaydi. Eng keng tarqalgan quantum gatelari - Hadamard gate. Pauli gatelar, phase gate, va CNOT gatelar.
+
+##### Quantum circuit - Kvant sxemalari
+
+Kvant sxemalari kvant algoritmlarini implement qilish uchun ishlatiladigan quantum gatelarini tartibga solishdir. Kvant sxemasi bir yoki bir nechta qubitlarga o'z holatini o'zgartirish uchun harakat qiladigan bir qator quantum gatelaridan iborat.
+
+
+## Kvant hisoblash qo'llaniladigan sohalar
+
+
+Kvant hisoblash ilm-fan, muhandislik va sanoatning ko'plab sohalarini inqilob qilish imkoniyatiga ega va u allaqachon keng ko'lamli ilovalar uchun o'rganilmoqda. Kvant hisoblashning hozirgi va potentsial ilovalaridan ba'zilari:
+
+#### Kriptografiya
+
+Kvant hisoblash `RSA` va elliptic curve kriptografiya kabi raqamli aloqalarni himoya qilish uchun ishlatiladigan ko'plab kriptografik tizimlarni buzish potentsialiga ega. Biroq, u kvant kalitlarini taqsimlash kabi kvant hujumlariga chidamli yangi kriptografik tizimlarni ishlab chiqish uchun ham ishlatilishi mumkin.
+
+#### Optimallashtirish
+
+Rejalashtirish, marshrutlash va resurslarni taqsimlash kabi ko'plab real muammolarni klassik algoritmlar yordamida hal qilish qiyin. Kvant hisoblash klassik algoritmlarga qaraganda samaraliroq bo'lgan yangi optimallashtirish algoritmlarini ishlab chiqish uchun ishlatilishi mumkin, bu esa ushbu muammolarni tezroq va aniqroq hal qilish imkonini beradi.
+
+#### Simulyatsiya
+
+Kvant mexanikasi klassik kompyuterlar yordamida, hatto nisbatan kichik tizimlar uchun ham taqlid qilish juda qiyin. Kvant hisoblashlari kvant tizimlarini yanada aniqroq va samaraliroq simulyatsiya qilish uchun ishlatilishi mumkin, bu materialshunoslik, kimyo va boshqa sohalarda yangi kashfiyotlar qilish imkonini beradi.
+
+#### Machine learning
+
+Kvant hisoblash klassik algoritmlarga qaraganda tezroq va aniqroq bo'lgan yangi machine learning algoritmlarini ishlab chiqish uchun ishlatilishi mumkin, bu ma'lumotlarni tahlil qilish, tasvir va nutqni aniqlash va boshqalarda yangi ilovalarga imkon beradi.
+
+#### Moliyaviy modellashtirish
+
+Opsion narxlari va risklarni tahlil qilish kabi ko'plab moliyaviy modellar klassik kompyuterlar yordamida amalga oshirish qiyin bo'lgan keng ko'lamli simulyatsiyalarni talab qiladi. Kvant hisoblashlari yanada aniqroq va samarali moliyaviy modellarni ishlab chiqish uchun ishlatilishi mumkin, bu esa xatarlarni yaxshiroq boshqarish va investitsiya qarorlarini qabul qilish imkonini beradi.
+
+#### Dori kashfiyoti
+
+Kvant hisoblash usuli molekulalar va oqsillarning xatti-harakatlarini klassik kompyuterlarga qaraganda aniqroq va samaraliroq simulyatsiya qilish uchun ishlatilishi mumkin, bu esa dori-darmonlarni tezroq va aniqroq topish va ishlab chiqish imkonini beradi.
+
+Bular kvant hisoblashning joriy va potentsial qo'llanilishiga bir nechta misollar. Texnologiya rivojlanishda va yetuklikda davom etar ekan, u fan, texnika va sanoatning ko'plab sohalariga yanada katta ta'sir ko'rsatishi mumkin.
