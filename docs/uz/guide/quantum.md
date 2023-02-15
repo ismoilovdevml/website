@@ -3,6 +3,12 @@
 ![alt text](https://thumbs.dreamstime.com/b/abstract-technology-background-polygonal-grid-analyze-data-dark-analytics-algorithms-quantum-computing-concept-banner-228106476.jpg)
 
 
+
+:::tip
+Ushbu maqola Qiskit, Microsoft Q#, Cirq, PyQuil va IBM Quantum Composer-ga e'tibor qaratgan holda kvant hisoblashda dasturlash tillarining ahamiyatini o'rganib chiqamiz. Unda ularning o'ziga xos xususiyatlari va imkoniyatlari muhokama qilinadi, shuningdek, yangi boshlanuvchilar uchun ko'rsatmalar va manbalar taqdim etiladi. Maqolada sohadagi muammolar va olib borilayotgan izlanishlarga ham to‘xtalib o‘tildi. Kvant hisoblashlari rivojlanishda davom etar ekan, dasturlash tillari ushbu kuchli tizimlarning imkoniyatlarini ochishda muhim rol o'ynaydi.
+:::
+
+
 Kvant hisoblash - tez rivojlanayotgan soha bo'lib, klassik kompyuterlar bilan hal qilib bo'lmaydigan muammolarni hal qilish uchun kvant mexanikasi kuchidan foydalanishga intiladi. 0 yoki 1 ni ifodalash uchun bitlardan foydalanadigan klassik kompyuterlardan farqli o'laroq, kvant kompyuterlari bir vaqtning o'zida ikkala holatning superpozitsiyasida mavjud bo'lishi mumkin bo'lgan kvant bitlari yoki qubitlardan foydalanadi. Bu kvant kompyuterlariga ko'plab hisob-kitoblarni parallel ravishda bajarishga imkon beradi, bu ularni katta sonlarni faktoring qilish, murakkab kimyoviy reaktsiyalarni simulyatsiya qilish va logistikani optimallashtirish kabi vazifalar uchun juda mos keladi.
 
 
@@ -180,19 +186,19 @@ Qisqa qilib aytganda, kvant hisoblash shiddat bilan rivojlanayotgan soha bo‘li
 
 Kvant dasturlashni o'rganishga qiziquvchilar uchun boshlash uchun bir nechta onlayn resurslar mavjud. Ba'zi mashhur onlayn kurslar va qo'llanmalar quyidagilarni o'z ichiga oladi:
 
-#### IBM Quantum Experience
+#### [IBM Quantum Experience](https://quantum-computing.ibm.com/)
 
 IBM kvant kompyuterlariga, shuningdek, oʻquv qoʻllanmalari va misol dasturlari toʻplamiga kirishni taʼminlovchi bepul onlayn platforma.
 
-#### Qiskit Textbook
+#### [Qiskit Textbook](https://qiskit.org/textbook/preface.html)
 
 Qiskit yordamida kvant hisoblash, kvant mexanikasi va kvant dasturlash asoslarini qamrab olgan keng qamrovli onlayn darslik.
 
-#### Microsoft Quantum Development Kit
+#### [Microsoft Quantum Development Kit](https://azure.microsoft.com/en-us/resources/development-kit/quantum-computing/)
 
 Microsoft-ning Q# dasturlash tilidan foydalangan holda kvant kompyuterlarini dasturlash uchun toollar va o'quv qo'llanmalar to'plami.
 
-#### Rigetti Forest
+#### [Rigetti Forest](https://pyquil-docs.rigetti.com/en/v2.3.0/)
 
 Rigetti kvant kompyuterlariga, shuningdek, o'quv qo'llanmalari va misol dasturlariga kirishni ta'minlaydigan cloudga asoslangan kvant hisoblash platformasi.
 
