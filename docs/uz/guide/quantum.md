@@ -40,7 +40,10 @@ Maqolani yaxshiroq tushunishingiz uchun b'azi tushuntirish berilgan videolarni k
 
 Qubit - bu 0 yoki 1 holatda bo'lishi mumkin bo'lgan klassik bitga o'xshash ikki holatli kvant tizimi. Biroq, qubitlar bir vaqtning o'zida ikkala holatning superpozitsiyasida mavjud bo'lishi mumkin, ya'ni bitta qubit klassik bitga qaraganda ko'proq holatlarni ifodalashi mumkin. Bundan tashqari, qubitlar chigal bo'lishi mumkin, ya'ni bir qubitning holati boshqasining holatiga bog'liq bo'lishi mumkin, hatto ular katta masofalar bilan ajratilgan bo'lsa ham.
 
+
 Klassik va kvant hisoblash o'rtasidagi yana bir asosiy farq bu xatolarning tabiatidir. Kvant hisoblashda xatolar qubitlar va boshqa omillar orasidagi kvant kogerentligini yo'qotish bo'lgan dekogerentlik tufayli yuzaga kelishi mumkin. Kvant kompyuterlari uchun xatolarni tuzatishning samarali strategiyalarini ishlab chiqish doimiy tadqiqot sohasidir.
+
+![alt text](https://thumbs.dreamstime.com/b/qubit-vs-bit-states-classical-compare-to-quantum-superposition-vector-concept-234886042.jpg)
 
 Kvant gatelari - bu bir yoki bir nechta qubitlarda o'z holatlarini boshqarish uchun harakat qiladigan operatsiyalar. Ular klassik hisoblashda AND, OR va NOT gatelari kabi logical gatelarga o'xshash va turli kvant hisoblarini bajarish uchun ishlatilishi mumkin.
 
@@ -52,6 +55,9 @@ Hisoblash uchun kvant mexanikasidan foydalanish g'oyasi 1980-yillarda fizik `Ric
 
 Dastlabki yillarda kvant hisoblash asosan nazariy edi va 1990-yillarning oxiriga kelib kichik hajmdagi kvant hisoblashning birinchi eksperimental namoyishlari amalga oshirildi. O'shandan beri kvant hardware, dasturiy ta'minot va algoritmlarni ishlab chiqishda sezilarli yutuqlarga erishildi.
 
+![alt tetx](https://caltech-prod.s3.amazonaws.com/main/images/feynman01-NEWS-WEB.width-600_tSwRQP5.jpg)
+
+##### Rasmda Richard Feynman
 
 Kvant kompyuterining ishlashi atom va subatomik miqyosdagi zarrachalarning harakatini tavsiflovchi kvant mexanikasining asosiy tamoyillariga asoslanadi. Kvant hisoblashining asosi bo'lgan bir nechta asosiy printsiplar mavjud, ular orasida superpozitsiya, entanglement(chalkashlik) va interferensiya mavjud.
 
@@ -59,7 +65,11 @@ Kvant kompyuterining ishlashi atom va subatomik miqyosdagi zarrachalarning harak
 
 `Entanglement` kvant mexanikasining yana bir asosiy printsipi bo'lib, u ikki yoki undan ortiq qubitlarni bir-biridan katta masofalar bilan ajratilgan bo'lsa ham, bir qubitning holati boshqasining holatiga bog'liq bo'ladigan tarzda correlate qilishga imkon beradi. Bu shuni anglatadiki, bir qubitning holatini o'lchash ular orasidagi masofadan qat'i nazar, boshqa qubitning holatini bir zumda aniqlashi mumkin.
 
+![alt text](https://forum.huawei.com/enterprise/en/data/attachment/forum/202011/26/212730xsq9oyyyg99o9rdy.png?How%20it%20Works_%20Quantum%20Computing%20-%20YouTube%20-%20Google%20Chrome%2026-Nov-20%205_25_43%20PM.png)
+
 `Interference` (Interferentsiya) kvant holatlarining o'zaro ta'sirini tavsiflovchi printsipdir. Ikki yoki undan ortiq kvant holatlari o'zaro ta'sirlashganda, ular bir-biriga xalaqit berishi mumkin, natijada constructive yoki destructive interferensiya paydo bo'ladi. Bu interfering holatlarning fazasiga qarab, ma'lum bir holatni o'lchash ehtimolini kuchaytirish yoki kamaytirish uchun ishlatilishi mumkin.
+
+![alt text](https://www.researchgate.net/publication/342997524/figure/fig4/AS:914777660461057@1595111398882/Quantum-interference-in-the-presence-of-blind-witnesses-The-values-of-the-normalized.png)
 
 Kvant mexanikasining ushbu tamoyillari klassik hisoblashda logic gatelarga o'xshash kvant gatelari yordamida qubitlarning holatini boshqarish uchun ishlatiladi. Kvant gatelari yordamida qubitlarning holatini manipulyatsiya qilish orqali kvant algoritmlarini amalga oshirish uchun kvant sxemalarini qurish mumkin, ular klassik algoritmlarga qaraganda aniq muammolarni hal qilish uchun ishlatilishi mumkin.
 
@@ -67,14 +77,19 @@ Kvant mexanikasining ushbu tamoyillari klassik hisoblashda logic gatelarga o'xsh
 
 Qubitlar kvant kompyuterining asosiy qurilish bloklaridir. Ular klassik hisoblashda ishlatiladigan klassik bitlarga o'xshash, ammo ular kvant mexanikasi tamoyillariga muvofiq ishlaydi. Qubit ikkita holat, 0 va 1 superpozitsiyasida bo'lishi mumkin va boshqa qubitlar bilan ham aralashib ketishi mumkin. Qubitning holatini klassik bitni olish uchun o'lchash mumkin, ammo kubitni o'lchash harakati uning superpozitsiya holatini buzadi.
 
+![alt text](https://www.mouser.mx/blog/Portals/11/Figure%201%20Qubit%20Representation_1.jpg)
+
 #### Quantum gatelar
 
 Quantum gatelar - bu qubitlarning holatini boshqarish uchun ishlatiladigan operatsiyalar. Ular klassik hisoblashda qo'llaniladigan logic gatelarga o'xshash, ammo ular kvant mexanikasi tamoyillariga muvofiq ishlaydi. Eng keng tarqalgan quantum gatelari - Hadamard gate. Pauli gatelar, phase gate, va CNOT gatelar.
 
-##### Quantum circuit - Kvant sxemalari
+![lat text](https://miro.medium.com/max/1400/1*Zq858Cx4WcGKpBERpoOkng.png)
+
+#### Quantum circuit - Kvant sxemalari
 
 Kvant sxemalari kvant algoritmlarini implement qilish uchun ishlatiladigan quantum gatelarini tartibga solishdir. Kvant sxemasi bir yoki bir nechta qubitlarga o'z holatini o'zgartirish uchun harakat qiladigan bir qator quantum gatelaridan iborat.
 
+![lat text](https://www.researchgate.net/publication/348696816/figure/fig1/AS:983053300162560@1611389579116/Example-of-a-5-qubit-quantum-circuit-from-18-with-each-horizontal-line-representing.png)
 
 ## Kvant hisoblash qo'llaniladigan sohalar
 
@@ -85,6 +100,8 @@ Kvant hisoblash ilm-fan, muhandislik va sanoatning ko'plab sohalarini inqilob qi
 
 Kvant hisoblash `RSA` va elliptic curve kriptografiya kabi raqamli aloqalarni himoya qilish uchun ishlatiladigan ko'plab kriptografik tizimlarni buzish potentsialiga ega. Biroq, u kvant kalitlarini taqsimlash kabi kvant hujumlariga chidamli yangi kriptografik tizimlarni ishlab chiqish uchun ham ishlatilishi mumkin.
 
+![alt text](https://ciberseguridad.blog/content/images/2017/10/criptografia-post-quantum.jpg)
+
 #### Optimallashtirish
 
 Rejalashtirish, marshrutlash va resurslarni taqsimlash kabi ko'plab real muammolarni klassik algoritmlar yordamida hal qilish qiyin. Kvant hisoblash klassik algoritmlarga qaraganda samaraliroq bo'lgan yangi optimallashtirish algoritmlarini ishlab chiqish uchun ishlatilishi mumkin, bu esa ushbu muammolarni tezroq va aniqroq hal qilish imkonini beradi.
@@ -93,13 +110,19 @@ Rejalashtirish, marshrutlash va resurslarni taqsimlash kabi ko'plab real muammol
 
 Kvant mexanikasi klassik kompyuterlar yordamida, hatto nisbatan kichik tizimlar uchun ham taqlid qilish juda qiyin. Kvant hisoblashlari kvant tizimlarini yanada aniqroq va samaraliroq simulyatsiya qilish uchun ishlatilishi mumkin, bu materialshunoslik, kimyo va boshqa sohalarda yangi kashfiyotlar qilish imkonini beradi.
 
+![alt text](https://1qbit.com/wp-content/uploads/2021/02/1QBit-Blog-Pushing-the-Limits-of-Quantum-Simulation-Using-the-Cloud.jpg)
+
 #### Machine learning
 
 Kvant hisoblash klassik algoritmlarga qaraganda tezroq va aniqroq bo'lgan yangi machine learning algoritmlarini ishlab chiqish uchun ishlatilishi mumkin, bu ma'lumotlarni tahlil qilish, tasvir va nutqni aniqlash va boshqalarda yangi ilovalarga imkon beradi.
 
+![alt text](https://miro.medium.com/max/2400/0*XcIix2xbLzNEIXAH.png)
+
 #### Moliyaviy modellashtirish
 
 Opsion narxlari va risklarni tahlil qilish kabi ko'plab moliyaviy modellar klassik kompyuterlar yordamida amalga oshirish qiyin bo'lgan keng ko'lamli simulyatsiyalarni talab qiladi. Kvant hisoblashlari yanada aniqroq va samarali moliyaviy modellarni ishlab chiqish uchun ishlatilishi mumkin, bu esa xatarlarni yaxshiroq boshqarish va investitsiya qarorlarini qabul qilish imkonini beradi.
+
+![alt text](https://www.brewin.co.uk/sites/brewin-corp-v4/files/miam-02-june_2.jpg)
 
 #### Dori kashfiyoti
 
@@ -107,6 +130,7 @@ Kvant hisoblash usuli molekulalar va oqsillarning xatti-harakatlarini klassik ko
 
 Bular kvant hisoblashning joriy va potentsial qo'llanilishiga bir nechta misollar. Texnologiya rivojlanishda va yetuklikda davom etar ekan, u fan, texnika va sanoatning ko'plab sohalariga yanada katta ta'sir ko'rsatishi mumkin.
 
+![alt tetx](https://whatsthebigdata.files.wordpress.com/2021/09/drug-discovery.jpg)
 
 ## Kvant hisoblashning asosiy qiyinchiliklari va cheklovlari
 
@@ -142,6 +166,8 @@ Qisqa qilib aytadigan bo'lsak, kvant hisoblash bir qator qiyinchiliklar va chekl
 
 ## Kvant kompyuterlari dasturlash tillari
 
+![alt text](https://www.dwavesys.com/media/mb5jl2nl/event_listing_abstract_7.jpg)
+
 Kvant hisoblash sohasi ishlab chiquvchilar uchun mavjud bo'lgan bir nechta dasturlash tillariga ega. Bu tillar dasturchilarga kvant algoritmlarini yozish va ularni kvant kompyuterlarida ishga tushirishga yordam berish uchun yaratilgan. Kvant hisoblash uchun mashhur dasturlash tillaridan ba'zilari:
 
 #### Qiskit
@@ -173,6 +199,8 @@ Ushbu dasturlash tillarining har biri o'zining kuchli va zaif tomonlariga ega va
 
 
 ## Kvant dasturlashda Pythondan Rustni ustunligi 
+
+![alt text](https://crowdbotics.ghost.io/content/images/2021/08/Python-vs.-Rust.png)
 
 Rust ham, Python ham o'zining kuchli va zaif tomonlariga ega bo'lsa-da, Rust uni kvant hisoblash uchun yaxshi tanlovga aylantiradigan bir nechta xususiyatlarga ega:
 
