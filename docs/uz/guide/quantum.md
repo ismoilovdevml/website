@@ -120,11 +120,11 @@ Kvant hisoblash sohasi ishlab chiquvchilar uchun mavjud bo'lgan bir nechta dastu
 
 #### Qiskit
 
-`Qiskit` - bu Python-da kvant dasturlarini yaratish va ishga tushirish uchun open-source framework. U sxemani loyihalash, optimallashtirish, simulyatsiya qilish va kvant uskunasiga kirish uchun vositalarni o'z ichiga oladi.
+`Qiskit` - IBM tomonidan ishlab chiqilgan Python-ga asoslangan kvant hisoblash tizimi. U kvant sxemalarini yaratish va ishga tushirish, kvant kompyuterlarini taqlid qilish va IBM kvant hardwaresi bilan aloqa o'rnatish uchun toollar to'plamini taqdim etadi. Qiskit turli kvant operatsiyalarini qo'llab-quvvatlaydi, masalan, bitta qubit va ko'p qubit operatsiyalari uchun gatelar, shuningdek, o'lchovlar va noiselarni modellashtirish. Shuningdek, u gibrid kvant-klassik algoritmlar uchun klassik hisoblashni qo'llab-quvvatlaydi.
 
 #### Microsoft Q#
 
-`Q#` - kvant hisoblash uchun domain-specific language bo'lib, u Visual Studio va .NET frameworki bilan birlashtirilgan. U kvant algoritmlarini tabiiy usulda ifodalashga qaratilgan holda oʻrganish va ulardan foydalanish oson boʻlishi uchun yaratilgan.
+`Q#` — Microsoft tomonidan ishlab chiqilgan kvant hisoblash uchun domenga xos dasturlash tili. U C#-ga o'xshash sintaksisga ega va kvant algoritmlarini ishlab chiqish uchun yuqori darajadagi dasturlash modelini taqdim etadi. Q# turli kvant operatsiyalarini qo'llab-quvvatlaydi, masalan, bitta va ko'p qubitli gatelar, o'lchovlar va simulyatsiyalar va u gibrid kvant-klassik algoritmlar uchun klassik hisoblashni qo'llab-quvvatlaydi.
 
 #### Cirq
 
@@ -167,3 +167,9 @@ Rust kvant hisoblashda muhim bo'lgan parallelizmni qo'llab-quvvatlash uchun mo'l
 Rust - bu tizim dasturlash tili bo'lib, u xotirani boshqarish va tizim darajasidagi boshqa operatsiyalar ustidan low-lewel darajadagi nazoratni ta'minlaydi. Bu maxsus apparat uchun kodni optimallashtirishni osonlashtiradi, bu esa kvant hisoblashda muhim, bunda apparatga xos optimallashtirish ish faoliyatini sezilarli darajada yaxshilashga olib kelishi mumkin. Python, yuqori darajadagi til bo'lsa-da, low-lweldagi optimallashtirishga unchalik mos kelmaydi.
 
 Qisqa qilib aytganda, Rustning ishlashi, xavfsizligi, parallelligi va low-leweldagi boshqaruvi uni kvant hisoblash ilovalari uchun samarador tanlovga aylantiradi, ayniqsa yuqori unumdorlik va apparatga xos optimallashtirish muhim bo'lgan hollarda.
+
+Kvant hisoblashning salohiyati juda katta, ammo u o'z va'dasini amalga oshirishdan oldin yengib o'tish kerak bo'lgan muhim qiyinchiliklar mavjud. Ba'zi asosiy muammolar qatoriga xatolarni tuzatish zarurati, kvant tizimlarini kengaytirish qiyinligi va texnologiyaning hozirgi holati kiradi. Xatolarni tuzatish juda muhim, chunki kvant tizimlari noisega va xatolarga olib kelishi mumkin bo'lgan atrof-muhit omillariga juda sezgir. Kvant tizimlarini kengaytirish qiyinligi qiyin, chunki mazmunli hisoblash uchun zarur bo'lgan qubitlar soni hozirda cheklangan va qubitlar sonini ko'paytirish qo'shimcha noise va xatolarga olib kelishi mumkin.
+
+Ushbu qiyinchiliklarga qaramay, bu sohada sezilarli yutuqlarga erishildi va bir nechta kompaniyalar va tadqiqot guruhlari kengaytiriladigan kvant hisoblash tizimlarini yaratish ustida ishlamoqda. Ushbu tizimlar keng tarqalib borar ekan, kvant kompyuterlari uchun kod yoza oladigan dasturchilarga talab ortib boradi. Kvant dasturlashni o'rganishga qiziquvchilar uchun Internetda ko'plab resurslar mavjud, jumladan, o'quv qo'llanmalari, onlayn kurslar va amaliyot dasturlari.
+
+Qisqa qilib aytganda, kvant hisoblash shiddat bilan rivojlanayotgan soha bo‘lib, kriptografiya, optimallashtirish va simulyatsiya kabi sohalardagi murakkab muammolarni hal qilish uchun ulkan salohiyatga ega. Hali hal qilinishi kerak bo'lgan jiddiy muammolar mavjud bo'lsa-da, so'nggi bir necha yil ichida bu sohada erishilgan yutuqlar ta'sirchan bo'ldi va kvant hisoblashning kelajakdagi istiqbollari hayajonli. Ko'proq tadqiqotchilar va kompaniyalar texnologiyaga sarmoya kiritar ekan, kelgusi yillarda kvant hisoblashlari kompyuter fanining tobora muhim sohasiga aylanishi mumkin.
