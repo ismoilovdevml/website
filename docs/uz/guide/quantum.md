@@ -8,6 +8,8 @@
 Ushbu maqola Qiskit, Microsoft Q#, Cirq, PyQuil va IBM Quantum Composer-ga e'tibor qaratgan holda kvant hisoblashda dasturlash tillarining ahamiyatini o'rganib chiqamiz. Unda ularning o'ziga xos xususiyatlari va imkoniyatlari muhokama qilinadi, shuningdek, yangi boshlanuvchilar uchun ko'rsatmalar va manbalar taqdim etiladi. Maqolada sohadagi muammolar va olib borilayotgan izlanishlarga ham to‘xtalib o‘tildi. Kvant hisoblashlari rivojlanishda davom etar ekan, dasturlash tillari ushbu kuchli tizimlarning imkoniyatlarini ochishda muhim rol o'ynaydi.
 :::
 
+Bu maqolaning birinchi qismi hisoblanadi va bu maqolada biz kvant hisoblash bo'yicha umumiy bilimlarni o'rganib chiqamiz. Maqolani ikkinchi qismida esa kvant hisoblashga chuqurroq shong'iymiz.
+
 
 Kvant hisoblash - tez rivojlanayotgan soha bo'lib, klassik kompyuterlar bilan hal qilib bo'lmaydigan muammolarni hal qilish uchun kvant mexanikasi kuchidan foydalanishga intiladi. 0 yoki 1 ni ifodalash uchun bitlardan foydalanadigan klassik kompyuterlardan farqli o'laroq, kvant kompyuterlari bir vaqtning o'zida ikkala holatning superpozitsiyasida mavjud bo'lishi mumkin bo'lgan kvant bitlari yoki qubitlardan foydalanadi. Bu kvant kompyuterlariga ko'plab hisob-kitoblarni parallel ravishda bajarishga imkon beradi, bu ularni katta sonlarni faktoring qilish, murakkab kimyoviy reaktsiyalarni simulyatsiya qilish va logistikani optimallashtirish kabi vazifalar uchun juda mos keladi.
 
@@ -20,6 +22,22 @@ Kvant hisoblashlarini tushunish uchun kvant mexanikasi tamoyillari haqida asosiy
 
 Klassik mexanikada zarralar aniq belgilangan pozitsiya va momentga ega bo'lishi mumkin va ularning xususiyatlarini klassik o'zgaruvchilar bilan tavsiflash mumkin. Bundan farqli o'laroq, kvant mexanikasida zarralar to'lqin funktsiyalari bilan tavsiflanadi, bu esa zarrachani ma'lum bir holatda topish ehtimolini beradi.
 
+:::tip
+#### Kvant hisoblash tushuntirilgan videolar
+Maqolani yaxshiroq tushunishingiz uchun b'azi tushuntirish berilgan videolarni ko'rishni maslaxat beraman :)
+
+[Kvnat hisoblash xaritasi va kvant hisoblash haqida](https://youtu.be/-UlxHPIEVqA)
+
+[Kvant fizikasi bilan tushuntirilgan kvant kompyuterlari](https://youtu.be/jHoEjvuPoB8)
+
+[5 daqiqada kvant hisoblash](https://youtu.be/X8MZWCGgIb8)
+
+[Kvant hisoblash! Google, IBM va Intel laboratoriyalaridagi ishlanmalar](https://youtu.be/D04MXBzt-MA)
+
+[Google Quantum AI kampusi | Google](https://youtu.be/2uV5XwhH6Eg)
+
+:::
+
 Qubit - bu 0 yoki 1 holatda bo'lishi mumkin bo'lgan klassik bitga o'xshash ikki holatli kvant tizimi. Biroq, qubitlar bir vaqtning o'zida ikkala holatning superpozitsiyasida mavjud bo'lishi mumkin, ya'ni bitta qubit klassik bitga qaraganda ko'proq holatlarni ifodalashi mumkin. Bundan tashqari, qubitlar chigal bo'lishi mumkin, ya'ni bir qubitning holati boshqasining holatiga bog'liq bo'lishi mumkin, hatto ular katta masofalar bilan ajratilgan bo'lsa ham.
 
 Klassik va kvant hisoblash o'rtasidagi yana bir asosiy farq bu xatolarning tabiatidir. Kvant hisoblashda xatolar qubitlar va boshqa omillar orasidagi kvant kogerentligini yo'qotish bo'lgan dekogerentlik tufayli yuzaga kelishi mumkin. Kvant kompyuterlari uchun xatolarni tuzatishning samarali strategiyalarini ishlab chiqish doimiy tadqiqot sohasidir.
@@ -27,6 +45,8 @@ Klassik va kvant hisoblash o'rtasidagi yana bir asosiy farq bu xatolarning tabia
 Kvant gatelari - bu bir yoki bir nechta qubitlarda o'z holatlarini boshqarish uchun harakat qiladigan operatsiyalar. Ular klassik hisoblashda AND, OR va NOT gatelari kabi logical gatelarga o'xshash va turli kvant hisoblarini bajarish uchun ishlatilishi mumkin.
 
 Kvant sxemalari kvant quantum gatelaridan iborat bo'lib, kvant kompyuterida bajariladigan operatsiyalar ketma-ketligini ifodalaydi. Ulardan kvant algoritmlarini amalga oshirish uchun foydalanish mumkin, ya'ni kvant mexanikasining o'ziga xos xususiyatlaridan muayyan muammolarni klassik algoritmlarga qaraganda samaraliroq hal qilish uchun foydalanadigan operatsiyalar ketma-ketligi.
+
+## Kvant hisoblash tarixi
 
 Hisoblash uchun kvant mexanikasidan foydalanish g'oyasi 1980-yillarda fizik `Richard Feynman` kvant tizimlarini klassik kompyuterlarga qaraganda samaraliroq simulyatsiya qilish uchun kvant kompyuteri g'oyasini taklif qilgan paytdan boshlanadi. 1994 yilda matematik `Peter Shor` kriptografiyaga sezilarli ta'sir ko'rsatadigan eng mashhur klassik algoritmdan ko'ra ko'p sonlarni eksponent ravishda tezroq faktorlashi mumkin bo'lgan kvant algoritmini ishlab chiqdi.
 
@@ -218,5 +238,6 @@ Avtomatlashtirilgan xatolarni tuzatishni o'z ichiga olgan dasturlash tillarini i
 
 Kvant hisoblash tizimlarini aniqroq simulyatsiya qila oladigan dasturlash tillarini ishlab chiqish, bu yanada samaraliroq va samarali sinov va optimallashtirish imkonini beradi.
 
-Xulosa yakun
+## Xulosa yakun
+
 Kvant dasturlash tillari kvant hisoblash kelajagining muhim tarkibiy qismidir. Soha o'sishda va rivojlanishda davom etar ekan, tadqiqotchilar va amaliyotchilar uchun eng so'nggi ishlanmalar va vositalardan xabardor bo'lish juda muhimdir. Kuchliroq va foydalanuvchilarga qulay kvant dasturlash tillarining davom etayotgan rivojlanishi bilan kvant hisoblashning kelajagi istiqbolli ko'rinadi. Kvant hisoblashlari kengroq qo'llanilsa, kvant dasturlash kriptografiya, optimallashtirish va simulyatsiya kabi sohalarga ta'sir ko'rsatadigan kompyuter fanining tobora muhim sohasiga aylanishi mumkin.
