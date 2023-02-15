@@ -350,6 +350,8 @@ Endi sizda CPU ishlashi va qanday tuzilgani haqida bilib oldingiz )
 
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
+[Telegram Blog](https://t.me/Otabek_Ismoilov)
+
 
 Foydanilgan Manbalar
 

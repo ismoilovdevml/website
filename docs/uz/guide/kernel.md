@@ -337,6 +337,8 @@ Endi siz kernel ishlashi kelib chiqishi kernel turlari haqidagi bilimlarni bilib
 
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
+[Telegram Blog](https://t.me/Otabek_Ismoilov)
+
 
 Foydanilgan Manbalar
 

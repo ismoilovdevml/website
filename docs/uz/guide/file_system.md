@@ -195,3 +195,8 @@ Xulosa qilib aytganda, Linux fayl tizimi Linux tizimidagi fayllar va directoryla
 Linux fayl tizimi root directory, boot directory, inodelar, superblok va boshqa muhim directorylar kabi komponentlarni o'z ichiga oladi. Inode strukturasi fayl tizimidagi har bir fayl haqidagi ma'lumotlarni saqlaydi, superblok esa butun fayl tizimi haqida muhim ma'lumotlarni o'z ichiga oladi. Fayl tizimlarini mount qilish va ummount qilish jarayoni tizimga fayl tizimlariga kirish va ulardan foydalanish imkonini beradi, faylga ruxsat va egalik esa fayllar va directorylarga kirishni boshqarishda yordam beradi.
 
 Umuman olganda, Linux fayl tizimini tushunish Linux tizimini samarali boshqarish va saqlash uchun muhimdir.
+
+
+Xato va kamchiliklar bo'lsa uzur so'rayman )
+
+[Telegram Blog](https://t.me/Otabek_Ismoilov)

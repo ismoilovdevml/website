@@ -1,6 +1,6 @@
 # #1 Kvant dasturlashga sayohat
 
-![alt text](https://thumbs.dreamstime.com/b/abstract-technology-background-polygonal-grid-analyze-data-dark-analytics-algorithms-quantum-computing-concept-banner-228106476.jpg)
+![alt text](https://miro.medium.com/max/1400/1*CQPNQqE4X2Jh5XomWQrWQQ.png)
 
 
 
@@ -38,14 +38,14 @@ Maqolani yaxshiroq tushunishingiz uchun b'azi tushuntirish berilgan videolarni k
 
 :::
 
-Qubit - bu 0 yoki 1 holatda bo'lishi mumkin bo'lgan klassik bitga o'xshash ikki holatli kvant tizimi. Biroq, qubitlar bir vaqtning o'zida ikkala holatning superpozitsiyasida mavjud bo'lishi mumkin, ya'ni bitta qubit klassik bitga qaraganda ko'proq holatlarni ifodalashi mumkin. Bundan tashqari, qubitlar chigal bo'lishi mumkin, ya'ni bir qubitning holati boshqasining holatiga bog'liq bo'lishi mumkin, hatto ular katta masofalar bilan ajratilgan bo'lsa ham.
+`Qubit` - bu 0 yoki 1 holatda bo'lishi mumkin bo'lgan klassik bitga o'xshash ikki holatli kvant tizimi. Biroq, qubitlar bir vaqtning o'zida ikkala holatning superpozitsiyasida mavjud bo'lishi mumkin, ya'ni bitta qubit klassik bitga qaraganda ko'proq holatlarni ifodalashi mumkin. Bundan tashqari, qubitlar chigal bo'lishi mumkin, ya'ni bir qubitning holati boshqasining holatiga bog'liq bo'lishi mumkin, hatto ular katta masofalar bilan ajratilgan bo'lsa ham.
 
 
 Klassik va kvant hisoblash o'rtasidagi yana bir asosiy farq bu xatolarning tabiatidir. Kvant hisoblashda xatolar qubitlar va boshqa omillar orasidagi kvant kogerentligini yo'qotish bo'lgan dekogerentlik tufayli yuzaga kelishi mumkin. Kvant kompyuterlari uchun xatolarni tuzatishning samarali strategiyalarini ishlab chiqish doimiy tadqiqot sohasidir.
 
 ![alt text](https://thumbs.dreamstime.com/b/qubit-vs-bit-states-classical-compare-to-quantum-superposition-vector-concept-234886042.jpg)
 
-Kvant gatelari - bu bir yoki bir nechta qubitlarda o'z holatlarini boshqarish uchun harakat qiladigan operatsiyalar. Ular klassik hisoblashda AND, OR va NOT gatelari kabi logical gatelarga o'xshash va turli kvant hisoblarini bajarish uchun ishlatilishi mumkin.
+`Kvant gatelari` - bu bir yoki bir nechta qubitlarda o'z holatlarini boshqarish uchun harakat qiladigan operatsiyalar. Ular klassik hisoblashda AND, OR va NOT gatelari kabi logical gatelarga o'xshash va turli kvant hisoblarini bajarish uchun ishlatilishi mumkin.
 
 Kvant sxemalari kvant quantum gatelaridan iborat bo'lib, kvant kompyuterida bajariladigan operatsiyalar ketma-ketligini ifodalaydi. Ulardan kvant algoritmlarini amalga oshirish uchun foydalanish mumkin, ya'ni kvant mexanikasining o'ziga xos xususiyatlaridan muayyan muammolarni klassik algoritmlarga qaraganda samaraliroq hal qilish uchun foydalanadigan operatsiyalar ketma-ketligi.
 
@@ -65,7 +65,7 @@ Kvant kompyuterining ishlashi atom va subatomik miqyosdagi zarrachalarning harak
 
 `Entanglement` kvant mexanikasining yana bir asosiy printsipi bo'lib, u ikki yoki undan ortiq qubitlarni bir-biridan katta masofalar bilan ajratilgan bo'lsa ham, bir qubitning holati boshqasining holatiga bog'liq bo'ladigan tarzda correlate qilishga imkon beradi. Bu shuni anglatadiki, bir qubitning holatini o'lchash ular orasidagi masofadan qat'i nazar, boshqa qubitning holatini bir zumda aniqlashi mumkin.
 
-![alt text](https://forum.huawei.com/enterprise/en/data/attachment/forum/202011/26/212730xsq9oyyyg99o9rdy.png?How%20it%20Works_%20Quantum%20Computing%20-%20YouTube%20-%20Google%20Chrome%2026-Nov-20%205_25_43%20PM.png)
+![alt text](https://github.com/ismoilovdevml/website/blob/master/assets/1.png)
 
 `Interference` (Interferentsiya) kvant holatlarining o'zaro ta'sirini tavsiflovchi printsipdir. Ikki yoki undan ortiq kvant holatlari o'zaro ta'sirlashganda, ular bir-biriga xalaqit berishi mumkin, natijada constructive yoki destructive interferensiya paydo bo'ladi. Bu interfering holatlarning fazasiga qarab, ma'lum bir holatni o'lchash ehtimolini kuchaytirish yoki kamaytirish uchun ishlatilishi mumkin.
 
@@ -180,7 +180,7 @@ Kvant hisoblash sohasi ishlab chiquvchilar uchun mavjud bo'lgan bir nechta dastu
 
 #### Cirq
 
-`Cirq` - bu Python-da kvant sxemalarini yaratish va ishga tushirish uchun open-source kutubxona. U turli xil kvant qurilma platformalarida ishlay oladigan yuqori unumdorlikdagi sxemalarni yaratishga qaratilgan holda moslashuvchan va kengaytiriladigan bo‘lishi uchun mo‘ljallangan.
+`Cirq` - bu Python-da kvant sxemalarini yaratish va ishga tushirish uchun open-source kutubxona. U turli xil kvant qurilma platformalarida ishlay oladigan yuqori unumdorlikdagi sxemalarni yaratishga qaratilgan holda moslashuvchan va kengaytiriladigan bo‘lishi uchun mo‘ljallangan. Cirqni  Google Quantum ishlab chiqqan.
 
 
 #### PyQuil
@@ -269,3 +269,7 @@ Kvant hisoblash tizimlarini aniqroq simulyatsiya qila oladigan dasturlash tillar
 ## Xulosa yakun
 
 Kvant dasturlash tillari kvant hisoblash kelajagining muhim tarkibiy qismidir. Soha o'sishda va rivojlanishda davom etar ekan, tadqiqotchilar va amaliyotchilar uchun eng so'nggi ishlanmalar va vositalardan xabardor bo'lish juda muhimdir. Kuchliroq va foydalanuvchilarga qulay kvant dasturlash tillarining davom etayotgan rivojlanishi bilan kvant hisoblashning kelajagi istiqbolli ko'rinadi. Kvant hisoblashlari kengroq qo'llanilsa, kvant dasturlash kriptografiya, optimallashtirish va simulyatsiya kabi sohalarga ta'sir ko'rsatadigan kompyuter fanining tobora muhim sohasiga aylanishi mumkin.
+
+Xato va kamchiliklar bo'lsa uzur so'rayman )
+
+[Telegram Blog](https://t.me/Otabek_Ismoilov)

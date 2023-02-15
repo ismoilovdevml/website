@@ -181,6 +181,8 @@ Protsessor tezroq ishlashi uchun va imkon qadar ko'proq ishlashi uchun ko'plab o
 
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
+[Telegram Blog](https://t.me/Otabek_Ismoilov)
+
 Foydanilgan Manbalar
 
 [freecodecamp.org](https://www.freecodecamp.org/news/how-does-a-cpu-work/)

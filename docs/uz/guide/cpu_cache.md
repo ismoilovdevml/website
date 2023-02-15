@@ -200,6 +200,8 @@ Ixtisoslashuv va ko'p darajali keshlashni tasvirlash uchun bu erda AMD Athlon 64
 
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
+[Telegram Blog](https://t.me/Otabek_Ismoilov)
+
 Foydanilgan Manbalar
 
 [Makeuseof.com](https://www.makeuseof.com/tag/what-is-cpu-cache/)
