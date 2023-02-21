@@ -17,3 +17,5 @@
 ## [Kernel nima va u qanday ishlaydi?](kernel.html)
 
 ## [Linux fayl tizimi uchun keng qamrovli qo'llanma](file_system.html)
+
+## [LLVM Arxitekturasi va Optimallashtirish](llvm.html)

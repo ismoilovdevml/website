@@ -17,3 +17,5 @@
 ## [What is a Kernel and how does it work?](kernel.html)
 
 ## [Exploring the Structure of the Linux File System](file_system.html)
+
+## [LLVM Architecture and Optimization](llvm.html)

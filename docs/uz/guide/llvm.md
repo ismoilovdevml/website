@@ -1,0 +1,3 @@
+# LLVM Arxitekturasi va Optimallashtirish
+
+LLVM — kompilyator va toolchain texnologiyalari boʻlib, har qanday dasturlash tili uchun frontend va har qanday instruction set arxitekturasi uchun backendni ishlab chiqish uchun ishlatilishi mumkin. LLVM tildan mustaqil `Intermediate Representation (IR) ` atrofida ishlab chiqilgan bo'lib, u portativ, high-level assembly language bo'lib xizmat qiladi, uni multiple passe orqali turli xil o'zgarishlar bilan optimallashtirish mumkin.
