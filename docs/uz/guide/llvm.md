@@ -29,3 +29,6 @@ LLVM `LLVM Foundation` tomonidan boshqariladi. Kompilyator muhandisi Tanya Lattn
 
 "LLVMni loyihalash va implement qilish uchun" Association for Computing Machinery assotsiatsiyasi Vikram Adve, [Chris Lattner](https://github.com/lattner), va Evan Chengga 2012 yil ACM dasturiy ta'minot tizimi mukofotini taqdim etdi.
 Loyiha dastlab `UIUC` litsenziyasi ostida mavjud edi. 2019-yilda chiqarilgan `v9.0.0` dan keyin, LLVM LLVM istisnolari bilan Apache 2.0 litsenziyasiga qayta litsenziyalandi.
+
+
+LLVM kompilyatordan intermediate representation (IR) kodini olib, optimallashtirilgan IR-ni chiqaradigan to'liq kompilyator tizimining o'rta qatlamlarini taqdim etishi mumkin. Ushbu yangi IR keyinchalik maqsadli platforma uchun mashinaga bog'liq assembly language kodiga aylantirilishi va bog'lanishi mumkin. LLVM `GNU Compiler Collection (GCC)` toolchaindan IR ni qabul qilishi mumkin, bu esa uni ushbu loyiha uchun yozilgan mavjud kompilyator old qismlarining keng qatori bilan ishlatishga imkon beradi.
