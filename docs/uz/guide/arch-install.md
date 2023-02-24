@@ -1,6 +1,6 @@
 <h1 align="center">Arch Linux-ni o'rnatish bo'yicha bosqichma-bosqich qo'llanma</h1>
 
-<p align="center"><a href="https://xinux.uz" target="_blank"><img src="https://github.com/ismoilovdevml/Arch-Linux/blob/master/assets/banner.png"/></a></p>
+![alt text](https://github.com/ismoilovdevml/Arch-Linux/raw/master/assets/banner.png)
 
 ## I. Kirish
 
@@ -620,7 +620,7 @@ Kodning ikkinchi qatori LightDM displey menejerini boshqarish uchun masul bo'lga
 
 Agar sizga xfce4ni o'zini standart dizayni ko'rishini yoqmasa uni didingizga qarab xoxlagancha bezab olishingiz mumkin. Quyida havolada Arch linuxga o'rnatilgan xfce4ni dizayni o'zgartirish qo'llanmasi va konfiguratsiya fayllar, kodlari bor.
 
-![alt text](https://github.com/ismoilovdevml/Arch-Linux/blob/master/assets/xfce4.png)
+![alt text](https://github.com/ismoilovdevml/Arch-Linux/raw/master/assets/xfce4.png)
 
 ### [Xfce4 Ko'rinishi o'zgartirish](https://github.com/ismoilovdevml/de-config/tree/master/xfce4-macos-config)
 
