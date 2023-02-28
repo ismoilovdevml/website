@@ -50,3 +50,26 @@ LLVM ga bo'lgan keng qiziqish turli tillar uchun yangi frontendlarni ishlab chiq
 Utrecht Haskell kompilyatori LLVM uchun kod yaratishi mumkin. Generatr rivojlanishning dastlabki bosqichida bo'lsa-da, ko'p hollarda u C kod generatoriga qaraganda samaraliroq bo'lgan. LLVM-dan foydalangan holda Glasgow Haskell Compiler (GHC) backend mavjud bo'lib, u GHC yoki C kodini yaratish orqali kompilyatsiya qilish va undan keyin kompilyatsiya qilish orqali mahalliy kodga nisbatan kompilyatsiya qilingan kodni 30% ga tezlashtiradi.
 
 ![alt text](https://www.researchgate.net/publication/334167635/figure/fig2/AS:1032001314373634@1623059695273/LLVM-Compiler-Development-architecture.ppm)
+
+## Intermediate Representation - IR
+
+LLVM ning yadrosi intermediate representation (IR), assembleyerga o'xshash low-leveldagi dasturlash tilidir. IR - bu reduced instruction set computer (RISC)  ko'p tafsilotlarini qisqartiradigan kuchli terilgan reduced instruction set computer instructionlari to'plami. Masalan, chaqiruv konventsiyasi aniq argumentlar bilan `call` va `ret` instructionlari orqali mavhumlashtiriladi. Shuningdek, belgilangan registrlar to‘plami o‘rniga IR `%0`, `%1` va hokazo ko‘rinishdagi cheksiz vaqtinchalik to‘plamdan foydalanadi. LLVM IRning uchta ekvivalent shaklini qo'llab-quvvatlaydi: odam o'qiy oladigan assembly format(human-readable assembly format), frontendlar uchun mos xotira formati va ketma-ketlashtirish uchun zich bitkod formati. Oddiy "Hello, world!" IR formatidagi dastur:
+
+```llvm
+@.str = internal constant [14 x i8] c"hello, world\0A\00"
+
+declare i32 @printf(ptr, ...)
+
+define i32 @main(i32 %argc, ptr %argv) nounwind {
+entry:
+    %tmp1 = getelementptr [14 x i8], ptr @.str, i32 0, i32 0
+    %tmp2 = call i32 (ptr, ...) @printf( ptr %tmp1 ) nounwind
+    ret i32 0
+}
+```
+
+Amaldagi ko'plab turli konventsiyalar va turli maqsadlar tomonidan taqdim etilgan xususiyatlar LLVM haqiqatan ham maqsadli mustaqil IR ishlab chiqara olmasligini va ba'zi belgilangan qoidalarni buzmasdan uni qayta yo'naltira olmasligini anglatadi. Texnik Hujjatlarda aniq aytib o'tilganidan tashqari target dependence misollarini 2011 yilda onlayn distribution uchun mo'ljallangan LLVM IR ning to'liq target-independent varianti bo'lgan "wordcode" bo'yicha taklifda topish mumkin. LLVM loyihasi shuningdek, Dialect nomli plagin arxitekturasidan foydalangan holda qayta foydalanish mumkin va kengaytiriladigan kompilyator infratuzilmasini yaratishga yordam beruvchi `MLIR` nomli intermediate representationning yana bir turini taqdim etadi. Bu optimallashtirish jarayonida dastur strukturasi haqida yuqori darajadagi ma'lumotlardan, shu jumladan polyhedral kompilyatsiyadan foydalanish imkonini beradi.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Mesa_layers_of_crap_2016.svg/1280px-Mesa_layers_of_crap_2016.svg.png)
+
+![alt text](https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2019/12/mirall.png?itok=0huh_91D)
