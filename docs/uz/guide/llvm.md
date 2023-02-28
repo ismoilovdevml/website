@@ -36,3 +36,17 @@ LLVM kompilyatordan intermediate representation (IR) kodini olib, optimallashtir
 LLVM language-independent instruction  va type systemni qo'llab-quvvatlaydi. Har bir instruction static single assignment(SSA) shaklida mavjud, ya'ni har bir o'zgaruvchi (yozilgan registr deb ataladi) bir marta tayinlanadi va keyin muzlatiladi.Bu o'zgaruvchilar orasidagi bog'liqliklarni tahlil qilishni soddalashtirishga yordam beradi. LLVM kodni an'anaviy GCC tizimida bo'lgani kabi statik ravishda kompilyatsiya qilish imkonini beradi yoki Java'ga o'xshash IR-dan mashina kodiga just-in-time compilation (JIT) orqali kech kompilyatsiya qilish uchun qoldiriladi.
 
 Type systemi butun yoki floating-point raqamlar kabi asosiy turlardan va beshta hosila turlaridan iborat: pointerlar, arraylar, vektorlar, structuralar va funksiyalar.
+
+LLVM JIT kompilyatori runtimeda dasturdan keraksiz statik tarmoqlarni optimallashtirishi mumkin va shuning uchun dasturda ko'plab variantlar mavjud bo'lgan hollarda qisman baholash uchun foydali bo'ladi, ularning aksariyati ma'lum bir muhitda keraksizligini osongina aniqlash mumkin. Bu xususiyat Mac OS X Leopard (v10.5) ning OpenGL pipelineda yetishmayotgan hardware xususiyatlarini qo'llab-quvvatlash uchun ishlatiladi.
+
+## Front end
+
+LLVM dastlab GCC stekidagi mavjud kod generatorini almashtirish uchun yozilgan edi va GCCning ko'pgina frontend qismlari u bilan ishlash uchun o'zgartirildi, natijada endi LLVM-GCC to'plami tugatildi. O'zgartirishlar odatda GIMPLE-to-LLVM IR bosqichini o'z ichiga oladi, shuning uchun GCC ning GIMPLE tizimi o'rniga LLVM optimallashtiruvchilari va kodegen ishlatilishi mumkin. Apple Xcode 4.x (2013) orqali LLVM-GCC-ning muhim foydalanuvchisi edi. GCC frontendidan bunday foydalanish asosan vaqtinchalik chora hisoblangan, ammo Clang-ning paydo bo'lishi va LLVM va Clang-ning zamonaviy va modulli kod bazasining afzalliklari (shuningdek, kompilyatsiya tezligi) asosan eskirgan.
+
+LLVM hozirda Ada, C, C++, D, Delphi, Fortran, Haskell, Julia, Objective-C, Rust, va Swift-ni turli xil frontend qismlarida foydalangan holda kompilyatsiya qilishni qo'llab-quvvatlaydi. 
+
+LLVM ga bo'lgan keng qiziqish turli tillar uchun yangi frontendlarni ishlab chiqish bo'yicha bir qancha sa'y-harakatlarga olib keldi. Eng ko'p e'tiborni tortgan Clang, C, C++ va Objective-C ni qo'llab-quvvatlaydigan yangi kompilyator edi. Asosan Apple tomonidan qo'llab-quvvatlanadigan Clang GCC tizimidagi C/Objective-C kompilyatorini integratsiyalashgan ishlab chiqish muhitlari (IDE) bilan osonroq integratsiyalashgan va ko'p ish zarralarini kengroq qo'llab-quvvatlaydigan tizim bilan almashtirishga qaratilgan. OpenMP directivelarini qo'llab-quvvatlash Clang-ga 3.8 versiyasidan qo'shilgan.
+
+Utrecht Haskell kompilyatori LLVM uchun kod yaratishi mumkin. Generatr rivojlanishning dastlabki bosqichida bo'lsa-da, ko'p hollarda u C kod generatoriga qaraganda samaraliroq bo'lgan. LLVM-dan foydalangan holda Glasgow Haskell Compiler (GHC) backend mavjud bo'lib, u GHC yoki C kodini yaratish orqali kompilyatsiya qilish va undan keyin kompilyatsiya qilish orqali mahalliy kodga nisbatan kompilyatsiya qilingan kodni 30% ga tezlashtiradi.
+
+![alt text](https://www.researchgate.net/publication/334167635/figure/fig2/AS:1032001314373634@1623059695273/LLVM-Compiler-Development-architecture.ppm)
