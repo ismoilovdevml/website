@@ -39,6 +39,21 @@ Type systemi butun yoki floating-point raqamlar kabi asosiy turlardan va beshta 
 
 LLVM JIT kompilyatori runtimeda dasturdan keraksiz statik tarmoqlarni optimallashtirishi mumkin va shuning uchun dasturda ko'plab variantlar mavjud bo'lgan hollarda qisman baholash uchun foydali bo'ladi, ularning aksariyati ma'lum bir muhitda keraksizligini osongina aniqlash mumkin. Bu xususiyat Mac OS X Leopard (v10.5) ning OpenGL pipelineda yetishmayotgan hardware xususiyatlarini qo'llab-quvvatlash uchun ishlatiladi.
 
+## Kompilyator arxitekturasi
+
+#### 1. An'anaviy two-pass kompilyator
+
+![alt text](https://www.sites.google.com/site/compiler7987/llvm/1.png?height=75&width=770)
+
+#### 2. LLVM GCC 4
+
+![alt text](https://www.sites.google.com/site/compiler7987/llvm/4.png?height=92&width=760)
+
+#### 3.LLVM Optimizer 
+
+![alt text](https://www.sites.google.com/site/compiler7987/llvm/5.png?height=318&width=784)
+
+
 ## Front end
 
 LLVM dastlab GCC stekidagi mavjud kod generatorini almashtirish uchun yozilgan edi va GCCning ko'pgina frontend qismlari u bilan ishlash uchun o'zgartirildi, natijada endi LLVM-GCC to'plami tugatildi. O'zgartirishlar odatda GIMPLE-to-LLVM IR bosqichini o'z ichiga oladi, shuning uchun GCC ning GIMPLE tizimi o'rniga LLVM optimallashtiruvchilari va kodegen ishlatilishi mumkin. Apple Xcode 4.x (2013) orqali LLVM-GCC-ning muhim foydalanuvchisi edi. GCC frontendidan bunday foydalanish asosan vaqtinchalik chora hisoblangan, ammo Clang-ning paydo bo'lishi va LLVM va Clang-ning zamonaviy va modulli kod bazasining afzalliklari (shuningdek, kompilyatsiya tezligi) asosan eskirgan.
@@ -55,7 +70,7 @@ Utrecht Haskell kompilyatori LLVM uchun kod yaratishi mumkin. Generatr rivojlani
 
 LLVM ning yadrosi intermediate representation (IR), assembleyerga o'xshash low-leveldagi dasturlash tilidir. IR - bu reduced instruction set computer (RISC)  ko'p tafsilotlarini qisqartiradigan kuchli terilgan reduced instruction set computer instructionlari to'plami. Masalan, chaqiruv konventsiyasi aniq argumentlar bilan `call` va `ret` instructionlari orqali mavhumlashtiriladi. Shuningdek, belgilangan registrlar to‘plami o‘rniga IR `%0`, `%1` va hokazo ko‘rinishdagi cheksiz vaqtinchalik to‘plamdan foydalanadi. LLVM IRning uchta ekvivalent shaklini qo'llab-quvvatlaydi: odam o'qiy oladigan assembly format(human-readable assembly format), frontendlar uchun mos xotira formati va ketma-ketlashtirish uchun zich bitkod formati. Oddiy "Hello, world!" IR formatidagi dastur:
 
-```llvm
+```c
 @.str = internal constant [14 x i8] c"hello, world\0A\00"
 
 declare i32 @printf(ptr, ...)
