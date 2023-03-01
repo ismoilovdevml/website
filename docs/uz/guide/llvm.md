@@ -88,3 +88,16 @@ Amaldagi ko'plab turli konventsiyalar va turli maqsadlar tomonidan taqdim etilga
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Mesa_layers_of_crap_2016.svg/1280px-Mesa_layers_of_crap_2016.svg.png)
 
 ![alt text](https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2019/12/mirall.png?itok=0huh_91D)
+
+
+## Backend
+
+13-versiyada LLVM IA-32, x86-64, ARM, Qualcomm Hexagon, MIPS, Nvidia Parallel Thread Execution (PTX; LLVM hujjatlarida NVPTX deb ataladi), PowerPC, AMD TeraScale,  koʻpchilik AMD kabi instructionlar toʻplamlarini qoʻllab-quvvatlaydi. Ayrim funksiyalar ayrim platformalarda mavjud emas. Aksariyat xususiyatlar IA-32, x86-64, z/Architecture, ARM va PowerPCuchun mavjud. RISC-V 7-versiyadan boshlab qo'llab-quvvatlanadi.
+
+Ilgari LLVM boshqa backendlarni ham toʻliq yoki qisman qoʻllab-quvvatlagan, jumladan C backend, Cell SPU, mblaze (MicroBlaze),AMD R600, DEC/Compaq Alpha (Alpha AXP) va Nios2, lekin bu hardware asosan eskirgan va LLVM ishlab chiquvchilari qo'llab-quvvatlash va texnik xizmat ko'rsatish xarajatlari endi oqlanmasligiga qaror qilishdi.
+
+LLVM, shuningdek, WebAssembly-ni qo'llab-quvvatlaydi, bu kompilyatsiya qilingan dasturlarni Google Chrome / Chromium, Firefox, Microsoft Edge, Apple Safari yoki WAVM kabi WebAssembly yoqilgan muhitlarda bajarishga imkon beradi. LLVM-ga mos keluvchi WebAssembly kompilyatorlari odatda C, C++, D, Rust, Nim, Kotlin va boshqa bir qancha tillarda yozilgan o'zgartirilmagan manba kodini qo'llab-quvvatlaydi.
+
+LLVM machine code (MC) kichik loyihasi matnli shakllar va mashina kodi o'rtasida machine instructionlarini tarjima qilish uchun LLVM asosidir.
+
+Ilgari, LLVM assemblerni mashina kodiga tarjima qilish uchun tizim assembleriga yoki toolchaini tomonidan taqdim etilganiga tayangan. LLVM MC ning integratsiyalashgan assembleri IA-32, x86-64, ARM va ARM64 kabi ko'pgina LLVM maqsadlarini qo'llab-quvvatlaydi. Ba'zi maqsadlar uchun, jumladan, turli MIPS instructionlar to'plamlari uchun, integratsiyalashgan montaj yordami foydalanish mumkin, lekin hali ham beta bosqichida.
