@@ -66,6 +66,8 @@ Utrecht Haskell kompilyatori LLVM uchun kod yaratishi mumkin. Generatr rivojlani
 
 ![alt text](https://www.researchgate.net/publication/334167635/figure/fig2/AS:1032001314373634@1623059695273/LLVM-Compiler-Development-architecture.ppm)
 
+![alt text](https://blog.gopheracademy.com/postimages/advent-2018/llvm-ir-and-go/llvm_compiler_pipeline.png)
+
 ## Intermediate Representation - IR
 
 LLVM ning yadrosi intermediate representation (IR), assembleyerga o'xshash low-leveldagi dasturlash tilidir. IR - bu reduced instruction set computer (RISC)  ko'p tafsilotlarini qisqartiradigan kuchli terilgan reduced instruction set computer instructionlari to'plami. Masalan, chaqiruv konventsiyasi aniq argumentlar bilan `call` va `ret` instructionlari orqali mavhumlashtiriladi. Shuningdek, belgilangan registrlar to‘plami o‘rniga IR `%0`, `%1` va hokazo ko‘rinishdagi cheksiz vaqtinchalik to‘plamdan foydalanadi. LLVM IRning uchta ekvivalent shaklini qo'llab-quvvatlaydi: odam o'qiy oladigan assembly format(human-readable assembly format), frontendlar uchun mos xotira formati va ketma-ketlashtirish uchun zich bitkod formati. Oddiy "Hello, world!" IR formatidagi dastur:
@@ -102,10 +104,14 @@ LLVM machine code (MC) kichik loyihasi matnli shakllar va mashina kodi o'rtasida
 
 Ilgari, LLVM assemblerni mashina kodiga tarjima qilish uchun tizim assembleriga yoki toolchaini tomonidan taqdim etilganiga tayangan. LLVM MC ning integratsiyalashgan assembleri IA-32, x86-64, ARM va ARM64 kabi ko'pgina LLVM maqsadlarini qo'llab-quvvatlaydi. Ba'zi maqsadlar uchun, jumladan, turli MIPS instructionlar to'plamlari uchun, integratsiyalashgan montaj yordami foydalanish mumkin, lekin hali ham beta bosqichida.
 
+![alt text](https://res.cloudinary.com/practicaldev/image/fetch/s--z3KksHsX--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.imgur.com/CofrtbC.png)
+
 
 ## Linker - Bo'glovchi
 
 lld subproject LLVM uchun o'rnatilgan, platformadan mustaqil linkerni ishlab chiqishga urinishdir. lld uchinchi tomon dependesiga linkerni yo'q qilishga qaratilgan. 2017-yilning may oyi holatiga koʻra, lld ELF, PE/COFF, Mach-O va WebAssemblyni toʻliqligining kamayish tartibida qoʻllab-quvvatlaydi. GNU linkerlaridan farqli o'laroq, lld ulanish vaqtini optimallashtirish (link-time optimization - LTO) uchun o'rnatilgan yordamga ega. Bu tezroq kod ishlab chiqarish imkonini beradi, chunki u linker plagindan foydalanishni chetlab o'tadi, biroq boshqa tomondan LTO ning boshqa xususiyatlari bilan o'zaro ishlashni taqiqlaydi.
+
+![alt text](https://www.aosabook.org/images/llvm/LTO.png)
 
 ## C++ standart kutubxonasi
 
@@ -115,6 +121,12 @@ LLVM loyihasi MIT litsenziyasi va UIUC litsenziyasi ostida ikki tomonlama litsen
 
 Bu ko'p burchakli model yordamida cache-localityni optimallashtirish to'plamini, shuningdek avtomatik parallellik va vektorizatsiyani amalga oshiradi.
 
+Polyhedral model (polytope metodi deb ham ataladi) juda ko'p sonli operatsiyalarni bajaradigan dasturlar uchun matematik framework bo'lib, aniq sanab o'tish uchun juda katta, shuning uchun ixcham tasvirni talab qiladi. Ichki sikl dasturlari odatiy, ammo yagona misol emas va modelning eng keng tarqalgan qo'llanilishi dasturni optimallashtirishda loop nest optimallashtirish uchundir.
+
+![alt text](https://releases.llvm.org/15.0.0/tools/polly/docs/_images/architecture.png)
+
 ## Debugger
 
-LLDB Debugger (LLDB) LLVM loyihasining debugger komponentidir.
+LLDB Debugger (LLDB) LLVM loyihasining debugger komponentidir. U qayta foydalanish mumkin bo'lgan komponentlar to'plami sifatida yaratilgan bo'lib, ular LLVM ning Clang expression parse va LLVM disassembleri kabi mavjud kutubxonalaridan keng foydalanadi. LLDB Illinois universiteti/NCSA open-source litsenziyasi ostidagi bepul va open-source dasturiy ta'minot bo'lib, BSD uslubidagi ruxsat beruvchi dasturiy ta'minot litsenziyasiga kiradi. LLDB C, Objective-C va C++ tillarida yozilgan dasturlarni debuggingni qo'llab-quvvatlaydi. Swift hamjamiyati tilni qo'llab-quvvatlaydigan versiyani qo'llab-quvvatlaydi.U macOS, Linux, FreeBSD, NetBSD va Windowsda ishlashi maʼlum va i386, x86-64 va ARM instructionlar toʻplamini qoʻllab-quvvatlaydi. LLDB Xcode 5 va undan keyingi versiyalar uchun standart debuggerdir. Android Studio debug uchun LLDB dan ham foydalanadi. LLDB boshqa IDE-lardan, jumladan Visual Studio Code, C++ Builder, Eclipse, va CLion-dan foydalanish mumkin.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/c/c2/LLDB_screenshot.png)
