@@ -115,6 +115,7 @@ lld subproject LLVM uchun o'rnatilgan, platformadan mustaqil linkerni ishlab chi
 
 ## C++ standart kutubxonasi
 
+C++ dasturlash tilida C++ standart kutubxonasi asosiy tilda yozilgan va C++ ISO standartining bir qismi bo'lgan classlar va funksiyalar to'plamidir.
 LLVM loyihasi MIT litsenziyasi va UIUC litsenziyasi ostida ikki tomonlama litsenziyalangan libc++ deb nomlangan C++ standart kutubxonasini implementationni o'z ichiga oladi. v9.0.0 dan boshlab, u LLVM istisnolari bilan Apache License 2.0 ga qayta litsenziyalangan.
 
 ## Polly
@@ -130,3 +131,24 @@ Polyhedral model (polytope metodi deb ham ataladi) juda ko'p sonli operatsiyalar
 LLDB Debugger (LLDB) LLVM loyihasining debugger komponentidir. U qayta foydalanish mumkin bo'lgan komponentlar to'plami sifatida yaratilgan bo'lib, ular LLVM ning Clang expression parse va LLVM disassembleri kabi mavjud kutubxonalaridan keng foydalanadi. LLDB Illinois universiteti/NCSA open-source litsenziyasi ostidagi bepul va open-source dasturiy ta'minot bo'lib, BSD uslubidagi ruxsat beruvchi dasturiy ta'minot litsenziyasiga kiradi. LLDB C, Objective-C va C++ tillarida yozilgan dasturlarni debuggingni qo'llab-quvvatlaydi. Swift hamjamiyati tilni qo'llab-quvvatlaydigan versiyani qo'llab-quvvatlaydi.U macOS, Linux, FreeBSD, NetBSD va Windowsda ishlashi maʼlum va i386, x86-64 va ARM instructionlar toʻplamini qoʻllab-quvvatlaydi. LLDB Xcode 5 va undan keyingi versiyalar uchun standart debuggerdir. Android Studio debug uchun LLDB dan ham foydalanadi. LLDB boshqa IDE-lardan, jumladan Visual Studio Code, C++ Builder, Eclipse, va CLion-dan foydalanish mumkin.
 
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/c/c2/LLDB_screenshot.png)
+
+## C standart kutubxonasi
+
+C standart kutubxonasi yoki libc ISO C standartida ko'rsatilganidek, C dasturlash tili uchun standart kutubxonadir. Asl `ANSI C `standartidan boshlab, u C kutubxonasi POSIX spetsifikatsiyasi bilan bir vaqtda ishlab chiqilgan bo'lib, uning yuqori qismi hisoblanadi. ANSI C Xalqaro standartlashtirish tashkiloti tomonidan qabul qilinganligi sababli, C standart kutubxonasi ISO C kutubxonasi deb ham ataladi. C standart kutubxonasi macrolarni, turdagi definitionlarni va stringlarni boshqarish, matematik hisoblar, input/outputni qayta ishlash, xotirani boshqarish va boshqa bir qator operatsion tizim xizmatlari kabi vazifalarni taqdim etadi.
+llvm-libc - bu LLVM loyihasi tomonidan ishlab chiqilgan, to'liq bo'lmagan, yaqinlashib kelayotgan, ABI mustaqil C standart kutubxonasi.
+
+
+## Dastruchilar
+
+
+#### Asosiy Dasturchilar: Vikram Adve va Chris Lattner
+
+LLVM loyisi Open Source bo'lgani uchun manba kodlarini Githubdan topishingiz mumkin.
+
+#### [LLVM Github](https://github.com/llvm/llvm-project)
+
+#### [Loyihaga hissa qo'shgan dastruchilar ro'yxati](https://github.com/llvm/llvm-project/graphs/contributors)
+
+#### [LLVM Dasturchilari ro'yxati](https://github.com/orgs/llvm/people)
+
+O'zbekistonda xam LLVM dasturchisi borligini mamnuniyat bilan ayta olaman. O'zbekistondagi LLVM dasturchisi [Yuri Katsuki](https://github.com/katsuki-yuri). Yuri bu haqida yaqinda o'zining [Telegram blogida](https://t.me/yurionblog/233) e'lon qildi. Biz bundan juda xursandmiz.
