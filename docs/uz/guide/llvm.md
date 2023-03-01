@@ -101,3 +101,20 @@ LLVM, shuningdek, WebAssembly-ni qo'llab-quvvatlaydi, bu kompilyatsiya qilingan 
 LLVM machine code (MC) kichik loyihasi matnli shakllar va mashina kodi o'rtasida machine instructionlarini tarjima qilish uchun LLVM asosidir.
 
 Ilgari, LLVM assemblerni mashina kodiga tarjima qilish uchun tizim assembleriga yoki toolchaini tomonidan taqdim etilganiga tayangan. LLVM MC ning integratsiyalashgan assembleri IA-32, x86-64, ARM va ARM64 kabi ko'pgina LLVM maqsadlarini qo'llab-quvvatlaydi. Ba'zi maqsadlar uchun, jumladan, turli MIPS instructionlar to'plamlari uchun, integratsiyalashgan montaj yordami foydalanish mumkin, lekin hali ham beta bosqichida.
+
+
+## Linker - Bo'glovchi
+
+lld subproject LLVM uchun o'rnatilgan, platformadan mustaqil linkerni ishlab chiqishga urinishdir. lld uchinchi tomon dependesiga linkerni yo'q qilishga qaratilgan. 2017-yilning may oyi holatiga koʻra, lld ELF, PE/COFF, Mach-O va WebAssemblyni toʻliqligining kamayish tartibida qoʻllab-quvvatlaydi. GNU linkerlaridan farqli o'laroq, lld ulanish vaqtini optimallashtirish (link-time optimization - LTO) uchun o'rnatilgan yordamga ega. Bu tezroq kod ishlab chiqarish imkonini beradi, chunki u linker plagindan foydalanishni chetlab o'tadi, biroq boshqa tomondan LTO ning boshqa xususiyatlari bilan o'zaro ishlashni taqiqlaydi.
+
+## C++ standart kutubxonasi
+
+LLVM loyihasi MIT litsenziyasi va UIUC litsenziyasi ostida ikki tomonlama litsenziyalangan libc++ deb nomlangan C++ standart kutubxonasini implementationni o'z ichiga oladi. v9.0.0 dan boshlab, u LLVM istisnolari bilan Apache License 2.0 ga qayta litsenziyalangan.
+
+## Polly
+
+Bu ko'p burchakli model yordamida cache-localityni optimallashtirish to'plamini, shuningdek avtomatik parallellik va vektorizatsiyani amalga oshiradi.
+
+## Debugger
+
+LLDB Debugger (LLDB) LLVM loyihasining debugger komponentidir.
