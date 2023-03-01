@@ -1,7 +1,7 @@
-# LLVM Arxitekturasi va Optimallashtirish
+# LLVM Arxitekturasi
 
 
-![alt text](https://llvm.org/img/DragonMedium.png)
+![alt text](https://clangpowertools.com/assets/blog/next-steps-for-clang-power-tools/CptBanner.png)
 
 
 :::tip
@@ -10,7 +10,7 @@ LLVM - bu low level virtual machineni ifodalovchi qisqartma
 
 LLVM — kompilyator va toolchain texnologiyalari boʻlib, har qanday dasturlash tili uchun frontend va har qanday instruction set arxitekturasi uchun backendni ishlab chiqish uchun ishlatilishi mumkin. LLVM tildan mustaqil `Intermediate Representation (IR) ` atrofida ishlab chiqilgan bo'lib, u portativ, high-level assembly language bo'lib xizmat qiladi, uni multiple passe orqali turli xil o'zgarishlar bilan optimallashtirish mumkin.
 
-LLVM C++ tilida yozilgan va compile-time, link-time, run-time va "idle-time" optimallashtirish uchun mo'ljallangan.
+LLVM C++ tilida yozilgan va compile-time, link-time, run-time va idle-time optimallashtirish uchun mo'ljallangan.
 Dastlab C va C++ uchun tatbiq etilgan LLVMning language-agnostic dizayni oʻshandan beri turli xil frontendlarni yaratdi: LLVM dan foydalanadigan (yoki bevosita LLVM dan foydalanmaydigan, lekin kompilyatsiya qilingan dasturlarni LLVM IR sifatida yarata oladigan) kompilyatorli tillar ActionScript, Ada, C#, Common Lisp, PicoLisp, Crystal, CUDA, D, Delphi, Dylan, Forth, Fortran, Free Basic, Free Pascal, Graphical G, Halide, Haskell, Java bytecode, Julia, Kotlin, Lua, Objective-C, OpenCL, PostgreSQL SQL va PLpgSQL, Ruby, Rust, Scala, Swift, XC, Xojo va Zig.
 
 ![alt text](https://assets-global.website-files.com/620d42e86cb8ec4d0839e59d/620d42e96cb8ec53c539ef17_c47cbc8cca9448df840b6c203a38ab8d.jpeg)
@@ -62,7 +62,7 @@ LLVM hozirda Ada, C, C++, D, Delphi, Fortran, Haskell, Julia, Objective-C, Rust,
 
 LLVM ga bo'lgan keng qiziqish turli tillar uchun yangi frontendlarni ishlab chiqish bo'yicha bir qancha sa'y-harakatlarga olib keldi. Eng ko'p e'tiborni tortgan Clang, C, C++ va Objective-C ni qo'llab-quvvatlaydigan yangi kompilyator edi. Asosan Apple tomonidan qo'llab-quvvatlanadigan Clang GCC tizimidagi C/Objective-C kompilyatorini integratsiyalashgan ishlab chiqish muhitlari (IDE) bilan osonroq integratsiyalashgan va ko'p ish zarralarini kengroq qo'llab-quvvatlaydigan tizim bilan almashtirishga qaratilgan. OpenMP directivelarini qo'llab-quvvatlash Clang-ga 3.8 versiyasidan qo'shilgan.
 
-Utrecht Haskell kompilyatori LLVM uchun kod yaratishi mumkin. Generatr rivojlanishning dastlabki bosqichida bo'lsa-da, ko'p hollarda u C kod generatoriga qaraganda samaraliroq bo'lgan. LLVM-dan foydalangan holda Glasgow Haskell Compiler (GHC) backend mavjud bo'lib, u GHC yoki C kodini yaratish orqali kompilyatsiya qilish va undan keyin kompilyatsiya qilish orqali mahalliy kodga nisbatan kompilyatsiya qilingan kodni 30% ga tezlashtiradi.
+Utrecht Haskell kompilyatori LLVM uchun kod yaratishi mumkin. Generator rivojlanishning dastlabki bosqichida bo'lsa-da, ko'p hollarda u C kod generatoriga qaraganda samaraliroq bo'lgan. LLVM-dan foydalangan holda Glasgow Haskell Compiler (GHC) backend mavjud bo'lib, u GHC yoki C kodini yaratish orqali kompilyatsiya qilish va undan keyin kompilyatsiya qilish orqali mahalliy kodga nisbatan kompilyatsiya qilingan kodni 30% ga tezlashtiradi.
 
 ![alt text](https://www.researchgate.net/publication/334167635/figure/fig2/AS:1032001314373634@1623059695273/LLVM-Compiler-Development-architecture.ppm)
 
@@ -102,7 +102,7 @@ LLVM, shuningdek, WebAssembly-ni qo'llab-quvvatlaydi, bu kompilyatsiya qilingan 
 
 LLVM machine code (MC) kichik loyihasi matnli shakllar va mashina kodi o'rtasida machine instructionlarini tarjima qilish uchun LLVM asosidir.
 
-Ilgari, LLVM assemblerni mashina kodiga tarjima qilish uchun tizim assembleriga yoki toolchaini tomonidan taqdim etilganiga tayangan. LLVM MC ning integratsiyalashgan assembleri IA-32, x86-64, ARM va ARM64 kabi ko'pgina LLVM maqsadlarini qo'llab-quvvatlaydi. Ba'zi maqsadlar uchun, jumladan, turli MIPS instructionlar to'plamlari uchun, integratsiyalashgan montaj yordami foydalanish mumkin, lekin hali ham beta bosqichida.
+Ilgari, LLVM assemblerni mashina kodiga tarjima qilish uchun tizim assembleriga yoki toolchaini tomonidan taqdim etilganiga tayangan. LLVM MC ning integratsiyalashgan assembleri IA-32, x86-64, ARM va ARM64 kabi ko'pgina LLVM maqsadlarini qo'llab-quvvatlaydi. Ba'zi maqsadlar uchun, jumladan, turli MIPS instructionlar to'plamlari uchun, integratsiyalashgan assembly yordami foydalanish mumkin, lekin hali ham beta bosqichida.
 
 ![alt text](https://res.cloudinary.com/practicaldev/image/fetch/s--z3KksHsX--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.imgur.com/CofrtbC.png)
 
@@ -138,7 +138,7 @@ C standart kutubxonasi yoki libc ISO C standartida ko'rsatilganidek, C dasturlas
 llvm-libc - bu LLVM loyihasi tomonidan ishlab chiqilgan, to'liq bo'lmagan, yaqinlashib kelayotgan, ABI mustaqil C standart kutubxonasi.
 
 
-## Dastruchilar
+## Dasturchilar
 
 
 #### Asosiy Dasturchilar: Vikram Adve va Chris Lattner
@@ -147,8 +147,18 @@ LLVM loyisi Open Source bo'lgani uchun manba kodlarini Githubdan topishingiz mum
 
 #### [LLVM Github](https://github.com/llvm/llvm-project)
 
-#### [Loyihaga hissa qo'shgan dastruchilar ro'yxati](https://github.com/llvm/llvm-project/graphs/contributors)
+#### [Loyihaga hissa qo'shgan dasturchilar ro'yxati](https://github.com/llvm/llvm-project/graphs/contributors)
 
 #### [LLVM Dasturchilari ro'yxati](https://github.com/orgs/llvm/people)
 
 O'zbekistonda xam LLVM dasturchisi borligini mamnuniyat bilan ayta olaman. O'zbekistondagi LLVM dasturchisi [Yuri Katsuki](https://github.com/katsuki-yuri). Yuri bu haqida yaqinda o'zining [Telegram blogida](https://t.me/yurionblog/233) e'lon qildi. Biz bundan juda xursandmiz.
+
+
+Xato va kamchiliklar bo'lsa uzur so'rayman )
+
+[Telegram Blog](https://t.me/Otabek_Ismoilov)
+
+Foydanilgan Manbalar
+
+[Wikipedia](https://en.wikipedia.org/wiki/LLVM)
+va boshqa ko'plab manbalar
