@@ -1,2 +1,2 @@
 # Website
-[Open Source Developer Blog](https://ismoilovdev.vercel.app/)
+[Open Source Developer Blog](https://ismoilovdev.uz)

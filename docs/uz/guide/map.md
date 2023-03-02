@@ -18,6 +18,8 @@
 
 ## [Linux fayl tizimi uchun keng qamrovli qo'llanma](file_system.html)
 
-## [LLVM Arxitekturasi va Optimallashtirish](llvm.html)
+## [LLVM Arxitekturasi](llvm.html)
 
 ## [Arch Linux-ni o'rnatish bo'yicha bosqichma-bosqich qo'llanma](arch-install.html)
+
+## [Blockchain](blockchain.html)
