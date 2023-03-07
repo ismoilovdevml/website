@@ -21,3 +21,23 @@ Birinchi markazlashtirilmagan blokcheyn 2008 yilda Satoshi Nakamoto nomi bilan t
 
 
 2014 yil avgust oyida tarmoqdagi barcha tranzaksiyalarning yozuvlarini o'z ichiga olgan bitcoin blokcheyn fayl hajmi 20 GB (gigabayt) ga yetdi. 2015 yil yanvar oyida uning hajmi deyarli 30 Gb gacha o'sdi va 2016 yil yanvaridan 2017 yil yanvarigacha bitkoin blokcheyni 50 Gb dan 100 Gb gacha o'sdi. 2020 yil boshiga kelib ledger size 200 Gb dan oshdi. 2023 yil 6 mart hisobiga ko'ra bu hajm 461GB ga chiqqan.
+
+Blok(block) va zanjir(chain) so'zlari Satoshi Nakamotoning asl qog'ozida alohida ishlatilgan, ammo oxir-oqibat 2016 yilga kelib bitta so'z, blokcheyn sifatida ommalashgan. Sanoat savdo guruhlari 2016 yilda Chamber of Digital Commercesining tashabbusi bilan Global Blockchain Forumini yaratish uchun birlashdilar.
+
+## Struktura va Dizayn
+
+Blokcheyn - bu markazlashtirilmagan(decentralized), taqsimlangan(distributed) va tez-tez ommaviy, digital ledger bo'lib, bloklar deb ataladigan yozuvlardan iborat bo'lib, ular ko'plab kompyuterlar bo'ylab tranzaktsiyalarni yozib olish uchun ishlatiladi, shuning uchun har qanday blokni keyingi barcha bloklarni o'zgartirmasdan o'zgartirib bo'lmaydi. Bu ishtirokchilarga operatsiyalarni mustaqil va nisbatan arzon tekshirish va tekshirish imkonini beradi. Blockchain ma'lumotlar bazasi peer-to-peer tarmog'i va taqsimlangan vaqtni(timestamping) belgilash serveri yordamida avtonom tarzda boshqariladi.Ular jamoaviy manfaatlar asosidagi ommaviy hamkorlik orqali tasdiqlanadi
+
+Bunday dizayn ishonchli ish oqimini osonlashtiradi, bunda ishtirokchilarning ma'lumotlar xavfsizligi bo'yicha noaniqligi chegaralangan.Blokcheyndan foydalanish digital assetdan cheksiz takrorlanuvchanlik(infinite reproducibility) xususiyatini olib tashlaydi. Bu qiymatning har bir birligi faqat bir marta o'tkazilganligini tasdiqlaydi, bu esa uzoq vaqtdan beri mavjud bo'lgan double-spending(ikki marta sarflash) muammosini hal qiladi. Blokcheyn value-exchange protocol(qiymat almashinuvi protokoli) sifatida tavsiflangan. Blokcheyn egalik huquqini saqlab qolishi mumkin, chunki ayirboshlash shartnomasini batafsil bayon qilish uchun to'g'ri sozlanganda, u taklif va qabul qilishga majburlovchi yozuvni taqdim etadi.
+
+
+:::tip
+Mantiqan, blokcheynni bir necha qismlardan iborat deb ko'rish mumkin.
+
+* infrastructure (hardware)
+* networking(tarmoq) (node discovery, ma'lumotni tarqatish va tekshirish)
+* consensus (proof of work, proof of stake)
+* data(ma'lumotlar) (bloklar, tranzaksiyalar)
+* ilova (agar mavjud bo'lsa, aqlli shartnomalar/markazlashtirilmagan ilovalar)
+
+:::
