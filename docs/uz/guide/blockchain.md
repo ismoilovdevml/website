@@ -41,3 +41,26 @@ Mantiqan, blokcheynni bir necha qismlardan iborat deb ko'rish mumkin.
 * ilova (agar mavjud bo'lsa, aqlli shartnomalar/markazlashtirilmagan ilovalar)
 
 :::
+
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20221111160733/Structureofblocksinblockchain.png)
+
+## Bloklar
+
+Bloklar Merkle daraxtiga xeshlangan va kodlangan yaroqli tranzaktsiyalar to'plamini saqlaydi. Har bir blok blokcheyndagi oldingi blokning kriptografik xeshini o'z ichiga oladi va ikkalasini bog'laydi.Bog'langan bloklar zanjir hosil qiladi. Ushbu iterativ jarayon oldingi blokning yaxlitligini tasdiqlaydi, genesis bloki (blok 0) deb nomlanuvchi boshlang'ich blokga qadar. Blok va undagi ma'lumotlarning yaxlitligini ta'minlash uchun blok odatda raqamli imzolanadi.
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Hash_Tree.svg/1200px-Hash_Tree.svg.png)
+
+![alt text](https://media.geeksforgeeks.org/wp-content/cdn-uploads/MerkleTree-min-1024x512.png)
+
+Rasmda Merkle Daraxti
+
+
+![alt text](https://positiwise.com/wp-content/uploads/2022/06/hash-function.png)
+
+
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/1200px-Cryptographic_Hash_Function.svg.png)
+
+![alt text](https://www.mdpi.com/J/J-02-00021/article_deploy/html/images/J-02-00021-g003.png)
+
+Rasmda kriptografik xesh
