@@ -96,3 +96,22 @@ Forklar accidental  yoki intentional qilingan deb tasniflanishi mumkin. Intentio
 Hard fork - bu blokcheyn protokoliga o'zgartirish, u orqaga qarab mos kelmaydi va tarmoqda ishtirok etishni davom ettirish uchun barcha foydalanuvchilardan o'z dasturlarini yangilashni talab qiladi. Hard forkda tarmoq ikkita alohida versiyaga bo'linadi: biri yangi qoidalarga amal qiladi, ikkinchisi esa eski qoidalarga amal qiladi. Misol uchun, Ethereum 2016-yilda kodidagi zaiflikdan foydalangan holda xakerlik hujumiga uchragan The DAO dagi investorlarni birlashtirishga qattiq kirishdi. Bunday holda, fork Ethereum va Ethereum Classic zanjirlarini yaratish bo'linishiga olib keldi.
 
 2014-yilda Nxt hamjamiyatidan yirik kriptovalyuta birjasidan 50 million NXT o‘g‘irlanishi oqibatlarini yumshatish uchun blokcheyn yozuvlarini orqaga qaytarishga olib keladigan hard forkni ko‘rib chiqish so‘ralgan. Hard fork taklifi rad etildi va mablag'larning bir qismi muzokaralar va to'lovdan so'ng qaytarib olindi. Shu bilan bir qatorda, doimiy boʻlinishning oldini olish uchun, yangi dasturiy taʼminotdan foydalanadigan koʻpchilik tugunlar 2013-yil 12-martdagi bitkoin boʻlinishida boʻlgani kabi, eski qoidalarga qaytishi mumkin. Eng so'nggi hard forklar misoli 2017 yilda bitkoin bo'lib, bu bo'linish Bitcoin Cashni yaratishga olib keldi. Tarmoqning bo'linishi, asosan, talabni qondirish uchun soniyada tranzaktsiyalarni oshirish bo'yicha kelishmovchilik tufayli yuzaga kelgan.
+
+![alt text](https://bitcoin.tax/blog/wp-content/uploads/2022/11/Crypto-Forks-Hard-fork-1024x1024.png)
+
+
+## Decentralization - Markazsizlashtirish
+
+“Peer-to-peer” tarmogʻida maʼlumotlarni saqlash orqali blokcheyn maʼlumotlarning markazlashtirilgan holda saqlanishi bilan bogʻliq baʼzi xavflarni bartaraf etadi. Markazlashtirilmagan blokcheyn maxsus xabarlarni uzatish va tarqatilgan tarmoqdan foydalanishi mumkin.
+
+“51% hujum” deb ataladigan hodisada markaziy tashkilot tarmoqning yarmidan ko‘pi ustidan nazoratni qo‘lga kiritadi va keyin o‘ziga xos blokcheyn rekordini o‘z xohishiga ko‘ra o‘zgartirishi mumkin, bu esa ikki marta sarflanishi mumkin. Blokcheyn xavfsizligi usullari public-key cryptography(ochiq kalitli kriptografiya)dan foydalanishni o'z ichiga oladi.
+
+Public key (uzun, tasodifiy ko'rinadigan raqamlar qatori) blokcheyndagi manzildir. Tarmoq bo'ylab yuborilgan qiymat tokenlari ushbu manzilga tegishli sifatida qayd etiladi. Private key(maxfiy kalit) o'z egasiga raqamli aktivlariga kirish huquqini beruvchi parolga o'xshaydi yoki blokcheynlar hozirda qo'llab-quvvatlaydigan turli imkoniyatlar bilan o'zaro aloqada bo'lish vositalariga o'xshaydi. Blokcheynda saqlangan ma'lumotlar odatda buzilmaydi. Markazlashtirilmagan tizimdagi har bir node(tugun) blokcheyn nusxasiga ega. Ma'lumotlar sifati ommaviy ma'lumotlar bazasi replikatsiyasi va hisoblash ishonchliligi bilan ta'minlanadi. Hech qanday markazlashtirilgan "rasmiy" nusxa mavjud emas va hech bir foydalanuvchi boshqalardan ko'ra ko'proq "ishonchli" emas.
+
+Tranzaktsiyalar dastur yordamida tarmoqqa uzatiladi. Xabarlar eng yaxshi harakat asosida yetkaziladi. Dastlabki blokcheynlar tranzaktsiyalarni tasdiqlash uchun energiyani ko'p talab qiluvchi mining nodelariga(kon tugunlari) tayanadi, ularni qurayotgan blokga qo'shadi va keyin tugallangan blokni boshqa nodelarga uzatadi. Blokcheynlar o'zgarishlarni ketma-ketlashtirish uchun vaqtni belgilashning turli sxemalaridan foydalanadi, masalan, proof-of-work.
+
+![alt text](https://forkast.news/wp-content/uploads/2020/04/Proof-of-Work-1260x709.jpg)
+
+![alt text](https://miro.medium.com/max/1276/1*uRZgTH4u9-6fHe_xoKA_tg.jpeg)
+
+Keyinchalik consensus methodlari proofni isbotlashni o'z ichiga oladi.Markazlashtirilmagan blokcheynning o'sishi markazlashtirish xavfi bilan birga keladi, chunki katta hajmdagi ma'lumotlarni qayta ishlash uchun zarur bo'lgan kompyuter resurslari qimmatlashadi.
