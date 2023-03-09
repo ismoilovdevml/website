@@ -69,3 +69,30 @@ Ba'zan alohida bloklar bir vaqtning o'zida ishlab chiqarilishi mumkin, bu esa te
 
 
 Xavfsiz hash-based historyga qo'shimcha ravishda, har qanday blokcheyn historyning turli versiyalarini baholash uchun belgilangan algoritmga ega, shuning uchun yuqori ballga ega bo'lgan birini boshqalardan tanlash mumkin. Zanjirga kiritish uchun tanlanmagan bloklar yetim bloklar(orphan blocks) deb ataladi. Ma'lumotlar bazasini qo'llab-quvvatlovchi peerlar vaqti-vaqti bilan historyning turli versiyalariga ega. Ular ma'lumotlar bazasining faqat o'zlariga ma'lum bo'lgan eng yuqori ballli versiyasini saqlaydilar. Har safar peer yuqori ballli versiyani (odatda bitta yangi blok qo'shilgan eski versiya) olganida, ular o'zlarining ma'lumotlar bazasini kengaytiradilar yoki qayta yozadilar va yaxshilanishni peerlariga qayta uzatadilar. Har qanday alohida yozuv abadiy historyning eng yaxshi versiyasida qolishiga hech qachon mutlaq kafolat yo'q. Blokcheynlar odatda eski bloklarga yangi bloklar ballini qo'shish uchun qurilgan va eski bloklarni qayta yozish o'rniga yangi bloklar bilan kengaytirish uchun rag'batlantiriladi. Shuning uchun, yozuvning o'rnini bosish ehtimoli eksponent ravishda kamayadi, chunki uning ustiga ko'proq bloklar qurilgan va oxir-oqibat juda past bo'ladi. Masalan, bitcoin `proof-of-work` tizimidan foydalanadi, bunda proof-of-work eng ko‘p bo‘lgan zanjir tarmoq tomonidan yaroqli deb hisoblanadi. Hisoblashning yetarli darajasini ko'rsatish uchun ishlatilishi mumkin bo'lgan bir qator usullar mavjud. Blokcheyn ichida hisoblash an'anaviy ajratilgan va parallel usulda emas, balki redundantly(ortiqcha) tarzda amalga oshiriladi.
+
+### Block time - Bloklash vaqti
+
+Bloklash vaqti tarmoqning blokcheynda bitta qo'shimcha blok yaratishi uchun ketadigan o'rtacha vaqtdir. Blok tugallangandan so'ng, kiritilgan ma'lumotlar tekshirilishi mumkin bo'ladi. Kriptovalyutada bu amalda tranzaktsiya sodir bo'lganda sodir bo'ladi, shuning uchun qisqaroq bloklash vaqti tezroq operatsiyalarni anglatadi. Ethereum uchun bloklash vaqti 14 dan 15 soniyagacha o'rnatiladi, bitkoin uchun esa o'rtacha 10 daqiqa.
+
+![alt text](https://pbs.twimg.com/media/FMXXFBzaUAEa0IF?format=jpg&name=small)
+
+### Hard forks
+
+Hard forklarni tushunishdan oldin vavvalo biz blockhain forklarni tushunib olishimiz kerak.
+
+Blokcheynda fork turlicha ta'riflanadi:
+
+* Blokcheyn ikkita potentsial yo'lni oldinga siljitganda nima bo'ladi
+* protokoldagi o'zgarish yoki
+* ikki yoki undan ortiq bloklar bir xil blok balandligiga ega bo'lganda yuzaga keladigan vaziyat
+
+
+Forklar turli partiyalar blokcheyn historyni saqlab qolish uchun umumiy qoidalardan foydalanishi kerakligi bilan bog'liq. Tomonlar kelisha olmasa, muqobil zanjirlar paydo bo'lishi mumkin. Aksariyat forklar qisqa muddatli bo'lsa-da, ba'zilari doimiydir. Short-lived forklar taqsimlangan tizimda tez konsensusga erishish qiyinligi bilan bog'liq.
+Permanent forklar (protokolni o'zgartirish ma'nosida) blokcheynga yangi xususiyatlar qo'shish uchun ishlatilgan bo'lsa-da, ular Ethereum va Ethereum Classic kabi xakerlik oqibatlarini bartaraf etish yoki blokcheyndagi halokatli xatolarni oldini olish uchun ham ishlatilishi mumkin. 2010 yil 6 avgustda bitcoin fork bilan bo'lgani kabi.
+
+
+Forklar accidental  yoki intentional qilingan deb tasniflanishi mumkin. Intentional forklar 2ta Hard Fork va Soft Fork.
+
+Hard fork - bu blokcheyn protokoliga o'zgartirish, u orqaga qarab mos kelmaydi va tarmoqda ishtirok etishni davom ettirish uchun barcha foydalanuvchilardan o'z dasturlarini yangilashni talab qiladi. Hard forkda tarmoq ikkita alohida versiyaga bo'linadi: biri yangi qoidalarga amal qiladi, ikkinchisi esa eski qoidalarga amal qiladi. Misol uchun, Ethereum 2016-yilda kodidagi zaiflikdan foydalangan holda xakerlik hujumiga uchragan The DAO dagi investorlarni birlashtirishga qattiq kirishdi. Bunday holda, fork Ethereum va Ethereum Classic zanjirlarini yaratish bo'linishiga olib keldi.
+
+2014-yilda Nxt hamjamiyatidan yirik kriptovalyuta birjasidan 50 million NXT o‘g‘irlanishi oqibatlarini yumshatish uchun blokcheyn yozuvlarini orqaga qaytarishga olib keladigan hard forkni ko‘rib chiqish so‘ralgan. Hard fork taklifi rad etildi va mablag'larning bir qismi muzokaralar va to'lovdan so'ng qaytarib olindi. Shu bilan bir qatorda, doimiy boʻlinishning oldini olish uchun, yangi dasturiy taʼminotdan foydalanadigan koʻpchilik tugunlar 2013-yil 12-martdagi bitkoin boʻlinishida boʻlgani kabi, eski qoidalarga qaytishi mumkin. Eng so'nggi hard forklar misoli 2017 yilda bitkoin bo'lib, bu bo'linish Bitcoin Cashni yaratishga olib keldi. Tarmoqning bo'linishi, asosan, talabni qondirish uchun soniyada tranzaktsiyalarni oshirish bo'yicha kelishmovchilik tufayli yuzaga kelgan.
