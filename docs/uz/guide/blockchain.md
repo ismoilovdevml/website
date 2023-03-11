@@ -115,3 +115,19 @@ Tranzaktsiyalar dastur yordamida tarmoqqa uzatiladi. Xabarlar eng yaxshi harakat
 ![alt text](https://miro.medium.com/max/1276/1*uRZgTH4u9-6fHe_xoKA_tg.jpeg)
 
 Keyinchalik consensus methodlari proofni isbotlashni o'z ichiga oladi.Markazlashtirilmagan blokcheynning o'sishi markazlashtirish xavfi bilan birga keladi, chunki katta hajmdagi ma'lumotlarni qayta ishlash uchun zarur bo'lgan kompyuter resurslari qimmatlashadi.
+
+
+### Finality - Yakuniylik
+
+Finality - yaqinda blokcheynga qo'shilgan yaxshi shakllangan blok kelajakda bekor qilinmasligiga ("yakunlangan") ishonch darajasi va shuning uchun ishonchli bo'lishi mumkin.
+
+Ko'pgina distributed blockchain protokollari, xoh proof of work, xoh proof of stake bo'ladimi, yangi tuzilgan blokning yakuniyligini kafolatlay olmaydi va buning o'rniga "ehtimolli finality" ga tayanadi: blok blokcheynga chuqurroq kirib borishi sababli, yangi topilgan consensus bilan uni o'zgartirish yoki qaytarish ehtimoli kamroq.
+
+Byzantine Fault Tolerance(Vizantiya xatosiga bardoshliligi)ga asoslangan proof-of-stake protokollari "absolute finality(mutlaq yakuniylik)" deb ataladi: Tasodifiy tanlangan validator blokni taklif qiladi, qolgan tasdiqlovchilar unga ovoz berishadi va agar ko'pchilik qarori uni ma'qullasa, blok blokcheynga qaytarib bo'lmaydigan tarzda kiritiladi.
+
+Ushbu usulning modifikatsiyasi, "economic finality" Ethereum-da qo'llaniladigan Casper protokoli kabi amaliy protokollarda qo'llaniladi: blockchain-da bir xil pozitsiyada ikkita turli blokni imzolagan validatorlar "slashing" ga duchor bo'ladilar, bunda ularning levered ulushi bekor qilinadi.
+
+
+### Openness
+
+Ochiq blokcheynlar ba'zi an'anaviy ownership recordlariga qaraganda foydalanuvchilar uchun qulayroqdir, ular ommaga ochiq bo'lsa ham, ko'rish uchun jismoniy kirishni talab qiladi. Barcha dastlabki blokcheynlar ruxsatsiz bo'lganligi sababli, blokcheyn ta'rifi bo'yicha tortishuvlar paydo bo'ldi.Ushbu davom etayotgan bahs-munozaralarda markaziy organ tomonidan topshirilgan va ruxsat berilgan  tekshirgichlari bo'lgan xususiy tizim blokcheyn deb hisoblanishi kerakmi yoki yo'qmi. Ruxsat berilgan yoki private chain(zanjir)lar tarafdorlari "blokcheyn" atamasi ma'lumotlarni time-stampi bilan belgilangan bloklarga to'playdigan har qanday ma'lumotlar strukturasiga qo'llanilishi mumkinligini ta'kidlaydilar. Ushbu blokcheynlar ma'lumotlar bazalarida ko'p versiyali parallel boshqaruvning (multiversion concurrency control - MVCC) taqsimlangan versiyasi bo'lib xizmat qiladi.
