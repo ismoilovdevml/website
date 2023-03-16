@@ -85,3 +85,24 @@ Umuman olganda, decentralization blokcheyn texnologiyasining asosiy xususiyati b
 ## Consensus mexanizmlari
 
 Blockchain-ga blok qo'shish uchun tarmoq ishtirokchilari tranzaktsiyaning haqiqiyligi bo'yicha consensusga erishishlari kerak. Blockchain-da qo'llaniladigan bir nechta turli xil consensus mexanizmlari mavjud, jumladan Proof of Work (PoW) va Proof of Stake (PoS). Ushbu mexanizmlar tranzaktsiyalarning ishonchli va shaffof tarzda blokcheynga qo'shilishi va tekshirilishini ta'minlaydi.
+
+Consensus mexanizmlari blokcheyn texnologiyasining muhim tarkibiy qismi bo‘lib, tarmoqqa tranzaktsiyalarning to‘g‘riligi va haqiqiyligini markaziy organga ehtiyoj sezmasdan tekshirish imkonini beradi.
+Blokcheyn texnologiyasida bir nechta consensus mexanizmlari qo'llaniladi, ularning har biri o'zining kuchli va zaif tomonlariga ega. Eng keng tarqalgan consensus mexanizmlaridan ba'zilari:
+
+### Proof of Work (PoW)
+
+Bu Bitcoin tarmog'i tomonidan qo'llaniladigan consensus mexanizmi. PoW-da tarmoqdagi nodelar tranzaktsiyalarni tasdiqlash va blokcheynga yangi bloklarni qo'shish uchun murakkab matematik muammolarni hal qilish uchun raqobatlashadi. Bu katta miqdordagi hisoblash quvvatini talab qiladi, bu esa har qanday bitta nodening tarmoqni boshqarishini qiyinlashtiradi.
+
+### Proof of Stake (PoS)
+
+PoS-da nodelar o'zlarining kriptovalyuta miqdoriga qarab tranzaktsiyalarni tasdiqlash uchun tanlanadi. Bu shuni anglatadiki, ko'proq kriptovalyutaga ega nodelar tranzaktsiyalarni tasdiqlash va blokcheynga yangi bloklar qo'shish uchun ko'proq tanlanadi. Ushbu consensus mexanizmi PoW ga qaraganda energiya tejamkorroqdir, biroq oz sonli nodelar katta miqdordagi kripto valyutasini ushlab tursa, markazlashtirishga olib kelishi mumkin.
+
+### Delegated Proof of Stake (DPoS)
+
+Bu PoS ning o'zgarishi bo'lib, unda nodelar tranzaktsiyalarni tasdiqlash va blokcheynga yangi bloklarni qo'shish uchun mas'ul bo'lgan kichikroq delegatlar guruhiga ovoz berishi mumkin. Bu PoW ning hisoblash talablarini va PoSda markazlashtirish potentsialini kamaytiradi.
+
+### Byzantine Fault Tolerance (BFT)
+
+Vizantiya xatosiga bardoshliligi (BFT): BFT - bu consensus mexanizmi bo'lib, tarmoqdagi nodelarga hatto zararli aktyorlar ishtirokida ham consensusga erishishga imkon beradi. U odatda ruxsat etilgan blokcheyn tarmoqlarida qo'llaniladi, bu erda barcha ishtirokchilarning identifikatorlari ma'lum va ishonchli.
+
+Consensus mexanizmlari blokcheyn texnologiyasining muhim tarkibiy qismidir, chunki ular tarmoqqa markaziy hokimiyatga ehtiyoj sezmasdan, buxgalteriya hisobi holati bo‘yicha kelishuvga erishish imkonini beradi. Tarmoqning barcha ishtirokchilari tranzaktsiyalarning haqiqiyligi to'g'risida kelishib olishlarini ta'minlash orqali consensus mexanizmlari buzish va firibgarlikka chidamli xavfsiz va shaffof tizimni yaratishga imkon beradi.
