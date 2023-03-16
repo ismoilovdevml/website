@@ -66,6 +66,8 @@ DLT yuqori darajada himoyalangan va hujumlarga chidamli bo'lishi uchun yaratilga
 ![alt text](https://media.licdn.com/dms/image/C5612AQGZUKeR_egfrw/article-cover_image-shrink_720_1280/0/1646509320509?e=2147483647&v=beta&t=HbrS6EJWqUxJO5PJgGcDw-mHF3I3P2jky8lqPiHq6EQ)
 
 ![alt text](https://affidaty.io/blog/wp-content/uploads/2019/08/POS-ENG.jpg)
+
+
 Proof of Stake (PoS)
 
 Blockchain-da DLT-dan foydalanish xavfsizlik, shaffoflik va samaradorlikni oshirish kabi bir qator afzalliklarga ega. Vositachilarga bo'lgan ehtiyojni bartaraf etish va bir nechta tomonlarga ledgening to'g'riligini saqlash va tekshirishga ruxsat berish orqali DLT jarayonlarni soddalashtirishi va xarajatlarni kamaytirishi mumkin. Bu blokcheyn texnologiyasining muhim tarkibiy qismi bo‘lib, turli sohalarni chuqur o‘zgartirish imkoniyatiga ega.
@@ -113,7 +115,7 @@ Smart contractlar xaridor va sotuvchi o'rtasidagi shartnoma shartlari to'g'ridan
 
 Smart contractlardan advokatlar yoki banklar kabi vositachilarga ehtiyoj sezmasdan, shartnoma shartlarini tekshirish va bajarish jarayonini avtomatlashtirish uchun foydalanish mumkin. Bu an'anaviy kontraktlarni boshqarish bilan bog'liq xarajatlar va vaqtni sezilarli darajada qisqartirishi, shuningdek, xavfsizlik va shaffoflikni oshirishi mumkin.
 
-Smart contractlar odatda ma'lum shartlar bajarilgandan so'ng muayyan harakatlar bajarilishini talab qiluvchi blokcheyn ilovalarida qo'llaniladi. Misol uchun, loyihani tugatish yoki tovarlarni etkazib berish kabi ma'lum bir sana yoki voqea sodir bo'lgandan so'ng, smart contract avtomatik ravishda pul mablag'larini bir tomondan boshqasiga o'tkazish uchun ishlatilishi mumkin.
+Smart contractlar odatda ma'lum shartlar bajarilgandan so'ng muayyan harakatlar bajarilishini talab qiluvchi blokcheyn ilovalarida qo'llaniladi. Misol uchun, loyihani tugatish yoki tovarlarni yetkazib berish kabi ma'lum bir sana yoki voqea sodir bo'lgandan so'ng, smart contract avtomatik ravishda pul mablag'larini bir tomondan boshqasiga o'tkazish uchun ishlatilishi mumkin.
 
 Smart contractlarning asosiy afzalliklaridan biri ularning firibgarlik yoki xatolik ehtimolini kamaytirish qobiliyatidir. Shartnoma shartlari blokcheynda kodlanganligi sababli, vositachilarning jarayonni nazorat qilishiga hojat yo'q, nizolar yoki tushunmovchiliklar ehtimolini kamaytiradi.
 
@@ -180,7 +182,7 @@ Blokcheyn texnologiyasi bemorlarning qaydlarini xavfsiz saqlash va boshqarish uc
 
 ### Shaxsni tekshirish
 
-![alt text](https://facilityexecutive.com/wp-content/uploads/2021/11/Frost_And_Sullivan_Digital_Identity_Solutions.jpeg)
+![alt text](https://www.concordlawschool.edu/images/page-templates/blog/news/blockchain-as-evidence.jpg)
 
 Blockchain texnologiyasidan identifikatsiyani tekshirish uchun xavfsiz va markazlashmagan tizimlarni yaratish, identifikatorni o‘g‘irlash va boshqa firibgarlik faoliyati ehtimolini kamaytirish uchun foydalanish mumkin.
 
@@ -257,7 +259,7 @@ NFT - bu blokcheynda saqlanadigan va noyob va bir-birini almashtirib bo'lmaydiga
 
 #### Ta'minot zanjiri boshqaruvi - Supply Chain Management
 
-Blokcheyn texnologiyasi tovarlarni etkazib berish zanjiri bo'ylab harakatlanishini kuzatish uchun ishlatilishi mumkin, bu esa shaffoflik va javobgarlikni ta'minlaydi. Bu firibgarlikni kamaytirish, samaradorlikni oshirish va umumiy ta'minot zanjiri boshqaruvini yaxshilashga yordam beradi.
+Blokcheyn texnologiyasi tovarlarni yetkazib berish zanjiri bo'ylab harakatlanishini kuzatish uchun ishlatilishi mumkin, bu esa shaffoflik va javobgarlikni ta'minlaydi. Bu firibgarlikni kamaytirish, samaradorlikni oshirish va umumiy ta'minot zanjiri boshqaruvini yaxshilashga yordam beradi.
 
 #### Sog'liqni saqlash - Healthcare
 
