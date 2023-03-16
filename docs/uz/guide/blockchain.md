@@ -158,30 +158,39 @@ Blokcheyn texnologiyasi ko'plab sohalarda keng ko'lamli potentsial ilovalarga eg
 
 ### Kriptovalyutalar
 
+![alt text](https://transitnet.io/wp-content/uploads/what-is-private-cryptocurrency.jpg)
+
 Blokcheyn texnologiyasining eng mashhur ilovalaridan biri Bitcoin va Ethereum kabi kriptovalyutalarni yaratishdir. Ushbu raqamli valyutalar markazlashtirilmagan, xavfsiz va shaffof tizimni ta'minlash uchun blokcheyn texnologiyasidan foydalanadi.
 
 ### Ta'minot zanjiri boshqaruvi (Supply Chain Management)
 
+![alt text](https://inventrax.com/wp-content/uploads/2019/07/block-chain-banner.jpeg)
+
 Blokcheyn texnologiyasidan tovarlar va mahsulotlarning ta'minot zanjiri bo'ylab harakatlanishini kuzatish uchun foydalanish mumkin, bu esa shaffoflik va javobgarlikni ta'minlaydi. Bu firibgarlik, qalbakilashtirish va ta'minot zanjiri boshqaruvini bezovta qiladigan boshqa muammolarni kamaytirishga yordam beradi.
 
 ### Moliyaviy xizmatlar
+![alt text](https://otssolutions.com/wp-content/uploads/2018/10/fee51070-565f-11e8-806a-808d194ffb75-1024x576.jpg)
 
 Blokcheyn texnologiyasi, xususan, transchegaraviy to‘lovlar, pul o‘tkazmalari va aktivlarni boshqarish kabi sohalarda moliyaviy operatsiyalarning samaradorligi va xavfsizligini sezilarli darajada oshirish potentsialiga ega.
 
 ### Sog'liqni saqlash
 
+![alt text](https://www.statnews.com/wp-content/uploads/2017/12/Blockchain-healthcare-graphic.png)
 Blokcheyn texnologiyasi bemorlarning qaydlarini xavfsiz saqlash va boshqarish uchun ishlatilishi mumkin, bu esa sog'liq haqidagi nozik ma'lumotlarning maxfiyligini ta'minlaydi, shuningdek, turli xil tibbiy yordam ko'rsatuvchi provayderlar o'rtasida uzluksiz almashish imkonini beradi.
 
 ### Shaxsni tekshirish
+
+![alt text](https://facilityexecutive.com/wp-content/uploads/2021/11/Frost_And_Sullivan_Digital_Identity_Solutions.jpeg)
 
 Blockchain texnologiyasidan identifikatsiyani tekshirish uchun xavfsiz va markazlashmagan tizimlarni yaratish, identifikatorni o‘g‘irlash va boshqa firibgarlik faoliyati ehtimolini kamaytirish uchun foydalanish mumkin.
 
 ### Ovoz berish tizimlari 
 
+![alt text](https://www.aranca.com/assets/uploads/blogs/blockchanihelpovrban.jpg)
 Blockchain texnologiyasidan xavfsiz va shaffof ovoz berish tizimlarini yaratish, ovozlarning aniq qayd etilishi va sanalishini ta'minlash, shuningdek, saylovchilar maxfiyligini ta'minlash uchun foydalanish mumkin.
 
 ### Energiya boshqaruvi
-
+![alt text](https://thumbs.dreamstime.com/b/sustainability-green-brush-industries-business-concept-banner-vector-illustration-209163170.jpg)
 Blokcheyn texnologiyasi jismoniy shaxslar va tashkilotlarga qayta tiklanadigan energiyani bir-biridan to'g'ridan-to'g'ri sotib olish va sotish imkonini beruvchi tengdoshlar orasidagi energiya savdo tizimlarini yaratish uchun ishlatilishi mumkin.
 
 
@@ -239,9 +248,11 @@ Blockchain kelajagi istiqbolli, ko'plab rivojlanayotgan tendentsiyalar va turli 
 #### Markazlashtirilmagan moliya (DeFi) - Decentralized Finance (DeFi)
 
 DeFi an'anaviy moliya institutlaridan mustaqil ravishda ishlaydigan markazlashmagan moliya tizimini yaratish uchun blokcheyn texnologiyasidan foydalanadigan rivojlanayotgan tendentsiyadir. DeFi moliyaviy xizmatlarga kengroq kirishni ta'minlash va vositachilarga bo'lgan ehtiyojni kamaytirish orqali moliya sanoatini o'zgartirish imkoniyatiga ega.
+![alt text](https://bap-software.net/wp-content/uploads/2021/06/what-is-defi.jpg)
 
 #### Non-Fungible Tokens (NFTs) 
 
+![alt text](https://wp-api.zipmex.com/wp-content/uploads/2021/11/shutterstock_1943413315.jpg)
 NFT - bu blokcheynda saqlanadigan va noyob va bir-birini almashtirib bo'lmaydigan raqamli aktivlarning bir turi. NFTlar san'at olamida inqilob qilish potentsialiga ega, chunki ular rassomlarga o'z asarlarini vositachilarga ehtiyoj sezmasdan bevosita xaridorlarga sotish imkonini beradi.
 
 #### Ta'minot zanjiri boshqaruvi - Supply Chain Management
