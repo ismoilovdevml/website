@@ -69,3 +69,19 @@ DLT yuqori darajada himoyalangan va hujumlarga chidamli bo'lishi uchun yaratilga
 Proof of Stake (PoS)
 
 Blockchain-da DLT-dan foydalanish xavfsizlik, shaffoflik va samaradorlikni oshirish kabi bir qator afzalliklarga ega. Vositachilarga bo'lgan ehtiyojni bartaraf etish va bir nechta tomonlarga ledgening to'g'riligini saqlash va tekshirishga ruxsat berish orqali DLT jarayonlarni soddalashtirishi va xarajatlarni kamaytirishi mumkin. Bu blokcheyn texnologiyasining muhim tarkibiy qismi bo‘lib, turli sohalarni chuqur o‘zgartirish imkoniyatiga ega.
+
+## Decentralization
+
+Blokcheyn peer-to-peer tarmog'ida ishlaydi, ya'ni tizimni boshqaradigan markaziy hokimiyat mavjud emas. Buning o'rniga, tarmoq ishtirokchilari tranzaktsiyalarni tekshirish va tizimning yaxlitligini saqlash uchun birgalikda ishlaydi. Bu xavfsizlikni kuchaytiradi va yanada demokratik va markazlashmagan jamiyatni rivojlantiradi.
+
+Decentralization blokcheyn texnologiyasining asosiy xususiyati hisoblanadi. Bu hokimiyat va nazoratni bir hokimiyat qo'lida to'plashdan ko'ra, bir nechta partiyalar o'rtasida taqsimlashni anglatadi. Blokcheyn kontekstida markazsizlashtirish tarmoqning “peer-to-peer” tamoyili asosida ishlashini anglatadi, bunda tizimni nazorat qiluvchi markaziy hokimiyat bo‘lmaydi.
+
+Decentralizationga tarmoqdagi har bir node(tugun) buxgalteriya ledgerining nusxasini saqlaydigan distributed ledgerdan foydalanish orqali erishiladi. Bu shuni anglatadiki, hech bir tashkilot buxgalteriya hisobini nazorat qila olmaydi va buxgalteriya ledgeriga kiritilgan har qanday o'zgarishlar tarmoqdagi boshqa nodelar tomonidan tasdiqlanishi kerak. Bu buzish va buzishga juda chidamli tizimni yaratadi, chunki nosozlikning markaziy nuqtasi yo'q.
+
+Blokcheyn texnologiyasida decentralizationning afzalliklari juda ko'p. Bu vositachilarga bo'lgan ehtiyojni bartaraf etish orqali xavfsizlik va shaffoflikni oshiradi va tizimning yanada demokratik va senzuraga chidamli bo'lishini ta'minlaydi. Shuningdek, u har kimga tarmoqda ishtirok etish va uning rivojlanishiga hissa qo'shish imkonini berish orqali innovatsiyalar va hamkorlikni rag'batlantiradi.
+
+Umuman olganda, decentralization blokcheyn texnologiyasining asosiy xususiyati bo‘lib, uni kuchli va o‘zgaruvchan qiladi. peer-to-peer asosida ishlaydigan xavfsiz va shaffof tizimni yaratish orqali blokcheyn moliyadan tortib, ta’minot zanjiri boshqaruvigacha, ovoz berish tizimlarigacha bo‘lgan keng ko‘lamli sohalarda inqilob qilish imkoniyatiga ega.
+
+## Consensus mexanizmlari
+
+Blockchain-ga blok qo'shish uchun tarmoq ishtirokchilari tranzaktsiyaning haqiqiyligi bo'yicha consensusga erishishlari kerak. Blockchain-da qo'llaniladigan bir nechta turli xil consensus mexanizmlari mavjud, jumladan Proof of Work (PoW) va Proof of Stake (PoS). Ushbu mexanizmlar tranzaktsiyalarning ishonchli va shaffof tarzda blokcheynga qo'shilishi va tekshirilishini ta'minlaydi.
