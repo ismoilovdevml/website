@@ -23,3 +23,5 @@
 ## [Arch Linux-ni o'rnatish bo'yicha bosqichma-bosqich qo'llanma](arch-install.html)
 
 ## [Blockchain](blockchain.html)
+
+## [DBMS - Database Management System](dbms.html)
