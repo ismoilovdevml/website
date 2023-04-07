@@ -17,6 +17,7 @@ Loyiha ustida ishlanmoqda
 * Cinnamon
 
 ## Rust dasturlash tilini o'zbekcha qo'llanmasi
+
 Mening sevimli dasturlash tilim Rust dasturlash tilidir. Ammo men Rust dasturlash tilini texnik hujajtlarida o'zbek tilini ko'rmadim. Rust dasturlash tiliga o‘zbek tilini qo‘llab-quvvatlashni qo‘shish tashabbusi bilan chiqdim, bu uning imkoniyatlarini kengaytiradi va foydalanuvchilarning keng doirasini jalb qiladi.
 
 Loyiha ustida ishlanmoqda
@@ -31,22 +32,15 @@ Loyiha ustida ishlanmoqda
 O'zimga qiziq bo'lgan texnogogiyalar haqida maqolalar va texnik hujjatlar joylab boradigan blog vebsayt.
 Bu loyiha Open Source hisoblanadi loyihaga o'z hissangizni qo'shishingiz mumkin.
 
-Veb-sayt: [ismoilovdev.vercel.app](https://ismoilovdev.vercel.app/)
+Veb-sayt: [ismoilovdev.vercel.app](https://ismoilovdev.uz)
 
 Github: [github.com/ismoilovdevml/website](https://github.com/ismoilovdevml/website)
+
+## RMX
+Ko'plab katta hajmga ega fayllarni tezkor o'chirish uchun `rm` alternativi. Loyiha Open Source hisoblanadi.
+
+[RMX](https://github.com/ismoilovdevml/rmx)
 
 ## Boshqa loyihalar
 
 [Github Profil](https://github.com/ismoilovdevml/) 
-
-[Web Server Rust](https://github.com/ismoilovdevml/web-server-rust)
-
-[Chaqmoq Runtime](https://github.com/ismoilovdevml/chaqmoq)
-
-[DNS Server](https://github.com/ismoilovdevml/dns-server)
-
-[OINIX](https://github.com/ismoilovdevml/OINIX)
-
-[Rust OS](https://github.com/ismoilovdevml/rust_os)
-
-[Blockchain](https://github.com/ismoilovdevml/blockchain)
