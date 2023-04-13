@@ -14,3 +14,15 @@ Birlamchi prekursor tarmog'i(precursor network) `ARPANET` dastlab 1970-yillarda 
 Internetning paydo bo'lishi telefon, radio, televizor, qog'oz pochta va gazeta kabi an'anaviy aloqa vositalarini o'zgartirdi. Internet elektron pochta, internet-telefon, internet-televideniye, onlayn musiqa, raqamli gazetalar va video oqimli veb-saytlar kabi yangi xizmatlarni yaratdi.
 
 Internet na texnologik amalga oshirish, na kirish va foydalanish siyosatida yagona markazlashgan boshqaruvga ega emas; har bir tarkibiy tarmoq o'z siyosatini belgilaydi.
+
+Internetdagi ikkita asosiy nom maydonining umumiy ta'riflari, Internet Protokol manzili (IP manzil) maydoni va Domen nomlari tizimi(Domain Name System (DNS)) saqlovchi tashkilot, Internet Corporation for Assigned Names and Numbers`(ICANN)` tomonidan boshqariladi.
+![alt text](https://i0.wp.com/www.techarp.com/wp-content/uploads/2016/03/photo_2016-03-11_14-51-35.jpg?fit=1280%2C579&ssl=1)
+ Asosiy protokollarning texnik asosi va standartizatsiyasi Internet Engineering Task Force `(IETF)`faoliyati bo'lib, u erkin bog'langan xalqaro ishtirokchilarning notijorat tashkiloti bo'lib, har kim texnik tajribaga hissa qo'shish orqali u bilan bog'lanishi mumkin.
+
+## Termin kelib chiqishi
+
+`internetted `so'zi 1849 yilda ishlatilgan bo'lib, o'zaro bog'langan yoki o'zaro bog'langan degan ma'noni anglatadi. Internet so'zi 1945 yilda Qo'shma Shtatlar urush departamenti tomonidan radio operatori qo'llanmasida va 1974 yilda Internet ishining stenografiya shakli sifatida ishlatilgan.
+
+## Tarix
+
+1960-yillarda Qo'shma Shtatlar Mudofaa vazirligining (Department of Defense - `DoD`) Ilg'or tadqiqot loyihalari agentligi Advanced Research Projects Agency -`ARPA`) kompyuterlar vaqtini taqsimlash bo'yicha tadqiqotlarni moliyalashtirdi. `J. C. R. Licklider` ARPA da Axborotni qayta ishlash texnikasi idorasiga (`IPTO`) rahbarlik qilayotganda universal tarmoq g‘oyasini taklif qilgan.
