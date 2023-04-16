@@ -87,7 +87,7 @@ export default defineUserConfig({
         danger: 'Ehtiyot bo\'ling',
         // 404 page
         notFound: [
-          'Siz bu yerdalarda nimalar qilib yuribsiz?',
+          'Siz bu yerlarda nimalar qilib yuribsiz?',
           'Mazzami sizlarga?!',
         ],
         backToHome: 'Orqaga qaytish',
