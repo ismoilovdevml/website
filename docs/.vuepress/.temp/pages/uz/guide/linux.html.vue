@@ -52,6 +52,8 @@
 </ul>
 <p>Agar sizning kompyuter ko'nikmalaringiz juda oddiy bo'lsa, siz Linux Mint, Ubuntu, Elementary OS yoki Deepin kabi yangi boshlanuvchilar uchun qulay distributiv. Agar sizning mahoratingiz o'rtachadan yuqori diapazonga kirsa, siz Debian. Arch linux va Fedora kabi distributorga o'tishingiz mumkin. Ammo, agar siz kompyuter va tizim boshqaruvini deyarli o'zlashtirgan bo'lsangiz, Gentoo kabi distributivdan foydalaning. Agar siz haqiqatan ham qiyinchilikni xohlasangiz, Linux From Scratch  yoki Arch iso yordamida o'zingizning shaxsiy Linux distributivingizni yaratishingiz mumkin.</p>
 <p>Agar siz faqat server uchun distributiv izlayotgan bo'lsangiz, desktop interfeysi kerakmi yoki buni faqat command-line orqali qilishni xohlaysizmi. Ubuntu serveri GUI interfeysini o'rnatmaydi. Bu shuni anglatadiki, sizning serveringiz grafiklarni yuklashda to'xtab qolmaydi va siz Linux command line haqida yaxshi tushunchaga ega bo'lishingiz kerak bo'ladi. Biroq, siz GUI paketini Ubuntu serverining tepasiga sudo apt-get install ubuntu-desktop kabi bitta buyruq bilan o'rnatishingiz mumkin. Tizim administratorlari, shuningdek, xususiyatlar bo'yicha distributivni ko'rishni xohlashadi. Sizga serveringiz uchun kerak bo'lgan hamma narsani taklif qiladigan serverga xos distributivni xohlaysizmi? Agar shunday bo'lsa, CentOS eng yaxshi tanlov bo'lishi mumkin.</p>
+<p>Xato va kamchiliklar bo'lsa uzur so'rayman )</p>
+<p><a href="https://t.me/Otabek_Ismoilov" target="_blank" rel="noopener noreferrer">Telegram Blog<ExternalLinkIcon/></a></p>
 </div></template>
 
 

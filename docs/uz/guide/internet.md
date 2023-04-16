@@ -25,4 +25,8 @@ Internetdagi ikkita asosiy nom maydonining umumiy ta'riflari, Internet Protokol 
 
 ## Tarix
 
-1960-yillarda Qo'shma Shtatlar Mudofaa vazirligining (Department of Defense - `DoD`) Ilg'or tadqiqot loyihalari agentligi Advanced Research Projects Agency -`ARPA`) kompyuterlar vaqtini taqsimlash bo'yicha tadqiqotlarni moliyalashtirdi. `J. C. R. Licklider` ARPA da Axborotni qayta ishlash texnikasi idorasiga (`IPTO`) rahbarlik qilayotganda universal tarmoq g‘oyasini taklif qilgan.
+1960-yillarda Qo'shma Shtatlar Mudofaa vazirligining (Department of Defense - `DoD`) Ilg'or tadqiqot loyihalari agentligi (Advanced Research Projects Agency -`ARPA`) kompyuterlar time-sharing bo'yicha tadqiqotlarni moliyalashtirdi. `J. C. R. Licklider` ARPA da Axborotni qayta ishlash texnikasi idorasiga (Information Processing Techniques Office `IPTO`) rahbarlik qilayotganda universal tarmoq g‘oyasini taklif qilgan. Asosiy Internet texnologiyalaridan biri bo'lgan paketli kommutatsiya(packet switching) bo'yicha tadqiqotlar 1960-yillarning boshida Paul Baran amaki va mustaqil ravishda 1965 yilda Donald Davies tomonidan boshlangan.
+
+1967 yildagi Operatsion tizimlar printsiplari simpoziumidan(Symposium on Operating Systems Principles) so'ng, taklif qilingan NPL tarmog'idan paketli kommutatsiya 1960-yillarning oxiri va 1970-yillarning boshlarida ishlab chiqilgan ARPANET va boshqa resurslarni almashish tarmoqlari, masalan, Merit Network va CYCLADES uchun dizaynga kiritilgan.
+
+ARPANET rivojlanishi 1969-yil 29-oktabrda Los Angelesdagi California universiteti (UCLA) va SRI International (SRI) oʻrtasida oʻzaro bogʻlangan ikkita tarmoq tugunidan boshlandi. Uchinchi sayt Santa Barbaradagi Kaliforniya universitetida, keyin esa Utah universitetida joylashgan.

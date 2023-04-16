@@ -23,24 +23,38 @@ export const pagesData = {
   "v-a4f3fa06": () => import(/* webpackChunkName: "v-a4f3fa06" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/en/guide/map.html.js").then(({ data }) => data),
   // path: /uz/guide/about.html
   "v-2a101e20": () => import(/* webpackChunkName: "v-2a101e20" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/about.html.js").then(({ data }) => data),
+  // path: /uz/guide/arch-install.html
+  "v-562ad79e": () => import(/* webpackChunkName: "v-562ad79e" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/arch-install.html.js").then(({ data }) => data),
+  // path: /uz/guide/blockchain.html
+  "v-1be2bbfe": () => import(/* webpackChunkName: "v-1be2bbfe" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/blockchain.html.js").then(({ data }) => data),
   // path: /uz/guide/cpu.html
   "v-5e343cb5": () => import(/* webpackChunkName: "v-5e343cb5" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/cpu.html.js").then(({ data }) => data),
   // path: /uz/guide/cpu_2.html
   "v-622701e2": () => import(/* webpackChunkName: "v-622701e2" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/cpu_2.html.js").then(({ data }) => data),
   // path: /uz/guide/cpu_cache.html
   "v-6c6021dc": () => import(/* webpackChunkName: "v-6c6021dc" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/cpu_cache.html.js").then(({ data }) => data),
+  // path: /uz/guide/dbms.html
+  "v-199d30b1": () => import(/* webpackChunkName: "v-199d30b1" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/dbms.html.js").then(({ data }) => data),
+  // path: /uz/guide/file_system.html
+  "v-cb22836a": () => import(/* webpackChunkName: "v-cb22836a" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/file_system.html.js").then(({ data }) => data),
+  // path: /uz/guide/internet.html
+  "v-2d135834": () => import(/* webpackChunkName: "v-2d135834" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/internet.html.js").then(({ data }) => data),
   // path: /uz/guide/kernel.html
   "v-548edfb8": () => import(/* webpackChunkName: "v-548edfb8" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/kernel.html.js").then(({ data }) => data),
   // path: /uz/guide/kirish.html
   "v-07dac22a": () => import(/* webpackChunkName: "v-07dac22a" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/kirish.html.js").then(({ data }) => data),
   // path: /uz/guide/linux.html
   "v-16f10be9": () => import(/* webpackChunkName: "v-16f10be9" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/linux.html.js").then(({ data }) => data),
+  // path: /uz/guide/llvm.html
+  "v-c7312a04": () => import(/* webpackChunkName: "v-c7312a04" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/llvm.html.js").then(({ data }) => data),
   // path: /uz/guide/map.html
   "v-4afa4981": () => import(/* webpackChunkName: "v-4afa4981" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/map.html.js").then(({ data }) => data),
   // path: /uz/guide/quantum.html
   "v-49140dbc": () => import(/* webpackChunkName: "v-49140dbc" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/quantum.html.js").then(({ data }) => data),
   // path: /uz/guide/ram.html
   "v-4d419fff": () => import(/* webpackChunkName: "v-4d419fff" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/ram.html.js").then(({ data }) => data),
+  // path: /uz/guide/test.html
+  "v-56bc38fa": () => import(/* webpackChunkName: "v-56bc38fa" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/test.html.js").then(({ data }) => data),
   // path: /404.html
   "v-3706649a": () => import(/* webpackChunkName: "v-3706649a" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/404.html.js").then(({ data }) => data),
 }
