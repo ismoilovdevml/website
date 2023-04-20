@@ -36,3 +36,16 @@ ARPANET-ga kirish 1981 yilda National Science Foundation (NSF) Kompyuter fanlari
 1989 yil o'rtalarida MCI Mail va Compuserve Internetga ulanishni o'rnatib, Internetning yarim million foydalanuvchisiga elektron pochta va ommaviy foydalanish mahsulotlarini etkazib berdi. Bir necha oy o'tgach, 1990 yil 1 yanvarda PSInet tijorat maqsadlarida foydalanish uchun muqobil Internet magistralini ishga tushirdi; keyingi yillar tijorat Internetining o'zagiga qo'shilgan tarmoqlardan biri. 1990 yil mart oyida NSFNET va Yevropa o'rtasidagi birinchi yuqori tezlikdagi T1 (1,5 Mbit/s) aloqasi Cornell universiteti va CERN o'rtasida o'rnatildi, bu sun'iy yo'ldoshlarga qaraganda ancha mustahkam aloqani ta'minladi. Olti oydan so'ng Tim Berners-Lee ikki yillik CERN boshqaruviga o'zgartirishlar qilishdan so'ng birinchi veb-brauzer `WorldWideWeb`ni yozishni boshladi.
 
 1990 yil Rojdestvoga qadar `Berners-Lee` ishlaydigan Internet uchun barcha zarur dastur va vositalarni yaratdi: HyperText Transfer Protocol (HTTP) 0.9, HyperText Markup Language (HTML), birinchi veb-brauzer (u ham HTML muharriri edi va Usenet yangiliklar guruhlari va FTP fayllariga kira oladi),birinchi HTTP server dasturiy ta'minoti (keyinchalik CERN httpd deb nomlanadi), birinchi veb-server va loyihaning o'zini tasvirlaydigan birinchi veb-sahifalar. 1991-yilda `PSInet`-ga boshqa `CERFnet ` va `Alternet` tijorat tarmoqlari bilan aloqa qilish imkonini beruvchi Tijoriy Internet `eXchange` tashkil etildi. Stanford Federal Credit Union 1994 yil oktyabr oyida o'zining barcha a'zolariga onlayn Internet-banking xizmatlarini taklif qilgan birinchi moliyaviy institut edi. 1996 yilda OP Financial Group, shuningdek, cooperative bank, dunyodagi ikkinchi onlayn bank va Evropada birinchi bo'ldi. 1995 yilga kelib, NSFNet to'xtatilgandan so'ng, Internet AQShda to'liq tijoratlashtirildi, bu esa tijorat trafigini tashish uchun Internetdan foydalanishdagi oxirgi cheklovlarni olib tashladi.
+
+:::tip
+
+* Butun dunyo bo'ylab Internet foydalanuvchilari
+
+| Foydalanuvchilar | 2005        | 2010      | 2014     | 2017      | 2019       | 2021       |
+| ---------------- | ----------- | ----------| -------- | --------- | ---------- | ---------- |
+| Dunyo aholisi    | 6,553 mlrd  | 6.97 mlrd | 7.318mlrd| 7.578mlrd | 7.743 mlrd | 7.888 mlrd |
+| Butun dunyoda    | 16.8%       | 29.3%     | 38.9%    | 46.3%     | 51.4%      | 63%        |
+| Rivojlanayotgan davlatlar | 8.1% | 21.1%   | 31.2%    | 39.1%     | 44.4%      | 57%        | 
+| Rivojlangan davlatlar     | 52.8%| 66.5%   | 75.8%    | 81.9%     | 86.7%      | 90%        | 
+
+:::
