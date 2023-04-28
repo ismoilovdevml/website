@@ -84,6 +84,7 @@ Tier 3 ISPlar kichikroq, mahalliy provayderlar bo'lib, ular asosan ma'lum bir mi
 
 ### Internet Protocol Suite
 
-Internet standartlari Internet protokollar to'plami(Internet protocol suite) deb nomlanuvchi fremworkni tavsiflaydi (shuningdek, birinchi ikkita komponentga asoslangan TCP/IP deb ataladi). Bu dastlab RFC(Request for Comments) 1122 va RFC 1123 da hujjatlashtirilgan, ishlash doirasi bo'yicha to'rtta kontseptual qatlamlar to'plamiga tartiblangan protokollar to'plami.
+Internet standartlari Internet protokollar to'plami(Internet protocol suite) deb nomlanuvchi fremworkni tavsiflaydi (shuningdek, birinchi ikkita komponentga asoslangan TCP/IP deb ataladi). Bu dastlab RFC(Request for Comments) 1122 va RFC 1123 da hujjatlashtirilgan, ishlash doirasi bo'yicha to'rtta kontseptual layerlar to'plamiga tartiblangan protokollar to'plami.
 
 Yuqori qismida application layer joylashgan bo'lib, u erda aloqa har bir dastur uchun eng mos keladigan obyektlar yoki ma'lumotlar tuzilmalari nuqtai nazaridan tavsiflanadi. Masalan, veb-brauzer mijoz-server ilovasi modelida ishlaydi va Hypertext Transfer Protocol (HTTP)  va Hypertext Markup Language (HTML) kabi application-germane ma'lumotlar tuzilmasi bilan ma'lumot almashadi.
+Ushbu yuqori layer ostida transport layeri turli xostlardagi ilovalarni tarmoq orqali logical channel bilan bog'laydi. Ushbu qatlamlar asosida tarmoqlarni o'z chegaralarida o'zaro bog'laydigan va ular bo'ylab trafik almashadigan tarmoq texnologiyalari yotadi. Internet darajasi(Internet layer) kompyuterlarga IP-manzil bo'yicha bir-birini aniqlash va joylashtirish, shuningdek, oraliq (tranzit) tarmoqlar orqali trafikni yo'naltirish imkonini beruvchi Internet Protokolini (IP) amalga oshiradi.
