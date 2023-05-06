@@ -95,3 +95,27 @@ Emscripten, Binaryen va LLVM-dan foydalanib, C va C++ ni Wasmga kompilyatsiya qi
 MVP chiqarilgandan so'ng, WebAssembly-ni C# (Blazor orqali qo'llab-quvvatlanadi), F# (Blazor yordamida Bolero orqali qo'llab-quvvatlanadi) kabi garbage-collecterli dasturlash tillari uchun kompilyatsiya maqsadiga aylantiradigan multithreading vagarbage-collecterni qo'llab-quvvatlash rejalari mavjud.
 
 Python va hatto JavaScript-da brauzerning just-in-time kompilyatsiya tezligi juda sekin hisoblanadi. Python, Julia, va Ruby kabi bir qator boshqa tillar ham qoʻllab-quvvatlanadi. Bir qator tizimlar Java va boshqa bytecode tillarini JavaScript va WebAssembly-ga kompilyatsiya qilishlari mumkin. Bularga CheerpJ, JWebAssembly va TeaVM kiradi. Bularning barchasi Java byte codi .class fayllarini kirish sifatida qabul qiladi va Groovy, Kotlin va Scala kabi boshqa JVM tillaridan ham foydalanishga imkon beradi.
+
+## Cheklovlar
+
+* Umuman olganda, WebAssembly DOM bilan to'g'ridan-to'g'ri ishlashga ruxsat bermaydi. Barcha interactionlar JavaScript interop orqali o'tishi kerak.
+
+* Garbage collectionning yo'qligi (garchi buni hal qilish rejalashtirilgan bo'lsa ham).
+
+* Xavfsizlik masalalari
+
+WebAssembly desktopda va mobil qurilmalarda qo'llab-quvvatlanadi, ammo ikkinchisida amalda (kichik bo'lmagan xotira ajratish uchun, masalan, Unity o'yin mexanizmida) "ko'plab ilovalarni mobil brauzerlarda ishonchli tarzda joylashtirishni imkonsiz qiladigan jiddiy cheklovlar mavjud. Hozirda ~300MB dan ortiq xotira ajratish Chrome-ga xos vaqtinchalik yechimlarga murojaat qilmasdan Android-dagi Chrome-da ham, iOS-dagi Safari-da ham ishonchli emas."
+
+To'g'ridan-to'g'ri Document Object Model (DOM) kirish imkoniyati yo'q; ammo, buning uchun proksi-server funksiyalarini yaratish mumkin, masalan, Rust tilidan foydalanganda `stdweb` yoki `web_sys` orqali. Barcha asosiy veb-brauzerlar, agar  Content-Security-Policy (Kontent-Xavfsizlik-Siyosat) ko'rsatilmagan bo'lsa yoki "unsafe-eval (xavfsiz baholash)" ishlatilsa, WebAssembly-ga ruxsat beradi, lekin aks holda asosiy veb-brauzerlar boshqacha harakat qiladi.
+
+## WASI
+
+WebAssembly System Interface (WASI) Mozilla tomonidan ishlab chiqilgan oddiy interfeys (ABI va API) boʻlib, har qanday platformaga koʻchma boʻlishi uchun moʻljallangan. U POSIX-ga o'xshash xususiyatlarni taqdim etadi, masalan, imkoniyatlarga asoslangan xavfsizlik bilan cheklangan fayl I/O kiritish-chiqarish. Yana bir nechta taklif qilingan ABI/API mavjud.
+
+WASI yoki WebAssembly System Interface - bu WebAssembly (Wasm) ilovalari uchun mo'ljallangan modulli tizim interfeysi. WebAssembly veb-ilovalar uchun low-leveldagi binary format bo'lib, u JavaScript-ga qaraganda tezroq va samaraliroq bo'lishni maqsad qilib qo'yadi, shu bilan birga C, C++ va Rust kabi yuqori darajali tillarni kompilyatsiya qilish uchun portativ maqsaddir.
+
+WASI WebAssembly ilovalari va xost tizimi o'rtasida izchil va xavfsiz interfeysni ta'minlaydi, bu Wasm dasturlariga fayllar, tarmoq ulanishlari va muhit o'zgaruvchilari kabi operatsion tizim resurslariga kirish imkonini beradi. WASI maqsadi WebAssembly uchun turli platformalar va operatsion tizimlarda ishlaydigan standartlashtirilgan tizim interfeysini yaratishdir, bu esa dasturchilarga Wasm ilovalarini yaratish va joylashtirishni osonlashtiradi.
+
+Standart interfeysni taqdim etish orqali WASI WebAssembly ilovalarini yanada ko‘chma, sinov muhitiga ega va xavfsizroq bo‘lishiga yordam beradi, chunki ular kodni o‘zgartirishni talab qilmasdan turli operatsion tizimlar va qurilmalarda ishlashi mumkin. WASI-ning modulli dizayni, shuningdek, ishlab chiquvchilarga o'z ilovalari uchun kerakli interfeys qismlaridan foydalanishga imkon beruvchi maxsus API-larni bosqichma-bosqich qabul qilishga imkon beradi.
+
+Docker asoschilaridan biri SSolomon Hykes 2019 yilda shunday deb yozgan edi: “Agar WASM+WASI 2008-yilda mavjud bo‘lganida, biz Docker-ni yaratishimiz shart emas edi. Bu qanchalik muhim. Serverdagi WebAssembly - bu hisoblashning kelajagi." Wasmer, 1.0 versiyasida "dasturiy ta'minotni konteynerlashtirishni ta'minlaydi, biz Linux, macOS, Windows va veb-brauzerlar kabi operatsion tizimlarni o'z ichiga olgan holda istalgan joyda o'zgartirilmagan holda ishlaydigan universal binary(ikkilik) fayllarni yaratamiz. Wasm xavfsiz bajarilishi uchun ilovalarni standart bo'yicha avtomatik ravishda sandboxga o'tkazadi"
