@@ -292,8 +292,8 @@ Barcha butun son konstantalari boʻsh joyni tejaydigan, oʻzgaruvchan uzunlikdag
 
 E'tibor bering, modul bilvosita kompilyator tomonidan yaratilgan. Funksiyaga aslida binary tizimdagi turdagi jadvalning yozuvi, demak, tip bo'limi va dekompilyator tomonidan chiqarilgan turga reference qilinadi. Kompilyator va dekompilyatorga onlayn kirish mumkin.
 
-<img src="/docs/public/wasm.png" alt="" />
-
+![alt text](https://raw.githubusercontent.com/ismoilovdevml//website/master/docs/public/wasm.png
+)
 
 [`wasmdec`](https://wwwg.github.io/web-wasmdec/) - wasm modullari uchun onlayn dekompilyator.
 
