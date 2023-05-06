@@ -19,6 +19,8 @@ Wasm-ning asosiy afzalliklaridan biri uning JavaScript va boshqa veb-texnologiya
 
 2015-yilda e’lon qilingan va birinchi marta 2017-yil mart oyida chiqarilgan WebAssembly 2019-yil 5-dekabrda `World Wide Web Consortium` tavsiyasiga aylandi va 2021-yilda `ACM SIGPLAN` tomonidan Dasturlash tillari uchun dasturiy ta’minot mukofotini oldi. `World Wide Web Consortium (W3C)` standartni Mozilla, Microsoft, Google, Apple, Fastly, Intel va Red Hat hissalari bilan saqlab turadi.
 
+![alt text](https://storage.googleapis.com/blog-images-backup/1*4ZMcCrF95AUvVzJ4S6Lo-g.png)
+
 ### Zamonaviy veb-ishlab chiqishda Wasmning ahamiyati
 
 WebAssembly-ning paydo bo'lishi ishlab chiquvchilar yillar davomida duch kelgan bir qator qiyinchiliklar va cheklovlarni hal qilish orqali zamonaviy veb-ishlab chiqishga sezilarli ta'sir ko'rsatdi. Wasm veb-ilovalarda ishlash, xavfsizlik va portativlikni optimallashtirish uchun muhim vositaga aylandi. WebAssembly nima uchun zamonaviy veb-ishlab chiqishda juda muhim bo'lishining asosiy sabablaridan ba'zilari:
@@ -149,6 +151,8 @@ Wasm dasturining binary formati uchun asosiy standart VM tomonidan bajariladigan
 
 Asl standartda (MVP) foydalanilgan opcodelar soni 256 ta mumkin boʻlgan opcodedan 200 tadan ozroq edi. WebAssembly-ning keyingi versiyalari opcodelar sonini 200 dan biroz oshirdi. WebAssembly SIMD proposal (parallel ishlov berish uchun) 128-bitli SIMD uchun muqobil opcode prefiksini (0xfd) taqdim etadi. SIMD prefiksining birlashuvi, shuningdek, SIMD prefiksidan keyin amal qiladigan opcode SIMD opcodini hosil qiladi. SIMD opcodelari "minimum viable product" (MVP) SIMD uchun qo'shimcha 236 ta instructionlarni (jami 436 ta instructionlar uchun) olib keladi. Ushbu instructionlar, "yakunlangan operatsiya kodlari" Google-ning V8 (Google Chrome-da) va Mozilla Firefox-ning tegishli enginesida (lekin veb-brauzerlarning barqaror versiyalarida yoqilmagan) amalga oshiriladi.
 
+![alt text](https://hacks.mozilla.org/files/2018/10/01-02-heavyweight-04-final-e1540219657102.png)
+
 Ushbu SIMD opkodlari ham portativdir va x64 va ARM kabi native instructionlar to'plamlariga tarjima qilinadi. Bundan farqli o'laroq, Java-ning JVM (yoki CIL) ham SIMD-ni o'zlarining opcode darajasida, ya'ni standartda qo'llab-quvvatlamaydi; Ikkalasida ham SIMD tezligini ta'minlaydigan bir nechta parallel API mavjud. Java uchun x64 SIMD uchun ichki ma'lumotlarni qo'shish uchun kengaytma mavjud, u portativ emas, ya'ni ARM yoki smartfonlarda ishlatib bo'lmaydi. Smartfonlar SIMD bilan assembly kodini chaqirish orqali SIMD-ni qo'llab-quvvatlashi mumkin va C# ham xuddi shunday yordamga ega.
 
 ## Kod 
@@ -232,6 +236,22 @@ Barcha butun son konstantalari boʻsh joyni tejaydigan, oʻzgaruvchan uzunlikdag
 
 E'tibor bering, modul bilvosita kompilyator tomonidan yaratilgan. Funksiyaga aslida binary tizimdagi turdagi jadvalning yozuvi, demak, tip bo'limi va dekompilyator tomonidan chiqarilgan turga reference qilinadi. Kompilyator va dekompilyatorga onlayn kirish mumkin.
 
+![alt text](assets/wasm.png)
+
 [`wasmdec`](https://wwwg.github.io/web-wasmdec/) - wasm modullari uchun onlayn dekompilyator.
 
 [`wasmExplorer`](https://mbebenita.github.io/WasmExplorer/) - wasmExplorer - bu wasm modullarini ishlab chiqish va sinovdan o'tkazish uchun veb-asoslangan IDE-ni taqdim etadigan onlayn dastur.
+
+WebAssembly ish jarayoni to'rtta asosiy bosqichdan iborat.
+
+![alt text](https://tutorialzine.com/media/2017/06/wasm-chain.png)
+
+Kodni yozish: Ushbu bosqichda ishlab chiquvchilar manba kodini C, C++ yoki Rust kabi yuqori darajadagi tillarda yozadilar. Ushbu tillar ko'pincha JavaScript bilan solishtirganda muayyan vazifalar yoki ishlash uchun muhim ilovalar uchun ko'proq mos keladi.
+
+WASM ga kompilyatsiya qilish: Manba kodi yozilgandan so'ng uni WebAssembly bayt-kodiga kompilyatsiya qilish kerak. Bu LLVM yoki Emscripten kabi kompilyatorlar yordamida amalga oshiriladi, ular yuqori darajadagi til kodini WebAssembly formatiga mos keladigan low-leveldagi taqdimotga aylantiradi.
+
+Loading va Decoding: Veb-sahifa yuklanganda, brauzer kompilyatsiya qilingan WebAssembly bayt kodini oladi va uni bajarish uchun mos bo'lgan ichki ko'rinishga dekodlaydi. WebAssembly-ning binary formati JavaScript-ni tahlil qilishdan ko'ra tezroq dekodlashni ta'minlaydi, bu esa unumdorlikni oshirishga yordam beradi.
+
+Execution: Yakuniy bosqichda brauzerning WebAssembly runtime dekodlangan kodni sinov muhitida bajaradi. Bu muhit boshqa ishlaydigan skriptlardan va asosiy tizimdan ajratilgan bo'lib, xavfsizlik va barqarorlikni ta'minlaydi. WebAssembly runtime WASM nstructionlarini native mashina kodiga tarjima qilish uchun Just-In-Time (JIT) kompilyatsiyasidan foydalanadi, bu esa kodning near-native darajada ishlashiga imkon beradi.
+
+![alt text](https://assets.website-files.com/63e3d6905bacd6855fa38c1c/63e3d6905bacd6cef0a38f92_How%20does%20Wasm%20work.jpg)
