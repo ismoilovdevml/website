@@ -175,41 +175,75 @@ int factorial(int n) {
 WebAssembly `.wat` matn formati
 
 ```wasm
-(func (param i64) (result i64)
-  local.get 0
-  i64.eqz
-  if (result i64)
-      i64.const 1
-  else
-      local.get 0
-      local.get 0
-      i64.const 1
-      i64.sub
-      call 0
-      i64.mul
-  end)
+(module
+ (table 0 anyfunc)
+ (memory $0 1)
+ (export "memory" (memory $0))
+ (export "_Z9factoriali" (func $_Z9factoriali))
+ (func $_Z9factoriali (; 0 ;) (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (block $label$0
+   (br_if $label$0
+    (i32.eqz
+     (get_local $0)
+    )
+   )
+   (set_local $2
+    (i32.const 1)
+   )
+   (loop $label$1
+    (set_local $2
+     (i32.mul
+      (get_local $0)
+      (get_local $2)
+     )
+    )
+    (set_local $0
+     (tee_local $1
+      (i32.add
+       (get_local $0)
+       (i32.const -1)
+      )
+     )
+    )
+    (br_if $label$1
+     (get_local $1)
+    )
+   )
+   (return
+    (get_local $2)
+   )
+  )
+  (i32.const 1)
+ )
+)
+
 ```
 WebAssembly `.wasm` binary formati
 
 ```wasm
-00 61 73 6D 01 00 00 00
-01 06 01 60 01 7E 01 7E
-03 02 01 00
-0A 17 01
-15 00
-20 00
-50
-04 7E
-42 01
-05
-20 00
-20 00
-42 01
-7D
-10 00
-7E
-0B
-0B
+wasm-function[0]:
+  sub rsp, 8                            ; 0x000000 48 83 ec 08
+  test edi, edi                         ; 0x000004 85 ff
+  je 0x20                               ; 0x000006 0f 84 14 00 00 00
+ 0x00000c:                              
+  mov eax, 1                            ; 0x00000c b8 01 00 00 00
+ 0x000011:                              ; 0x000011 from: [0x000019]
+  imul eax, edi                         ; 0x000011 0f af c7
+  add edi, -1                           ; 0x000014 83 c7 ff
+  test edi, edi                         ; 0x000017 85 ff
+  jne 0x11                              ; 0x000019 75 f6
+ 0x00001b:                              
+  jmp 0x25                              ; 0x00001b e9 05 00 00 00
+ 0x000020:                              
+  mov eax, 1                            ; 0x000020 b8 01 00 00 00
+ 0x000025:                              ; 0x000025 from: [0x00001b]
+  nop                                   ; 0x000025 66 90
+  add rsp, 8                            ; 0x000027 48 83 c4 08
+  ret                                   ; 0x00002b c3
+
+
 ```
 
 Barcha butun son konstantalari boʻsh joyni tejaydigan, oʻzgaruvchan uzunlikdagi [`LEB128`](https://en.wikipedia.org/wiki/LEB128) kodlash yordamida kodlangan. WebAssembly matn formati S-expressionlari yordamida folded formatda ko'proq kanonik(canonicall) tarzda yozilgan. Instructionlar va expressionlar uchun bu format sof syntactic sugar bo'lib, chiziqli(linear) format bilan xatti-harakatlarida farq qilmaydi.
@@ -236,7 +270,7 @@ Barcha butun son konstantalari boʻsh joyni tejaydigan, oʻzgaruvchan uzunlikdag
 
 E'tibor bering, modul bilvosita kompilyator tomonidan yaratilgan. Funksiyaga aslida binary tizimdagi turdagi jadvalning yozuvi, demak, tip bo'limi va dekompilyator tomonidan chiqarilgan turga reference qilinadi. Kompilyator va dekompilyatorga onlayn kirish mumkin.
 
-![alt text](assets/wasm.png)
+![alt text](https://github.com/ismoilovdevml/website/blob/master/assets/wasm.png)
 
 [`wasmdec`](https://wwwg.github.io/web-wasmdec/) - wasm modullari uchun onlayn dekompilyator.
 
