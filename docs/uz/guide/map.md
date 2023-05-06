@@ -27,3 +27,5 @@
 ## [DBMS - Database Management System](dbms.html)
 
 ## [Internet](internet.html)
+
+## [WebAssembly WASM](wasm.html)
