@@ -76,3 +76,16 @@ Kengaytirilgan tilni qo'llab-quvvatlash: Vaqt o'tishi bilan WebAssembly-ga kompi
 WebAssembly System Interface (WASI): 2019-yilda taqdim etilgan WASI modulli tizim interfeysi boʻlib, WebAssembly modullariga operatsion tizim bilan oʻzaro aloqada boʻlish va tizim resurslariga xavfsiz kirish imkonini beradi. Ushbu ishlanma WebAssembly-ning qo'llanilishini brauzerdan tashqari kengaytirib, uni server tomonida va boshqa brauzer bo'lmagan kontekstlarda ishlatish imkonini berdi.
 
 WebAssembly rivojlanishda davom etmoqda, parallellikni ta'minlovchi threadlar va ma'lum operatsiyalar uchun ishlashni optimallashtiradigan SIMD (Single Instruction Multiple Data) kabi takliflar ustida ish olib borilmoqda. Ushbu va boshqalar kelajakda WebAssembly imkoniyatlarini yanada oshirishi kutilmoqda.
+
+### Implemention
+WebAssembly dastlab veb-brauzerda near-native tezligini yoqish uchun ishlab chiqilgan bo'lsa-da, u bundan tashqari, umumiy kontekstlarda qimmatli deb hisoblanadi. WebAssembly runtime environmentlari (RE) low leveldagi virtual stack machinelari (JVM yoki Flash VM ga o'xshash) bo'lib, ular xost ilovalariga kiritilishi mumkin, ularning ba'zilari Wasmtime va Wasmer kabi standalone runtime environmenlariga yo'l topdilar.
+
+### Veb-brauzerlar
+2017 yil noyabr oyida Mozilla Edge 16 da default holda WebAssembly yoqilganidan soʻng, Mozilla barcha asosiy brauzerlarda qoʻllab-quvvatlashni eʼlon qildi. Qo'llab-quvvatlash iOS va Android uchun mobil veb-brauzerlarni o'z ichiga oladi. 2023-yil aprel holatiga koʻra, oʻrnatilgan brauzerlarning 96% WebAssembly-ni qoʻllab-quvvatlaydi (1.0-versiya). Ammo eski brauzerlar uchun Wasm asm.js ga JavaScript polyfill orqali kompilyatsiya qilinishi mumkin.
+
+
+## Kompilyatorlar
+
+WebAssembly ilovalari odatda oldindan (AOT) yoki o'z vaqtida (JIT) kompilyatsiyasidan foydalanadi, lekin interpretatordan ham foydalanishi mumkin. Birinchi ilovalar veb-brauzerlarda paydo bo'lgan bo'lsa-da, umumiy maqsadlarda foydalanish uchun brauzer bo'lmagan ilovalar ham mavjud, jumladan Wasmer, Wasmtime yoki WAMR, wasm3, WAVM va boshqalar. WebAssembly executable(bajariladigan) fayllar oldindan kompilyatsiya qilinganligi sababli ularni yaratish uchun turli dasturlash tillaridan foydalanish mumkin. Bunga Wasm-ga to'g'ridan-to'g'ri kompilyatsiya qilish yoki Wasm-da tegishli virtual mashinalarni amalga oshirish orqali erishiladi. Wasm-ni kompilyatsiya maqsadi sifatida qo'llab-quvvatlaydigan 40 ga yaqin dasturlash tillari haqida xabar berilgan. 
+
+Emscripten, Binaryen va LLVM-dan foydalanib, C va C++ ni Wasmga kompilyatsiya qiladi. Emscripten SDK har qanday LLVM tomonidan qo'llab-quvvatlanadigan tillarni (masalan, C, C++ yoki Rust va boshqalar) manba kodini JavaScript kodi bilan bir xil sandboxda ishlaydigan binary faylga kompilyatsiya qilishi mumkin. Emscripten WebGL kabi bir nechta tez-tez ishlatiladigan muhit interfeyslari uchun ulanishlarni ta'minlaydi.
