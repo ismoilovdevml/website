@@ -159,63 +159,68 @@ Ushbu SIMD opkodlari ham portativdir va x64 va ARM kabi native instructionlar to
 
 2017-yil mart oyida WebAssembly hamjamiyat guruhi boshlang‘ich (MVP) binary formati, JavaScript API va mos yozuvlar tarjimoni bo‘yicha konsensusga erishdi. WebAssembly binary format bo'lib, u asosan odamlar tomonidan o'qilmaydigan, kompyuterlar tomonidan bajarilishi uchun mo'ljallangan. Shu bilan birga, WebAssembly uchun WebAssembly Text Format (yoki qisqacha .wat) deb nomlangan matn formati ham mavjud bo'lib, u inson tomonidan o'qilishi uchun mo'ljallangan.
 
-Quyidagi jadvalda C da yozilgan faktorial funksiya va kompilyatsiyadan so'ng unga mos keladigan WebAssembly kodi misoli ko'rsatilgan WebAssembly-ni qo'llab-quvvatlaydigan veb-brauzer yoki runtime environment tomonidan bajariladigan .wat matn formatida (WebAssemblyning odam o'qiy oladigan matnli ko'rinishi) va .wasm binary formatida (quyida o'n oltilik tizimda ifodalangan xom(raw) bayt-kod) ko'rsatilgan.
+Quyidagi jadvalda C da yozilgan 2ta sonni qo'shish va kompilyatsiyadan so'ng unga mos keladigan WebAssembly kodi misoli ko'rsatilgan WebAssembly-ni qo'llab-quvvatlaydigan veb-brauzer yoki runtime environment tomonidan bajariladigan .wat matn formatida (WebAssemblyning odam o'qiy oladigan matnli ko'rinishi) va .wasm binary formatida (quyida o'n oltilik tizimda ifodalangan xom(raw) bayt-kod) ko'rsatilgan.
 
                       C manba kodi va WebAssembly
 
 `C` kodi
 ```c
-int factorial(int n) {
-  if (n == 0)
-    return 1;
-  else
-    return n * factorial(n-1);
+#include <stdio.h>
+
+int main() {
+    int a = 5;
+    int b = 7;
+    int c;
+    c = a + b;
+    printf("Natija: %d\n", c);
+
+    return 0;
 }
+
 ```
 WebAssembly `.wat` matn formati
 
 ```wasm
 (module
+ (type $FUNCSIG$ii (func (param i32) (result i32)))
+ (type $FUNCSIG$iii (func (param i32 i32) (result i32)))
+ (import "env" "printf" (func $printf (param i32 i32) (result i32)))
  (table 0 anyfunc)
  (memory $0 1)
+ (data (i32.const 16) "Natija: %d\n\00")
  (export "memory" (memory $0))
- (export "_Z9factoriali" (func $_Z9factoriali))
- (func $_Z9factoriali (; 0 ;) (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
-  (block $label$0
-   (br_if $label$0
-    (i32.eqz
-     (get_local $0)
-    )
-   )
-   (set_local $2
-    (i32.const 1)
-   )
-   (loop $label$1
-    (set_local $2
-     (i32.mul
-      (get_local $0)
-      (get_local $2)
+ (export "main" (func $main))
+ (func $main (; 1 ;) (result i32)
+  (local $0 i32)
+  (i32.store offset=4
+   (i32.const 0)
+   (tee_local $0
+    (i32.sub
+     (i32.load offset=4
+      (i32.const 0)
      )
+     (i32.const 16)
     )
-    (set_local $0
-     (tee_local $1
-      (i32.add
-       (get_local $0)
-       (i32.const -1)
-      )
-     )
-    )
-    (br_if $label$1
-     (get_local $1)
-    )
-   )
-   (return
-    (get_local $2)
    )
   )
-  (i32.const 1)
+  (i32.store
+   (get_local $0)
+   (i32.const 12)
+  )
+  (drop
+   (call $printf
+    (i32.const 16)
+    (get_local $0)
+   )
+  )
+  (i32.store offset=4
+   (i32.const 0)
+   (i32.add
+    (get_local $0)
+    (i32.const 16)
+   )
+  )
+  (i32.const 0)
  )
 )
 
@@ -223,27 +228,44 @@ WebAssembly `.wat` matn formati
 WebAssembly `.wasm` binary formati
 
 ```wasm
+wasm-function[1]:
+  sub rsp, 0x28                         ; 0x000000 48 83 ec 28
+  cmp qword ptr [r14 + 0x28], rsp       ; 0x000004 49 39 66 28
+  jae 0x78                              ; 0x000008 0f 83 6a 00 00 00
+ 0x00000e:                              
+  mov esi, dword ptr [r15 + 4]          ; 0x00000e 41 8b 77 04
+  sub esi, 0x10                         ; 0x000012 83 ee 10
+  mov dword ptr [rsp + 0x1c], esi       ; 0x000015 89 74 24 1c
+  mov dword ptr [r15 + 4], esi          ; 0x000019 41 89 77 04
+  mov dword ptr [r15 + rsi], 0xc        ; 0x00001d 41 c7 04 37 0c 00 00 00
+  mov edi, 0x10                         ; 0x000025 bf 10 00 00 00
+  mov qword ptr [rsp], r14              ; 0x00002a 4c 89 34 24
+  mov rax, qword ptr [r14 + 0x30]       ; 0x00002e 49 8b 46 30
+  mov r14, qword ptr [r14 + 0x38]       ; 0x000032 4d 8b 76 38
+  mov r15, qword ptr [r14 + 0x18]       ; 0x000036 4d 8b 7e 18
+  call rax                              ; 0x00003a ff d0
+  mov r14, qword ptr [rsp]              ; 0x00003c 4c 8b 34 24
+  mov r15, qword ptr [r14 + 0x18]       ; 0x000040 4d 8b 7e 18
+  mov eax, dword ptr [rsp + 0x1c]       ; 0x000044 8b 44 24 1c
+  add eax, 0x10                         ; 0x000048 83 c0 10
+  mov dword ptr [r15 + 4], eax          ; 0x00004b 41 89 47 04
+  xor eax, eax                          ; 0x00004f 33 c0
+  nop                                   ; 0x000051 66 90
+  add rsp, 0x28                         ; 0x000053 48 83 c4 28
+  ret                                   ; 0x000057 c3
+
 wasm-function[0]:
-  sub rsp, 8                            ; 0x000000 48 83 ec 08
-  test edi, edi                         ; 0x000004 85 ff
-  je 0x20                               ; 0x000006 0f 84 14 00 00 00
- 0x00000c:                              
-  mov eax, 1                            ; 0x00000c b8 01 00 00 00
- 0x000011:                              ; 0x000011 from: [0x000019]
-  imul eax, edi                         ; 0x000011 0f af c7
-  add edi, -1                           ; 0x000014 83 c7 ff
-  test edi, edi                         ; 0x000017 85 ff
-  jne 0x11                              ; 0x000019 75 f6
- 0x00001b:                              
-  jmp 0x25                              ; 0x00001b e9 05 00 00 00
- 0x000020:                              
-  mov eax, 1                            ; 0x000020 b8 01 00 00 00
- 0x000025:                              ; 0x000025 from: [0x00001b]
-  nop                                   ; 0x000025 66 90
-  add rsp, 8                            ; 0x000027 48 83 c4 08
-  ret                                   ; 0x00002b c3
-
-
+  sub rsp, 0x18                         ; 0x000000 48 83 ec 18
+  mov qword ptr [rsp], r14              ; 0x000004 4c 89 34 24
+  mov rax, qword ptr [r14 + 0x30]       ; 0x000008 49 8b 46 30
+  mov r14, qword ptr [r14 + 0x38]       ; 0x00000c 4d 8b 76 38
+  mov r15, qword ptr [r14 + 0x18]       ; 0x000010 4d 8b 7e 18
+  call rax                              ; 0x000014 ff d0
+  mov r14, qword ptr [rsp]              ; 0x000016 4c 8b 34 24
+  mov r15, qword ptr [r14 + 0x18]       ; 0x00001a 4d 8b 7e 18
+  nop                                   ; 0x00001e 66 90
+  add rsp, 0x18                         ; 0x000020 48 83 c4 18
+  ret                                   ; 0x000024 c3
 ```
 
 Barcha butun son konstantalari boʻsh joyni tejaydigan, oʻzgaruvchan uzunlikdagi [`LEB128`](https://en.wikipedia.org/wiki/LEB128) kodlash yordamida kodlangan. WebAssembly matn formati S-expressionlari yordamida folded formatda ko'proq kanonik(canonicall) tarzda yozilgan. Instructionlar va expressionlar uchun bu format sof syntactic sugar bo'lib, chiziqli(linear) format bilan xatti-harakatlarida farq qilmaydi.
@@ -270,7 +292,8 @@ Barcha butun son konstantalari boʻsh joyni tejaydigan, oʻzgaruvchan uzunlikdag
 
 E'tibor bering, modul bilvosita kompilyator tomonidan yaratilgan. Funksiyaga aslida binary tizimdagi turdagi jadvalning yozuvi, demak, tip bo'limi va dekompilyator tomonidan chiqarilgan turga reference qilinadi. Kompilyator va dekompilyatorga onlayn kirish mumkin.
 
-![alt text](https://github.com/ismoilovdevml/website/blob/master/assets/wasm.png)
+<img src="/docs/public/wasm.png" alt="" />
+
 
 [`wasmdec`](https://wwwg.github.io/web-wasmdec/) - wasm modullari uchun onlayn dekompilyator.
 
