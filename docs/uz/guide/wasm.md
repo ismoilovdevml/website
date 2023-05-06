@@ -142,3 +142,96 @@ Kompilyatsiyadan so'ng WebAssembly namunasi yaratiladi, u xotira, jadval va baja
 JavaScript endi optimallashtirilgan mahalliy mashina kodi tufayli deyarli near-native tezlikda bajariladigan WebAssembly funksiyalarini chaqirishi mumkin. WebAssembly nusxasi va JavaScript WebAssembly xotirasini almashishi va boshqarishi va veb-sahifaning DOM (Document Object Model) bilan o'zaro ta'sir qilishi mumkin.
 
 WebAssembly-ning sandboxda execution environment kodning xavfsiz ishlashini ta'minlaydi, tizim resurslariga ruxsatsiz kirishni oldini oladi va zararli kodlar bajarilishini cheklaydi. WebAssembly virtual mashinasi veb-brauzerlarda yuqori unumli ilovalarni bajarishga imkon beradi va an'anaviy JavaScript-ga nisbatan sezilarli yaxshilanishni ta'minlaydi. Sandboxing va tekshirish orqali xavfsiz va xavfsiz muhitni saqlab qolgan holda, u kodni near-native tezlikda kompilyatsiya qiladi va bajaradi.
+
+## Instruction set
+
+Wasm dasturining binary formati uchun asosiy standart VM tomonidan bajariladigan operatsiyalar turlarining o'ziga xos binary kodlashlaridan tashkil topgan instruction set architecture (ISA) (tarjimasi ko'rsatmalar to'plami arxitekturasi) belgilaydi. instructionlar ro'yxati standart xotira load/store instructionlari, numeric, parametric, control flow instructionlari turlarini boshqarish va Wasm-ga xos o'zgaruvchan instructionlarni o'z ichiga oladi. 
+
+Asl standartda (MVP) foydalanilgan opcodelar soni 256 ta mumkin boʻlgan opcodedan 200 tadan ozroq edi. WebAssembly-ning keyingi versiyalari opcodelar sonini 200 dan biroz oshirdi. WebAssembly SIMD proposal (parallel ishlov berish uchun) 128-bitli SIMD uchun muqobil opcode prefiksini (0xfd) taqdim etadi. SIMD prefiksining birlashuvi, shuningdek, SIMD prefiksidan keyin amal qiladigan opcode SIMD opcodini hosil qiladi. SIMD opcodelari "minimum viable product" (MVP) SIMD uchun qo'shimcha 236 ta instructionlarni (jami 436 ta instructionlar uchun) olib keladi. Ushbu instructionlar, "yakunlangan operatsiya kodlari" Google-ning V8 (Google Chrome-da) va Mozilla Firefox-ning tegishli enginesida (lekin veb-brauzerlarning barqaror versiyalarida yoqilmagan) amalga oshiriladi.
+
+Ushbu SIMD opkodlari ham portativdir va x64 va ARM kabi native instructionlar to'plamlariga tarjima qilinadi. Bundan farqli o'laroq, Java-ning JVM (yoki CIL) ham SIMD-ni o'zlarining opcode darajasida, ya'ni standartda qo'llab-quvvatlamaydi; Ikkalasida ham SIMD tezligini ta'minlaydigan bir nechta parallel API mavjud. Java uchun x64 SIMD uchun ichki ma'lumotlarni qo'shish uchun kengaytma mavjud, u portativ emas, ya'ni ARM yoki smartfonlarda ishlatib bo'lmaydi. Smartfonlar SIMD bilan assembly kodini chaqirish orqali SIMD-ni qo'llab-quvvatlashi mumkin va C# ham xuddi shunday yordamga ega.
+
+## Kod 
+
+2017-yil mart oyida WebAssembly hamjamiyat guruhi boshlang‘ich (MVP) binary formati, JavaScript API va mos yozuvlar tarjimoni bo‘yicha konsensusga erishdi. WebAssembly binary format bo'lib, u asosan odamlar tomonidan o'qilmaydigan, kompyuterlar tomonidan bajarilishi uchun mo'ljallangan. Shu bilan birga, WebAssembly uchun WebAssembly Text Format (yoki qisqacha .wat) deb nomlangan matn formati ham mavjud bo'lib, u inson tomonidan o'qilishi uchun mo'ljallangan.
+
+Quyidagi jadvalda C da yozilgan faktorial funksiya va kompilyatsiyadan so'ng unga mos keladigan WebAssembly kodi misoli ko'rsatilgan WebAssembly-ni qo'llab-quvvatlaydigan veb-brauzer yoki runtime environment tomonidan bajariladigan .wat matn formatida (WebAssemblyning odam o'qiy oladigan matnli ko'rinishi) va .wasm binary formatida (quyida o'n oltilik tizimda ifodalangan xom(raw) bayt-kod) ko'rsatilgan.
+
+                      C manba kodi va WebAssembly
+
+`C` kodi
+```c
+int factorial(int n) {
+  if (n == 0)
+    return 1;
+  else
+    return n * factorial(n-1);
+}
+```
+WebAssembly `.wat` matn formati
+
+```wasm
+(func (param i64) (result i64)
+  local.get 0
+  i64.eqz
+  if (result i64)
+      i64.const 1
+  else
+      local.get 0
+      local.get 0
+      i64.const 1
+      i64.sub
+      call 0
+      i64.mul
+  end)
+```
+WebAssembly `.wasm` binary formati
+
+```wasm
+00 61 73 6D 01 00 00 00
+01 06 01 60 01 7E 01 7E
+03 02 01 00
+0A 17 01
+15 00
+20 00
+50
+04 7E
+42 01
+05
+20 00
+20 00
+42 01
+7D
+10 00
+7E
+0B
+0B
+```
+
+Barcha butun son konstantalari boʻsh joyni tejaydigan, oʻzgaruvchan uzunlikdagi [`LEB128`](https://en.wikipedia.org/wiki/LEB128) kodlash yordamida kodlangan. WebAssembly matn formati S-expressionlari yordamida folded formatda ko'proq kanonik(canonicall) tarzda yozilgan. Instructionlar va expressionlar uchun bu format sof syntactic sugar bo'lib, chiziqli(linear) format bilan xatti-harakatlarida farq qilmaydi.
+
+`Wasm2wat` orqali yuqoridagi kod quyidagicha dekompilyatsiya qilinadi:
+
+```wasm
+(module
+  (type $t0 (func (param i64) (result i64)))
+  (func $f0 (type $t0) (param $p0 i64) (result i64)
+    (if $I0 (result i64) ;; $I0 - foydalanilmaydigan label name
+      (i64.eqz
+        (local.get $p0)) ;; $p0 nomi bu yerda 0 bilan bir xil
+      (then
+        (i64.const 1))
+      (else
+        (i64.mul
+          (local.get $p0)
+          (call $f0      ;; $f0 nomi bu erda 0 bilan bir xil
+            (i64.sub
+              (local.get $p0)
+              (i64.const 1))))))))
+```
+
+E'tibor bering, modul bilvosita kompilyator tomonidan yaratilgan. Funksiyaga aslida binary tizimdagi turdagi jadvalning yozuvi, demak, tip bo'limi va dekompilyator tomonidan chiqarilgan turga reference qilinadi. Kompilyator va dekompilyatorga onlayn kirish mumkin.
+
+[`wasmdec`](https://wwwg.github.io/web-wasmdec/) - wasm modullari uchun onlayn dekompilyator.
+
+[`wasmExplorer`](https://mbebenita.github.io/WasmExplorer/) - wasmExplorer - bu wasm modullarini ishlab chiqish va sinovdan o'tkazish uchun veb-asoslangan IDE-ni taqdim etadigan onlayn dastur.
