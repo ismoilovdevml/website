@@ -119,3 +119,26 @@ WASI WebAssembly ilovalari va xost tizimi o'rtasida izchil va xavfsiz interfeysn
 Standart interfeysni taqdim etish orqali WASI WebAssembly ilovalarini yanada ko‘chma, sinov muhitiga ega va xavfsizroq bo‘lishiga yordam beradi, chunki ular kodni o‘zgartirishni talab qilmasdan turli operatsion tizimlar va qurilmalarda ishlashi mumkin. WASI-ning modulli dizayni, shuningdek, ishlab chiquvchilarga o'z ilovalari uchun kerakli interfeys qismlaridan foydalanishga imkon beruvchi maxsus API-larni bosqichma-bosqich qabul qilishga imkon beradi.
 
 Docker asoschilaridan biri SSolomon Hykes 2019 yilda shunday deb yozgan edi: “Agar WASM+WASI 2008-yilda mavjud bo‘lganida, biz Docker-ni yaratishimiz shart emas edi. Bu qanchalik muhim. Serverdagi WebAssembly - bu hisoblashning kelajagi." Wasmer, 1.0 versiyasida "dasturiy ta'minotni konteynerlashtirishni ta'minlaydi, biz Linux, macOS, Windows va veb-brauzerlar kabi operatsion tizimlarni o'z ichiga olgan holda istalgan joyda o'zgartirilmagan holda ishlaydigan universal binary(ikkilik) fayllarni yaratamiz. Wasm xavfsiz bajarilishi uchun ilovalarni standart bo'yicha avtomatik ravishda sandboxga o'tkazadi"
+
+## Virtual machine
+
+Wasm kodi (ikkilik kod, ya'ni bayt kod) portativ virtual stek mashinasida (VM) ishga tushirish uchun mo'ljallangan. VM JavaScript-ga qaraganda tezroq tahlil qilish va bajarish va ixcham kod taqdimotiga ega bo'lish uchun mo'ljallangan. Wasm binary kodi tomonidan kutilishi mumkin bo'lgan tashqi funksionallik (masalan, tizimli syscall-lar) standartda ko'zda tutilmagan. Bu, aksincha, VM ilovasi ishlaydigan xost muhiti tomonidan modullar orqali interfeyslarni etkazib berish usulini taqdim etadi.
+
+WebAssembly virtual mashinasi kompilyatsiya, instantsiya va execution kabi bir necha bosqichda ishlaydi. Bu jarayon qanday ishlashi haqida umumiy ma'lumot:
+
+#### Kompilyatsiya
+
+Dasturchi kodni C, C++ yoki Rust kabi yuqori darajadagi tilda yozadi, keyin esa WebAssembly bayt-kodiga kompilyatsiya qilinadi. Bu brauzerlar tomonidan tez va oson dekodlash uchun maxsus ishlab chiqilgan ikkilik format.
+WebAssembly ikkilik kodi (.wasm) veb-sahifaga odatda WebAssembly moduli bilan o'zaro aloqada bo'lgan JavaScript kodi bilan birga yuklanadi.
+
+#### Instantiation
+
+Brauzer WebAssembly modulini yuklaganida, u to‘g‘ri formatlanganligi va bajarilishi xavfsiz ekanligiga ishonch hosil qilish uchun avval modul bayt kodini tekshiradi. Ushbu qadam WebAssembly ilovalarining xavfsizligi va xavfsizligini ta'minlash uchun zarurdir.
+Brauzer keyin WebAssembly bayt-kodini Just-In-Time (JIT) kompilyatsiyasi yoki oldindan (AOT) kompilyatsiyasidan foydalangan holda xost mashinasi uchun optimallashtirilgan mahalliy mashina kodiga kompilyatsiya qiladi.
+Kompilyatsiyadan so'ng WebAssembly namunasi yaratiladi, u xotira, jadval va bajarish uchun zarur bo'lgan boshqa WebAssembly-ga xos elementlarni o'z ichiga oladi.
+
+#### Execution
+
+JavaScript endi optimallashtirilgan mahalliy mashina kodi tufayli deyarli near-native tezlikda bajariladigan WebAssembly funksiyalarini chaqirishi mumkin. WebAssembly nusxasi va JavaScript WebAssembly xotirasini almashishi va boshqarishi va veb-sahifaning DOM (Document Object Model) bilan o'zaro ta'sir qilishi mumkin.
+
+WebAssembly-ning sandboxda execution environment kodning xavfsiz ishlashini ta'minlaydi, tizim resurslariga ruxsatsiz kirishni oldini oladi va zararli kodlar bajarilishini cheklaydi. WebAssembly virtual mashinasi veb-brauzerlarda yuqori unumli ilovalarni bajarishga imkon beradi va an'anaviy JavaScript-ga nisbatan sezilarli yaxshilanishni ta'minlaydi. Sandboxing va tekshirish orqali xavfsiz va xavfsiz muhitni saqlab qolgan holda, u kodni near-native tezlikda kompilyatsiya qiladi va bajaradi.
