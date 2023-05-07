@@ -5,13 +5,13 @@
 
 ## Kirish
 
-Odatda Wasm nomi bilan tanilgan WebAssembly zamonaviy veb-brauzerlarda xavfsiz, tez va portativ ishlash uchun mo'ljallangan binary instruction (ikkilik ko'rsatmalar) formatidir. U low-leveldagi virtual machine(virtual mashina) bo'lib xizmat qiladi, bu kichik binary footprint saqlab, veb-ilovalarga deyarli local(mahalliy) tezlikda ishlash imkonini beradi. Ushbu inqilobiy texnologiya veb-ishlab chiqishda yangi imkoniyatlarni ochib berdi, bu dasturchilarga C, C++ va Rust kabi dasturlash tillaridan foydalangan holda yuqori samarali veb-ilovalarni yaratish imkonini berdi.
+Odatda Wasm nomi bilan tanilgan WebAssembly zamonaviy veb-brauzerlarda xavfsiz, tez va portativ ishlash uchun mo'ljallangan binary instruction (ikkilik ko'rsatmalar) formatidir. U low-leveldagi virtual machine(virtual mashina) bo'lib xizmat qiladi, bu kichik binary footprint saqlab, veb-ilovalarga deyarli near-native tezlikda ishlash imkonini beradi. Ushbu inqilobiy texnologiya veb-ishlab chiqishda yangi imkoniyatlarni ochib berdi, bu dasturchilarga C, C++ va Rust kabi dasturlash tillaridan foydalangan holda yuqori samarali veb-ilovalarni yaratish imkonini berdi.
 
-Ushbu maqolada biz WebAssembly-ning texnik jihatlariga chuqur kirib boramiz, uning ichki ishlashi, kelib chiqishi va bugungi veb-ishlab chiqish landshaftidagi zaruriyatini o'rganamiz. Shuningdek, biz C va Rust tillarida Wasm kodini qanday yozish va bajarishni ko'rsatamiz va veb-ishlab chiqishda WebAssembly-ning amaliy qo'llanilishini ko'rsatadigan kichik loyiha bilan yakunlaymiz.
+Ushbu maqolada biz WebAssembly-ning texnik jihatlariga  kirib boramiz, uning ichki ishlashi, kelib chiqishi va bugungi veb-ishlab chiqish landshaftidagi zaruriyatini o'rganamiz. Shuningdek, biz C va Rust tillarida Wasm kodini qanday yozish va bajarishni ko'rsatamiz va veb-ishlab chiqishda WebAssembly-ning amaliy qo'llanilishini ko'rsatadigan kichik loyiha bilan yakunlaymiz.
 
 ### WebAssembly (Wasm) haqida qisqacha ma'lumot
 
-WebAssembly (Wasm) zamonaviy veb-brauzerlarga kodni near-native tezlikda bajarish imkonini beruvchi ochiq standart binary formatdir. Wasm ixcham binary formatni qo'llab-quvvatlaydigan, tezroq yuklab olish va samarali bajarishni osonlashtiradigan low-leveldagi virtual machine sifatida ishlab chiqilgan. U C, C++, Rust va boshqalar kabi yuqori darajadagi dasturlash tillari uchun kompilyatsiya maqsadi bo'lib xizmat qiladi, bu esa ishlab chiquvchilarga veb-ilovalarida ushbu tillarning kuchidan foydalanish imkonini beradi.
+WebAssembly (Wasm) zamonaviy veb-brauzerlarga kodni near-native tezlikda bajarish imkonini beruvchi ochiq standart binary formatdir. Wasm ixcham binary formatni qo'llab-quvvatlaydigan, tezroq yuklab(load) olish va samarali bajarishni(execute) osonlashtiradigan low-leveldagi virtual machine sifatida ishlab chiqilgan. U C, C++, Rust va boshqalar kabi yuqori darajadagi dasturlash tillari uchun kompilyatsiya maqsadi bo'lib xizmat qiladi, bu esa ishlab chiquvchilarga veb-ilovalarida ushbu tillarning kuchidan foydalanish imkonini beradi.
 
 WebAssembly platformadan mustaqil, ya'ni u turli xil operatsion tizimlar va arxitekturalarda o'zgartirishlarsiz ishlashi mumkin. Bundan tashqari, u xavfsizlikka katta e'tibor qaratadi va foydalanuvchi tizimlarini himoya qilish uchun kod xavfsiz sinov muhitida ishlashini ta'minlaydi.
 
@@ -94,7 +94,7 @@ Emscripten, Binaryen va LLVM-dan foydalanib, C va C++ ni Wasmga kompilyatsiya qi
 
 8-versiyadan boshlab, mustaqil Clang C va C++ ni Wasm-ga kompilyatsiya qilishi mumkin. Uning boshlang'ich maqsadi C va C++ dan kompilyatsiya qilishni qo'llab-quvvatlash edi, lekin Rust, .NET va AssemblyScript (TypeScript-ga o'xshash) kabi boshqa manba tillarini qo'llab-quvvatlash ham paydo bo'lmoqda.
 
-MVP chiqarilgandan so'ng, WebAssembly-ni C# (Blazor orqali qo'llab-quvvatlanadi), F# (Blazor yordamida Bolero orqali qo'llab-quvvatlanadi) kabi garbage-collecterli dasturlash tillari uchun kompilyatsiya maqsadiga aylantiradigan multithreading vagarbage-collecterni qo'llab-quvvatlash rejalari mavjud.
+MVP chiqarilgandan so'ng, WebAssembly-ni C# (Blazor orqali qo'llab-quvvatlanadi), F# (Blazor yordamida Bolero orqali qo'llab-quvvatlanadi) kabi garbage-collecterli dasturlash tillari uchun kompilyatsiya maqsadiga aylantiradigan multithreading garbage-collecterni qo'llab-quvvatlash rejalari mavjud.
 
 Python va hatto JavaScript-da brauzerning just-in-time kompilyatsiya tezligi juda sekin hisoblanadi. Python, Julia, va Ruby kabi bir qator boshqa tillar ham qoʻllab-quvvatlanadi. Bir qator tizimlar Java va boshqa bytecode tillarini JavaScript va WebAssembly-ga kompilyatsiya qilishlari mumkin. Bularga CheerpJ, JWebAssembly va TeaVM kiradi. Bularning barchasi Java byte codi .class fayllarini kirish sifatida qabul qiladi va Groovy, Kotlin va Scala kabi boshqa JVM tillaridan ham foydalanishga imkon beradi.
 
@@ -120,11 +120,11 @@ WASI WebAssembly ilovalari va xost tizimi o'rtasida izchil va xavfsiz interfeysn
 
 Standart interfeysni taqdim etish orqali WASI WebAssembly ilovalarini yanada ko‘chma, sinov muhitiga ega va xavfsizroq bo‘lishiga yordam beradi, chunki ular kodni o‘zgartirishni talab qilmasdan turli operatsion tizimlar va qurilmalarda ishlashi mumkin. WASI-ning modulli dizayni, shuningdek, ishlab chiquvchilarga o'z ilovalari uchun kerakli interfeys qismlaridan foydalanishga imkon beruvchi maxsus API-larni bosqichma-bosqich qabul qilishga imkon beradi.
 
-Docker asoschilaridan biri SSolomon Hykes 2019 yilda shunday deb yozgan edi: “Agar WASM+WASI 2008-yilda mavjud bo‘lganida, biz Docker-ni yaratishimiz shart emas edi. Bu qanchalik muhim. Serverdagi WebAssembly - bu hisoblashning kelajagi." Wasmer, 1.0 versiyasida "dasturiy ta'minotni konteynerlashtirishni ta'minlaydi, biz Linux, macOS, Windows va veb-brauzerlar kabi operatsion tizimlarni o'z ichiga olgan holda istalgan joyda o'zgartirilmagan holda ishlaydigan universal binary(ikkilik) fayllarni yaratamiz. Wasm xavfsiz bajarilishi uchun ilovalarni standart bo'yicha avtomatik ravishda sandboxga o'tkazadi"
+Docker asoschilaridan biri Solomon Hykes 2019 yilda shunday deb yozgan edi: “Agar WASM+WASI 2008-yilda mavjud bo‘lganida, biz Docker-ni yaratishimiz shart emas edi. Bu qanchalik muhim. Serverdagi WebAssembly - bu hisoblashning kelajagi." Wasmer, 1.0 versiyasida "dasturiy ta'minotni konteynerlashtirishni ta'minlaydi, biz Linux, macOS, Windows va veb-brauzerlar kabi operatsion tizimlarni o'z ichiga olgan holda istalgan joyda o'zgartirilmagan holda ishlaydigan universal binary(ikkilik) fayllarni yaratamiz. Wasm xavfsiz bajarilishi uchun ilovalarni standart bo'yicha avtomatik ravishda sandboxga o'tkazadi"
 
 ## Virtual machine
 
-Wasm kodi (ikkilik kod, ya'ni bayt kod) portativ virtual stek mashinasida (VM) ishga tushirish uchun mo'ljallangan. VM JavaScript-ga qaraganda tezroq tahlil qilish va bajarish va ixcham kod taqdimotiga ega bo'lish uchun mo'ljallangan. Wasm binary kodi tomonidan kutilishi mumkin bo'lgan tashqi funksionallik (masalan, tizimli syscall-lar) standartda ko'zda tutilmagan. Bu, aksincha, VM ilovasi ishlaydigan xost muhiti tomonidan modullar orqali interfeyslarni etkazib berish usulini taqdim etadi.
+Wasm kodi (ikkilik kod, ya'ni bayt kod) portativ virtual stek mashinasida (VM) ishga tushirish uchun mo'ljallangan. VM JavaScript-ga qaraganda tezroq tahlil qilish va bajarish va ixcham kod taqdimotiga ega bo'lish uchun mo'ljallangan. Wasm binary kodi tomonidan kutilishi mumkin bo'lgan tashqi funksionallik (masalan, tizimli syscall-lar) standartda ko'zda tutilmagan. Bu, aksincha, VM ilovasi ishlaydigan xost muhiti tomonidan modullar orqali interfeyslarni yetkazib berish usulini taqdim etadi.
 
 WebAssembly virtual mashinasi kompilyatsiya, instantsiya va execution kabi bir necha bosqichda ishlaydi. Bu jarayon qanday ishlashi haqida umumiy ma'lumot:
 
@@ -135,9 +135,9 @@ WebAssembly ikkilik kodi (.wasm) veb-sahifaga odatda WebAssembly moduli bilan o'
 
 #### Instantiation
 
-Brauzer WebAssembly modulini yuklaganida, u to‘g‘ri formatlanganligi va bajarilishi xavfsiz ekanligiga ishonch hosil qilish uchun avval modul bayt kodini tekshiradi. Ushbu qadam WebAssembly ilovalarining xavfsizligi va xavfsizligini ta'minlash uchun zarurdir.
+Brauzer WebAssembly modulini yuklaganida, u to‘g‘ri formatlanganligi va bajarilishi xavfsiz ekanligiga ishonch hosil qilish uchun avval modul bayt kodini tekshiradi. Ushbu qadam WebAssembly ilovalarining xavfsizligi ta'minlash uchun zarurdir.
 Brauzer keyin WebAssembly bayt-kodini Just-In-Time (JIT) kompilyatsiyasi yoki oldindan (AOT) kompilyatsiyasidan foydalangan holda xost mashinasi uchun optimallashtirilgan mahalliy mashina kodiga kompilyatsiya qiladi.
-Kompilyatsiyadan so'ng WebAssembly namunasi yaratiladi, u xotira, jadval va bajarish uchun zarur bo'lgan boshqa WebAssembly-ga xos elementlarni o'z ichiga oladi.
+Kompilyatsiyadan so'ng WebAssembly namunasi yaratiladi, u xotira, table va execution uchun zarur bo'lgan boshqa WebAssembly-ga xos elementlarni o'z ichiga oladi.
 
 #### Execution
 
@@ -157,33 +157,11 @@ Ushbu SIMD opkodlari ham portativdir va x64 va ARM kabi native instructionlar to
 
 ## Kod 
 
-2017-yil mart oyida WebAssembly hamjamiyat guruhi boshlangWebAssembly (Wasm) kuchli texnologiya sifatida paydo bo'ldi, u veb-ishlab chiqarishni inqilob qilish va zamonaviy veb-ilovalar chegaralarini kengaytirish imkoniyatiga ega. Kodni mahalliy tezlikda bajarish va brauzerlar uchun ixcham ikkilik formatni taqdim etish qobiliyati turli sohalarda sezilarli darajada qo'llanilgan. Quyida WebAssemblyning kelajakdagi istiqbollari va potentsial ilovalari keltirilgan:
+2017-yil mart oyida WebAssembly hamjamiyat guruhi boshlang‘ich (MVP) binary formati, JavaScript API va reference interpretator bo‘yicha konsensusga erishdi. WebAssembly binary format bo'lib, u asosan odamlar tomonidan o'qilmaydigan, kompyuterlar tomonidan bajarilishi uchun mo'ljallangan. Shu bilan birga, WebAssembly uchun WebAssembly Text Format (yoki qisqacha .wat) deb nomlangan matn formati ham mavjud bo'lib, u inson tomonidan o'qilishi uchun mo'ljallangan.
 
-Veb-ilovalar uchun yaxshilangan unumdorlik: WebAssembly ishlab chiquvchilarga C, C++ va Rust kabi tillarda yuqori samarali kod yozish imkonini beradi, bu esa past darajadagi virtual mashina kodiga kompilyatsiya qilinishi mumkin, bu esa tezroq bajarilish vaqtlariga olib keladi. Wasm etuklashgan sari, veb-ilovalar tezroq va samaraliroq bo'lishini kutishimiz mumkin.
+Quyidagi jadvalda C da yozilgan 2ta sonni qo'shish va kompilyatsiyadan so'ng unga mos keladigan WebAssembly kodi misoli ko'rsatilgan WebAssembly-ni qo'llab-quvvatlaydigan veb-brauzer yoki runtime environment tomonidan bajariladigan .wat matn formatida (WebAssemblyning odam o'qiy oladigan matnli ko'rinishi) va .wasm binary formatida ko'rsatilgan.
 
-Ish stoli ilovalarini internetga koʻchirish: WebAssembly ishlab chiquvchilarga mavjud ish stoli ilovalari va vositalarini unumdorlikni sezilarli darajada yoʻqotmasdan internetga koʻchirish imkonini beradi, foydalanish imkoniyatini oshiradi va dasturiy taʼminotni kengroq auditoriyaga taqdim etadi.
-
-Oʻyin va interaktiv media: WebAssembly yuqori unumdor grafiklarni qoʻllab-quvvatlaganligi sababli, u internetda oʻyin oʻynash va interaktiv media uchun yangi imkoniyatlarni ochadi. Ishlab chiquvchilarga tanish dasturlash tillari va vositalaridan foydalanishga ruxsat berish orqali Wasm yanada murakkab va jozibali veb-ga asoslangan o'yin tajribalarini taqdim etadi.
-
-Virtual va kengaytirilgan haqiqat: WebAssembly virtual va toʻldirilgan reallik ilovalarini ishlab chiqishda muhim rol oʻynashi mumkin, bu esa deyarli mahalliy ishlash va veb-texnologiyalar bilan uzluksiz integratsiyani taklif qiladi. Bu veb-brauzerlar orqali kirish mumkin bo'lgan immersive VR va AR tajribalarini yaratishda yordam beradi.
-
-Narsalar Interneti (IoT): WebAssembly IoT ilovalarida muhim komponent bo'lishi mumkin, bu erda uning kichik ikkilik o'lchami, tezkor bajarilishi va tilni qo'llab-quvvatlashi qurilmalarning o'zaro ishlashi, energiya samaradorligi va xavfsiz kod bajarilishi nuqtai nazaridan foyda keltirishi mumkin.
-
-Blokcheyn va markazlashtirilmagan ilovalar: WebAssembly xususiyatlari blokcheyn platformalari va markazlashtirilmagan ilovalar ehtiyojlariga mos keladi, bu esa ishlab chiquvchilarga turli tillarda aqlli shartnomalar yozish imkonini beradi, ish faoliyatini yaxshilaydi va murakkabroq ilovalarni yaratishni osonlashtiradi.
-
-Edge hisoblash va serversiz funksiyalar: WebAssembly oxirgi foydalanuvchiga yaqin ishlaydigan engil, samarali va xavfsiz funksiyalarni joylashtirish, javob vaqtlarini yaxshilash va markazlashtirilgan serverlar yukini kamaytirish orqali chekka hisoblash va serversiz arxitekturalarda asosiy rol oʻynashi mumkin.
-
-Sun'iy intellekt va mashinani o'rganish: WebAssembly-ning brauzerda kodni samarali ishga tushirish qobiliyati sun'iy intellekt va mashinani o'rganish ilovalarini internetga olib kirishi mumkin, bu esa foydalanuvchilarga maxsus dasturlarni o'rnatishni talab qilmasdan kuchli algoritmlarga kirish imkonini beradi.
-
-Til va asboblarni takomillashtirish: WebAssembly mashhurlik orttirishda davom etar ekan, uning rivojlanishini qo‘llab-quvvatlash, ishlab chiquvchilar samaradorligini oshirish va tobora murakkablashgan veb-ilovalarni yaratish imkonini beruvchi ko‘proq dasturlash tillari va vositalari paydo bo‘ladi.
-
-Brauzerdan tashqarida WebAssembly: Wasmer va Wasmtime kabi mustaqil WebAssembly ish vaqtlari paydo bo'lishi bilan WebAssembly brauzerdan tashqarida ham ishlatilishi mumkin, bu uni mobil ilovalarni ishlab chiqish va ish stoli ilovalari kabi boshqa dasturiy ta'minot domenlarida qabul qilish imkoniyatlarini ochib beradi.
-
-WebAssembly rivojlanishda va etuklikda davom etar ekan, u sanoatning keng doirasi bo'ylab muhim innovatsiyalarni olib borishi kutilmoqda, bu bizning veb-ilovalarni ishlab chiqish va foydalanish uslubimizni o'zgartiradi.‘ich (MVP) binary formati, JavaScript API va mos yozuvlar tarjimoni bo‘yicha konsensusga erishdi. WebAssembly binary format bo'lib, u asosan odamlar tomonidan o'qilmaydigan, kompyuterlar tomonidan bajarilishi uchun mo'ljallangan. Shu bilan birga, WebAssembly uchun WebAssembly Text Format (yoki qisqacha .wat) deb nomlangan matn formati ham mavjud bo'lib, u inson tomonidan o'qilishi uchun mo'ljallangan.
-
-Quyidagi jadvalda C da yozilgan 2ta sonni qo'shish va kompilyatsiyadan so'ng unga mos keladigan WebAssembly kodi misoli ko'rsatilgan WebAssembly-ni qo'llab-quvvatlaydigan veb-brauzer yoki runtime environment tomonidan bajariladigan .wat matn formatida (WebAssemblyning odam o'qiy oladigan matnli ko'rinishi) va .wasm binary formatida (quyida o'n oltilik tizimda ifodalangan xom(raw) bayt-kod) ko'rsatilgan.
-
-                      C manba kodi va WebAssembly
+                         C manba kodi va WebAssembly
 
 `C` kodi
 ```c
@@ -200,7 +178,7 @@ int main() {
 }
 
 ```
-WebAssembly `.wat` matn formati
+                       WebAssembly `.wat` matn formati
 
 ```wasm
 (module
@@ -247,7 +225,7 @@ WebAssembly `.wat` matn formati
 )
 
 ```
-WebAssembly `.wasm` binary formati
+                     WebAssembly `.wasm` binary formati
 
 ```wasm
 wasm-function[1]:
@@ -325,13 +303,13 @@ WebAssembly ish jarayoni to'rtta asosiy bosqichdan iborat.
 
 ![alt text](https://tutorialzine.com/media/2017/06/wasm-chain.png)
 
-Kodni yozish: Ushbu bosqichda ishlab chiquvchilar manba kodini C, C++ yoki Rust kabi yuqori darajadagi tillarda yozadilar. Ushbu tillar ko'pincha JavaScript bilan solishtirganda muayyan vazifalar yoki ishlash uchun muhim ilovalar uchun ko'proq mos keladi.
+Kodni yozish: Ushbu bosqichda dasturchilar manba kodini C, C++ yoki Rust kabi yuqori darajadagi tillarda yozadilar. Ushbu tillar ko'pincha JavaScript bilan solishtirganda muayyan vazifalar yoki ishlash uchun muhim ilovalar uchun ko'proq mos keladi.
 
 WASM ga kompilyatsiya qilish: Manba kodi yozilgandan so'ng uni WebAssembly bayt-kodiga kompilyatsiya qilish kerak. Bu LLVM yoki Emscripten kabi kompilyatorlar yordamida amalga oshiriladi, ular yuqori darajadagi til kodini WebAssembly formatiga mos keladigan low-leveldagi taqdimotga aylantiradi.
 
 Loading va Decoding: Veb-sahifa yuklanganda, brauzer kompilyatsiya qilingan WebAssembly bayt kodini oladi va uni bajarish uchun mos bo'lgan ichki ko'rinishga dekodlaydi. WebAssembly-ning binary formati JavaScript-ni tahlil qilishdan ko'ra tezroq dekodlashni ta'minlaydi, bu esa unumdorlikni oshirishga yordam beradi.
 
-Execution: Yakuniy bosqichda brauzerning WebAssembly runtime dekodlangan kodni sinov muhitida bajaradi. Bu muhit boshqa ishlaydigan skriptlardan va asosiy tizimdan ajratilgan bo'lib, xavfsizlik va barqarorlikni ta'minlaydi. WebAssembly runtime WASM nstructionlarini native mashina kodiga tarjima qilish uchun Just-In-Time (JIT) kompilyatsiyasidan foydalanadi, bu esa kodning near-native darajada ishlashiga imkon beradi.
+Execution: Yakuniy bosqichda brauzerning WebAssembly runtime dekodlangan kodni sinov muhitida bajaradi. Bu muhit boshqa ishlaydigan skriptlardan va asosiy tizimdan ajratilgan bo'lib, xavfsizlik va barqarorlikni ta'minlaydi. WebAssembly runtime WASM instructionlarini native mashina kodiga tarjima qilish uchun Just-In-Time (JIT) kompilyatsiyasidan foydalanadi, bu esa kodning near-native darajada ishlashiga imkon beradi.
 
 ![alt text](https://assets.website-files.com/63e3d6905bacd6855fa38c1c/63e3d6905bacd6cef0a38f92_How%20does%20Wasm%20work.jpg)
 
@@ -352,9 +330,9 @@ WebAssembly ishlab chiquvchilarga mavjud desktop ilovalari va vositalarini unumd
 
 WebAssembly yuqori unumdor grafiklarni qoʻllab-quvvatlaganligi sababli, u internetda oʻyin oʻynash va interaktiv media uchun yangi imkoniyatlarni ochadi. Ishlab chiquvchilarga tanish dasturlash tillari va vositalaridan foydalanishga ruxsat berish orqali Wasm yanada murakkab va jozibali veb-ga asoslangan o'yin tajribalarini taqdim etadi.
 
-* Virtual reality va augmented reality
+* Virtual reality va Augmented reality
 
-WebAssembly virtual va taugmented reallik ilovalarini ishlab chiqishda muhim rol oʻynashi mumkin, bu esa deyarli near-native ishlash va veb-texnologiyalar bilan uzluksiz integratsiyani taklif qiladi. Bu veb-brauzerlar orqali kirish mumkin bo'lgan immersive VR va AR tajribalarini yaratishda yordam beradi.
+WebAssembly virtual va augmented reallik ilovalarini ishlab chiqishda muhim rol oʻynashi mumkin, bu esa deyarli near-native ishlash va veb-texnologiyalar bilan uzluksiz integratsiyani taklif qiladi. Bu veb-brauzerlar orqali kirish mumkin bo'lgan immersive VR va AR tajribalarini yaratishda yordam beradi.
 
 * Internet of Things (IoT)
 
@@ -376,7 +354,7 @@ Til va tollarni takomillashtirish: WebAssembly mashhurlik orttirishda davom etar
 
 * Brauzerdan tashqarida WebAssembly
 
-Wasmer va Wasmtime kabi mustaqil WebAssembly runtimelari paydo bo'lishi bilan WebAssembly brauzerdan tashqarida ham ishlatilishi mumkin, bu uni mobil ilovalarni ishlab chiqish va deskrop ilovalari kabi boshqa dasturiy ta'minot domenlarida qabul qilish imkoniyatlarini ochib beradi.
+Wasmer va Wasmtime kabi mustaqil WebAssembly runtimelari paydo bo'lishi bilan WebAssembly brauzerdan tashqarida ham ishlatilishi mumkin, bu uni mobil ilovalarni ishlab chiqish va desktop ilovalari kabi boshqa dasturiy ta'minot domenlarida qabul qilish imkoniyatlarini ochib beradi.
 
 WebAssembly rivojlanishda va yetuklikda davom etar ekan, u sanoatning keng doirasi bo'ylab muhim innovatsiyalarni olib borishi kutilmoqda, bu bizning veb-ilovalarni ishlab chiqish va foydalanish uslubimizni o'zgartiradi.
 
