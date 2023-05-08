@@ -196,7 +196,8 @@ Linux fayl tizimi root directory, boot directory, inodelar, superblok va boshqa 
 
 Umuman olganda, Linux fayl tizimini tushunish Linux tizimini samarali boshqarish va saqlash uchun muhimdir.
 
-
+:::tip
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
 [Telegram Blog](https://t.me/Otabek_Ismoilov)
+:::

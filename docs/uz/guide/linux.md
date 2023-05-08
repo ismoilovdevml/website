@@ -71,6 +71,8 @@ Agar sizning kompyuter ko'nikmalaringiz juda oddiy bo'lsa, siz Linux Mint, Ubunt
 
 Agar siz faqat server uchun distributiv izlayotgan bo'lsangiz, desktop interfeysi kerakmi yoki buni faqat command-line orqali qilishni xohlaysizmi. Ubuntu serveri GUI interfeysini o'rnatmaydi. Bu shuni anglatadiki, sizning serveringiz grafiklarni yuklashda to'xtab qolmaydi va siz Linux command line haqida yaxshi tushunchaga ega bo'lishingiz kerak bo'ladi. Biroq, siz GUI paketini Ubuntu serverining tepasiga sudo apt-get install ubuntu-desktop kabi bitta buyruq bilan o'rnatishingiz mumkin. Tizim administratorlari, shuningdek, xususiyatlar bo'yicha distributivni ko'rishni xohlashadi. Sizga serveringiz uchun kerak bo'lgan hamma narsani taklif qiladigan serverga xos distributivni xohlaysizmi? Agar shunday bo'lsa, CentOS eng yaxshi tanlov bo'lishi mumkin.
 
+:::tip
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
 [Telegram Blog](https://t.me/Otabek_Ismoilov)
+:::

@@ -635,6 +635,7 @@ Tizimni qayta ishga tushirgandan so'ng, bizga Arch Linux buyruq qatori interfeys
 
 O'rnatish jarayoni boshqa Linux distributivlariga qaraganda ancha murakkab bo'lishi mumkin bo'lsa-da, Arch Linux-ning afzalliklari uning moslashuvchanligi, minimalizmi va sozlanishidadir. Bu ularning o'ziga xos ehtiyojlariga moslashtirilishi mumkin bo'lgan yengil va samarali operatsion tizimni xohlaydigan foydalanuvchilar uchun ideal tanlovdir.
 
+:::tip
 
 #### Muallif: Otabek Ismoilov
 * [Veb-sayt](https://ismoilovdev.vercel.app/)
@@ -650,3 +651,5 @@ O'rnatish jarayoni boshqa Linux distributivlariga qaraganda ancha murakkab bo'li
 * [Veb-sayt](https://oss.uzinfocom.uz)
 * [Telegram](https://t.me/uzinfocom_oss)
 * [Github](https://github.com/uzinfocom-org)
+
+:::

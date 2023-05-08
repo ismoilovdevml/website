@@ -50,7 +50,7 @@ WebAssembly JavaScript bilan birga ishlash uchun moʻljallangan boʻlib, ishlab 
 WebAssembly kodi xavfsizlikning mumkin bo'lgan zaifliklari xavfini kamaytiradigan xavfsiz sinov muhitida ishlaydi. Bu Wasm yordamida yaratilgan veb-ilovalar an'anaviy JavaScript-ga asoslangan ilovalarga qaraganda xavfsizroq va hujumlarga kamroq moyil bo'lishini ta'minlaydi.
 
 :::tip
-* Portativlik:
+* Portativlik
 :::
 
 WebAssembly platforma-agnostikdir, ya'ni u turli xil operatsion tizimlar va hardware arxitekturalarida hech qanday o'zgartirishni talab qilmasdan ishlashi mumkin. Bu ishlab chiquvchilarga doimiy foydalanuvchi tajribasini ta'minlab, keng turdagi qurilmalarda osongina tarqatilishi va bajarilishi mumkin bo'lgan portativ veb-ilovalarni yaratishga imkon beradi.
@@ -178,7 +178,7 @@ int main() {
 }
 
 ```
-                       WebAssembly `.wat` matn formati
+                       WebAssembly .wat matn formati
 
 ```wasm
 (module
@@ -358,5 +358,7 @@ Wasmer va Wasmtime kabi mustaqil WebAssembly runtimelari paydo bo'lishi bilan We
 
 WebAssembly rivojlanishda va yetuklikda davom etar ekan, u sanoatning keng doirasi bo'ylab muhim innovatsiyalarni olib borishi kutilmoqda, bu bizning veb-ilovalarni ishlab chiqish va foydalanish uslubimizni o'zgartiradi.
 
+:::tip
 
 Ikkinchi qismda WASMda kichik loyiha qilamiz )
+:::

@@ -177,6 +177,7 @@ Protsessor tezroq ishlashi uchun va imkon qadar ko'proq ishlashi uchun ko'plab o
 [CPU qanday ishlashi va qanday tuzulishi haqida ko'proq bilib olish uchun animatsion videorolik](https://www.youtube.com/watch?v=cNN_tTXABUA)
 
 
+:::tip
 [2-qism: CPU qanday ishlaydi va qanday tuzilgan (chuqurlashtirilgan)](https://ismoilovdev.vercel.app/uz/guide/cpu_2.html)
 
 Xato va kamchiliklar bo'lsa uzur so'rayman )
@@ -186,3 +187,4 @@ Xato va kamchiliklar bo'lsa uzur so'rayman )
 Foydanilgan Manbalar
 
 [freecodecamp.org](https://www.freecodecamp.org/news/how-does-a-cpu-work/)
+:::

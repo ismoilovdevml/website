@@ -151,6 +151,7 @@ LLVM loyisi Open Source bo'lgani uchun manba kodlarini Githubdan topishingiz mum
 
 #### [LLVM Dasturchilari ro'yxati](https://github.com/orgs/llvm/people)
 
+:::tip
 O'zbekistonda xam LLVM dasturchisi borligini mamnuniyat bilan ayta olaman. O'zbekistondagi LLVM dasturchisi [Yuri Katsuki](https://github.com/katsuki-yuri). Yuri bu haqida yaqinda o'zining [Telegram blogida](https://t.me/yurionblog/233) e'lon qildi. Biz bundan juda xursandmiz.
 
 
@@ -162,3 +163,4 @@ Foydanilgan Manbalar
 
 [Wikipedia](https://en.wikipedia.org/wiki/LLVM)
 va boshqa ko'plab manbalar
+:::

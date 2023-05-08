@@ -270,6 +270,8 @@ Kvant hisoblash tizimlarini aniqroq simulyatsiya qila oladigan dasturlash tillar
 
 Kvant dasturlash tillari kvant hisoblash kelajagining muhim tarkibiy qismidir. Soha o'sishda va rivojlanishda davom etar ekan, tadqiqotchilar va amaliyotchilar uchun eng so'nggi ishlanmalar va vositalardan xabardor bo'lish juda muhimdir. Kuchliroq va foydalanuvchilarga qulay kvant dasturlash tillarining davom etayotgan rivojlanishi bilan kvant hisoblashning kelajagi istiqbolli ko'rinadi. Kvant hisoblashlari kengroq qo'llanilsa, kvant dasturlash kriptografiya, optimallashtirish va simulyatsiya kabi sohalarga ta'sir ko'rsatadigan kompyuter fanining tobora muhim sohasiga aylanishi mumkin.
 
+:::tip
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
 [Telegram Blog](https://t.me/Otabek_Ismoilov)
+:::

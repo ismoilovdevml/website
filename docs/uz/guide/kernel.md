@@ -335,6 +335,7 @@ Maqola juda uzun bo'lgani uchun uzur so'rayman )
 
 Endi siz kernel ishlashi kelib chiqishi kernel turlari haqidagi bilimlarni bilib oldingiz )
 
+:::tip
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
 [Telegram Blog](https://t.me/Otabek_Ismoilov)
@@ -344,3 +345,4 @@ Foydanilgan Manbalar
 
 [Wikipedia](https://en.wikipedia.org/wiki/Kernel_(operating_system))
 va boshqa juda ko'p manbalar
+:::

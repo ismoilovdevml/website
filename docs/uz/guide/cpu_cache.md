@@ -198,6 +198,7 @@ Instruction cachedagi cache read miss yuborilganligi odatda eng katta kechikishg
 Ixtisoslashuv va ko'p darajali keshlashni tasvirlash uchun bu erda AMD Athlon 64 protsessoridagi K8 yadrosining kesh ierarxiyasi keltirilgan
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cache%2Chierarchy-example.svg/500px-Cache%2Chierarchy-example.svg.png)
 
+:::tip
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 
 [Telegram Blog](https://t.me/Otabek_Ismoilov)
@@ -207,4 +208,4 @@ Foydanilgan Manbalar
 [Makeuseof.com](https://www.makeuseof.com/tag/what-is-cpu-cache/)
 
 [Wikipedia](https://en.wikipedia.org/wiki/CPU_cache)
-
+:::
