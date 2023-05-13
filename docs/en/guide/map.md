@@ -29,3 +29,5 @@
 ## [Internet](internet.html)
 
 ## [WebAssembly WASM](wasm.html)
+
+## [How Compilers Work](compiler.html)
