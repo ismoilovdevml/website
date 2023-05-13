@@ -11,3 +11,13 @@ Ushbu maqolada biz kompilyatsiya jarayonining bosqichlarini tahlil qilamiz. Keyi
 Yuqorida aytib o'tganimizdek, kompilyatsiya jarayoni high-leveldagi manba kodini maqsadli mashina tomonidan bajarilishi mumkin bo'lgan low-leveldagi mashina kodiga aylantiradi. Bundan tashqari, kompilyatorlarning muhim roli dasturchiga yo'l qo'yilgan xatolar, ayniqsa sintaksis bilan bog'liq bo'lganlar haqida xabardor qilishdir.
 
 > Kompilyatsiya jarayoni bir necha bosqichlardan iborat
+
+:::tip
+* Lexical analysis (Leksik tahlil)
+* Syntax analysis (Sintaksis tahlil)
+* Semantic analysis (Semantik tahlil)
+* Intermediate code generation (Oraliq kod ishlab chiqarish)
+* Optimization (Optimallashtirish)
+* Code generation (Kod generatsiya)
+
+Ushbu bo'limda biz har bir bosqichni batafsil muhokama qilamiz.
