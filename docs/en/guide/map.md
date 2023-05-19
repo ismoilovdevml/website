@@ -1,6 +1,6 @@
 # Sitemap (Table of Contents)
 
-## [About the blog](about.html)
+## [About the blog](https://ismoilovdev.uz/uz/guide/about.html)
 
 ## [What is Linux?](linux.html)
 

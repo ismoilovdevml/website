@@ -13,6 +13,7 @@ export const pagesRoutes = [
   ["v-2a101e20","/uz/guide/about.html",{"title":"Otabek Ismoilov"},["/uz/guide/about","/uz/guide/about.md"]],
   ["v-562ad79e","/uz/guide/arch-install.html",{"title":""},["/uz/guide/arch-install","/uz/guide/arch-install.md"]],
   ["v-1be2bbfe","/uz/guide/blockchain.html",{"title":"Blockchain"},["/uz/guide/blockchain","/uz/guide/blockchain.md"]],
+  ["v-0105dd96","/uz/guide/compiler.html",{"title":"Kompilyatorlar qanday ishlaydi"},["/uz/guide/compiler","/uz/guide/compiler.md"]],
   ["v-5e343cb5","/uz/guide/cpu.html",{"title":"1-qism: CPU nima va u qanday ishlaydi?"},["/uz/guide/cpu","/uz/guide/cpu.md"]],
   ["v-622701e2","/uz/guide/cpu_2.html",{"title":"1 CPU nima va qanday ishlaydi?"},["/uz/guide/cpu_2","/uz/guide/cpu_2.md"]],
   ["v-6c6021dc","/uz/guide/cpu_cache.html",{"title":"CPU cache nima va u qanday ishlaydi?"},["/uz/guide/cpu_cache","/uz/guide/cpu_cache.md"]],
@@ -26,6 +27,6 @@ export const pagesRoutes = [
   ["v-4afa4981","/uz/guide/map.html",{"title":"Sayt yo'l xaritasi (Mundarija)"},["/uz/guide/map","/uz/guide/map.md"]],
   ["v-49140dbc","/uz/guide/quantum.html",{"title":"#1 Kvant dasturlashga sayohat"},["/uz/guide/quantum","/uz/guide/quantum.md"]],
   ["v-4d419fff","/uz/guide/ram.html",{"title":"RAM nima va u qanday ishlaydi?"},["/uz/guide/ram","/uz/guide/ram.md"]],
-  ["v-56bc38fa","/uz/guide/test.html",{"title":"Blockchain"},["/uz/guide/test","/uz/guide/test.md"]],
+  ["v-340ede9e","/uz/guide/wasm.html",{"title":"WebAssembly WASM"},["/uz/guide/wasm","/uz/guide/wasm.md"]],
   ["v-3706649a","/404.html",{"title":""},["/404"]],
 ]

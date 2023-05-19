@@ -29,6 +29,8 @@ export const pagesComponents = {
   "v-562ad79e": defineAsyncComponent(() => import(/* webpackChunkName: "v-562ad79e" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/arch-install.html.vue")),
   // path: /uz/guide/blockchain.html
   "v-1be2bbfe": defineAsyncComponent(() => import(/* webpackChunkName: "v-1be2bbfe" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/blockchain.html.vue")),
+  // path: /uz/guide/compiler.html
+  "v-0105dd96": defineAsyncComponent(() => import(/* webpackChunkName: "v-0105dd96" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/compiler.html.vue")),
   // path: /uz/guide/cpu.html
   "v-5e343cb5": defineAsyncComponent(() => import(/* webpackChunkName: "v-5e343cb5" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/cpu.html.vue")),
   // path: /uz/guide/cpu_2.html
@@ -55,8 +57,8 @@ export const pagesComponents = {
   "v-49140dbc": defineAsyncComponent(() => import(/* webpackChunkName: "v-49140dbc" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/quantum.html.vue")),
   // path: /uz/guide/ram.html
   "v-4d419fff": defineAsyncComponent(() => import(/* webpackChunkName: "v-4d419fff" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/ram.html.vue")),
-  // path: /uz/guide/test.html
-  "v-56bc38fa": defineAsyncComponent(() => import(/* webpackChunkName: "v-56bc38fa" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/test.html.vue")),
+  // path: /uz/guide/wasm.html
+  "v-340ede9e": defineAsyncComponent(() => import(/* webpackChunkName: "v-340ede9e" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/wasm.html.vue")),
   // path: /404.html
   "v-3706649a": defineAsyncComponent(() => import(/* webpackChunkName: "v-3706649a" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/404.html.vue")),
 }
