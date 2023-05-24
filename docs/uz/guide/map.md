@@ -31,3 +31,5 @@
 ## [WebAssembly WASM](wasm.html)
 
 ## [Kompilyatorlar qanday ishlaydi](compiler.html)
+
+## [Linux Kernel](linux_kernel.html)
