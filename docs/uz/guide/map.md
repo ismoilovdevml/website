@@ -32,4 +32,4 @@
 
 ## [Kompilyatorlar qanday ishlaydi](compiler.html)
 
-## [Linux Kernel](linux_kernel.html)
+## [Asosiy operatsion tizim atamalari va tushunchalari](linux_kernel.html)

@@ -29,10 +29,32 @@ Monolit krernel - bu kernelning turli quyi tizimlari(subsystem) o'rtasida kirish
 
 ![alt text](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-3dc899167df5e16a230c434cf5d6964cb5868482.png)
 
-Biroq, ko'pgina monolit kernellar subsytemlar o'rtasida, ayniqsa kernel coresi va qurilma drayverlari o'rtasida logical separation(mantiqiy ajratish)ni ta'minlaydi, ular bitta subsystem yoki qurilma drayverlari tomonidan taklif qilinadigan xizmatlarga kirish uchun ishlatilishi kerak bo'lgan nisbatan qat'iy API-larga ega (lekin o'rnatilgan bo'lishi shart emas).
+Biroq, ko'pgina monolit kernellar subsytemlar o'rtasida, ayniqsa kernel coresi va qurilma drayverlari o'rtasida logical separation(mantiqiy ajratish)ni ta'minlaydi, ular bitta subsystem yoki qurilma drayverlari tomonidan taklif qilinadigan servicelarga kirish uchun ishlatilishi kerak bo'lgan nisbatan qat'iy API-larga ega (lekin o'rnatilgan bo'lishi shart emas).
 
 ### Micro kernel
 
 Mikro-kernel kernelning katta qismlari bir-biridan himoyalangan, odatda user spaceda xizmat ko'rsatadigan kerneldir. Kernelning muhim qismlari hozir foydalanuvchi rejimida(user mod) ishlayotganligi sababli, kernel rejimida(kernel mode) ishlaydigan qolgan kod sezilarli darajada kichikroq, shuning uchun mikro kernel atamasi ishlatiladi.
 
 ![alt text](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-c8a3d93d0109b7be6f608871d16adff4aaa933da.png)
+
+Mikro-kernel arxitekturasida kernel turli xil ishlaydigan jarayonlar o'rtasida xabar o'tishiga imkon beradigan yetarli kodni o'z ichiga oladi.
+Amalda bu kernelda scheduler(rejalashtiruvchi )va IPC mexanizmini, shuningdek ilovalar va servicelar o'rtasida himoyani o'rnatish uchun asosiy xotira boshqaruvini amalga oshirishni anglatadi. Ushbu arxitekturaning afzalliklaridan biri shundaki, servicelar izolyatsiya qilingan va shuning uchun bitta servicedagi xatolar boshqa servicelarga ta'sir qilmaydi. Shunday qilib, agar service ishlamay qolsa, biz butun tizimga ta'sir qilmasdan uni qayta ishga tushirishimiz mumkin.
+Biroq, amalda bunga erishish qiyin, chunki serviceni qayta ishga tushirish ushbu servicega bog'liq bo'lgan barcha ilovalarga ta'sir qilishi mumkin (masalan, agar fayl serveri ochilgan fayl identifikatorlari bo'lgan barcha ilovalarni buzsa, ularga kirishda xatolar yuzaga keladi). Ushbu arxitektura kernelga modulli yondashuvni qo'llaydi va xizmatlar o'rtasida memory protection(xotirani himoya) qilishni taklif qiladi, lekin ishlash xarajati bilan. Monolitik kernellardagi ikkita service o'rtasidagi oddiy funksiya chaqiruvi endi IPC va schedulingdan o'tishni talab qiladi.
+
+
+### Micro-kernel vs Monolitik kernel
+
+Micro-kernel tarafdorlari ko'pincha micro-kernel modulli dizayni tufayli micro-kernelning ustun ekanligini ta'kidlaydilar. Biroq, monolit kernellar modulli bo'lishi mumkin va zamonaviy monolit kernellari bu maqsadda foydalanadigan bir nechta yondashuvlar mavjud:
+
+* Komponentlar kompilyatsiya vaqtida yoqilishi yoki o'chirilishi mumkin
+* Yuklanadigan kernel modullarini qo'llab-quvvatlash (runtimeda)
+* Logical, independent subsystemlarda kernelni tashkil qilish
+* Strict interfeyslar, lekin performance(unumdorligi) past: makroslar, inline funksiyalar, funksiya pointerlari
+
+Monolit va mikro kernellar o'rtasida (masalan, Windows, Mac OS X) o'zini gibrid(hybrid) kernel deb da'vo qiladigan operatsion tizimlar sinfi mavjud. Biroq, barcha tipik monolit servicelar ushbu operatsion tizimlarda kernel modeda ishlaganligi sababli, ularni monolit kernellardan tashqari sifatlash uchun unchalik ahamiyatli emas. Ko'pgina operatsion tizimlar va kernel mutaxassislari buni ma'nosiz va shunchaki marketing deb rad etishdi. Linus Torvalds bu masala haqida shunday dedi:
+
+"Gibrid yadroga kelsak, bu shunchaki marketing. Bu mikro-kernellarda yaxshi PR bor edi, qanday qilib biz ishlaydigan kernelimiz uchun yaxshi PR olishga harakat qilishimiz mumkin? O, bilaman, keling, ajoyib nom ishlatamiz va harakat qilib ko'raylik. Bu boshqa tizimdagi barcha PR afzalliklariga ega ekanligini anglatadi."
+
+### Address space
+
+Address space atamasi turli kontekstlarda turli ma'nolarga ega bo'lishi mumkin bo'lgan atama. Physical address space(jismoniy manzil maydo)ni operativ xotira va qurilma xotiralari memory busida qanday ko'rinishini bildiradi.
