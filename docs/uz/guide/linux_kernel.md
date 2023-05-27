@@ -53,7 +53,7 @@ Micro-kernel tarafdorlari ko'pincha micro-kernel modulli dizayni tufayli micro-k
 
 Monolit va mikro kernellar o'rtasida (masalan, Windows, Mac OS X) o'zini gibrid(hybrid) kernel deb da'vo qiladigan operatsion tizimlar sinfi mavjud. Biroq, barcha tipik monolit servicelar ushbu operatsion tizimlarda kernel modeda ishlaganligi sababli, ularni monolit kernellardan tashqari sifatlash uchun unchalik ahamiyatli emas. Ko'pgina operatsion tizimlar va kernel mutaxassislari buni ma'nosiz va shunchaki marketing deb rad etishdi. Linus Torvalds bu masala haqida shunday dedi:
 
-"Gibrid yadroga kelsak, bu shunchaki marketing. Bu mikro-kernellarda yaxshi PR bor edi, qanday qilib biz ishlaydigan kernelimiz uchun yaxshi PR olishga harakat qilishimiz mumkin? O, bilaman, keling, ajoyib nom ishlatamiz va harakat qilib ko'raylik. Bu boshqa tizimdagi barcha PR afzalliklariga ega ekanligini anglatadi."
+"Gibrid kernelga kelsak, bu shunchaki marketing. Bu mikro-kernellarda yaxshi PR bor edi, qanday qilib biz ishlaydigan kernelimiz uchun yaxshi PR olishga harakat qilishimiz mumkin? O, bilaman, keling, ajoyib nom ishlatamiz va harakat qilib ko'raylik. Bu boshqa tizimdagi barcha PR afzalliklariga ega ekanligini anglatadi."
 
 ### Address space
 
@@ -66,3 +66,11 @@ User va kernel spacelari uchun odatiy dastur virtual address spacesi user proces
 ![alt text](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-a5f93e0d17ccdc2ba24828b620d7227f7fc75e33.png)
 
 ### Execution contexts
+
+Kernelning eng muhim vazifalaridan biri interruptlarga xizmat ko'rsatish va ularga samarali xizmat ko'rsatishdir. Bu juda muhimki, u bilan maxsus execution context bog'langan. Kernel interrupt natijasida ishlaganda interrupt contextda ishlaydi. Bunga interrupt handler kiradi, lekin u bilan cheklanmaydi, interrupt modeda ishlaydigan boshqa maxsus(software)  konstruksiyalar mavjud. Interrupt kontekstida ishlaydigan kod har doim kernel modeda ishlaydi va kerel dasturchisi bilishi kerak bo'lgan ma'lum cheklovlar mavjud (masalan, blokirovkalash funktsiyalarini chaqirmaslik yoki user spacega kirish). Interrupt kontekstiga qarshi process(jarayon )konteksti mavjud. Process kontekstida ishlaydigan kod buni user modeda(executing application code)  yoki kernel modeda (executing a system call) amalga oshirishi mumkin.
+
+### Multi-tasking
+
+Multitasking - bu operatsion tizimning bir nechta dasturlarni "bir vaqtning o'zida(simultaneously)" bajarish qobiliyati. Buni ishlaydigan processeslar o'rtasida tezda almashish orqali amalga oshiradi. Kooperativ multitasking dasturlardan ko'p vazifani bajarish uchun hamkorlik qilishni talab qiladi. Dastur ishga tushadi va CPU boshqaruvini OSga qaytaradi, keyin esa boshqa dasturni rejalashtiradi. Preemptive multitasking bilan kernel har bir  process uchun qat'iy cheklovlarni amalga oshiradi, shuning uchun barcha  processlarni ishga tushirish uchun  imkoniyat bo'ladi. Har bir processga vaqt boʻlagini (masalan, 100ms) ishga tushirishga ruxsat beriladi, shundan soʻng, agar u hali ham ishlayotgan boʻlsa, u majburiy ravishda oʻchiriladi va boshqa vazifa rejalashtiriladi.
+
+### Preemptive kernel
