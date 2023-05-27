@@ -57,4 +57,12 @@ Monolit va mikro kernellar o'rtasida (masalan, Windows, Mac OS X) o'zini gibrid(
 
 ### Address space
 
-Address space atamasi turli kontekstlarda turli ma'nolarga ega bo'lishi mumkin bo'lgan atama. Physical address space(jismoniy manzil maydo)ni operativ xotira va qurilma xotiralari memory busida qanday ko'rinishini bildiradi.
+Address space atamasi turli kontekstlarda turli ma'nolarga ega bo'lishi mumkin bo'lgan atama. Physical address space(jismoniy manzil maydo)ni operativ xotira va qurilma xotiralari memory busida qanday ko'rinishini bildiradi. Masalan, 32 bitli Intel arxitekturasida RAMni lower physical address spacega joylashtirish odatiy holdir, grafik karta xotirasi esa physical address spaceda yuqori bo'ladi. Virtual address spacesi (yoki ba'zan shunchaki address space) virtual xotira moduli yoqilganda (ba'zan protected mode yoki paging yoqilgan deb ataladi) protsessor xotirani ko'rish usulini bildiradi. Kernel virtual addreslar spaceni yaratadigan xaritalashni(mapping) o'rnatish uchun javobgardir, unda ushbu spacening hududlari ma'lum physical memory arealariga mos keladi. Virtual address spacesi bilan bog'liq holda tez-tez ishlatiladigan yana ikkita atama mavjud: process (address) space va kernel (address) space. Process spacesi process(jarayon) bilan bog'langan virtual address spacesi (bir qismi). Bu jarayonlarning "xotira ko'rinishi(memory view)". Bu noldan boshlanadigan uzluksiz maydon. Processning address spacesi qayerda tugashi implementation va arxitekturaga bog'liq. Kernel spacw - kernel modeda ishlaydigan kodning "xotira ko'rinishi(memory view)".
+
+### User va kernel virtual address space taqsimlanishi
+
+User va kernel spacelari uchun odatiy dastur virtual address spacesi user processes(foydalanuvchi jarayonlari) va kernel o'rtasida taqsimlanadi. Bu holda kernel space address spacening yuqori qismida, user space esa pastki qismida joylashgan. User processlarining kernel spacega kirishiga yo'l qo'ymaslik uchun kernel user modedan kernel spacega kirishni taqiqlovchi xaritalarni yaratadi.
+
+![alt text](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-a5f93e0d17ccdc2ba24828b620d7227f7fc75e33.png)
+
+### Execution contexts

@@ -32,4 +32,4 @@
 
 ## [How Compilers Work](compiler.html)
 
-## [Linux Kernel](linux_kernel.html)
+## [Basic operating systems terms and concepts](linux_kernel.html)
