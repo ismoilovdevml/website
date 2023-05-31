@@ -233,4 +233,30 @@ Oxir oqibat, CPU scalability ko'proq protsessorlar/corelarni qo'shish yoki kuchl
 
 
 
-## Linux Kerneling umumiy ko'rinishi
+## Linux Kernelining umumiy ko'rinishi
+
+Linux kerneli Linux operatsion tizimining asosiy komponenti bo'lib, kompyuter hardware va uning processlari o'rtasidagi asosiy interfeys hisoblanadi. U kompyuterning hardware va dasturiy ta'minoti o'rtasida aloqa o'rnatadi va tizim resurslarini iloji boricha samarali boshqaradi.
+
+Linux kerneli monolitdir, ya'ni uning barcha funksiyalari to'g'ridan-to'g'ri kernel imagega, jumladan, qurilma drayverlari, fayl tizimi bilan ishlash, tarmoq protokollari va boshqalarga kiritilgan.
+
+Dastlab Linus Torvalds tomonidan yozilgan Linux kerneli open source dasturiy ta'minot bo'lib, uning manba kodi jamoatchilikka bepul bo'lishini anglatadi va uni GNU General Public License (GPL) shartlariga muvofiq har kim o'zgartirishi va tarqatishi mumkin. U Ubuntu, Fedora va Debian, shuningdek, Android mobil operatsion tizimi kabi turli xil Linux distributivlari uchun asos bo'lib xizmat qiladi.
+
+Shunday qilib, siz Internetni ko'rib chiqyapsizmi, hujjat yozyapsizmi yoki Linux tizimida o'yin o'ynayapsizmi, barchasi muammosiz ishlashi uchun sahna ortida ishlaydigan Linux kerneli.
+
+### Linux development model
+
+Linux operatsion tizimi ko'pincha "Linux kernel development model" deb ataladigan ishlab chiqish modeliga amal qiladi. Bu open source loyihadir, ya'ni manba(source) kodi ommaga ochiq(public) va har kim unga hissa qo'shishi(contribute qilishi) mumkin. Biroq, bu jarayonni boshqaradigan ba'zi asosiy tamoyillar va rollar mavjud:
+
+Linus Torvalds: Linuxning asl yaratuvchisi Linus Torvalds hali ham Linux kernelini ishlab chiqish bo'yicha eng yuqori vakolatga ega. Qaysi o'zgartirishlar, tuzatishlar va qo'shimchalar uni asosiy kernel deb nomlanuvchi kernelning rasmiy versiyasiga kiritishini oxir-oqibat u hal qiladi.
+
+Maintainerlar: Tarmoq drayverlari yoki fayl tizimlari kabi kernelning muayyan qismlari uchun mas'ul bo'lgan ko'plab subsystem maintainerlari mavjud. Ular kernelning tegishli qismlari uchun o'zgarishlarni ko'rib chiqadilar va qabul qiladilar, so'ngra bu o'zgarishlarni yakuniy tasdiqlash uchun Linus Torvaldsga topshiradilar.
+
+Contributorlar: Har kim kodni yaxshilash yoki xatolarni tuzatish orqali Linux kerneliga contribute qilishi mumkin. Contributionlar odatda tegishli subsystem maintainerlariga elektron pochta orqali patcheslar sifatida yuboriladi.
+
+Release Cycle: Linux kerneli yangi versiyalar odatda har 9-10 haftada chiqariladigan release cyclelini kuzatib boradi. Har bir reliz davri ikki haftalik bmerge windowni o'z ichiga oladi, unda yangi xususiyatlar qo'shiladi, so'ngra barqarorlashtirish davri keladi, bu yerda faqat xatolarni tuzatish qabul qilinadi.
+
+Linux Distributionlari: Rasmiy Linux kerneli turli xil Linux distributivlari uchun asos bo'lib xizmat qiladi (Ubuntu, Fedora va boshqalar). Ushbu distributionlar asosiy kernel ustiga qo'shimcha funksiyalar, oldindan tuzilgan sozlamalar yoki foydalanuvchi uchun qulay vositalarni qo'shishi mumkin.
+
+GPL Litsenziyasi: Linux kerneli GNU General Public License (GPL) ostida chiqarilgan boʻlib, u har kimga dasturiy taʼminotdan foydalanish, oʻzgartirish va tarqatish imkonini beradi, agar ular har qanday oʻzgartirish yoki yaxshilanishlar kiritsa, open source.
+
+Open Source va hamkorlikdagi rivojlanish modeli Linuxni kichik embedded qurilmalardan tortib yirik superkompyuterlargacha bo'lgan hamma narsada qo'llanilishiga olib keldi. Turli xil contributorlar va foydalanuvchilar uni doimiy ravishda rivojlantirish va takomillashtirishga yordam beradi.
