@@ -274,3 +274,25 @@ Subsystem Maintainerlari: Ushbu Maintainerlar Linux kernelining networking stack
 Contributorlar: Bular kernelga patchelarni qo'shadigan butun dunyo bo'ylab dasturchilardir. Ular o'zlarining patchelarini ko'rib chiqish uchun tegishli subsystem maintainerga taqdim etadilar.
 
 Ushbu ierarxiya Linux loyihasining keng ko'lamini boshqarishga yordam beradi, har bir relizda yuz minglab kod satrlari o'zgartiriladi. Shuni ta'kidlash kerakki, bu soddalashtirilgan tushuntirish va haqiqiy tuzilma murakkabroq va harakatchan bo'lishi mumkin, ba'zi shaxslar bir nechta rollarni o'ynaydi.
+
+
+## Linux manba kodining tartibi
+
+![alt text](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-f45246aade5ecc7cfb71f7f103a57f95fc7c2b9e.png)
+
+Linux kernelining manba kodi har bir kernelning turli qismlarini o'z ichiga olgan ma'lum bir directory structureda tashkil etilgan. Bu yerda tartibning yuqori darajadagi umumiy ko'rinishi:
+
+
+`/arch:` Bu yerda siz arxitekturaga xos kodni topasiz. Linux tomonidan qo'llab-quvvatlanadigan kompyuter arxitekturasining har bir turi (masalan, `x86`, `arm`, `mips`) bu yerda alohida subdirectoryga ega.
+
+`/block:` Ushbu directoryda siz hard drivelar, SSDlar kabi storage devicelariga "blocks"lardagi ma'lumotlarni o'qish va yozishni(read/write) boshqaradigan kernelning bir qismi bo'lgan blokli I/O(input/output) qatlami kodini topasiz, va boshqa block devicelar.
+
+`/certs:` Ushbu directory module signatureni tekshirish uchun sertifikatlarni saqlash uchun ishlatiladi. Xavfsiz yuklash(secure boot) stsenariysida ushbu directorydagi sertifikatlar kernel modullarining digital signaturelarini(raqamli imzolarini) kernela yuklanishidan oldin tekshirish uchun ishlatiladi. Bu faqat ishonchli, o'zgartirilmagan modullarning yuklanishini(load) ta'minlashga yordam beradi va tizim xavfsizligini oshiradi.
+
+`/crypto:` Ushbu directoryda siz Linux kernelining kriptografik API-ni topasiz. Ushbu API turli xil kriptografik algoritmlarni amalga oshirishni o'z ichiga oladi, ular butun kernelda xavfsizlik xususiyatlarini ta'minlash uchun ishlatiladi.
+
+`/Documentation:` Ushbu directoryda siz kernelning turli qismlarini, ular qanday ishlashini va ulardan qanday foydalanishni tavsiflovchi turli xil hujjat fayllarini topasiz. Bu kernel ustida ishlaydigan developerlar yoki kernel qanday ishlashini tushunishni istaganlar uchun qimmatli manbadir.
+
+`/drivers:` Ushbu directory barcha turli hardware device driverlari uchun kodni o'z ichiga oladi. Qurilma drayveri - kernelning ma'lum bir hardware qismi bilan o'zaro ta'sirini ta'minlaydigan dasturiy ta'minot. Masalan, hard devicelar, USB devicelari, network cardlari va boshqalar uchun drayverlar mavjud. Har bir toifadagi drayverlar `/drivers` directorysida o'z subdirectorysiga ega.
+
+`/firmware:` Ushbu directoryda siz ba'zi drayverlar to'g'ri ishlashi uchun kerak bo'lgan firmware fayllarini topasiz. Firmware low-leveldagi dasturiy ta'minot bo'lib, uning funksiyalarini boshqarish uchun qurilmaga o'rnatiladi. Ba'zi hardware devicelari o'zlarining drayverlari tomonidan ma'lum firmware filelarini yuklashni talab qiladi va bu directory ushbu firmware fayllari saqlanadigan joydir.
