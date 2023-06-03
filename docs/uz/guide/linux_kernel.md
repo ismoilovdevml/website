@@ -296,3 +296,19 @@ Linux kernelining manba kodi har bir kernelning turli qismlarini o'z ichiga olga
 `/drivers:` Ushbu directory barcha turli hardware device driverlari uchun kodni o'z ichiga oladi. Qurilma drayveri - kernelning ma'lum bir hardware qismi bilan o'zaro ta'sirini ta'minlaydigan dasturiy ta'minot. Masalan, hard devicelar, USB devicelari, network cardlari va boshqalar uchun drayverlar mavjud. Har bir toifadagi drayverlar `/drivers` directorysida o'z subdirectorysiga ega.
 
 `/firmware:` Ushbu directoryda siz ba'zi drayverlar to'g'ri ishlashi uchun kerak bo'lgan firmware fayllarini topasiz. Firmware low-leveldagi dasturiy ta'minot bo'lib, uning funksiyalarini boshqarish uchun qurilmaga o'rnatiladi. Ba'zi hardware devicelari o'zlarining drayverlari tomonidan ma'lum firmware filelarini yuklashni talab qiladi va bu directory ushbu firmware fayllari saqlanadigan joydir.
+
+`/fs:` Ushbu directory fayl tizimi(file system) ilovalarini o'z ichiga oladi. Fayl tizimlari - bu storage devicelarida(saqlash qurilmalari) ma'lumotlarni saqlash va tartibga solish usullari. `/fs` directoryda siz Linux tomonidan qo'llab-quvvatlanadigan `ext4`, `XFS`, `Btrfs` va boshqa ko'plab fayl tizimlarining kodini topasiz.
+
+`/include:` directoryda siz butun kernelda ishlatiladigan header filelarini topasiz. Header filelari odatda funksiyalar va o'zgaruvchilarning definitionlarini, shuningdek, kernelning bir nechta qismlarida ishlatiladigan ma'lumotlar turlari va tuzilmalarini o'z ichiga oladi. Ushbu umumiy elementlarni header filelarida `/include` directoryda saqlash orqali ularni kerak bo'lganda osongina kiritish mumkin, bu kodni qayta ishlatish va tartibga solishga yordam beradi.
+
+`/init:` directory kernelni yuklash uchun javobgar bo'lgan kodni o'z ichiga oladi. Kernelni ishga tushirish jarayoni shu yerda boshlanadi, jumladan xotira boshqaruvini sozlash, dastlabki jarayonni yaratish va boshqalar.
+
+`/ipc:` directoryda siz inter-process communication(jarayonlararo aloqa)(IPC) mexanizmlarini amalga oshirishni topasiz. IPC mexanizmlari turli jarayonlarni bir-biri bilan aloqa qilish va sinxronlashtirish imkonini beruvchi usullardir. Message queuelari, emaphorelar va shared memory.
+
+`/kernel` directory Linux kernelining asosiy qismlarini o'z ichiga oladi. U process management(jarayonlarni boshqarish) (scheduling, creating va destroying process), interrupt handling va system calllarini amalga oshirish kabi muhim kichik tizimlarni o'z ichiga oladi. Aslini olganda, u kernelning "yuragi" ni ushlab turadi.
+
+`/lib` directoryda siz kernel tomonidan ishlatiladigan turli xil library routinelarini topasiz. Bular kernelning bir nechta joylarida ishlatiladigan umumiy funksiyalardir. Bularni libraryga qo‘yish orqali ularni kerakli joyda qayta ishlatish mumkin, bu esa DRY (Don't Repeat Yourself) kod bazasini saqlaydi.
+
+`/mm` directory Linux kernelining memory management subsystemni o'z ichiga oladi. U xotirani qanday ajratish, ajratish va tartibga solish, jumladan, paging va swappingni boshqaradi. Bu tizimning muhim qismi boʻlib, har bir process oʻziga kerakli xotirani olishini va jismoniy xotiradan samarali foydalanishni taʼminlaydi.
+
+`/net` directoryda turli tarmoq protokollarini (TCP/IP, UDP va boshqalar) amalga oshiradigan va tarmoq aloqasini boshqaradigan networking subsystemi joylashgan. Tarmoqlarning keng qo'llanilishi bilan bu har qanday zamonaviy operatsion tizimning muhim qismidir.
