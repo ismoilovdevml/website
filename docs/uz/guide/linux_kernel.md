@@ -312,3 +312,17 @@ Linux kernelining manba kodi har bir kernelning turli qismlarini o'z ichiga olga
 `/mm` directory Linux kernelining memory management subsystemni o'z ichiga oladi. U xotirani qanday ajratish, ajratish va tartibga solish, jumladan, paging va swappingni boshqaradi. Bu tizimning muhim qismi boʻlib, har bir process oʻziga kerakli xotirani olishini va jismoniy xotiradan samarali foydalanishni taʼminlaydi.
 
 `/net` directoryda turli tarmoq protokollarini (TCP/IP, UDP va boshqalar) amalga oshiradigan va tarmoq aloqasini boshqaradigan networking subsystemi joylashgan. Tarmoqlarning keng qo'llanilishi bilan bu har qanday zamonaviy operatsion tizimning muhim qismidir.
+
+`/samples` directory Linux kernelining turli funksiyalari va API-laridan qanday foydalanishni ko'rsatadigan namuna kodini o'z ichiga oladi. Bu kernel uchun kod yozishni o'rganayotgan developerlar uchun foydali bo'lishi mumkin.
+
+`/scripts` directory siz kernelni yaratish va sozlash bilan bog'liq turli maqsadlarda ishlatiladigan skriptlarni topasiz. Bunga konfiguratsiya fayllarini yaratish, kernelni kompilyatsiya qilish va boshqalar uchun skriptlar kiradi.
+
+`/security` directoryda Linux Security Modules (LSM)(Linux Xavfsizlik Modullari) frameworki hamda unga ulanishi mumkin bo'lgan turli xil xavfsizlik modullari, masalan, SELinux, AppArmor va hokazolar bor. Kernelning xavfsizlik bilan bog'liq kodining katta qismi shu yerda joylashgan. Standart (Unix) xavfsizlik modelini kengaytirish, shuningdek, SELinux, smack, apparmor, tomoyo va boshqalar kabi bir nechta kengaytmalarni amalga oshirish imkonini beruvchi Linux Xavfsizlik Moduli fremworki directorysi.
+
+`/sound` directoryda siz sound subsystemni, jumladan, ovoz drayverlari va turli xil audio qurilmalar bilan o'zaro ishlash uchun kodni topasiz. ALSA (Advanced Linux Sound System), Linux sound framework (OSS)
+
+`/tools` directory kernel bilan ishlash uchun turli xil tollarni o'z ichiga oladi. Ushbu tollarning ba'zilari kernelni ishlab chiqishda qo'llaniladi, boshqalari esa kernel bilan ishlaydigan tizimlarni boshqaruvchi administratorlar uchun foydalidir.
+
+`/usr` directory tashqi modullarni yaratish uchun  headerlar va Makefilelar mavjud. To'g'ridan-to'g'ri kernelning bir qismi bo'lmasa-da, bu fayllar kernel bilan o'zaro aloqada bo'lgan modullarni yozayotgan yoki yaratayotgan ishlab chiquvchilar uchun muhim bo'lishi mumkin.
+
+`/virt` directory virtualizatsiya bilan bog'liq kodni o'z ichiga oladi. Xususan, u Linux kerneliga integratsiyalangan virtualizatsiya yechimi bo'lgan Kernel-based Virtual Machine (KVM)(Kernelga asoslangan virtual mashina) amalga oshirishni o'z ichiga oladi.
