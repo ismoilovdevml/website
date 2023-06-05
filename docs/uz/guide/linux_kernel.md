@@ -326,3 +326,51 @@ Linux kernelining manba kodi har bir kernelning turli qismlarini o'z ichiga olga
 `/usr` directory tashqi modullarni yaratish uchun  headerlar va Makefilelar mavjud. To'g'ridan-to'g'ri kernelning bir qismi bo'lmasa-da, bu fayllar kernel bilan o'zaro aloqada bo'lgan modullarni yozayotgan yoki yaratayotgan ishlab chiquvchilar uchun muhim bo'lishi mumkin.
 
 `/virt` directory virtualizatsiya bilan bog'liq kodni o'z ichiga oladi. Xususan, u Linux kerneliga integratsiyalangan virtualizatsiya yechimi bo'lgan Kernel-based Virtual Machine (KVM)(Kernelga asoslangan virtual mashina) amalga oshirishni o'z ichiga oladi.
+
+> Linux kerneli arxitekturasi
+
+![alt text](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-b9ffae65be16d30be11b5eca188a7a143b1b8227.png)
+
+
+### arch
+
+Linux kerneli manba kodida `arch` directorysi arxitekturaga xos kodni bildiradi. U Linux kerneli tomonidan qo'llab-quvvatlanadigan turli protsessor arxitekturalari va platformalariga mos keladigan subdirectorilarni o'z ichiga oladi. `arch` ichidagi har bir subdirectory `x86`, `ARM`, `MIPS`, `PowerPC` va boshqalar kabi o'ziga xos arxitekturani ifodalaydi. `arch` directorysining maqsadi low-leveldagi funksionallikning arxitekturaga xos ilovalarini, jumladan, hardwarega xos kodni, qurilma drayverlari va kernelning low-level darajadagi ishga tushirish tartiblari.
+
+Keling, `arch` directorysi tuzilishining texnik tafsilotlarini ko'rib chiqaylik:
+
+> archga xos(arch-specific) directorylar
+
+`arch/x86:` Bu directory x86 arxitekturasiga xos kodni o'z ichiga oladi, u 32-bitli va 64-bitli tizimlarni qamrab oladi. U 32 bitli tizimlar uchun `x86_32` va 64 bitli tizimlar uchun `x86_64` kabi turli xil x86 platformalari uchun subdirectorilarni o'z ichiga oladi.
+
+`arch/arm:` directoryda embedded systemlar va mobil qurilmalarda keng qo'llaniladigan ARM arxitekturasi uchun kod mavjud. U turli xil ARM platformalari uchun `arm`, `arm64`, `arm32` va boshqalar kabi kichik subdirectorilarni o'z ichiga oladi.
+
+`arch/mips:` directory odatda tarmoq uskunalari va embedded systemlarda mavjud bo'lgan MIPS arxitekturasi uchun kodni o'z ichiga oladi.
+
+`arch/powerpc:` directory turli tizimlarda, jumladan serverlar, o'yin konsollari va embedded devicelarda qo'llaniladigan PowerPC arxitekturasi uchun kodni o'z ichiga oladi.
+
+>Machine-specific Directorylar
+
+ Har bir arxitektura uchun maxsus directory ichida siz ma'lum machine yoki platforma turlari uchun qo'shimcha subdirectorilarni topasiz. Ushbu subdirectorylarda ma'lum hardware platformalari yoki oilalariga xos kod mavjud. 
+
+Masalan:
+
+`arch/x86/platforms` Bu directory da `pc`, `acer`, `dell`, kabi turli xil x86 platformalariga xos kodlar mavjud.
+
+`arch/arm/mach` directoryda `omap`, `exynos`, `imx` va boshqalar kabi turli xil ARM-ga asoslangan mashina turlariga xos kod mavjud.
+
+>Asosiy arxitektura fayllari
+
+Machine uchun maxsus directorylardan tashqari, `arch` directorisi turli platformalarda low-leveldagi funksionallikni ta'minlaydigan asosiy arxitektura fayllarini ham o'z ichiga oladi. Bu fayllarga quyidagilar kiradi:
+
+`arch/<arch>/kernel` directory tizimni ishga tushirish(system initialization), interrupt handling, context switching, memory management va timekeeping kabi arxitekturaga xos kernel core kodini o'z ichiga oladi.
+
+`arch/<arch>/include/asm` directory hardware registerlarini, low-leveldagi ma'lumotlar turlarini va kernel tomonidan ishlatiladigan protsessorga xos makrolarni belgilaydigan arxitekturaga xos header fayllarini o'z ichiga oladi.
+
+> Qurilma drayverlari va tashqi qurilmalar
+
+`arch` directorysi shuningdek, arxitekturaga xos bo'lgan turli xil qurilma drayverlari va tashqi qurilmalar uchun directorylarni o'z ichiga oladi. Ushbu directorylarda storage controllerlari, tarmoq interfeyslari, grafik adapterlar va boshqalar kabi muayyan hardware componentlari uchun drayverlar mavjud.
+
+`arch` directorysining tuzilishi Linux kerneli turli protsessor arxitekturalarida yuqori darajada portativ bo'lishiga imkon beradi va shu bilan birga samarali va arxitekturaga xos ilovalarni ta'minlaydi. Arxitekturaga xos kodni alohida directorylarda tashkil qilish orqali har bir arxitektura uchun kernelni mustaqil ravishda saqlash, ishlab chiqish va debug qilish osonlashadi.
+
+## Device drivers (Qurilma drayverlari)
+
