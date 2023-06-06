@@ -372,5 +372,36 @@ Machine uchun maxsus directorylardan tashqari, `arch` directorisi turli platform
 
 `arch` directorysining tuzilishi Linux kerneli turli protsessor arxitekturalarida yuqori darajada portativ bo'lishiga imkon beradi va shu bilan birga samarali va arxitekturaga xos ilovalarni ta'minlaydi. Arxitekturaga xos kodni alohida directorylarda tashkil qilish orqali har bir arxitektura uchun kernelni mustaqil ravishda saqlash, ishlab chiqish va debug qilish osonlashadi.
 
-## Device drivers (Qurilma drayverlari)
+### Device drivers (Qurilma drayverlari)
+
+Linux kernelidagi qurilma drayverlari operatsion tizim va hardware qurilmalari o'rtasidagi aloqani ta'minlovchi dasturiy komponentlardir. Ular application uchun tarmoq kartalari(network card), storage controller(saqlash kontroller)lari va displey adapterlari kabi qurilmalar bilan o'zaro ishlash uchun standartlashtirilgan interfeysni ta'minlaydi. Qurilma drayverlari Linux kerneli manba kodining `drivers` directorysida tashkil etilgan.
+
+Linux kerneli unified device modelidan foydalanadi, uning maqsadi tizimning holati va tuzilishini aks ettiruvchi ichki ma'lumotlar tuzilmalarini saqlashdir. Bunday ma'lumotlarga qaysi qurilmalar borligi, ularning holati, ular qaysi bus ga ulanganligi, qaysi driverga biriktirilganligi va hokazo kiradi. Bu ma'lumotlar tizimni keng miqyosda power managementni amalga oshirish, shuningdek, qurilmani aniqlash va dinamik qurilmani olib tashlash uchun zarurdir.
+
+Har bir subsystem o'ziga xos drayver interfeysiga ega bo'lib, u to'g'ri drayverlarni yozishni osonlashtirish va kodlarning takrorlanishini kamaytirish uchun o'zi taqdim etgan qurilmalarga moslashtirilgan.
+
+Linux qurilma drayverlarining eng xilma-xil to'plamidan birini qo'llab-quvvatlaydi, ba'zi misollar: TTY, serial, SCSI, fileystem, ethernet, USB, framebuffer, input, sound va boshqalar.
+
+### Process management
+
+Process management - bu operatsion tizim ichidagi processlarni(jarayon) muvofiqlashtirish va boshqarish. Bu processlarni yaratish(creating), bajarish(executing) va tugatish(terminating), shuningdek, ularning resurslarini boshqarish va rejalashtirishni(scheduling) o'z ichiga oladi. Process management bir vaqtning o'zida bir nechta vazifalar yoki dasturlarni bajarishga imkon beradi, resurslardan samarali foydalanishni ta'minlaydi va operatsion tizimda barqarorlik va xavfsizlikni ta'minlaydi. U processlarning bajarilishini tashkil etish va nazorat qilish, multitaskinglarni bajarish va tizim resurslaridan samarali foydalanish uchun javobgardir.
+
+Process management loyihani bajarish uchun birgalikda ishlaydigan bir guruh odamlarni boshqarishning oddiy hayotiy misoli bilan tushuntirish mumkin.
+
+Tasavvur qiling-a, bir guruh shaxslar loyiha ustida hamkorlik qilmoqda, masalan, mablag' yig'ish tadbirini tashkil qilish. Har bir jamoa a'zosi loyiha doirasidagi jarayonni ifodalaydi. Loyiha menejeri operatsion tizimning process manageri rolini o'z zimmasiga oladi.
+
+Loyiha menejeri har bir guruh a'zosiga o'z mahorati va tajribasidan kelib chiqqan holda aniq vazifalarni belgilash orqali loyihani boshlaydi. Ushbu vazifani belgilash operatsion tizimda processni yaratishga o'xshaydi.
+
+Loyiha davomida loyiha menejeri har bir topshiriqning(task) bajarilishini nazorat qilib, belgilangan muddatlarga rioya etilishini va loyihaning yo‘lda davom etishini ta’minlaydi. Ular vazifalarni qayta belgilashlari yoki kerak bo'lganda ustuvorliklarni sozlashlari mumkin, xuddi operatsion tizimdagi process scheduling kabi.
+
+Loyiha menejeri, shuningdek, byudjet, vaqt va jihozlar kabi resurslarni boshqaradi va ularni jamoa ishini qo'llab-quvvatlash uchun to'g'ri taqsimlaydi. Ushbu resurslarni taqsimlash operatsion tizim proceslar o'rtasida tizim resurslarini qanday boshqarishi bilan taqqoslanadi.
+
+Har qanday muammo yoki nizolar bo'lsa, loyiha menejeri ularni hal qilish uchun harakat qiladi va loyiha muammosiz davom etishini ta'minlaydi. Bu rol operatsion tizimning process manageri tomonidan bajariladigan xatolarni qayta ishlash va nizolarni hal qilishga o'xshaydi.
+
+Oxir-oqibat, loyiha tugallangach, loyiha menejeri vazifalarni tugatadi va loyihani yakunlaydi. Ushbu tugatish jarayoni, ularning bajarilishi tugagandan so'ng, operatsion tizim processlarni qanday tugatishiga mos keladi.
+
+Ushbu real misolda loyiha menejerining mas'uliyati operatsion tizimda processlarni boshqarishning asosiy jihatlarini, jumladan, processni yaratish, rejalashtirish(scheduling), resurslarni taqsimlash(resource allocation), xatolarni qayta ishlash(handling) va tugatishni( termination) aks ettiradi.
+
+
+### Memory management
 
