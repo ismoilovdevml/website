@@ -402,6 +402,36 @@ Oxir-oqibat, loyiha tugallangach, loyiha menejeri vazifalarni tugatadi va loyiha
 
 Ushbu real misolda loyiha menejerining mas'uliyati operatsion tizimda processlarni boshqarishning asosiy jihatlarini, jumladan, processni yaratish, rejalashtirish(scheduling), resurslarni taqsimlash(resource allocation), xatolarni qayta ishlash(handling) va tugatishni( termination) aks ettiradi.
 
+Linux fork(), exec(), wait() kabi standart Unix processlarni boshqarish API-larini, shuningdek, standart POSIX threadlarini implement qiladi.
+
+Biroq, Linux processnlari va threadlari boshqa kernellardan farqli ravishda implement qilinadi. Processlar yoki threadlarni implement qiladigan  internal structurelar mavjud emas, buning o'rniga task deb nomlangan abstract scheduling unit tavsiflovchi struct task_struct mavjud.
+
+Taskda address space, file descriptorlari, IPC idlari va boshqalar kabi manbalar pointerlari mavjud. Xuddi shu processning bir qismi bo'lgan tasklar uchun resurs ko'rsatkichlari bir xil resurslarga ishora qiladi, turli processlarning tasklari resurslari esa turli resurslarga ishora qiladi.
+
+Bu o'ziga xoslik, clone() va unshare() system calllari bilan birgalikda namespacelari kabi yangi xususiyatlarni(feature) implement qilish imkonini beradi.
+
+Linuxda operatsion tizim virtualizatsiyasini implement qilish uchun namespacelari boshqaruv guruhlari(control group)(cgroup) bilan birgalikda ishlatiladi.
+
+cgroup - bu processlarni ierarxik tarzda tashkil qilish va tizim resurslarini ierarxiya bo'ylab boshqariladigan va sozlanishi mumkin bo'lgan tarzda taqsimlash mexanizmi.
 
 ### Memory management
 
+Memory management deganda operatsion tizimda kompyuter xotirasi resurslarini tashkil qilish va boshqarish jarayoni tushuniladi. Bu xotirani dasturlarga ajratish, xotiraning qaysi qismlari ishlatilayotganligini kuzatish va kerak bo‘lmaganda xotirani ajratishni(allocating memory) o‘z ichiga oladi. Memory management dasturlarning muammosiz bajarilishini ta'minlash va ishdan chiqish yoki tizim sekinlashishi kabi xotira bilan bog'liq muammolarni oldini olish uchun mavjud xotiradan samarali va xavfsiz foydalanishni ta'minlaydi.
+
+Tasavvur qiling, sizda kitoblarni saqlash uchun cheklangan joy bo'lgan kitob javoningiz bor. Har bir kitob kompyuter tizimidagi dastur yoki  processni, kitob javoni esa xotirani(memory) ifodalaydi. Memory management tizimi kutubxonachi vazifasini bajaradi, kitob javonini boshqarish uchun javobgardir.
+
+> Memory Allocation (Xotirani taqsimlash)
+
+Agar javonga yangi kitob qo'shmoqchi bo'lsangiz, kutubxonachi bo'sh joy topadi va uni kitob uchun ajratadi. Xuddi shunday, memory managementda, dastur ishlashi uchun xotira kerak bo'lganda, operatsion tizim uning instructionlari va datalarini saqlash uchun ushbu dasturga xotira blokini ajratadi.
+
+> Memory Deallocation (Xotirani ajratish)
+Agar siz kitob javonidan kitobni olib tashlasangiz, kutubxonachi bu joyni boshqa kitoblar foydalanishi mumkin deb belgilaydi. Memory managementda, dastur tugallanganda yoki tugatilganda, operatsion tizim ushbu dasturga ajratilgan xotirani bo'shatadi va uni boshqa dasturlarning foydalanishi uchun imkon yaratadi.
+
+> Memory Tracking (Xotirani kuzatish)
+Kutubxonachi kitob javonida qaysi joy ajratilgani va qaysi biri bo'sh ekanligini qayd qiladi. Xuddi shunday, operatsion tizimdagi memory management tizimi xotiraning qaysi qismlari ishlatilayotganligi va qaysi biri mavjud ekanligini kuzatib boradi.
+
+> Memory Fragmentation
+
+Vaqt o'tishi bilan kitob javonida kitoblar orasidagi bo'shliqlar bo'lishi mumkin, bu esa katta kitob uchun katta doimiy joy topishni qiyinlashtiradi. Bu fragmentation deb ataladi. Memory managementda fragmentation xotira ajratilganda va ajratilganda sodir bo'ladi, natijada xotirada kichik foydalanilmagan bo'shliqlar paydo bo'ladi. Bu internal fragmentation (ajratilgan xotira bloklari ichida foydalanilmagan bo'sh joy) yoki external fragmentation (ajratilgan xotira bloklari orasidagi foydalanilmagan bo'sh joy) bo'lishi mumkin. Memory management usullari fragmentationni minimallashtirish va xotiradan maksimal darajada foydalanishga qaratilgan.
+
+Memory management kompyuter xotirasidan samarali foydalanishni ta'minlaydi, xotiraga ruxsatsiz kirishni oldini oladi va turli dasturlar va processlar o'rtasida xotira resurslarini taqsimlashni optimallashtiradi.
