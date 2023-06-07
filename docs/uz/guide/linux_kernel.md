@@ -478,3 +478,46 @@ Block I/O managementi ma'lumotlarni samarali saqlash va qidirishda muhim rol o'y
 Linux Block I/O subsystemi qurilmalardan ma'lumotlarni o'qish va yozish bilan shug'ullanadi: blockli I/O requestlarini yaratish, blockli I/O requestlarini o'zgartirish (masalan, dasturiy ta'minot RAID yoki LVM uchun), so'rovlarni birlashtirish(merge request) va tartiblash(sorting) va ularni scheduling qilish qurilma drayverlarini blokirovka qilish uchun turli xil I/O schedulerlari.
 
 ![alt text](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-0a96997f269a7a9cd0cdc9c9125f6e62e549be94.png)
+
+### Virtual Filesystem Switch
+
+Virtual Filesystem Switch (VFS) Linux kernelidagi software layer bo'lib, u turli fayl tizimlari bilan o'zaro ishlash uchun yagona interfeysni ta'minlaydi. U abstraction layer vazifasini bajarib, applicationlar va kernelga turli fayl tizimlari bilan izchil ishlash imkonini beradi.
+
+Oddiy qilib aytganda, VFS ni turli tillar orasidagi tarjimon yoki vositachi bilan solishtirish mumkin:
+
+> Common Interface (Umumiy interfeys)
+
+VFS fayl tizimlari qo'llab-quvvatlashi kerak bo'lgan standart operatsiyalar va ma'lumotlar tuzilmalari to'plamini belgilaydi. Ushbu umumiy interfeys applicationlar va kernelga fayllarni o'qish(read), yozish(write), ochish(open), yopish(close) va qidirish kabi operatsiyalarni har bir asosiy fayl tizimining o'ziga xos xususiyatlarini bilmasdan bajarishga imkon beradi.
+
+> Transparent Translation (Shaffof tarjima)
+Malakali tarjimon og'zaki so'zlarni bir tildan boshqa tilga o'zgartirgani kabi, VFS hamapplicationlar tomonidan so'raladigan umumiy fayl tizimi operatsiyalarini asosiy fayl tizimlari uchun specific calllarga tarjima qiladi. Amaldagi fayl tizimidan qat'i nazar, tegishli fayl tizimiga xos funksiyalarni ishga tushirishni ta'minlaydi.
+
+> File System Integration (Fayl tizimi integratsiyasi)
+VFS ext4, NTFS yoki NFS kabi turli fayl tizimlarini Linux yadrosiga muammosiz integratsiya qilish imkonini beradi. Har bir fayl tizimi VFS operatsiyalari uchun o'zining amalga oshirilishini ta'minlaydi, bu yadroga bir xil yuqori darajadagi buyruqlar to'plamidan foydalangan holda turli fayl tizimlari bilan ishlash imkonini beradi.
+
+> Filesystem-Specific Mounting
+
+Fayl tizimiga kirish kerak bo'lganda, VFS uni tizimga o'rnatish(mounting) jarayonini boshqaradi. O'rnatish(mountlash) yangi tashqi xotira qurilmasini kompyuterga ulash va undan foydalanish imkoniyatini yaratishga o'xshaydi. VFS fayl tizimi turini tanib olish, kerakli resurslarni taqsimlash va uni fayl tizimi ierarxiyasiga integratsiyalash bilan shug'ullanadi.
+
+> Virtual Filesystem Tree (Virtual fayl tizimi daraxti)
+VFS asosiy fayl tizimlaridan qat'i nazar, fayl tizimi ierarxiyasining yagona ko'rinishini taqdim etadi. U barcha o'rnatilgan fayl tizimlarini yagona directory tuzilishiga birlashtirgan virtual filesystem treeni yaratadi. Bu applicationlarga, ular yashaydigan haqiqiy fayl tizimidan qat'i nazar, izchil yo'llar yordamida fayllarni kezish va ularga kirish imkonini beradi.
+
+Virtual Filesystem Switch Linux kernelida bir xil interfeys va turli fayl tizimlarining uzluksiz integratsiyasini ta'minlashda hal qiluvchi rol o'ynaydi. Bu qo'llaniladigan fayl tizimining ma'lum bir dasturidan qat'i nazar, applicationlarning standartlashtirilgan buyruqlar to'plamidan foydalangan holda fayllar va directorilar bilan o'zaro ishlashini ta'minlaydi.
+
+
+Linux Virtual Filesystem Switch fayl tizimi drayverlarini takrorlashni kamaytirish uchun umumiy / generic fayl tizimi kodini implement qiladi. U ma'lum fayl tizimi abstraktsiyalarini taqdim etadi, masalan:
+
++ `inode` - diskdagi faylni tavsiflaydi (atributlar, diskdagi ma'lumotlar bloklarining joylashuvi)
+* `dentry` - inodeni nomga bog'laydi
+* `file` - ochilgan faylning xususiyatlarini tavsiflaydi (masalan, fayl ko'rsatkichi)
+* `superblock` - formatlangan fayl tizimining xususiyatlarini tavsiflaydi (masalan, bloklar soni, blok hajmi, diskdagi root directorining joylashuvi, shifrlash va boshqalar).
+
+![alt text](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-afa57a07e21b1b842554278abe30fea575278452.png)
+
+Linux VFS shuningdek, quyidagilarni o'z ichiga olgan murakkab keshlash mexanizmini amalga oshiradi:
+
+* `inode cache` - fayl atributlari va ichki fayl metama'lumotlarini keshlaydi
+* `dentry cache ` - fayl tizimining directory ierarxiyasini keshlaydi
+* `page cache` - xotiradagi fayl ma'lumotlar bloklarini keshlaydi
+
+### Networking stack
