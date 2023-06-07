@@ -435,3 +435,46 @@ Kutubxonachi kitob javonida qaysi joy ajratilgani va qaysi biri bo'sh ekanligini
 Vaqt o'tishi bilan kitob javonida kitoblar orasidagi bo'shliqlar bo'lishi mumkin, bu esa katta kitob uchun katta doimiy joy topishni qiyinlashtiradi. Bu fragmentation deb ataladi. Memory managementda fragmentation xotira ajratilganda va ajratilganda sodir bo'ladi, natijada xotirada kichik foydalanilmagan bo'shliqlar paydo bo'ladi. Bu internal fragmentation (ajratilgan xotira bloklari ichida foydalanilmagan bo'sh joy) yoki external fragmentation (ajratilgan xotira bloklari orasidagi foydalanilmagan bo'sh joy) bo'lishi mumkin. Memory management usullari fragmentationni minimallashtirish va xotiradan maksimal darajada foydalanishga qaratilgan.
 
 Memory management kompyuter xotirasidan samarali foydalanishni ta'minlaydi, xotiraga ruxsatsiz kirishni oldini oladi va turli dasturlar va processlar o'rtasida xotira resurslarini taqsimlashni optimallashtiradi.
+
+Linux memory management murakkab subsystem bo'lib, u quyidagilar bilan shug'ullanadi:
+
+* Physical(jismoniy) xotirani boshqarish: memory allocating va freeing(bo'shatish)
+* Virtual xotirani boshqarish: paging, swapping, demand paging, yozishda nusxalash
+* Foydalanuvchi xizmatlari(User services): user address spaceni boshqarish (masalan, mmap(), brk(), shared memory)
+* Kernel servicelari: SL*B allocatorlari, vmalloc
+
+### Block I/O management
+
+Block I/O management operatsion tizimdagi blok qurilmalari(block device) ishtirokidagi input/output(O/I kiritish/chiqarish) operatsiyalarini management va controlni anglatadi. Hard drivelar yoki solid-state drivelar(SSD) kabi block devicelari ma'lumotlarni fixed-size blocklar yoki sektorlarda uzatishni amalga oshiradi(data transfer).
+
+Oddiy qilib aytganda, blokni I/O managementni boshqarish ombordagi jismoniy tovarlar harakatini boshqarishga o'xshaydi.
+
+> Data Transfer (Ma'lumot uzatish)
+
+Tovarlar omborning turli joylari o'rtasida uzatilganidek,  block I/O managementi ham data blocklarini storage devicelari (block devicelari) va kompyuter xotirasi o'rtasida uzatishni o'z ichiga oladi.
+
+> Request Handling (So'rovni ko'rib chiqish)
+
+Block I/O managementi dasturiy ta'minot yoki applicationlardan o'qish(read) yoki blok qurilmadagi ma'lum bloklarga yozish(write) uchun so'rovlarni qayta ishlaydi. Ushbu so'rovlar ombordagi ma'lum narsalar uchun berilgan buyurtmalarga o'xshaydi.
+
+> Scheduling and Ordering
+
+Block I/O management boshqaruvi ishlashni optimallashtirish va kechikishni(latency) minimallashtirish uchun so'rovlarni tartibga soladi. Qidiruv vaqtini qisqartirish, ma'lumotlar joylashuvini maksimal darajada oshirish yoki umumiy o'tkazish qobiliyatini yaxshilash uchun so'rovlar tartibini o'zgartirishi mumkin.
+
+> Buffering and Caching
+
+Ishlashni yaxshilash block I/O managementi buferlash(buffering) va keshlash(caching) usullaridan foydalanadi. Tez-tez foydalaniladigan ma'lumotlar bloklari kirish vaqtini kamaytirish uchun vaqtinchalik xotira buferlarida yoki keshlarida saqlanadi.
+
+> Error Handling 
+Block I/O management diskdagi xatolar yoki ma'lumotlarning buzilishi kabi ma'lumotlarni uzatish paytida xatolarni aniqlaydi va hal qiladi. U muvaffaqiyatsiz operatsiyalarni qayta urinib ko'rishi, ortiqcha nusxalardan ma'lumotlarni tiklashi yoki xatolar haqida higher-leveldagi dasturiy ta'minotga xabar berishi mumkin.
+
+> Synchronization (Sinxronizatsiya)
+
+Block I/O management bir vaqtda o'qish(read) va yozish(write) operatsiyalarini muvofiqlashtirish orqali ma'lumotlarning izchilligini ta'minlaydi. U bir vaqtning o'zida bir nechta jarayonlar bir blokga kirishda ma'lumotlarning buzilishi yoki conflictlarni oldini olish uchun sinxronizatsiya mexanizmlarini qo'llaydi.
+
+Block I/O managementi ma'lumotlarni samarali saqlash va qidirishda muhim rol o'ynaydi, bu ilovalar va operatsion tizimning block devicelar bilan samarali o'zaro ta'siriga imkon beradi. U ma'lumotlar uzatishni(data transfer) optimallashtiradi, xatolik holatlarini hal qiladi va block devicelar bilan ishlashda ma'lumotlar yaxlitligini ta'minlaydi.
+
+
+Linux Block I/O subsystemi qurilmalardan ma'lumotlarni o'qish va yozish bilan shug'ullanadi: blockli I/O requestlarini yaratish, blockli I/O requestlarini o'zgartirish (masalan, dasturiy ta'minot RAID yoki LVM uchun), so'rovlarni birlashtirish(merge request) va tartiblash(sorting) va ularni scheduling qilish qurilma drayverlarini blokirovka qilish uchun turli xil I/O schedulerlari.
+
+![alt text](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-0a96997f269a7a9cd0cdc9c9125f6e62e549be94.png)
