@@ -327,7 +327,7 @@ Linux kernelining manba kodi har bir kernelning turli qismlarini o'z ichiga olga
 
 `/virt` directory virtualizatsiya bilan bog'liq kodni o'z ichiga oladi. Xususan, u Linux kerneliga integratsiyalangan virtualizatsiya yechimi bo'lgan Kernel-based Virtual Machine (KVM)(Kernelga asoslangan virtual mashina) amalga oshirishni o'z ichiga oladi.
 
-> Linux kerneli arxitekturasi
+#### Linux kerneli arxitekturasi
 
 ![alt text](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-b9ffae65be16d30be11b5eca188a7a143b1b8227.png)
 
@@ -338,7 +338,7 @@ Linux kerneli manba kodida `arch` directorysi arxitekturaga xos kodni bildiradi.
 
 Keling, `arch` directorysi tuzilishining texnik tafsilotlarini ko'rib chiqaylik:
 
-> archga xos(arch-specific) directorylar
+#### archga xos(arch-specific) directorylar
 
 `arch/x86:` Bu directory x86 arxitekturasiga xos kodni o'z ichiga oladi, u 32-bitli va 64-bitli tizimlarni qamrab oladi. U 32 bitli tizimlar uchun `x86_32` va 64 bitli tizimlar uchun `x86_64` kabi turli xil x86 platformalari uchun subdirectorilarni o'z ichiga oladi.
 
@@ -348,7 +348,7 @@ Keling, `arch` directorysi tuzilishining texnik tafsilotlarini ko'rib chiqaylik:
 
 `arch/powerpc:` directory turli tizimlarda, jumladan serverlar, o'yin konsollari va embedded devicelarda qo'llaniladigan PowerPC arxitekturasi uchun kodni o'z ichiga oladi.
 
->Machine-specific Directorylar
+#### Machine-specific Directorylar
 
  Har bir arxitektura uchun maxsus directory ichida siz ma'lum machine yoki platforma turlari uchun qo'shimcha subdirectorilarni topasiz. Ushbu subdirectorylarda ma'lum hardware platformalari yoki oilalariga xos kod mavjud. 
 
@@ -358,7 +358,7 @@ Masalan:
 
 `arch/arm/mach` directoryda `omap`, `exynos`, `imx` va boshqalar kabi turli xil ARM-ga asoslangan mashina turlariga xos kod mavjud.
 
->Asosiy arxitektura fayllari
+#### Asosiy arxitektura fayllari
 
 Machine uchun maxsus directorylardan tashqari, `arch` directorisi turli platformalarda low-leveldagi funksionallikni ta'minlaydigan asosiy arxitektura fayllarini ham o'z ichiga oladi. Bu fayllarga quyidagilar kiradi:
 
@@ -366,7 +366,7 @@ Machine uchun maxsus directorylardan tashqari, `arch` directorisi turli platform
 
 `arch/<arch>/include/asm` directory hardware registerlarini, low-leveldagi ma'lumotlar turlarini va kernel tomonidan ishlatiladigan protsessorga xos makrolarni belgilaydigan arxitekturaga xos header fayllarini o'z ichiga oladi.
 
-> Qurilma drayverlari va tashqi qurilmalar
+#### Qurilma drayverlari va tashqi qurilmalar
 
 `arch` directorysi shuningdek, arxitekturaga xos bo'lgan turli xil qurilma drayverlari va tashqi qurilmalar uchun directorylarni o'z ichiga oladi. Ushbu directorylarda storage controllerlari, tarmoq interfeyslari, grafik adapterlar va boshqalar kabi muayyan hardware componentlari uchun drayverlar mavjud.
 
@@ -420,17 +420,17 @@ Memory management deganda operatsion tizimda kompyuter xotirasi resurslarini tas
 
 Tasavvur qiling, sizda kitoblarni saqlash uchun cheklangan joy bo'lgan kitob javoningiz bor. Har bir kitob kompyuter tizimidagi dastur yoki  processni, kitob javoni esa xotirani(memory) ifodalaydi. Memory management tizimi kutubxonachi vazifasini bajaradi, kitob javonini boshqarish uchun javobgardir.
 
-> Memory Allocation (Xotirani taqsimlash)
+#### Memory Allocation (Xotirani taqsimlash)
 
 Agar javonga yangi kitob qo'shmoqchi bo'lsangiz, kutubxonachi bo'sh joy topadi va uni kitob uchun ajratadi. Xuddi shunday, memory managementda, dastur ishlashi uchun xotira kerak bo'lganda, operatsion tizim uning instructionlari va datalarini saqlash uchun ushbu dasturga xotira blokini ajratadi.
 
-> Memory Deallocation (Xotirani ajratish)
+#### Memory Deallocation (Xotirani ajratish)
 Agar siz kitob javonidan kitobni olib tashlasangiz, kutubxonachi bu joyni boshqa kitoblar foydalanishi mumkin deb belgilaydi. Memory managementda, dastur tugallanganda yoki tugatilganda, operatsion tizim ushbu dasturga ajratilgan xotirani bo'shatadi va uni boshqa dasturlarning foydalanishi uchun imkon yaratadi.
 
-> Memory Tracking (Xotirani kuzatish)
+#### Memory Tracking (Xotirani kuzatish)
 Kutubxonachi kitob javonida qaysi joy ajratilgani va qaysi biri bo'sh ekanligini qayd qiladi. Xuddi shunday, operatsion tizimdagi memory management tizimi xotiraning qaysi qismlari ishlatilayotganligi va qaysi biri mavjud ekanligini kuzatib boradi.
 
-> Memory Fragmentation
+#### Memory Fragmentation
 
 Vaqt o'tishi bilan kitob javonida kitoblar orasidagi bo'shliqlar bo'lishi mumkin, bu esa katta kitob uchun katta doimiy joy topishni qiyinlashtiradi. Bu fragmentation deb ataladi. Memory managementda fragmentation xotira ajratilganda va ajratilganda sodir bo'ladi, natijada xotirada kichik foydalanilmagan bo'shliqlar paydo bo'ladi. Bu internal fragmentation (ajratilgan xotira bloklari ichida foydalanilmagan bo'sh joy) yoki external fragmentation (ajratilgan xotira bloklari orasidagi foydalanilmagan bo'sh joy) bo'lishi mumkin. Memory management usullari fragmentationni minimallashtirish va xotiradan maksimal darajada foydalanishga qaratilgan.
 
@@ -449,26 +449,26 @@ Block I/O management operatsion tizimdagi blok qurilmalari(block device) ishtiro
 
 Oddiy qilib aytganda, blokni I/O managementni boshqarish ombordagi jismoniy tovarlar harakatini boshqarishga o'xshaydi.
 
-> Data Transfer (Ma'lumot uzatish)
+#### Data Transfer (Ma'lumot uzatish)
 
 Tovarlar omborning turli joylari o'rtasida uzatilganidek,  block I/O managementi ham data blocklarini storage devicelari (block devicelari) va kompyuter xotirasi o'rtasida uzatishni o'z ichiga oladi.
 
-> Request Handling (So'rovni ko'rib chiqish)
+#### Request Handling (So'rovni ko'rib chiqish)
 
 Block I/O managementi dasturiy ta'minot yoki applicationlardan o'qish(read) yoki blok qurilmadagi ma'lum bloklarga yozish(write) uchun so'rovlarni qayta ishlaydi. Ushbu so'rovlar ombordagi ma'lum narsalar uchun berilgan buyurtmalarga o'xshaydi.
 
-> Scheduling and Ordering
+#### Scheduling and Ordering
 
 Block I/O management boshqaruvi ishlashni optimallashtirish va kechikishni(latency) minimallashtirish uchun so'rovlarni tartibga soladi. Qidiruv vaqtini qisqartirish, ma'lumotlar joylashuvini maksimal darajada oshirish yoki umumiy o'tkazish qobiliyatini yaxshilash uchun so'rovlar tartibini o'zgartirishi mumkin.
 
-> Buffering and Caching
+#### Buffering and Caching
 
 Ishlashni yaxshilash block I/O managementi buferlash(buffering) va keshlash(caching) usullaridan foydalanadi. Tez-tez foydalaniladigan ma'lumotlar bloklari kirish vaqtini kamaytirish uchun vaqtinchalik xotira buferlarida yoki keshlarida saqlanadi.
 
-> Error Handling 
+#### Error Handling 
 Block I/O management diskdagi xatolar yoki ma'lumotlarning buzilishi kabi ma'lumotlarni uzatish paytida xatolarni aniqlaydi va hal qiladi. U muvaffaqiyatsiz operatsiyalarni qayta urinib ko'rishi, ortiqcha nusxalardan ma'lumotlarni tiklashi yoki xatolar haqida higher-leveldagi dasturiy ta'minotga xabar berishi mumkin.
 
-> Synchronization (Sinxronizatsiya)
+#### Synchronization (Sinxronizatsiya)
 
 Block I/O management bir vaqtda o'qish(read) va yozish(write) operatsiyalarini muvofiqlashtirish orqali ma'lumotlarning izchilligini ta'minlaydi. U bir vaqtning o'zida bir nechta jarayonlar bir blokga kirishda ma'lumotlarning buzilishi yoki conflictlarni oldini olish uchun sinxronizatsiya mexanizmlarini qo'llaydi.
 
@@ -485,21 +485,21 @@ Virtual Filesystem Switch (VFS) Linux kernelidagi software layer bo'lib, u turli
 
 Oddiy qilib aytganda, VFS ni turli tillar orasidagi tarjimon yoki vositachi bilan solishtirish mumkin:
 
-> Common Interface (Umumiy interfeys)
+#### Common Interface (Umumiy interfeys)
 
 VFS fayl tizimlari qo'llab-quvvatlashi kerak bo'lgan standart operatsiyalar va ma'lumotlar tuzilmalari to'plamini belgilaydi. Ushbu umumiy interfeys applicationlar va kernelga fayllarni o'qish(read), yozish(write), ochish(open), yopish(close) va qidirish kabi operatsiyalarni har bir asosiy fayl tizimining o'ziga xos xususiyatlarini bilmasdan bajarishga imkon beradi.
 
-> Transparent Translation (Shaffof tarjima)
+#### Transparent Translation (Shaffof tarjima)
 Malakali tarjimon og'zaki so'zlarni bir tildan boshqa tilga o'zgartirgani kabi, VFS hamapplicationlar tomonidan so'raladigan umumiy fayl tizimi operatsiyalarini asosiy fayl tizimlari uchun specific calllarga tarjima qiladi. Amaldagi fayl tizimidan qat'i nazar, tegishli fayl tizimiga xos funksiyalarni ishga tushirishni ta'minlaydi.
 
-> File System Integration (Fayl tizimi integratsiyasi)
+#### File System Integration (Fayl tizimi integratsiyasi)
 VFS ext4, NTFS yoki NFS kabi turli fayl tizimlarini Linux yadrosiga muammosiz integratsiya qilish imkonini beradi. Har bir fayl tizimi VFS operatsiyalari uchun o'zining amalga oshirilishini ta'minlaydi, bu yadroga bir xil yuqori darajadagi buyruqlar to'plamidan foydalangan holda turli fayl tizimlari bilan ishlash imkonini beradi.
 
-> Filesystem-Specific Mounting
+#### Filesystem-Specific Mounting
 
 Fayl tizimiga kirish kerak bo'lganda, VFS uni tizimga o'rnatish(mounting) jarayonini boshqaradi. O'rnatish(mountlash) yangi tashqi xotira qurilmasini kompyuterga ulash va undan foydalanish imkoniyatini yaratishga o'xshaydi. VFS fayl tizimi turini tanib olish, kerakli resurslarni taqsimlash va uni fayl tizimi ierarxiyasiga integratsiyalash bilan shug'ullanadi.
 
-> Virtual Filesystem Tree (Virtual fayl tizimi daraxti)
+#### Virtual Filesystem Tree (Virtual fayl tizimi daraxti)
 VFS asosiy fayl tizimlaridan qat'i nazar, fayl tizimi ierarxiyasining yagona ko'rinishini taqdim etadi. U barcha o'rnatilgan fayl tizimlarini yagona directory tuzilishiga birlashtirgan virtual filesystem treeni yaratadi. Bu applicationlarga, ular yashaydigan haqiqiy fayl tizimidan qat'i nazar, izchil yo'llar yordamida fayllarni kezish va ularga kirish imkonini beradi.
 
 Virtual Filesystem Switch Linux kernelida bir xil interfeys va turli fayl tizimlarining uzluksiz integratsiyasini ta'minlashda hal qiluvchi rol o'ynaydi. Bu qo'llaniladigan fayl tizimining ma'lum bir dasturidan qat'i nazar, applicationlarning standartlashtirilgan buyruqlar to'plamidan foydalangan holda fayllar va directorilar bilan o'zaro ishlashini ta'minlaydi.
@@ -521,3 +521,11 @@ Linux VFS shuningdek, quyidagilarni o'z ichiga olgan murakkab keshlash mexanizmi
 * `page cache` - xotiradagi fayl ma'lumotlar bloklarini keshlaydi
 
 ### Networking stack
+
+Networking stack yoki TCP/IP stek sifatida ham tanilgan network protocol stack tarmoq aloqasini ta'minlaydigan operatsion tizimdagi software layerlari to'plamidir. U tarmoq orqali qurilmalar o'rtasida ma'lumotlarni uzatishni osonlashtiradigan protokollar va funksiyalardan iborat.
+
+Haqiqiy hayot nuqtai nazaridan, biz networking stacni pochta xizmati kabi tasavvur qilishimiz mumkin:
+
+#### Application Layer
+
+Application Layeri xat yoki paket yozish va uni jo'natishga tayyorlashga o'xshaydi. U HTTP (web browsing), SMTP (email) va FTP (file transfer) kabi protokollarni o'z ichiga oladi, ular applicationlar o'rtasidagi aloqaning muayyan turlarini boshqaradi.
