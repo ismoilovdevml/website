@@ -528,4 +528,3 @@ Haqiqiy hayot nuqtai nazaridan, biz networking stacni pochta xizmati kabi tasavv
 
 #### Application Layer
 
-Application Layeri xat yoki paket yozish va uni jo'natishga tayyorlashga o'xshaydi. U HTTP (web browsing), SMTP (email) va FTP (file transfer) kabi protokollarni o'z ichiga oladi, ular applicationlar o'rtasidagi aloqaning muayyan turlarini boshqaradi.
