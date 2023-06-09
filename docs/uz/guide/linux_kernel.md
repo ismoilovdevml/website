@@ -181,6 +181,7 @@ Portativ kernelning mashhur namunalaridan biri bu Linux kerneli bo'lib, u asosiy
 
 ### Asymmetric MultiProcessing (ASMP)
 
+![alt text](https://upload.wikimedia.org/wikipedia/commons/0/0b/Asmp_2.gif)
 Asymmetric MultiProcessing (ASMP) bu kernel tomonidan bir nechta protsessorlarni (corelarni) qo'llab-quvvatlash usuli bo'lib, bu yerda protsessor kernelga ajratilgan va boshqa barcha protsessorlar user space dasturlarini boshqaradi. Ushbu yondashuvning ojizligi shundaki, kernel o'tkazuvchanligi (masalan, system call, interrupt handling va h.k.) protsessorlar soniga mos kelmaydi va shuning uchun odatiy processlar tez-tez system callardan foydalanadi. Yondashuvning kengaytirilishi juda aniq tizimlar (masalan, ilmiy ilovalar) bilan cheklangan.
 
 Asymmetric MultiProcessing (ASMP) - bu tizimdagi bir nechta protsessorlarga operatsion tizim tomonidan har biriga o'ziga xos tasklar yoki rollar tayinlangan hisoblash arxitekturasining bir turi.
@@ -196,7 +197,13 @@ ASMP ko'p protsessorli tizimlarning oldingi kunlarida ko'proq qo'llanilgan, ammo
 
 ### Symmetric MultiProcessing (SMP)
 
+![alt text](https://www.researchgate.net/publication/346679305/figure/fig1/AS:966131825262594@1607355185573/Symmetric-Multiprocessing-SMP-Architecture-17.png)
+
+
 ASMP dan farqli o'laroq, SMP rejimida kerel user processlari kabi mavjud protsessorlarning har qandayida ishlashi mumkin. Ushbu yondashuvni amalga oshirish qiyinroq, chunki u kernelda poyga sharoitlarini yaratadi, agar ikkita process bir xil memory locationga kiradigan kernel funksiyalarini ishga tushirsa.
+
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/SMP_-_Symmetric_Multiprocessor_System.svg/1200px-SMP_-_Symmetric_Multiprocessor_System.svg.png)
 
 SMP-ni qo'llab-quvvatlash uchun kernel faqat bitta protsessor muhim bo'limni bajarishini kafolatlash uchun sinxronizatsiya primitivlarini (masalan, spin locks) amalga oshirishi kerak.
 
@@ -207,6 +214,9 @@ Buni restoran oshxonasidagi oshpazlar jamoasi kabi tasavvur qiling. Barcha oshpa
 SMP - bu bir vaqtning o'zida bir nechta foydalanuvchilarga veb-saytga xizmat ko'rsatish yoki grafiklarni ko'rsatish kabi kichikroq vazifalarga osongina bo'linadigan og'ir processing loadlarini yoki vazifalarni bajaradigan tizimlarning ishlashini yaxshilash usullaridan biridir. Bu ko'plab zamonaviy kompyuterlar, serverlardan consumer desktop va noutbuklar uchun, ayniqsa, multi-core(ko'p yadroli(core)) protsessorlarga ega bo'lganlar uchun odatiy sozlash.
 
 ![alt text](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-08aff771b3ff7a5525df7b0c090e28c836502788.png)
+
+
+![alt text](https://techdifferences.com/wp-content/uploads/2016/09/Symmetric-Multiprocessing-Vs-Asymmetric-Multiprocessing.jpg)
 
 ### CPU Scalability
 
@@ -245,6 +255,9 @@ Shunday qilib, siz Internetni ko'rib chiqyapsizmi, hujjat yozyapsizmi yoki Linux
 
 ### Linux development model
 
+![alt text](https://www.researchgate.net/publication/335644688/figure/fig1/AS:957483598229505@1605293287845/Linux-kernel-development-process-Extracted-from-8.ppm)
+
+
 Linux operatsion tizimi ko'pincha "Linux kernel development model" deb ataladigan ishlab chiqish modeliga amal qiladi. Bu open source loyihadir, ya'ni manba(source) kodi ommaga ochiq(public) va har kim unga hissa qo'shishi(contribute qilishi) mumkin. Biroq, bu jarayonni boshqaradigan ba'zi asosiy tamoyillar va rollar mavjud:
 
 Linus Torvalds: Linuxning asl yaratuvchisi Linus Torvalds hali ham Linux kernelini ishlab chiqish bo'yicha eng yuqori vakolatga ega. Qaysi o'zgartirishlar, tuzatishlar va qo'shimchalar uni asosiy kernel deb nomlanuvchi kernelning rasmiy versiyasiga kiritishini oxir-oqibat u hal qiladi.
@@ -260,6 +273,8 @@ Linux Distributionlari: Rasmiy Linux kerneli turli xil Linux distributivlari uch
 GPL Litsenziyasi: Linux kerneli GNU General Public License (GPL) ostida chiqarilgan boʻlib, u har kimga dasturiy taʼminotdan foydalanish, oʻzgartirish va tarqatish imkonini beradi, agar ular har qanday oʻzgartirish yoki yaxshilanishlar kiritsa, open source.
 
 Open Source va hamkorlikdagi rivojlanish modeli Linuxni kichik embedded qurilmalardan tortib yirik superkompyuterlargacha bo'lgan hamma narsada qo'llanilishiga olib keldi. Turli xil contributorlar va foydalanuvchilar uni doimiy ravishda rivojlantirish va takomillashtirishga yordam beradi.
+
+![alt text](https://static.javatpoint.com/linux/images/what-is-the-linux-kernel2.png)
 
 ### Maintainer hierarchy
 
@@ -328,6 +343,9 @@ Linux kernelining manba kodi har bir kernelning turli qismlarini o'z ichiga olga
 `/virt` directory virtualizatsiya bilan bog'liq kodni o'z ichiga oladi. Xususan, u Linux kerneliga integratsiyalangan virtualizatsiya yechimi bo'lgan Kernel-based Virtual Machine (KVM)(Kernelga asoslangan virtual mashina) amalga oshirishni o'z ichiga oladi.
 
 #### Linux kerneli arxitekturasi
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simplified_Structure_of_the_Linux_Kernel.svg/1280px-Simplified_Structure_of_the_Linux_Kernel.svg.png)
+
 
 ![alt text](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-b9ffae65be16d30be11b5eca188a7a143b1b8227.png)
 
@@ -416,6 +434,7 @@ cgroup - bu processlarni ierarxik tarzda tashkil qilish va tizim resurslarini ie
 
 ### Memory management
 
+![alt text](https://i.stack.imgur.com/xrKVw.png)
 Memory management deganda operatsion tizimda kompyuter xotirasi resurslarini tashkil qilish va boshqarish jarayoni tushuniladi. Bu xotirani dasturlarga ajratish, xotiraning qaysi qismlari ishlatilayotganligini kuzatish va kerak bo‘lmaganda xotirani ajratishni(allocating memory) o‘z ichiga oladi. Memory management dasturlarning muammosiz bajarilishini ta'minlash va ishdan chiqish yoki tizim sekinlashishi kabi xotira bilan bog'liq muammolarni oldini olish uchun mavjud xotiradan samarali va xavfsiz foydalanishni ta'minlaydi.
 
 Tasavvur qiling, sizda kitoblarni saqlash uchun cheklangan joy bo'lgan kitob javoningiz bor. Har bir kitob kompyuter tizimidagi dastur yoki  processni, kitob javoni esa xotirani(memory) ifodalaydi. Memory management tizimi kutubxonachi vazifasini bajaradi, kitob javonini boshqarish uchun javobgardir.
@@ -481,7 +500,11 @@ Linux Block I/O subsystemi qurilmalardan ma'lumotlarni o'qish va yozish bilan sh
 
 ### Virtual Filesystem Switch
 
+![alt text](https://www.researchgate.net/profile/Lukasz-Faber/publication/259643653/figure/fig1/AS:668926870552587@1536496002191/The-filesystem-implementation-stack_Q320.jpg)
+
 Virtual Filesystem Switch (VFS) Linux kernelidagi software layer bo'lib, u turli fayl tizimlari bilan o'zaro ishlash uchun yagona interfeysni ta'minlaydi. U abstraction layer vazifasini bajarib, applicationlar va kernelga turli fayl tizimlari bilan izchil ishlash imkonini beradi.
+
+![alt text](https://miro.medium.com/v2/resize:fit:689/1*dNuKgJjRomCjVGIfkevr2Q.png)
 
 Oddiy qilib aytganda, VFS ni turli tillar orasidagi tarjimon yoki vositachi bilan solishtirish mumkin:
 
@@ -521,6 +544,8 @@ Linux VFS shuningdek, quyidagilarni o'z ichiga olgan murakkab keshlash mexanizmi
 * `page cache` - xotiradagi fayl ma'lumotlar bloklarini keshlaydi
 
 ### Networking stack
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/OSI_Model_v1.svg/1200px-OSI_Model_v1.svg.png)
 
 Networking stack - bu tarmoq orqali qurilmalar o'rtasida aloqa o'rnatishga imkon beruvchi dasturiy ta'minot protokollari va komponentlar to'plami. U ma'lumotlarni jo'natish va qabul qilish jarayonini tashkil qiladi, axborotni samarali uzatish va qabul qilishni ta'minlaydi.
 
@@ -565,10 +590,12 @@ Mana bir nechta diqqatga sazovor misollar:
 
 #### Security Enhanced Linux (SELinux)
 
+![alt text](https://slideplayer.com/slide/15169497/92/images/24/SELinux+Architecture+Operation+context+LSM+DAC+Policy+files.jpg)
 SELinux keng qoʻllaniladigan security extensioni boʻlib, mandatory access control (MAC) policelarini amalga oshiradi. U processlarga, fayllarga va tarmoq resurslariga tayinlangan security labellariga asoslangan fine-grained access controlini amalga oshiradi.
 
 #### AppArmor
 
+![alt text](https://d3i71xaburhd42.cloudfront.net/c3438119a1d466f69568b48d6ae3f1664d1e3830/4-Figure1-1.png)
 AppArmor - bu  application-leveldagi xavfsizlikka qaratilgan yana bir mashhur security extension. U LSM dan individual applicationlar uchun xavfsizlik profillarini aniqlash va joriy qilish, ularning resurslarga kirishini cheklash va xavfsizlikning mumkin bo'lgan zaifliklarining ta'sirini kamaytirish uchun foydalanadi.
 
 #### Tomoyo
