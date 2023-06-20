@@ -33,3 +33,5 @@
 ## [Kompilyatorlar qanday ishlaydi](compiler.html)
 
 ## [Asosiy operatsion tizim atamalari va tushunchalari](linux_kernel.html)
+
+## [System Call](syscall.html)
