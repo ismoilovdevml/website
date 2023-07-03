@@ -23,10 +23,12 @@ export const pagesRoutes = [
   ["v-548edfb8","/uz/guide/kernel.html",{"title":"Kernel nima va u qanday ishlaydi?"},["/uz/guide/kernel","/uz/guide/kernel.md"]],
   ["v-07dac22a","/uz/guide/kirish.html",{"title":"Boshladik"},["/uz/guide/kirish","/uz/guide/kirish.md"]],
   ["v-16f10be9","/uz/guide/linux.html",{"title":"Linux nima"},["/uz/guide/linux","/uz/guide/linux.md"]],
+  ["v-51bbd826","/uz/guide/linux_kernel.html",{"title":"Asosiy operatsion tizim atamalari va tushunchalari"},["/uz/guide/linux_kernel","/uz/guide/linux_kernel.md"]],
   ["v-c7312a04","/uz/guide/llvm.html",{"title":"LLVM Arxitekturasi"},["/uz/guide/llvm","/uz/guide/llvm.md"]],
   ["v-4afa4981","/uz/guide/map.html",{"title":"Sayt yo'l xaritasi (Mundarija)"},["/uz/guide/map","/uz/guide/map.md"]],
   ["v-49140dbc","/uz/guide/quantum.html",{"title":"#1 Kvant dasturlashga sayohat"},["/uz/guide/quantum","/uz/guide/quantum.md"]],
   ["v-4d419fff","/uz/guide/ram.html",{"title":"RAM nima va u qanday ishlaydi?"},["/uz/guide/ram","/uz/guide/ram.md"]],
+  ["v-7921fb92","/uz/guide/syscall.html",{"title":"System Calls"},["/uz/guide/syscall","/uz/guide/syscall.md"]],
   ["v-340ede9e","/uz/guide/wasm.html",{"title":"WebAssembly WASM"},["/uz/guide/wasm","/uz/guide/wasm.md"]],
   ["v-3706649a","/404.html",{"title":""},["/404"]],
 ]

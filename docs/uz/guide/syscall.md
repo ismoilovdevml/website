@@ -119,18 +119,18 @@ CPU haqida to'liq maqola mavjud:
 Endi, taqdim etilgan kodni tushunish uchun, u x86 32-bitli Linux tizimi uchun system call dispetcherining o'ziga xos namunasini namoyish etishini tushunish muhimdir. Kodning asosiy qismlari quyidagilardir:
 
 :::tip
-     `do_int80_syscall_32(struct pt_regs *regs)` Bu funksiya 32-bitli Linuxda system callni chiqarishning anʼanaviy usuli boʻlgan `0x80` interruptni boshqaradi.
+`do_int80_syscall_32(struct pt_regs *regs)` Bu funksiya 32-bitli Linuxda system callni chiqarishning anʼanaviy usuli boʻlgan `0x80` interruptni boshqaradi.
 
-     `do_syscall_32_irqs_on(struct pt_regs *regs)` Bu 32-bitli Linux uchun system call dispetcherining soddalashtirilgan versiyasidir. U markaziy protsessor registrlarini system call chaqirilishidan oldingidek aks ettiruvchi tuzilmani oladi.
+`do_syscall_32_irqs_on(struct pt_regs *regs)` Bu 32-bitli Linux uchun system call dispetcherining soddalashtirilgan versiyasidir. U markaziy protsessor registrlarini system call chaqirilishidan oldingidek aks ettiruvchi tuzilmani oladi.
 
-     `unsigned int nr = regs->orig_ax;` Bu qator `regs` strukturasining `orig_ax` maydonidan system call raqamini oladi. System call raqami qaysi system callni chaqirish kerakligini aniqlaydi.
+`unsigned int nr = regs->orig_ax;` Bu qator `regs` strukturasining `orig_ax` maydonidan system call raqamini oladi. System call raqami qaysi system callni chaqirish kerakligini aniqlaydi.
 
-     `regs->ax = ia32_sys_call_table[nr](regs->bx, regs->cx,
-                                        regs->dx, regs->si,
-                                        regs->di, regs->bp);`
-     Agar system call raqami haqiqiy bo'lsa (ya'ni, `IA32_NR_syscalls` jadvalida belgilangan system callari sonidan kamroq), bu qator `ia32_sys_call_table`-da system call funksiyasini qidiradi va uni system callga o'tkazilgan parametrlar bilan chaqiradi. Keyin system callning qaytish(return) qiymati `regs` strukturasining `ax` maydonida saqlanadi.
+`regs->ax = ia32_sys_call_table[nr](regs->bx, regs->cx,
+                                    regs->dx, regs->si,
+                                    regs->di, regs->bp);`
+Agar system call raqami haqiqiy bo'lsa (ya'ni, `IA32_NR_syscalls` jadvalida belgilangan system callari sonidan kamroq), bu qator `ia32_sys_call_table`-da system call funksiyasini qidiradi va uni system callga o'tkazilgan parametrlar bilan chaqiradi. Keyin system callning qaytish(return) qiymati `regs` strukturasining `ax` maydonida saqlanadi.
 
-     `syscall_return_slowpath(regs);` Bu system calldan qaytishni boshqaradigan funksiya. U saqlangan user-space registrlarini tiklaydi va bajarilishini user-spacega qaytaradi.
+`syscall_return_slowpath(regs);` Bu system calldan qaytishni boshqaradigan funksiya. U saqlangan user-space registrlarini tiklaydi va bajarilishini user-spacega qaytaradi.
 :::
 
 
@@ -176,17 +176,17 @@ Keling, ushbu kod qismini batafsil ko'rib chiqamiz:
 
 :::tip
 
-     `#define __SYSCALL_I386(nr, sym, qual) [nr] = sym,` Bu system call table yozuvlarini yaratishda yordam beruvchi preprotsessor makrosi. Makros uchta argumentni oladi: system call raqamini bildiruvchi raqam `nr`, system callni amalga oshiradigan funksiyani ifodalovchi symbol sym va ushbu kodda ishlatilmaydigan qualifier qual. Ushbu makros chaqirilganda, u arrayda yozuv hosil qiladi, bunda indeks system call raqami nr va bu indeksdagi qiymat function pointer symidir.
+`#define __SYSCALL_I386(nr, sym, qual) [nr] = sym,` Bu system call table yozuvlarini yaratishda yordam beruvchi preprotsessor makrosi. Makros uchta argumentni oladi: system call raqamini bildiruvchi raqam `nr`, system callni amalga oshiradigan funksiyani ifodalovchi symbol sym va ushbu kodda ishlatilmaydigan qualifier qual. Ushbu makros chaqirilganda, u arrayda yozuv hosil qiladi, bunda indeks system call raqami nr va bu indeksdagi qiymat function pointer symidir.
 
-     `const sys_call_ptr_t ia32_sys_call_table[] = { ... };` Bu system call tablelining o'zi deklaratsiyasi. Bu har biri system callga mos keladigan function pointerlari (sys_call_ptr_t) arrayi.
+`const sys_call_ptr_t ia32_sys_call_table[] = { ... };` Bu system call tablelining o'zi deklaratsiyasi. Bu har biri system callga mos keladigan function pointerlari (sys_call_ptr_t) arrayi.
 
-     `[0 ... __NR_syscall_compat_max] = &sys_ni_syscall,` Bu 0 dan `__NR_syscall_compat_max` (maksimal system call raqami) gacha bo'lgan barcha yozuvlarni `&sys_ni_syscall` ga o'rnatadigan initializer. Bu har bir kirishni `sys_ni_syscall` ga ishora qilish uchun ishga tushiradigan "catch-all" sozlamasidir, bu funksiya odatda bajarilmagan system callarni boshqarish uchun ishlatiladi. Bu tableda aniq o'rnatilmagan har qanday system callar o'zboshimchalik va ehtimol xavfli xatti-harakatlardan ko'ra "no operation" yoki xato funksiyasiga olib kelishini ta'minlaydi.
+`[0 ... __NR_syscall_compat_max] = &sys_ni_syscall,` Bu 0 dan `__NR_syscall_compat_max` (maksimal system call raqami) gacha bo'lgan barcha yozuvlarni `&sys_ni_syscall` ga o'rnatadigan initializer. Bu har bir kirishni `sys_ni_syscall` ga ishora qilish uchun ishga tushiradigan "catch-all" sozlamasidir, bu funksiya odatda bajarilmagan system callarni boshqarish uchun ishlatiladi. Bu tableda aniq o'rnatilmagan har qanday system callar o'zboshimchalik va ehtimol xavfli xatti-harakatlardan ko'ra "no operation" yoki xato funksiyasiga olib kelishini ta'minlaydi.
 
-     `#include <asm/syscalls_32.h>:` Bu qator qoʻshimcha system call taʼriflarini oʻz ichiga olgan boshqa header fileni oʻz ichiga oladi.
+`#include <asm/syscalls_32.h>:` Bu qator qoʻshimcha system call taʼriflarini oʻz ichiga olgan boshqa header fileni oʻz ichiga oladi.
 
-    `__SYSCALL_I386(0, sys_restart_syscall), __SYSCALL_I386(1, sys_exit)` va boshqalar: Ushbu qatorlar system call table yozuvlar yaratish uchun` __SYSCALL_I386` makrosidan foydalanadi. Masalan, `__SYSCALL_I386(0, sys_restart_syscall)` `ia32_sys_call_table` indeksining 0 indeksida `sys_restart_syscall` funksiyasiga ishora qiluvchi yozuv yaratadi. Xuddi shunday, `__SYSCALL_I386(1, sys_exit)` 1-indeksda `sys_exit` funksiyasiga ishora qiluvchi yozuv yaratadi va hokazo. Ushbu funksiyalar tegishli system callarning haqiqiy funksiyalarini amalga oshiradi.
+`__SYSCALL_I386(0, sys_restart_syscall), __SYSCALL_I386(1, sys_exit)` va boshqalar: Ushbu qatorlar system call table yozuvlar yaratish uchun` __SYSCALL_I386` makrosidan foydalanadi. Masalan, `__SYSCALL_I386(0, sys_restart_syscall)` `ia32_sys_call_table` indeksining 0 indeksida `sys_restart_syscall` funksiyasiga ishora qiluvchi yozuv yaratadi. Xuddi shunday, `__SYSCALL_I386(1, sys_exit)` 1-indeksda `sys_exit` funksiyasiga ishora qiluvchi yozuv yaratadi va hokazo. Ushbu funksiyalar tegishli system callarning haqiqiy funksiyalarini amalga oshiradi.
 
-     `#ifdef CONFIG_X86_32` bo'limi shartli ravishda `sys_open` system callini kompilyatsiya qilish uchun ishlatiladi. Agar operatsion tizim x86 32-bitli arxitekturasi uchun tuzilgan bo'lsa (`CONFIG_X86_32` tomonidan ko'rsatilganidek), u `sys_open`-ni system callari jadvalidagi 5-indeksga tayinlaydi. Aks holda, 64-bitli arxitektura uchun `compat_sys_open` (64-bitli tizimda 32-bitli callar bilan mos `sys_open` versiyasi) bir xil indeksga tayinlanadi.
+`#ifdef CONFIG_X86_32` bo'limi shartli ravishda `sys_open` system callini kompilyatsiya qilish uchun ishlatiladi. Agar operatsion tizim x86 32-bitli arxitekturasi uchun tuzilgan bo'lsa (`CONFIG_X86_32` tomonidan ko'rsatilganidek), u `sys_open`-ni system callari jadvalidagi 5-indeksga tayinlaydi. Aks holda, 64-bitli arxitektura uchun `compat_sys_open` (64-bitli tizimda 32-bitli callar bilan mos `sys_open` versiyasi) bir xil indeksga tayinlanadi.
 
 :::
 

@@ -47,6 +47,8 @@ export const pagesData = {
   "v-07dac22a": () => import(/* webpackChunkName: "v-07dac22a" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/kirish.html.js").then(({ data }) => data),
   // path: /uz/guide/linux.html
   "v-16f10be9": () => import(/* webpackChunkName: "v-16f10be9" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/linux.html.js").then(({ data }) => data),
+  // path: /uz/guide/linux_kernel.html
+  "v-51bbd826": () => import(/* webpackChunkName: "v-51bbd826" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/linux_kernel.html.js").then(({ data }) => data),
   // path: /uz/guide/llvm.html
   "v-c7312a04": () => import(/* webpackChunkName: "v-c7312a04" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/llvm.html.js").then(({ data }) => data),
   // path: /uz/guide/map.html
@@ -55,6 +57,8 @@ export const pagesData = {
   "v-49140dbc": () => import(/* webpackChunkName: "v-49140dbc" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/quantum.html.js").then(({ data }) => data),
   // path: /uz/guide/ram.html
   "v-4d419fff": () => import(/* webpackChunkName: "v-4d419fff" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/ram.html.js").then(({ data }) => data),
+  // path: /uz/guide/syscall.html
+  "v-7921fb92": () => import(/* webpackChunkName: "v-7921fb92" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/syscall.html.js").then(({ data }) => data),
   // path: /uz/guide/wasm.html
   "v-340ede9e": () => import(/* webpackChunkName: "v-340ede9e" */"/home/ismoilovdev/Desktop/Project/website/docs/.vuepress/.temp/pages/uz/guide/wasm.html.js").then(({ data }) => data),
   // path: /404.html
