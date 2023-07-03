@@ -57,12 +57,12 @@ Masalan, 32 bitli x86 arxitekturasida system call identifikatori EAX registrida,
 
 System call entry pointi registrlarni (user spacedagi qiymatlarni, shu jumladan system call raqami va system call parametrlarini o'z ichiga oladi) stekda saqlaydi va keyin system call dispetcherini bajarishni davom ettiradi.
 
-<Callout type="info" emoji="">
+:::tip
 Eslatma!
 User - kernel modega o'tish vaqtida stek ham user stekidan kernel stekiga o'tkaziladi. Buni keyingi   interruptlar mavzusida batafsilroq ko'rib chiqamiz.
-</Callout>
+:::
 
-![Syscalls](/images/article/syscalls/3.png)
+![Syscalls](https://linux-kernel-labs.github.io/refs/heads/master/_images/ditaa-eeb919cd078d0ba5021028fa628bb47d7d6866e2.png)
 
 System Call dispetcherining maqsadi system call raqamini tekshirish va system call bilan bog'liq kernel funksiyasini ishga tushirishdir.
 
@@ -118,7 +118,7 @@ CPU haqida to'liq maqola mavjud:
 
 Endi, taqdim etilgan kodni tushunish uchun, u x86 32-bitli Linux tizimi uchun system call dispetcherining o'ziga xos namunasini namoyish etishini tushunish muhimdir. Kodning asosiy qismlari quyidagilardir:
 
-<Callout type="info" emoji="">
+:::tip
      `do_int80_syscall_32(struct pt_regs *regs)` Bu funksiya 32-bitli Linuxda system callni chiqarishning anʼanaviy usuli boʻlgan `0x80` interruptni boshqaradi.
 
      `do_syscall_32_irqs_on(struct pt_regs *regs)` Bu 32-bitli Linux uchun system call dispetcherining soddalashtirilgan versiyasidir. U markaziy protsessor registrlarini system call chaqirilishidan oldingidek aks ettiruvchi tuzilmani oladi.
@@ -131,7 +131,7 @@ Endi, taqdim etilgan kodni tushunish uchun, u x86 32-bitli Linux tizimi uchun sy
      Agar system call raqami haqiqiy bo'lsa (ya'ni, `IA32_NR_syscalls` jadvalida belgilangan system callari sonidan kamroq), bu qator `ia32_sys_call_table`-da system call funksiyasini qidiradi va uni system callga o'tkazilgan parametrlar bilan chaqiradi. Keyin system callning qaytish(return) qiymati `regs` strukturasining `ax` maydonida saqlanadi.
 
      `syscall_return_slowpath(regs);` Bu system calldan qaytishni boshqaradigan funksiya. U saqlangan user-space registrlarini tiklaydi va bajarilishini user-spacega qaytaradi.
-</Callout>
+:::
 
 
 Bu jarayon system call amalga oshirilganda user modedan kernel modega (va orqaga) bor tekis va xavfsiz o'tishni ta'minlaydi. Bu tizimning yaxlitligi va barqarorligini ta'minlash uchun juda muhim, chunki u foydalanuvchi dasturlariga kernel kodi va ma'lumotlariga to'g'ridan-to'g'ri kirishni oldini oladi va kernelga tizim resurslariga qanday va qachon kirishni nazorat qilish imkonini beradi.
@@ -174,7 +174,7 @@ Ushbu kod IA-32 (x86) arxitekturasi uchun Linux kernelida system call table qand
 Keling, ushbu kod qismini batafsil ko'rib chiqamiz:
 
 
-<Callout type="info" emoji="">
+:::tip
 
      `#define __SYSCALL_I386(nr, sym, qual) [nr] = sym,` Bu system call table yozuvlarini yaratishda yordam beruvchi preprotsessor makrosi. Makros uchta argumentni oladi: system call raqamini bildiruvchi raqam `nr`, system callni amalga oshiradigan funksiyani ifodalovchi symbol sym va ushbu kodda ishlatilmaydigan qualifier qual. Ushbu makros chaqirilganda, u arrayda yozuv hosil qiladi, bunda indeks system call raqami nr va bu indeksdagi qiymat function pointer symidir.
 
@@ -188,6 +188,6 @@ Keling, ushbu kod qismini batafsil ko'rib chiqamiz:
 
      `#ifdef CONFIG_X86_32` bo'limi shartli ravishda `sys_open` system callini kompilyatsiya qilish uchun ishlatiladi. Agar operatsion tizim x86 32-bitli arxitekturasi uchun tuzilgan bo'lsa (`CONFIG_X86_32` tomonidan ko'rsatilganidek), u `sys_open`-ni system callari jadvalidagi 5-indeksga tayinlaydi. Aks holda, 64-bitli arxitektura uchun `compat_sys_open` (64-bitli tizimda 32-bitli callar bilan mos `sys_open` versiyasi) bir xil indeksga tayinlanadi.
 
-</Callout>
+:::
 
 Ushbu table keyinchalik system call amalga oshirilganda kernel tomonidan ishlatiladi. Kernel user leveldagi process tomonidan taqdim etilgan system call raqamini ko'rib chiqadi, uni tasdiqlaydi va keyin tegishli system call funksiyasini topish va bajarish uchun uni `ia32_sys_call_table` indeksi sifatida ishlatadi.
