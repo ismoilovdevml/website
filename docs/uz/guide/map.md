@@ -35,3 +35,5 @@
 ## [Asosiy operatsion tizim atamalari va tushunchalari](linux_kernel.html)
 
 ## [System Call](syscall.html)
+
+## [#1 Linuxda Grafika](linuxda-grafika.html)
