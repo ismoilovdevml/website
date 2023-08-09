@@ -1,6 +1,8 @@
 # Loyihalar
 Bu yerda men o'zim ishlagan va ishlayotgan loyihlar haqida ma'lumot beraman
 
+## Github Reyting
+## [![committers.top badge](https://user-badge.committers.top/uzbekistan/ismoilovdevml.svg)](https://user-badge.committers.top/uzbekistan/ismoilovdevml)
 ## i10n Xinux | Lokalizatsiya
 
 Ushbu loyiha o'zbek tiliga tarjima qilinmagan DE yoki WM dasturlari uchun o'zbek tilida tarjimalar yetkazish uchun xizmat qiladi. Asosan hamma protsessni sentrallashtirish uchun yaratilgan repozitoriya hisoblanadi va kuzatib borish, hamda birga ishlash osonlashtiradi.
