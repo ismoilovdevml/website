@@ -178,7 +178,7 @@ Protsessor tezroq ishlashi uchun va imkon qadar ko'proq ishlashi uchun ko'plab o
 
 
 :::tip
-[2-qism: CPU qanday ishlaydi va qanday tuzilgan (chuqurlashtirilgan)](https://ismoilovdev.vercel.app/uz/guide/cpu_2.html)
+[2-qism: CPU qanday ishlaydi va qanday tuzilgan (chuqurlashtirilgan)](https://ismoilovdev.uz/uz/guide/cpu_2.html)
 
 Xato va kamchiliklar bo'lsa uzur so'rayman )
 

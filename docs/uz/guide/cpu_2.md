@@ -231,7 +231,7 @@ Boshqa turdagi keshlar ham  mavjud, masalan, ko'pchilik protsessorlarda mavjud b
 
 CPU cache haqida to'liqroq ma'lumot berilgan maqola bor. Ushbu maqoladan CPU cache haqida to'liqroq bilib olishingiz mumkin
 
-[CPU cache nima va u qanday ishlaydi?](https://ismoilovdev.vercel.app/uz/guide/cpu_cache.html)
+[CPU cache nima va u qanday ishlaydi?](https://ismoilovdev.uz/uz/guide/cpu_cache.html)
 
 
 ### Clock rate
