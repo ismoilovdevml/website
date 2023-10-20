@@ -6,6 +6,6 @@ RUN curl -f https://get.pnpm.io/v6.js | node - add --global pnpm
 RUN pnpm install
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
 
-CMD ["npx", "vuepress", "dev", "."]
+CMD ["npx", "vuepress", "dev", ".", "--port", "8080"]
