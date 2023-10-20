@@ -17,6 +17,7 @@
   "dependencies": {
     "@vuepress/bundler-vite": "2.0.0-beta.53",
     "@vuepress/bundler-webpack": "2.0.0-beta.53",
+    "vue-template-compiler": "2.7.14",
     "@vuepress/cli": "2.0.0-beta.53",
     "@vuepress/client": "2.0.0-beta.53",
     "@vuepress/core": "2.0.0-beta.53",

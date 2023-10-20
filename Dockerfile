@@ -2,9 +2,10 @@ FROM node:16
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install -g vuepress
-RUN npm install
+RUN curl -f https://get.pnpm.io/v6.js | node - add --global pnpm
+RUN pnpm install
 COPY . .
+
 EXPOSE 3000
 
-CMD ["vuepress", "dev", "."]
+CMD ["npx", "vuepress", "dev", "."]
