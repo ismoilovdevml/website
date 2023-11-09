@@ -24,6 +24,7 @@ export const pagesRoutes = [
   ["v-07dac22a","/uz/guide/kirish.html",{"title":"Boshladik"},["/uz/guide/kirish","/uz/guide/kirish.md"]],
   ["v-16f10be9","/uz/guide/linux.html",{"title":"Linux nima"},["/uz/guide/linux","/uz/guide/linux.md"]],
   ["v-51bbd826","/uz/guide/linux_kernel.html",{"title":"Asosiy operatsion tizim atamalari va tushunchalari"},["/uz/guide/linux_kernel","/uz/guide/linux_kernel.md"]],
+  ["v-2886fd6a","/uz/guide/linuxda-grafika.html",{"title":"Linuxda Grafika"},["/uz/guide/linuxda-grafika","/uz/guide/linuxda-grafika.md"]],
   ["v-c7312a04","/uz/guide/llvm.html",{"title":"LLVM Arxitekturasi"},["/uz/guide/llvm","/uz/guide/llvm.md"]],
   ["v-4afa4981","/uz/guide/map.html",{"title":"Sayt yo'l xaritasi (Mundarija)"},["/uz/guide/map","/uz/guide/map.md"]],
   ["v-49140dbc","/uz/guide/quantum.html",{"title":"#1 Kvant dasturlashga sayohat"},["/uz/guide/quantum","/uz/guide/quantum.md"]],

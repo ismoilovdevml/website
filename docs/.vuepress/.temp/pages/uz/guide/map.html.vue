@@ -17,6 +17,7 @@
 <h2 id="kompilyatorlar-qanday-ishlaydi" tabindex="-1"><a class="header-anchor" href="#kompilyatorlar-qanday-ishlaydi" aria-hidden="true">#</a> <RouterLink to="/uz/guide/compiler.html">Kompilyatorlar qanday ishlaydi</RouterLink></h2>
 <h2 id="asosiy-operatsion-tizim-atamalari-va-tushunchalari" tabindex="-1"><a class="header-anchor" href="#asosiy-operatsion-tizim-atamalari-va-tushunchalari" aria-hidden="true">#</a> <RouterLink to="/uz/guide/linux_kernel.html">Asosiy operatsion tizim atamalari va tushunchalari</RouterLink></h2>
 <h2 id="system-call" tabindex="-1"><a class="header-anchor" href="#system-call" aria-hidden="true">#</a> <RouterLink to="/uz/guide/syscall.html">System Call</RouterLink></h2>
+<h2 id="_1-linuxda-grafika" tabindex="-1"><a class="header-anchor" href="#_1-linuxda-grafika" aria-hidden="true">#</a> <RouterLink to="/uz/guide/linuxda-grafika.html">#1 Linuxda Grafika</RouterLink></h2>
 </div></template>
 
 
