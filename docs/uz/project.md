@@ -34,7 +34,7 @@ Loyiha ustida ishlanmoqda
 O'zimga qiziq bo'lgan texnogogiyalar haqida maqolalar va texnik hujjatlar joylab boradigan blog vebsayt.
 Bu loyiha Open Source hisoblanadi loyihaga o'z hissangizni qo'shishingiz mumkin.
 
-Veb-sayt: [ismoilovdev.vercel.app](https://ismoilovdev.uz)
+Veb-sayt: [ismoilovdev.uz](https://ismoilovdev.uz)
 
 Github: [github.com/ismoilovdevml/website](https://github.com/ismoilovdevml/website)
 
@@ -42,6 +42,18 @@ Github: [github.com/ismoilovdevml/website](https://github.com/ismoilovdevml/webs
 Ko'plab katta hajmga ega fayllarni tezkor o'chirish uchun `rm` alternativi. Loyiha Open Source hisoblanadi.
 
 [RMX](https://github.com/ismoilovdevml/rmx)
+
+## RustStrom
+RustStrom effektiv katta load bilan ishlash uchun zamonaviy Load Balancer hisoblanadi. Loyiha to'liq Rust dasturlash tilida yozilgan va open source hisoblanadi.
+
+[RustStrom](https://github.com/ismoilovdevml/RustStrom)
+
+## DevOps Journey
+
+Hozirgi kunda eng aktiv ishlab kelayotgan va katta jamoat kuzatigan open source education loyiha bo'lib, platformada bepul DevOps sohasini o'rganishingiz mumkin. Kirib ko'rib bir baho bering :)
+
+[RustStrom](https://devops-journey.uz/)
+[Github](https://github.com/ismoilovdevml/devops-journey)
 
 ## Boshqa loyihalar
 
